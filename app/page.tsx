@@ -322,6 +322,13 @@ const WORKS = [
     desc: '我們為品牌搭建的芳療知識平台：從植物化學、萃取、全球產地到臨床應用，以初學／進階／專業三層級結構內容，讓品牌不只是賣貨，而是擁有屬於自己的內容資產。',
     labels: ['內容資產', '資訊架構', 'SEO'],
   },
+  {
+    url: 'https://kiolllery8-dev.github.io/aus-garden/products/',
+    tag: 'E-COMMERCE · 品牌電商網站',
+    title: 'AUS GARDEN 澳維花園',
+    desc: '"From the Garden, Into Your Life." 為芳療品牌建置的商品型網站，收錄 80+ 件精油、按摩油、純露與保養品；從分類架構、卡片版型到購買動線，強調「一眼看清整個商品宇宙」。',
+    labels: ['電商網站', '商品陳列', 'UI／UX'],
+  },
 ];
 
 const STEPS = [

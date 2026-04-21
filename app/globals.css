@@ -539,8 +539,8 @@ section {
 /* ===== WORKS ===== */
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
 }
 .work {
   display: block;
@@ -629,9 +629,6 @@ section {
   padding: 4px 10px;
   border: 1px solid var(--line);
   border-radius: 999px;
-}
-@media (max-width: 960px) {
-  .works-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 620px) {
   .works-grid { grid-template-columns: 1fr; }
