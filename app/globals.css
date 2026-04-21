@@ -536,6 +536,107 @@ section {
   .service-arrow { top: 32px; right: 28px; }
 }
 
+/* ===== WORKS ===== */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.work {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all .35s ease;
+  color: inherit;
+}
+.work:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -30px rgba(184, 146, 74, 0.35);
+}
+.work-thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(184, 146, 74, 0.12), rgba(93, 158, 148, 0.1)),
+    var(--paper-warm);
+  border-bottom: 1px solid var(--line);
+}
+.work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform .6s ease;
+  display: block;
+}
+.work:hover .work-thumb img { transform: scale(1.04); }
+.work-visit {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  color: var(--ink);
+  background: rgba(246, 240, 225, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: all .3s ease;
+}
+.work:hover .work-visit { opacity: 1; transform: translateY(0); }
+.work-meta {
+  padding: 28px 28px 32px;
+}
+.work-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--gold-deep);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.work-meta h3 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.work-meta p {
+  font-size: 13px;
+  line-height: 1.95;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.work-meta ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.work-meta ul li {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+@media (max-width: 960px) {
+  .works-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .works-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== APPROACH / STEPS ===== */
 .steps {
   display: grid;

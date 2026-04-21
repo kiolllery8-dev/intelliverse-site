@@ -10,6 +10,7 @@ export default function Home() {
             <a href="#about">關於我們</a>
             <a href="#services">服務項目</a>
             <a href="#approach">合作方式</a>
+            <a href="#works">作品</a>
             <a href="#contact">聯絡</a>
           </div>
           <a href="mailto:linsonder6@gmail.com" className="nav-mail">linsonder6@gmail.com</a>
@@ -222,6 +223,46 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="works">
+        <div className="shell">
+          <div className="section-head">
+            <div>
+              <div className="section-num">— 04 / WORKS</div>
+              <h2 className="section-title">
+                我們做過的<br />一些實際案子。
+              </h2>
+            </div>
+            <p className="section-lede">
+              從轉換導向的一頁式銷售廣告，到深度內容型的品牌知識庫，
+              每一個都是我們與客戶共同思考的成果。
+            </p>
+          </div>
+
+          <div className="works-grid">
+            {WORKS.map((w) => (
+              <a key={w.url} href={w.url} target="_blank" rel="noopener noreferrer" className="work">
+                <div className="work-thumb">
+                  <img
+                    src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(w.url)}?w=1200&h=800`}
+                    alt={w.title}
+                    loading="lazy"
+                  />
+                  <div className="work-visit">VIEW LIVE ↗</div>
+                </div>
+                <div className="work-meta">
+                  <div className="work-tag">{w.tag}</div>
+                  <h3>{w.title}</h3>
+                  <p>{w.desc}</p>
+                  <ul>
+                    {w.labels.map((l) => <li key={l}>{l}</li>)}
+                  </ul>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <footer id="contact">
         <div className="shell">
           <div className="footer-grid">
@@ -258,6 +299,30 @@ export default function Home() {
     </>
   );
 }
+
+const WORKS = [
+  {
+    url: 'https://auslife.store',
+    tag: 'LANDING PAGE · 一頁式廣告',
+    title: 'AUSLIFE｜結界噴霧',
+    desc: '「啟動你的第一道結界。」以情緒頻率為切入，把七種神聖植物精油轉化成可購買的護身場景；搭配短句、證言與階段式引導，做出高轉換率的單頁銷售體驗。',
+    labels: ['轉換導向', '文案＋視覺', '受眾洞察'],
+  },
+  {
+    url: 'https://auslife.store/2',
+    tag: 'LANDING PAGE · 一頁式廣告',
+    title: 'AUSLIFE｜招財噴霧',
+    desc: '「財富來自磁場，不是努力。」將四種招財植物與三種使用儀式化的場景結合，把產品賣進客戶的生活動線，讓買的不只是精油，而是一種重新啟動的感覺。',
+    labels: ['品牌敘事', '情緒價值', '儀式設計'],
+  },
+  {
+    url: 'https://intelliverse.tw',
+    tag: 'KNOWLEDGE BASE · 品牌知識庫',
+    title: '精油能量圖譜｜INTELLIVERSE',
+    desc: '我們為品牌搭建的芳療知識平台：從植物化學、萃取、全球產地到臨床應用，以初學／進階／專業三層級結構內容，讓品牌不只是賣貨，而是擁有屬於自己的內容資產。',
+    labels: ['內容資產', '資訊架構', 'SEO'],
+  },
+];
 
 const STEPS = [
   {
