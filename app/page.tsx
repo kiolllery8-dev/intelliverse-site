@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <nav className="nav">
+      <nav className="nav" id="nav">
         <div className="shell nav-inner">
           <a href="#top" className="logo">
             靈境<em>·</em>智造
@@ -14,7 +14,22 @@ export default function Home() {
             <a href="#contact">聯絡</a>
           </div>
           <a href="mailto:linsonder6@gmail.com" className="nav-mail">linsonder6@gmail.com</a>
+          <a href="#menu" className="nav-toggle" aria-label="開啟選單">
+            <span /><span /><span />
+          </a>
         </div>
+        <div className="nav-drawer" id="menu">
+          <a href="#menu-close" className="nav-drawer-close" aria-label="關閉選單">✕</a>
+          <div className="nav-drawer-links">
+            <a href="#about">關於我們</a>
+            <a href="#services">服務項目</a>
+            <a href="#approach">合作方式</a>
+            <a href="#works">作品</a>
+            <a href="#contact">聯絡</a>
+          </div>
+          <a href="mailto:linsonder6@gmail.com" className="nav-drawer-mail">✦ linsonder6@gmail.com</a>
+        </div>
+        <a href="#menu-close" className="nav-drawer-backdrop" aria-hidden="true" id="menu-close" tabIndex={-1} />
       </nav>
 
       <header id="top" className="hero">
