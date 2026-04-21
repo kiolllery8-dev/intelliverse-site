@@ -329,6 +329,13 @@ const WORKS = [
     desc: '"From the Garden, Into Your Life." 為芳療品牌建置的商品型網站，收錄 80+ 件精油、按摩油、純露與保養品；從分類架構、卡片版型到購買動線，強調「一眼看清整個商品宇宙」。',
     labels: ['電商網站', '商品陳列', 'UI／UX'],
   },
+  {
+    url: 'https://kiolllery8-dev.github.io/goldfishion-oem/',
+    tag: 'B2B · ODM/OEM 品牌網站',
+    title: 'Gold Fishion｜美妝代工一站式',
+    desc: '「一站打造你的美妝品牌。」為美妝代工廠建置的品牌型網站，溝通對象是新創、電商、連鎖與跨業客戶；從核心實力、六步驟流程到劑型分類，把 B2B 的專業感跟品牌顧問的溫度講清楚。',
+    labels: ['B2B 品牌網站', '流程視覺化', '信任感設計'],
+  },
 ];
 
 const STEPS = [
