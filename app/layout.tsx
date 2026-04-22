@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   verification: {
-    // google: '請替換為 Google Search Console 驗證碼',
+    google: 'eBQecTnxY_7xwmP5sqWgCnpTVLZg47BsjpWEtGVn-Uk',
   },
 };
 
