@@ -32,12 +32,13 @@ export default function Home() {
         <a href="#menu-close" className="nav-drawer-backdrop" aria-hidden="true" id="menu-close" tabIndex={-1} />
       </nav>
 
+      <main>
       <header id="top" className="hero">
         <div className="shell hero-grid">
           <div>
-            <div className="hero-kicker">
-              <span /> 靈境智造 · INTELLIVERSE STUDIO
-            </div>
+            <p className="hero-kicker">
+              <span aria-hidden="true" /> 靈境智造 · INTELLIVERSE STUDIO
+            </p>
             <h1>
               <span className="line">讓每一個品牌，</span>
               <span className="line">
@@ -56,18 +57,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-art">
-            <div className="hero-art-label tl">HARDWARE<br />INTEGRATION</div>
-            <div className="hero-art-label tr">MEDIA<br />BUYING</div>
-            <div className="hero-art-label bl">WEB<br />DESIGN</div>
-            <div className="hero-art-label br">PRODUCT<br />DESIGN</div>
-            <div className="ring r1" />
-            <div className="ring r2" />
-            <div className="ring r3" />
-            <div className="dot" />
+          <div className="hero-art" role="img" aria-label="軟硬整合、廣告投放、網頁設計、商品設計四個軸向環繞的核心示意圖">
+            <div className="hero-art-label tl" aria-hidden="true">HARDWARE<br />INTEGRATION</div>
+            <div className="hero-art-label tr" aria-hidden="true">MEDIA<br />BUYING</div>
+            <div className="hero-art-label bl" aria-hidden="true">WEB<br />DESIGN</div>
+            <div className="hero-art-label br" aria-hidden="true">PRODUCT<br />DESIGN</div>
+            <div className="ring r1" aria-hidden="true" />
+            <div className="ring r2" aria-hidden="true" />
+            <div className="ring r3" aria-hidden="true" />
+            <div className="dot" aria-hidden="true" />
           </div>
         </div>
-        <div className="scroll-hint">
+        <div className="scroll-hint" aria-hidden="true">
           SCROLL
           <div className="bar" />
         </div>
@@ -255,14 +256,24 @@ export default function Home() {
 
           <div className="works-grid">
             {WORKS.map((w) => (
-              <a key={w.url} href={w.url} target="_blank" rel="noopener noreferrer" className="work">
+              <a
+                key={w.url}
+                href={w.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="work"
+                aria-label={`查看作品：${w.title}（在新視窗開啟）`}
+              >
                 <div className="work-thumb">
                   <img
                     src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(w.url)}?w=1200&h=800`}
-                    alt={w.title}
+                    alt={`${w.title}｜${w.tag} 網頁預覽縮圖`}
+                    width={1200}
+                    height={800}
                     loading="lazy"
+                    decoding="async"
                   />
-                  <div className="work-visit">VIEW LIVE ↗</div>
+                  <div className="work-visit" aria-hidden="true">VIEW LIVE ↗</div>
                 </div>
                 <div className="work-meta">
                   <div className="work-tag">{w.tag}</div>
@@ -277,6 +288,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </main>
 
       <footer id="contact">
         <div className="shell">
