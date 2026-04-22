@@ -32,7 +32,6 @@ jobs:
 
       - name: Build (static export)
         env:
-          GITHUB_REPOSITORY: ${{ github.repository }}
           NODE_ENV: production
         run: npm run build
 
