@@ -1,12 +1,22 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { FAQ } from './content';
 
 const SITE_URL = 'https://show.intelliverse.tw';
 const SITE_NAME = '靈境智造 Intelliverse Studio';
-const SITE_TITLE = `${SITE_NAME}｜軟硬整合・商品設計・網頁開發・廣告投放`;
+const SITE_TITLE = `${SITE_NAME}｜臺中設計工作室・軟硬整合・AI 工作流程・商品・網頁・廣告`;
 const SITE_DESC =
-  '靈境智造是一間結合科技、設計與商業思維的整合型工作室，位於臺中，橫跨軟硬體整合、商品設計、網頁開發與廣告投放，陪品牌從點子走到市場。';
-const OG_IMAGE = '/og-image.png'; // 請替換為你的分享預覽圖（建議 1200×630 PNG/JPG）
+  '靈境智造 Intelliverse Studio — 位於臺中太平的整合型設計工作室，結合科技、設計與商業思維。服務範圍橫跨軟硬體整合、AI 自動工作流程、商品設計、網頁開發、一頁式廣告與投放策略，陪品牌從點子走到市場。';
+const OG_IMAGE = '/og-image.png';
+
+const ADDRESS = {
+  streetAddress: '精美路 122 號',
+  addressLocality: '太平區',
+  addressRegion: '臺中市',
+  postalCode: '411',
+  addressCountry: 'TW',
+} as const;
+const FULL_ADDRESS_TW = `臺中市太平區精美路 122 號`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -18,18 +28,35 @@ export const metadata: Metadata = {
   keywords: [
     '靈境智造',
     'Intelliverse Studio',
+    '臺中設計工作室',
+    '台中設計公司',
+    '太平區 設計公司',
+    '精美路',
     '軟硬體整合',
+    'IoT 裝置開發',
+    '智慧零售',
+    'AI 自動工作流程',
+    'AI workflow',
+    'automation',
     '商品設計',
+    '包裝設計',
+    '產品開發',
     '網頁設計',
     '網站設計',
-    '廣告投放',
-    '品牌規劃',
     '一頁式廣告',
-    '臺中設計工作室',
-    '台中網頁設計',
+    'landing page',
+    '電商網站',
+    '品牌規劃',
+    '品牌識別',
+    '廣告投放',
+    '成效廣告',
     'Meta 廣告',
-    'Google 廣告',
-    'IoT 裝置開發',
+    'Google Ads',
+    'LINE 廣告',
+    '媒體代理',
+    '行銷顧問',
+    '臺中 網頁設計',
+    '台中 AI 工作流',
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
@@ -38,6 +65,9 @@ export const metadata: Metadata = {
   category: 'Design Studio',
   alternates: {
     canonical: '/',
+    languages: {
+      'zh-Hant-TW': '/',
+    },
   },
   openGraph: {
     type: 'website',
@@ -89,52 +119,195 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const organizationJsonLd = {
+/* ---------- Structured data (JSON-LD) ---------- */
+
+const localBusinessJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'ProfessionalService',
+  '@id': `${SITE_URL}/#organization`,
   name: SITE_NAME,
   alternateName: ['INTELLIVERSE STUDIO', '靈境智造'],
   url: SITE_URL,
   logo: `${SITE_URL}/og-image.png`,
+  image: `${SITE_URL}/og-image.png`,
   email: 'linsonder6@gmail.com',
   telephone: '+886-926-213-896',
   description: SITE_DESC,
+  slogan: '幫你打造 AI 自動工作流程，你只負責環遊世界。',
+  priceRange: 'NT$$',
   address: {
     '@type': 'PostalAddress',
-    addressCountry: 'TW',
-    addressRegion: '臺中市',
+    streetAddress: ADDRESS.streetAddress,
+    addressLocality: ADDRESS.addressLocality,
+    addressRegion: ADDRESS.addressRegion,
+    postalCode: ADDRESS.postalCode,
+    addressCountry: ADDRESS.addressCountry,
   },
-  areaServed: 'TW',
+  areaServed: [
+    { '@type': 'Country', name: 'Taiwan' },
+    { '@type': 'City', name: '臺中市' },
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '10:00',
+      closes: '19:00',
+    },
+  ],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'linsonder6@gmail.com',
+      telephone: '+886-926-213-896',
+      availableLanguage: ['zh-Hant', 'en'],
+      areaServed: 'TW',
+    },
+  ],
   knowsAbout: [
     '軟硬體整合',
+    'IoT 裝置開發',
+    'AI 自動工作流程',
+    'AI workflow automation',
     '商品設計',
+    '包裝設計',
     '網頁設計',
-    '廣告投放',
-    '品牌規劃',
-    'IoT',
     '一頁式廣告',
+    '品牌規劃',
+    '廣告投放',
+    'Meta 廣告',
+    'Google Ads',
+    'LINE 廣告',
   ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: '靈境智造服務項目',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: '軟硬體整合設計',
+          description:
+            '從電子元件選型、韌體開發到後端資料流，替物聯網產品、智慧零售設備與商業場域裝置打造穩定可擴充的軟硬整合方案。',
+          serviceType: 'Hardware-Software Integration',
+          provider: { '@id': `${SITE_URL}/#organization` },
+          areaServed: 'TW',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: '廣告投放與行銷策略',
+          description:
+            '以數據驅動的投放方法，操作 Meta、Google、LINE 等主要媒體；從受眾定義、素材製作到轉換追蹤。',
+          serviceType: 'Digital Advertising',
+          provider: { '@id': `${SITE_URL}/#organization` },
+          areaServed: 'TW',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: '網頁設計與開發',
+          description:
+            '從品牌官網、產品形象頁到電商系統，以使用者體驗為核心搭配現代前端架構，打造兼具美感、效能與可維護性的數位門面。',
+          serviceType: 'Web Design & Development',
+          provider: { '@id': `${SITE_URL}/#organization` },
+          areaServed: 'TW',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: '商品設計與品牌規劃',
+          description:
+            '從產品結構、包裝設計到品牌識別系統，陪客戶走完從零到上架的商業化企劃、行銷落地規劃，與產品服務線上線下整合。',
+          serviceType: 'Product & Brand Design',
+          provider: { '@id': `${SITE_URL}/#organization` },
+          areaServed: 'TW',
+        },
+      },
+    ],
+  },
 };
 
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
   name: SITE_NAME,
   url: SITE_URL,
   inLanguage: 'zh-Hant-TW',
+  publisher: { '@id': `${SITE_URL}/#organization` },
 };
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${SITE_URL}/#faq`,
+  mainEntity: FAQ.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.a,
+    },
+  })),
+};
+
+const webPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${SITE_URL}/#webpage`,
+  url: SITE_URL,
+  name: SITE_TITLE,
+  description: SITE_DESC,
+  inLanguage: 'zh-Hant-TW',
+  isPartOf: { '@id': `${SITE_URL}/#website` },
+  about: { '@id': `${SITE_URL}/#organization` },
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: `${SITE_URL}/og-image.png`,
+    width: 1200,
+    height: 630,
+  },
+};
+
+export { FULL_ADDRESS_TW };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-Hant-TW">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/og-image.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://s0.wp.com" />
+        <meta name="geo.region" content="TW-TXG" />
+        <meta name="geo.placename" content="臺中市太平區" />
+        <meta name="ICBM" content="24.137, 120.718" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body>{children}</body>

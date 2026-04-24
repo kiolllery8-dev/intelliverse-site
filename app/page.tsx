@@ -1,9 +1,12 @@
+import { FAQ } from './content';
+
 export default function Home() {
   return (
     <>
-      <nav className="nav" id="nav">
+      <a href="#top" className="skip-link">跳到主內容</a>
+      <nav className="nav" id="nav" aria-label="主選單">
         <div className="shell nav-inner">
-          <a href="#top" className="logo">
+          <a href="#top" className="logo" aria-label="靈境智造首頁">
             靈境<em>·</em>智造
           </a>
           <div className="nav-links">
@@ -11,6 +14,7 @@ export default function Home() {
             <a href="#services">服務項目</a>
             <a href="#approach">合作方式</a>
             <a href="#works">作品</a>
+            <a href="#faq">常見問答</a>
             <a href="#contact">聯絡</a>
           </div>
           <a href="mailto:linsonder6@gmail.com" className="nav-mail">linsonder6@gmail.com</a>
@@ -25,6 +29,7 @@ export default function Home() {
             <a href="#services">服務項目</a>
             <a href="#approach">合作方式</a>
             <a href="#works">作品</a>
+            <a href="#faq">常見問答</a>
             <a href="#contact">聯絡</a>
           </div>
           <a href="mailto:linsonder6@gmail.com" className="nav-drawer-mail">✦ linsonder6@gmail.com</a>
@@ -288,6 +293,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section id="faq">
+        <div className="shell">
+          <div className="section-head">
+            <div>
+              <div className="section-num">— 05 / FAQ</div>
+              <h2 className="section-title">
+                接洽前，<br />先把這些問題講清楚。
+              </h2>
+            </div>
+            <p className="section-lede">
+              這些是我們最常被問到的幾件事。如果還有其他疑問，直接寫信過來最快。
+            </p>
+          </div>
+          <div className="faq-list">
+            {FAQ.map((f, i) => (
+              <details key={i} className="faq-item">
+                <summary>
+                  <span className="faq-q-num">Q{String(i + 1).padStart(2, '0')}</span>
+                  <span className="faq-q-text">{f.q}</span>
+                  <span className="faq-q-mark" aria-hidden="true">+</span>
+                </summary>
+                <div className="faq-a">{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
       </main>
 
       <footer id="contact">
@@ -314,7 +347,8 @@ export default function Home() {
               <h4>STUDIO</h4>
               <p>靈境智造</p>
               <p>INTELLIVERSE STUDIO</p>
-              <p>Design · Engineering · Media</p>
+              <address>臺中市太平區精美路 122 號</address>
+              <p className="footer-tag">Design · Engineering · Media</p>
             </div>
           </div>
           <div className="footer-base">
@@ -387,3 +421,4 @@ const STEPS = [
     body: '上線只是開始，我們會持續追蹤數據與使用者回饋，依成效微調產品、網頁與廣告素材。',
   },
 ];
+

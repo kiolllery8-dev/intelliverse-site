@@ -1,0 +1,20 @@
+{
+  "name": "靈境智造 Intelliverse Studio",
+  "short_name": "靈境智造",
+  "description": "臺中的整合型設計工作室，軟硬整合・AI 工作流程・商品・網頁・廣告。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f6f0e1",
+  "theme_color": "#f6f0e1",
+  "lang": "zh-Hant-TW",
+  "icons": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
