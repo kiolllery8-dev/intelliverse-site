@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: `${SITE_NAME} — 軟硬整合・商品・網頁・廣告`,
+        alt: `${SITE_NAME} — 幫你打造 AI 自動工作流程，你只負責環遊世界`,
       },
     ],
   },
