@@ -785,6 +785,206 @@ section {
   .work-visit { font-size: 9px; padding: 6px 10px; }
 }
 
+/* ===== STRATEGY (extension under services) ===== */
+.strategy {
+  margin-top: 100px;
+  padding-top: 80px;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+.strategy::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 50%;
+  transform: translateX(-50%);
+  width: 80px; height: 1px;
+  background: var(--gold);
+}
+.strategy-head {
+  max-width: 760px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+.strategy-kicker {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.strategy-title {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 28px;
+}
+.strategy-title span {
+  background: linear-gradient(135deg, var(--gold-deep), var(--teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-style: italic;
+}
+.strategy-lede {
+  font-size: 15px;
+  line-height: 2;
+  color: var(--ink-soft);
+}
+
+/* flow chart visual */
+.strategy-flow {
+  margin: 0 auto 64px;
+  max-width: 1080px;
+  text-align: center;
+}
+.strategy-flow img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 30px 60px -32px rgba(184, 146, 74, 0.28);
+}
+.strategy-flow figcaption {
+  margin-top: 14px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--ink-dim);
+  text-transform: none;
+}
+
+.strategy-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 56px;
+}
+.strategy-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 24px 20px;
+  position: relative;
+  transition: all .3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.strategy-item:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -22px rgba(184, 146, 74, 0.3);
+}
+.strategy-num {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--gold-deep);
+  font-weight: 500;
+}
+.strategy-item h4 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.strategy-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.strategy-item ul li {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  padding-left: 14px;
+  position: relative;
+}
+.strategy-item ul li::before {
+  content: '·';
+  position: absolute;
+  left: 4px;
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.strategy-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 48px;
+}
+.pillar {
+  background: var(--paper-warm);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 18px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pillar b {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--gold-deep);
+}
+.pillar span {
+  font-size: 12px;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+}
+
+.strategy-summary {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 28px 32px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  background: var(--paper-warm);
+  font-size: 14px;
+  line-height: 2;
+  color: var(--ink-soft);
+}
+.strategy-summary span {
+  display: block;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1080px) {
+  .strategy-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .strategy { margin-top: 64px; padding-top: 56px; }
+  .strategy-head { margin-bottom: 36px; }
+  .strategy-flow { margin-bottom: 40px; }
+  .strategy-grid { gap: 10px; }
+  .strategy-item { padding: 18px 16px; }
+  .strategy-summary { padding: 22px 24px; font-size: 13px; }
+  .strategy-summary span { font-size: 16px; }
+  .strategy-pillars { grid-template-columns: 1fr; gap: 10px; }
+  .pillar { padding: 14px 22px; }
+}
+@media (max-width: 460px) {
+  .strategy-grid { grid-template-columns: 1fr; }
+}
+
 /* ===== APPROACH / STEPS ===== */
 .steps {
   display: grid;

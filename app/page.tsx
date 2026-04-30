@@ -215,6 +215,57 @@ export default function Home() {
               <div className="service-arrow">↗</div>
             </article>
           </div>
+
+          <div className="strategy">
+            <div className="strategy-head">
+              <div className="strategy-kicker">— 專屬行銷策略服務</div>
+              <h3 className="strategy-title">
+                不套版、不複製，<br />
+                <span>依品牌目標量身佈局</span>。
+              </h3>
+              <p className="strategy-lede">
+                每個品牌所處的階段、產品特色、客群需求與銷售目標都不同，因此我們不使用固定模板、也不複製制式做法，
+                而是根據品牌現況與未來方向，規劃真正適合你的行銷策略。從網站流量、內容優化、SEO 佈局到日常代管操作，
+                協助品牌建立更清楚的曝光路徑，提升搜尋能見度與轉換機會。
+              </p>
+            </div>
+
+            <figure className="strategy-flow">
+              <img
+                src="/strategy-flow.jpg"
+                alt="專屬行銷策略流程圖：品牌定位、市場分析、網頁流量分析、SEO 整合、代管操作、網頁素材規劃、優化報告、成效成長八步驟"
+                width={1440}
+                height={1080}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>專屬行銷策略流程圖｜八步驟、三大支柱（策略規劃・視覺美編・數據優化）</figcaption>
+            </figure>
+
+            <ol className="strategy-grid">
+              {STRATEGY.map((s) => (
+                <li key={s.num} className="strategy-item">
+                  <div className="strategy-num">{s.num}</div>
+                  <h4>{s.title}</h4>
+                  <ul>
+                    {s.tags.map((t) => <li key={t}>{t}</li>)}
+                  </ul>
+                </li>
+              ))}
+            </ol>
+
+            <div className="strategy-pillars" aria-hidden="false">
+              <div className="pillar"><b>策略規劃</b><span>精準定位 · 擬定有效策略</span></div>
+              <div className="pillar"><b>視覺美編</b><span>專業設計 · 強化品牌形象</span></div>
+              <div className="pillar"><b>數據優化</b><span>數據驅動 · 持續優化成效</span></div>
+            </div>
+
+            <p className="strategy-summary">
+              <span>專屬行銷策略，不套版、不複製。</span>
+              依照品牌目標、產品特色與市場需求，量身規劃網站流量分析、代管操作、SEO 整合、優化報告與網頁素材，
+              協助品牌提升曝光、強化內容，打造更有轉換力的網站。
+            </p>
+          </div>
         </div>
       </section>
 
@@ -397,6 +448,17 @@ const WORKS = [
     desc: '「一站打造你的美妝品牌。」為美妝代工廠建置的品牌型網站，溝通對象是新創、電商、連鎖與跨業客戶；從核心實力、六步驟流程到劑型分類，把 B2B 的專業感跟品牌顧問的溫度講清楚。',
     labels: ['B2B 品牌網站', '流程視覺化', '信任感設計'],
   },
+];
+
+const STRATEGY = [
+  { num: '01', title: '品牌定位', tags: ['品牌目標', '客群輪廓', '產品優勢'] },
+  { num: '02', title: '市場分析', tags: ['競品觀察', '消費需求', '趨勢判讀'] },
+  { num: '03', title: '網頁流量分析', tags: ['流量來源', '熱門頁面', '流失節點'] },
+  { num: '04', title: 'SEO 整合', tags: ['關鍵字佈局', '內容架構', '自然曝光提升'] },
+  { num: '05', title: '代管操作', tags: ['商品頁更新', '活動頁維護', '後台管理'] },
+  { num: '06', title: '網頁素材規劃', tags: ['Banner 設計', '商品圖優化', '視覺一致性'] },
+  { num: '07', title: '優化報告', tags: ['數據整理', '問題診斷', '改善建議'] },
+  { num: '08', title: '成效成長', tags: ['提升曝光', '提高轉換', '建立品牌力'] },
 ];
 
 const STEPS = [
