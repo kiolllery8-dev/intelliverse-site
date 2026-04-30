@@ -838,6 +838,16 @@ section {
   font-size: 15px;
   line-height: 2;
   color: var(--ink-soft);
+  text-align: left;
+}
+.strategy-lede + .strategy-lede {
+  margin-top: 18px;
+}
+.strategy-lede b {
+  color: var(--ink);
+  font-weight: 700;
+  background: linear-gradient(180deg, transparent 60%, rgba(184, 146, 74, 0.18) 60%);
+  padding: 0 2px;
 }
 
 /* flow chart visual */
