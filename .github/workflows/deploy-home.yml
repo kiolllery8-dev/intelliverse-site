@@ -1,0 +1,47 @@
+name: Deploy to home server
+
+# Push 到 main 自動觸發 — 用家裡的 self-hosted runner
+# (auslife-home-show, label: show) 直接 build 並寫入 nginx-static
+# 沒有 SSH，因為 runner 已經在 server 上面跑。
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-home
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, show]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (static export)
+        env:
+          NODE_ENV: production
+        run: npm run build
+
+      - name: Rsync out/ → /opt/auslife/nginx-static/show/
+        run: |
+          rsync -avz --delete \
+            --exclude='*.map' \
+            out/ /opt/auslife/nginx-static/show/
+
+      - name: Smoke test (origin direct)
+        run: |
+          curl -sk --resolve show.intelliverse.tw:443:127.0.0.1 \
+            -o /dev/null -w "origin %{http_code}\n" \
+            https://show.intelliverse.tw/
