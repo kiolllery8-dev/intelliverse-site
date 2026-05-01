@@ -1,58 +1,30 @@
-name: Deploy Next.js site to GitHub Pages
+name: Build verify
+
+# 部署改走家裡 server (deploy.sh)。這個 workflow 只在 PR 上做 build 驗證，
+# 確保推進 main 之前 next build 不會壞。
+# 不再推到 GitHub Pages（show.intelliverse.tw 已切到 home server）。
 
 on:
-  push:
+  pull_request:
     branches: [main]
   workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
+      - run: npm ci
 
-      - name: Build (static export)
+      - run: npm run build
         env:
           NODE_ENV: production
-        run: npm run build
 
-      - name: Add .nojekyll
-        run: touch out/.nojekyll
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Confirm out/ produced
+        run: ls -la out/index.html out/robots.txt out/sitemap.xml
