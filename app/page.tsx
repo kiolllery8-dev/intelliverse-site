@@ -32,12 +32,12 @@ export default function Home() {
                 <li role="none"><a role="menuitem" href="#work-goldfishion">Gold Fishion 美妝代工</a></li>
               </ul>
             </li>
-            <li role="none"><a role="menuitem" href="#faq">常見問答</a></li>
             <li role="none">
               <a role="menuitem" href="https://tools.intelliverse.tw" target="_blank" rel="noopener noreferrer" className="nav-external">
                 小工具 <span aria-hidden="true">↗</span>
               </a>
             </li>
+            <li role="none"><a role="menuitem" href="#faq">常見問答</a></li>
             <li role="none"><a role="menuitem" href="#contact">聯絡</a></li>
           </ul>
           <a href="mailto:linsonder6@gmail.com" className="nav-mail">linsonder6@gmail.com</a>
@@ -66,8 +66,8 @@ export default function Home() {
               <a href="#work-ausgarden">AUS GARDEN 澳維花園</a>
               <a href="#work-goldfishion">Gold Fishion 美妝代工</a>
             </div>
-            <a href="#faq">常見問答</a>
             <a href="https://tools.intelliverse.tw" target="_blank" rel="noopener noreferrer">小工具 ↗</a>
+            <a href="#faq">常見問答</a>
             <a href="#contact">聯絡</a>
           </div>
           <a href="mailto:linsonder6@gmail.com" className="nav-drawer-mail">✦ linsonder6@gmail.com</a>
