@@ -30,6 +30,7 @@ export default function Home() {
                 <li role="none"><a role="menuitem" href="#work-intelliverse">精油能量圖譜</a></li>
                 <li role="none"><a role="menuitem" href="#work-ausgarden">AUS GARDEN 澳維花園</a></li>
                 <li role="none"><a role="menuitem" href="#work-goldfishion">Gold Fishion 美妝代工</a></li>
+                <li role="none"><a role="menuitem" href="#work-tarot">紫妍塔羅芳療學院</a></li>
               </ul>
             </li>
             <li role="none">
@@ -65,6 +66,7 @@ export default function Home() {
               <a href="#work-intelliverse">精油能量圖譜</a>
               <a href="#work-ausgarden">AUS GARDEN 澳維花園</a>
               <a href="#work-goldfishion">Gold Fishion 美妝代工</a>
+              <a href="#work-tarot">紫妍塔羅芳療學院</a>
             </div>
             <a href="https://tools.intelliverse.tw" target="_blank" rel="noopener noreferrer">小工具 ↗</a>
             <a href="#faq">常見問答</a>
@@ -531,6 +533,14 @@ const WORKS = [
     title: 'Gold Fishion｜美妝代工一站式',
     desc: '「一站打造你的美妝品牌。」為美妝代工廠建置的品牌型網站，溝通對象是新創、電商、連鎖與跨業客戶；從核心實力、六步驟流程到劑型分類，把 B2B 的專業感跟品牌顧問的溫度講清楚。',
     labels: ['B2B 品牌網站', '流程視覺化', '信任感設計'],
+  },
+  {
+    slug: 'work-tarot',
+    url: 'https://tarot.intelliverse.tw/',
+    tag: 'EDUCATION · 品牌學院網站',
+    title: '紫妍塔羅芳療學院｜TAROT × AROMA',
+    desc: '「用塔羅看見內在，用香氣安頓自己。」為融合塔羅占卜與芳療教學的品牌學院打造的形象網站；把兩種療癒體系的世界觀串成一條敘事動線，從入門、進階到師資介紹，讓潛在學員一進站就感受到學院的氛圍與專業。',
+    labels: ['教學品牌', '多感官體驗', '靈性敘事'],
   },
 ];
 
