@@ -9,14 +9,37 @@ export default function Home() {
           <a href="#top" className="logo" aria-label="靈境智造首頁">
             靈境<em>·</em>智造
           </a>
-          <div className="nav-links">
-            <a href="#about">關於我們</a>
-            <a href="#services">服務項目</a>
-            <a href="#approach">合作方式</a>
-            <a href="#works">作品</a>
-            <a href="#faq">常見問答</a>
-            <a href="#contact">聯絡</a>
-          </div>
+          <ul className="nav-links" role="menubar">
+            <li role="none"><a role="menuitem" href="#about">關於我們</a></li>
+            <li role="none"><a role="menuitem" href="#services">服務項目</a></li>
+            <li role="none" className="has-sub">
+              <a role="menuitem" href="#types" aria-haspopup="true">合作方式</a>
+              <ul className="nav-sub" role="menu">
+                <li role="none"><a role="menuitem" href="#type-brand">品牌形象網站</a></li>
+                <li role="none"><a role="menuitem" href="#type-ecom">電商／購物網站</a></li>
+                <li role="none"><a role="menuitem" href="#type-content">知識／內容網站</a></li>
+                <li role="none"><a role="menuitem" href="#type-service">服務／預約網站</a></li>
+                <li role="none"><a role="menuitem" href="#type-landing">一頁式網站</a></li>
+              </ul>
+            </li>
+            <li role="none" className="has-sub">
+              <a role="menuitem" href="#works" aria-haspopup="true">作品</a>
+              <ul className="nav-sub" role="menu">
+                <li role="none"><a role="menuitem" href="#work-auslife-jiejie">AUSLIFE｜結界噴霧</a></li>
+                <li role="none"><a role="menuitem" href="#work-auslife-zhaocai">AUSLIFE｜招財噴霧</a></li>
+                <li role="none"><a role="menuitem" href="#work-intelliverse">精油能量圖譜</a></li>
+                <li role="none"><a role="menuitem" href="#work-ausgarden">AUS GARDEN 澳維花園</a></li>
+                <li role="none"><a role="menuitem" href="#work-goldfishion">Gold Fishion 美妝代工</a></li>
+              </ul>
+            </li>
+            <li role="none"><a role="menuitem" href="#faq">常見問答</a></li>
+            <li role="none">
+              <a role="menuitem" href="https://tools.intelliverse.tw" target="_blank" rel="noopener noreferrer" className="nav-external">
+                小工具 <span aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li role="none"><a role="menuitem" href="#contact">聯絡</a></li>
+          </ul>
           <a href="mailto:linsonder6@gmail.com" className="nav-mail">linsonder6@gmail.com</a>
           <a href="#menu" className="nav-toggle" aria-label="開啟選單">
             <span /><span /><span />
@@ -27,9 +50,24 @@ export default function Home() {
           <div className="nav-drawer-links">
             <a href="#about">關於我們</a>
             <a href="#services">服務項目</a>
-            <a href="#approach">合作方式</a>
-            <a href="#works">作品</a>
+            <div className="nav-drawer-group">
+              <span className="nav-drawer-group-label">合作方式</span>
+              <a href="#type-brand">品牌形象網站</a>
+              <a href="#type-ecom">電商／購物網站</a>
+              <a href="#type-content">知識／內容網站</a>
+              <a href="#type-service">服務／預約網站</a>
+              <a href="#type-landing">一頁式網站</a>
+            </div>
+            <div className="nav-drawer-group">
+              <span className="nav-drawer-group-label">作品</span>
+              <a href="#work-auslife-jiejie">AUSLIFE｜結界噴霧</a>
+              <a href="#work-auslife-zhaocai">AUSLIFE｜招財噴霧</a>
+              <a href="#work-intelliverse">精油能量圖譜</a>
+              <a href="#work-ausgarden">AUS GARDEN 澳維花園</a>
+              <a href="#work-goldfishion">Gold Fishion 美妝代工</a>
+            </div>
             <a href="#faq">常見問答</a>
+            <a href="https://tools.intelliverse.tw" target="_blank" rel="noopener noreferrer">小工具 ↗</a>
             <a href="#contact">聯絡</a>
           </div>
           <a href="mailto:linsonder6@gmail.com" className="nav-drawer-mail">✦ linsonder6@gmail.com</a>
@@ -277,11 +315,43 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="types">
+        <div className="shell">
+          <div className="section-head">
+            <div>
+              <div className="section-num">— 03 / TYPES</div>
+              <h2 className="section-title">
+                你想做的網站，<br />我們都能蓋。
+              </h2>
+            </div>
+            <p className="section-lede">
+              不同階段的品牌，需要不同形態的網站。
+              先想清楚這次要解決什麼問題，再決定該用哪一種架構。
+            </p>
+          </div>
+
+          <div className="types-grid">
+            {TYPES.map((t) => (
+              <article key={t.id} id={t.id} className="type-card">
+                <div className="type-num">{t.num}</div>
+                <h3 className="type-title">{t.title}</h3>
+                <p className="type-en">{t.en}</p>
+                <p className="type-desc">{t.desc}</p>
+                <ul className="type-tags">
+                  {t.tags.map((x) => <li key={x}>{x}</li>)}
+                </ul>
+                <p className="type-fit"><span>適合</span>{t.fit}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="approach">
         <div className="shell">
           <div className="section-head">
             <div>
-              <div className="section-num">— 03 / APPROACH</div>
+              <div className="section-num">— 04 / APPROACH</div>
               <h2 className="section-title">
                 我們怎麼跟客戶<br />一起把事情做出來。
               </h2>
@@ -307,7 +377,7 @@ export default function Home() {
         <div className="shell">
           <div className="section-head">
             <div>
-              <div className="section-num">— 04 / WORKS</div>
+              <div className="section-num">— 05 / WORKS</div>
               <h2 className="section-title">
                 我們做過的<br />一些實際案子。
               </h2>
@@ -322,6 +392,7 @@ export default function Home() {
             {WORKS.map((w) => (
               <a
                 key={w.url}
+                id={w.slug}
                 href={w.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -357,7 +428,7 @@ export default function Home() {
         <div className="shell">
           <div className="section-head">
             <div>
-              <div className="section-num">— 05 / FAQ</div>
+              <div className="section-num">— 06 / FAQ</div>
               <h2 className="section-title">
                 接洽前，<br />先把這些問題講清楚。
               </h2>
@@ -422,6 +493,7 @@ export default function Home() {
 
 const WORKS = [
   {
+    slug: 'work-auslife-jiejie',
     url: 'https://auslife.store',
     tag: 'LANDING PAGE · 一頁式廣告',
     title: 'AUSLIFE｜結界噴霧',
@@ -429,6 +501,7 @@ const WORKS = [
     labels: ['轉換導向', '文案＋視覺', '受眾洞察'],
   },
   {
+    slug: 'work-auslife-zhaocai',
     url: 'https://auslife.store/2',
     tag: 'LANDING PAGE · 一頁式廣告',
     title: 'AUSLIFE｜招財噴霧',
@@ -436,6 +509,7 @@ const WORKS = [
     labels: ['品牌敘事', '情緒價值', '儀式設計'],
   },
   {
+    slug: 'work-intelliverse',
     url: 'https://intelliverse.tw',
     tag: 'KNOWLEDGE BASE · 品牌知識庫',
     title: '精油能量圖譜｜INTELLIVERSE',
@@ -443,6 +517,7 @@ const WORKS = [
     labels: ['內容資產', '資訊架構', 'SEO'],
   },
   {
+    slug: 'work-ausgarden',
     url: 'https://kiolllery8-dev.github.io/aus-garden/products/',
     tag: 'E-COMMERCE · 品牌電商網站',
     title: 'AUS GARDEN 澳維花園',
@@ -450,11 +525,60 @@ const WORKS = [
     labels: ['電商網站', '商品陳列', 'UI／UX'],
   },
   {
+    slug: 'work-goldfishion',
     url: 'https://kiolllery8-dev.github.io/goldfishion-oem/',
     tag: 'B2B · ODM/OEM 品牌網站',
     title: 'Gold Fishion｜美妝代工一站式',
     desc: '「一站打造你的美妝品牌。」為美妝代工廠建置的品牌型網站，溝通對象是新創、電商、連鎖與跨業客戶；從核心實力、六步驟流程到劑型分類，把 B2B 的專業感跟品牌顧問的溫度講清楚。',
     labels: ['B2B 品牌網站', '流程視覺化', '信任感設計'],
+  },
+];
+
+const TYPES = [
+  {
+    id: 'type-brand',
+    num: '01',
+    title: '品牌形象網站',
+    en: 'BRAND · IDENTITY',
+    desc: '給品牌一個正式的網路門面：故事頁、團隊介紹、服務項目、作品集與聯絡方式，一次說清楚品牌主張與專業度。',
+    tags: ['形象首頁', '公司介紹', '服務頁'],
+    fit: '剛起步的品牌、想升級對外形象的公司、需要對提案／媒體展示的客戶',
+  },
+  {
+    id: 'type-ecom',
+    num: '02',
+    title: '電商／購物網站',
+    en: 'E-COMMERCE',
+    desc: '從商品分類、商品頁、購物車到金流、物流、會員後台一條龍。同步支援搜尋、優惠券、訂單追蹤、退換貨流程。',
+    tags: ['商品陳列', '會員系統', '金流串接'],
+    fit: '已有實體商品要直營、想脫離平台抽成、需要會員回購機制的品牌',
+  },
+  {
+    id: 'type-content',
+    num: '03',
+    title: '知識／內容網站',
+    en: 'CONTENT · KNOWLEDGE',
+    desc: '部落格、知識庫、媒體型內容站。多欄目分類、長期累積文章、SEO 結構、訂閱機制，建立品牌專屬內容資產。',
+    tags: ['內容架構', 'SEO 佈局', '多欄目'],
+    fit: '專業／顧問型品牌、想用內容養客戶的公司、需要長期累積信任的領域',
+  },
+  {
+    id: 'type-service',
+    num: '04',
+    title: '服務／預約網站',
+    en: 'BOOKING · SERVICE',
+    desc: '預約系統、課程報名、活動報名、表單收集與名單管理。讓「想預約」這件事，從加 LINE 變成自動化流程。',
+    tags: ['預約表單', '行事曆', '客戶名單'],
+    fit: '工作室、診所、教室、活動主辦方、各種需要排程／報名的服務業',
+  },
+  {
+    id: 'type-landing',
+    num: '05',
+    title: '一頁式網站',
+    en: 'LANDING PAGE',
+    desc: '廣告投放與活動專用的單頁銷售頁：明確 CTA、限時優惠、社會證明、A/B 測試素材模組，把流量精準變成訂單。',
+    tags: ['單頁銷售', '高轉換率', '廣告落地'],
+    fit: '新品上市、檔期活動、廣告投放主力商品、需要快速驗證市場反應的提案',
   },
 ];
 
