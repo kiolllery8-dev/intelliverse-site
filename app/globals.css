@@ -892,6 +892,65 @@ section {
   .type-title { font-size: 20px; }
 }
 
+/* ===== collapsible section (used by works) ===== */
+.section-fold > summary {
+  list-style: none;
+  cursor: pointer;
+  display: block;
+}
+.section-fold > summary::-webkit-details-marker { display: none; }
+.section-fold > summary .section-head {
+  position: relative;
+  padding-right: 200px;
+  margin-bottom: 0;
+  transition: margin-bottom .25s ease;
+}
+.section-fold[open] > summary .section-head {
+  margin-bottom: 64px;
+}
+.fold-mark {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  transition: color .2s ease;
+}
+.fold-mark-icon {
+  width: 44px; height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--gold-deep);
+  background: var(--paper-warm);
+  transition: transform .3s ease, background .25s ease, border-color .25s ease;
+}
+.section-fold > summary:hover .fold-mark { color: var(--ink); }
+.section-fold > summary:hover .fold-mark-icon {
+  background: rgba(184, 146, 74, 0.12);
+  border-color: var(--gold);
+}
+.section-fold[open] .fold-mark-icon {
+  transform: rotate(45deg);
+}
+.fold-mark-text .when-open { display: none; }
+.section-fold[open] .fold-mark-text .when-closed { display: none; }
+.section-fold[open] .fold-mark-text .when-open { display: inline; }
+@media (max-width: 720px) {
+  .section-fold > summary .section-head { padding-right: 60px; }
+  .fold-mark-text { display: none; }
+  .fold-mark-icon { width: 36px; height: 36px; font-size: 18px; }
+}
+
 /* ===== WORKS ===== */
 .works-grid {
   display: grid;

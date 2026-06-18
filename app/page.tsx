@@ -377,18 +377,28 @@ export default function Home() {
 
       <section id="works">
         <div className="shell">
-          <div className="section-head">
-            <div>
-              <div className="section-num">— 05 / WORKS</div>
-              <h2 className="section-title">
-                我們做過的<br />一些實際案子。
-              </h2>
+        <details className="section-fold" id="works-fold">
+          <summary>
+            <div className="section-head">
+              <div>
+                <div className="section-num">— 05 / WORKS</div>
+                <h2 className="section-title">
+                  我們做過的<br />一些實際案子。
+                </h2>
+              </div>
+              <p className="section-lede">
+                從轉換導向的一頁式銷售廣告，到深度內容型的品牌知識庫，
+                每一個都是我們與客戶共同思考的成果。
+              </p>
+              <span className="fold-mark" aria-hidden="true">
+                <span className="fold-mark-text">
+                  <span className="when-closed">展開作品</span>
+                  <span className="when-open">收合作品</span>
+                </span>
+                <span className="fold-mark-icon">+</span>
+              </span>
             </div>
-            <p className="section-lede">
-              從轉換導向的一頁式銷售廣告，到深度內容型的品牌知識庫，
-              每一個都是我們與客戶共同思考的成果。
-            </p>
-          </div>
+          </summary>
 
           <div className="works-grid">
             {WORKS.map((w) => (
@@ -423,6 +433,7 @@ export default function Home() {
               </a>
             ))}
           </div>
+        </details>
         </div>
       </section>
 
@@ -489,6 +500,14 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* auto-open the collapsible works section when navigating to a #work-* anchor */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html:
+            "(function(){function open(){var h=location.hash;if(/^#work-/.test(h)){var d=document.getElementById('works-fold');if(d&&!d.open){d.open=true;requestAnimationFrame(function(){var t=document.querySelector(h);if(t)t.scrollIntoView({block:'start'});});}}}open();addEventListener('hashchange',open);})();",
+        }}
+      />
     </>
   );
 }
