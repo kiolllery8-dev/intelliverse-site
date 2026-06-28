@@ -15,6 +15,7 @@ export default function Home() {
             <li role="none" className="has-sub">
               <a role="menuitem" href="#types" aria-haspopup="true">合作方式</a>
               <ul className="nav-sub" role="menu">
+                <li role="none"><a role="menuitem" href="#automation">AI 自動化代管</a></li>
                 <li role="none"><a role="menuitem" href="#type-brand">品牌形象網站</a></li>
                 <li role="none"><a role="menuitem" href="#type-ecom">電商／購物網站</a></li>
                 <li role="none"><a role="menuitem" href="#type-content">知識／內容網站</a></li>
@@ -53,6 +54,7 @@ export default function Home() {
             <a href="#services">服務項目</a>
             <div className="nav-drawer-group">
               <span className="nav-drawer-group-label">合作方式</span>
+              <a href="#automation">AI 自動化代管</a>
               <a href="#type-brand">品牌形象網站</a>
               <a href="#type-ecom">電商／購物網站</a>
               <a href="#type-content">知識／內容網站</a>
@@ -317,11 +319,72 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="automation">
+        <div className="shell">
+          <div className="section-head">
+            <div>
+              <div className="section-num">— 03 / AUTOMATION</div>
+              <h2 className="section-title">
+                重複的事，<br />交給 AI 做。
+              </h2>
+            </div>
+            <p className="section-lede">
+              把每天、每週、每月都要重複跑一次的營運動作，
+              變成不會忘記、不會偷懶的自動化流程。
+            </p>
+          </div>
+
+          <div className="automation-grid">
+            <article className="automation-case">
+              <div className="automation-tag">CASE 01 · SHOPEE</div>
+              <h3>蝦皮｜每日商品置頂</h3>
+              <p>
+                每天定時對指定商品執行置頂操作，配合人工微調，確保賣場曝光不中斷。
+                把「記得跑流程」這件事從小幫手的腦袋裡搬走。
+              </p>
+              <ul>
+                <li>不再忘記、不再撞時段</li>
+                <li>多帳號／多商店同步</li>
+                <li>人工可隨時介入調整</li>
+              </ul>
+            </article>
+
+            <article className="automation-case">
+              <div className="automation-tag">CASE 02 · MOMO</div>
+              <h3>MOMO｜每週降價促銷（售更多）</h3>
+              <p>
+                每週依排程設定降價區間與適用商品清單，省下手動上下架的時間。
+                「售更多」活動可以開好開滿，不漏單。
+              </p>
+              <ul>
+                <li>排程自動跑、結束自動還原</li>
+                <li>商品清單可批次調整</li>
+                <li>與「售更多」活動同步運作</li>
+              </ul>
+            </article>
+          </div>
+
+          <div className="automation-fit">
+            <div className="automation-fit-label">適合誰</div>
+            <ul>
+              <li>經常忘記跑流程的老闆與店主</li>
+              <li>工作太多沒空盯細節的小幫手</li>
+              <li>想把人力留給判斷、不是抄表的內勤</li>
+            </ul>
+          </div>
+
+          <a href="mailto:linsonder6@gmail.com?subject=AI%20%E8%87%AA%E5%8B%95%E5%8C%96%E4%BB%A3%E7%AE%A1%E8%A9%A2%E5%95%8F" className="automation-cta">
+            <span>有重複的工作想交出去？</span>
+            <span>告訴我們你最痛的那一個 <em>→</em></span>
+          </a>
+        </div>
+      </section>
+
       <section id="types">
         <div className="shell">
           <div className="section-head">
             <div>
-              <div className="section-num">— 03 / TYPES</div>
+              <div className="section-num">— 04 / TYPES</div>
               <h2 className="section-title">
                 你想做的網站，<br />我們都能蓋。
               </h2>
@@ -353,7 +416,7 @@ export default function Home() {
         <div className="shell">
           <div className="section-head">
             <div>
-              <div className="section-num">— 04 / APPROACH</div>
+              <div className="section-num">— 05 / APPROACH</div>
               <h2 className="section-title">
                 我們怎麼跟客戶<br />一起把事情做出來。
               </h2>
@@ -381,7 +444,7 @@ export default function Home() {
           <summary>
             <div className="section-head">
               <div>
-                <div className="section-num">— 05 / WORKS</div>
+                <div className="section-num">— 06 / WORKS</div>
                 <h2 className="section-title">
                   我們做過的<br />一些實際案子。
                 </h2>
@@ -441,7 +504,7 @@ export default function Home() {
         <div className="shell">
           <div className="section-head">
             <div>
-              <div className="section-num">— 06 / FAQ</div>
+              <div className="section-num">— 07 / FAQ</div>
               <h2 className="section-title">
                 接洽前，<br />先把這些問題講清楚。
               </h2>
