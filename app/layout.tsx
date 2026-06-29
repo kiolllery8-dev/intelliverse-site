@@ -292,7 +292,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://s0.wp.com" />
+
+        {/* Google Analytics 4 — G-HQKL8W50KD */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQKL8W50KD" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-HQKL8W50KD');",
+          }}
+        />
         <meta name="geo.region" content="TW-TXG" />
         <meta name="geo.placename" content="臺中市太平區" />
         <meta name="ICBM" content="24.137, 120.718" />
