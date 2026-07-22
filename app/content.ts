@@ -41,10 +41,30 @@ export const FAQ = [
   },
 ];
 
+/* 作品分類 — id 需與 globals.css 的 .works-filter 篩選規則一一對應 */
+export const WORK_CATEGORIES = [
+  { id: 'all', en: 'ALL', label: '全部作品' },
+  { id: 'ip', en: 'PERSONAL IP', label: 'IP／個人品牌' },
+  { id: 'brand', en: 'BRAND', label: '品牌形象' },
+  { id: 'ecom', en: 'E-COMMERCE', label: '電商／選品' },
+  { id: 'content', en: 'CONTENT', label: '知識／內容' },
+  { id: 'landing', en: 'LANDING', label: '一頁式廣告' },
+];
+
 export const WORKS = [
+  {
+    slug: 'work-zeng',
+    url: 'https://zeng.intelliverse.tw',
+    cat: 'ip',
+    tag: 'PERSONAL IP · 個人品牌網站',
+    title: '曾會長｜善循環公益資源整合平台',
+    desc: '「讓善意流動，讓資源發光。」為深耕地方近二十年的公益工作者打造的個人 IP 網站：把原本散落在 FB 貼文裡的信任、人脈與活動紀錄，整理成能被搜尋、能被轉介的數位資產。整合 LINE 官方帳號、Facebook 社群導流、會員系統、嚴選選品與活動報名表單，讓「找得到人、談得成合作」變成一條完整動線。',
+    labels: ['個人 IP 建立', 'LINE／FB 整合', '會員＋報名系統'],
+  },
   {
     slug: 'work-auslife-jiejie',
     url: 'https://auslife.store',
+    cat: 'landing',
     tag: 'LANDING PAGE · 一頁式廣告',
     title: 'AUSLIFE｜結界噴霧',
     desc: '「啟動你的第一道結界。」以情緒頻率為切入，把七種神聖植物精油轉化成可購買的護身場景；搭配短句、證言與階段式引導，做出高轉換率的單頁銷售體驗。',
@@ -53,6 +73,7 @@ export const WORKS = [
   {
     slug: 'work-auslife-zhaocai',
     url: 'https://auslife.store/2',
+    cat: 'landing',
     tag: 'LANDING PAGE · 一頁式廣告',
     title: 'AUSLIFE｜招財噴霧',
     desc: '「財富來自磁場，不是努力。」將四種招財植物與三種使用儀式化的場景結合，把產品賣進客戶的生活動線，讓買的不只是精油，而是一種重新啟動的感覺。',
@@ -61,6 +82,7 @@ export const WORKS = [
   {
     slug: 'work-intelliverse',
     url: 'https://intelliverse.tw',
+    cat: 'content',
     tag: 'KNOWLEDGE BASE · 品牌知識庫',
     title: '精油能量圖譜｜INTELLIVERSE',
     desc: '我們為品牌搭建的芳療知識平台：從植物化學、萃取、全球產地到臨床應用，以初學／進階／專業三層級結構內容，讓品牌不只是賣貨，而是擁有屬於自己的內容資產。',
@@ -69,6 +91,7 @@ export const WORKS = [
   {
     slug: 'work-ausgarden',
     url: 'https://kiolllery8-dev.github.io/aus-garden/products/',
+    cat: 'ecom',
     tag: 'E-COMMERCE · 品牌電商網站',
     title: 'AUS GARDEN 澳維花園',
     desc: '"From the Garden, Into Your Life." 為芳療品牌建置的商品型網站，收錄 80+ 件精油、按摩油、純露與保養品；從分類架構、卡片版型到購買動線，強調「一眼看清整個商品宇宙」。',
@@ -77,6 +100,7 @@ export const WORKS = [
   {
     slug: 'work-goldfishion',
     url: 'https://kiolllery8-dev.github.io/goldfishion-oem/',
+    cat: 'brand',
     tag: 'B2B · ODM/OEM 品牌網站',
     title: 'Gold Fishion｜美妝代工一站式',
     desc: '「一站打造你的美妝品牌。」為美妝代工廠建置的品牌型網站，溝通對象是新創、電商、連鎖與跨業客戶；從核心實力、六步驟流程到劑型分類，把 B2B 的專業感跟品牌顧問的溫度講清楚。',
@@ -85,6 +109,7 @@ export const WORKS = [
   {
     slug: 'work-tarot',
     url: 'https://tarot.intelliverse.tw/',
+    cat: 'brand',
     tag: 'EDUCATION · 品牌學院網站',
     title: '紫妍塔羅芳療學院｜TAROT × AROMA',
     desc: '「用塔羅看見內在，用香氣安頓自己。」為融合塔羅占卜與芳療教學的品牌學院打造的形象網站；把兩種療癒體系的世界觀串成一條敘事動線，從入門、進階到師資介紹，讓潛在學員一進站就感受到學院的氛圍與專業。',

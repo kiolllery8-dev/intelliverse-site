@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import { FAQ, WORKS, TYPES, SECTIONS } from './content';
+import { FAQ, WORKS, TYPES, SECTIONS, WORK_CATEGORIES } from './content';
 
 const SITE_URL = 'https://show.intelliverse.tw';
 const SITE_NAME = '靈境智造 Intelliverse Studio';
@@ -322,6 +322,7 @@ const worksJsonLd = {
       description: w.desc,
       url: w.url,
       image: `${SITE_URL}/og-image.png`,
+      genre: WORK_CATEGORIES.find((c) => c.id === w.cat)?.label,
       keywords: w.labels.join(', '),
       creator: { '@id': `${SITE_URL}/#organization` },
       inLanguage: 'zh-Hant-TW',

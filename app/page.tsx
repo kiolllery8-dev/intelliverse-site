@@ -1,4 +1,4 @@
-import { FAQ, WORKS, TYPES } from './content';
+import { FAQ, WORKS, TYPES, WORK_CATEGORIES } from './content';
 
 export default function Home() {
   return (
@@ -26,6 +26,7 @@ export default function Home() {
             <li role="none" className="has-sub">
               <a role="menuitem" href="#works" aria-haspopup="true">作品</a>
               <ul className="nav-sub" role="menu">
+                <li role="none"><a role="menuitem" href="#work-zeng">曾會長｜個人 IP 網站</a></li>
                 <li role="none"><a role="menuitem" href="#work-auslife-jiejie">AUSLIFE｜結界噴霧</a></li>
                 <li role="none"><a role="menuitem" href="#work-auslife-zhaocai">AUSLIFE｜招財噴霧</a></li>
                 <li role="none"><a role="menuitem" href="#work-intelliverse">精油能量圖譜</a></li>
@@ -450,8 +451,8 @@ export default function Home() {
                 </h2>
               </div>
               <p className="section-lede">
-                從轉換導向的一頁式銷售廣告，到深度內容型的品牌知識庫，
-                每一個都是我們與客戶共同思考的成果。
+                從個人 IP 網站與社群整合，到轉換導向的一頁式銷售廣告、深度內容型的品牌知識庫，
+                每一個都是我們與客戶共同思考的成果。可依分類挑選你想看的類型。
               </p>
               <span className="fold-mark" aria-hidden="true">
                 <span className="fold-mark-text">
@@ -463,6 +464,30 @@ export default function Home() {
             </div>
           </summary>
 
+          {/* 作品分類篩選 — 純 CSS（radio + :has），關掉 JS 也能用 */}
+          <fieldset className="works-filter">
+            <legend className="sr-only">作品分類篩選</legend>
+            {WORK_CATEGORIES.map((c) => {
+              const count = c.id === 'all' ? WORKS.length : WORKS.filter((w) => w.cat === c.id).length;
+              return (
+                <span key={c.id} className="works-filter-item">
+                  <input
+                    type="radio"
+                    name="work-filter"
+                    id={`wf-${c.id}`}
+                    value={c.id}
+                    defaultChecked={c.id === 'all'}
+                  />
+                  <label htmlFor={`wf-${c.id}`}>
+                    <span className="wf-en">{c.en}</span>
+                    <span className="wf-label">{c.label}</span>
+                    <span className="wf-count">{count}</span>
+                  </label>
+                </span>
+              );
+            })}
+          </fieldset>
+
           <div className="works-grid">
             {WORKS.map((w) => (
               <a
@@ -472,6 +497,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="work"
+                data-cat={w.cat}
                 aria-label={`查看作品：${w.title}（在新視窗開啟）`}
               >
                 <div className="work-thumb">
@@ -564,11 +590,11 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* auto-open the collapsible works section when navigating to a #work-* anchor */}
+      {/* 導向 #work-* 錨點時：自動展開作品區、把分類重設為「全部」，避免目標卡片被篩選隱藏 */}
       <script
         dangerouslySetInnerHTML={{
           __html:
-            "(function(){function open(){var h=location.hash;if(/^#work-/.test(h)){var d=document.getElementById('works-fold');if(d&&!d.open){d.open=true;requestAnimationFrame(function(){var t=document.querySelector(h);if(t)t.scrollIntoView({block:'start'});});}}}open();addEventListener('hashchange',open);})();",
+            "(function(){function open(){var h=location.hash;if(!/^#work-/.test(h))return;var a=document.getElementById('wf-all');if(a&&!a.checked)a.checked=true;var d=document.getElementById('works-fold');if(d&&!d.open)d.open=true;requestAnimationFrame(function(){var t=document.querySelector(h);if(t)t.scrollIntoView({block:'start'});});}open();addEventListener('hashchange',open);})();",
         }}
       />
     </>
