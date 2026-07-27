@@ -89,12 +89,9 @@ export default function SkillsIndex() {
 
             <aside className="skills-cta">
               <div>
-                <h2>看完覺得「這個我也想用」？</h2>
-                <p>
-                  這些技能單獨用已經很有幫助，但真正省時間的是把它們串成一條固定跑的流程。
-                  我們替客戶做過蝦皮每日置頂、MOMO 售更多排程這類自動化代管，
-                  也能依你的營運節奏設計一套。
-                </p>
+                <h2>省去無意義的試錯時間！</h2>
+                <p>看了再多 AI 趨勢與教學，依然無法真正落地應用？</p>
+                <p>把專業交給專業，我們為你量身打造 AI 自動化解決方案。</p>
               </div>
               <div className="skills-cta-actions">
                 <a href="/#automation" className="btn-primary">看 AI 自動化代管服務</a>

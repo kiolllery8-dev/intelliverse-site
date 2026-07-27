@@ -2140,6 +2140,7 @@ footer::before {
   line-height: 1.6;
   color: var(--ink-soft);
 }
+.skills-cta p + p { margin-top: 10px; }
 .skills-cta-actions {
   display: flex;
   flex-direction: column;
