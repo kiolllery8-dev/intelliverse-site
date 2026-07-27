@@ -230,9 +230,9 @@ export default async function SkillPage({
 
             <aside className="skills-cta">
               <div>
-                <h2>省去無意義的試錯時間！</h2>
-                <p>看了再多 AI 趨勢與教學，依然無法真正落地應用？</p>
-                <p>把專業交給專業，我們為你量身打造 AI 自動化解決方案。</p>
+                <h2>想把這項 AI 能力，真正變成公司的固定營運流程？</h2>
+                <p>單次使用只是幫個人省時間；融入日常流程，才是替企業把整個人力成本換回來。</p>
+                <p>不論是跨平台數據整理、定期營運報表產出、客戶需求自動對接，還是繁瑣的排程作業——我們能依據你的營運模式，量身打造專屬的 AI 自動化架構。</p>
               </div>
               <div className="skills-cta-actions">
                 <a href="/#automation" className="btn-primary">看 AI 自動化代管服務</a>

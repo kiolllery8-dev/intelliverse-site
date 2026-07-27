@@ -18,7 +18,7 @@ export default function SiteFooter() {
             <h4>CONTACT</h4>
             <a href="mailto:linsonder6@gmail.com" className="big-link">linsonder6@gmail.com</a>
             <a href="tel:+886926213896" className="big-link">+886 926-213-896</a>
-            <p>週一至週五 10:00–19:00</p>
+            <p>週一至週五 10:00–23:00</p>
           </div>
           <div className="footer-block">
             <h4>STUDIO</h4>
