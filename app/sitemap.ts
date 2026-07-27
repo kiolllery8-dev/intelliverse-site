@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { SECTIONS, WORKS, TYPES } from './content';
+import { SKILLS } from './skills-data';
 
 export const dynamic = 'force-static';
 
@@ -14,14 +15,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1.0,
     },
-    // 錨點區塊：讓 Google 認得每個 section 是頁面上獨立實體
+    // AI 技能圖書館索引
+    {
+      url: `${SITE_URL}/skills/`,
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // 每個技能一頁 —— 各自鎖定不同長尾關鍵字
+    ...SKILLS.map((s) => ({
+      url: `${SITE_URL}/skills/${s.slug}/`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+    // 首頁錨點區塊
     ...SECTIONS.map((s) => ({
       url: `${SITE_URL}/#${s.id}`,
       lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
-    // 網站類型：每種類型的落地錨點
+    // 網站類型錨點
     ...TYPES.map((t) => ({
       url: `${SITE_URL}/#${t.id}`,
       lastModified,

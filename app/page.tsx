@@ -1,84 +1,12 @@
 import { FAQ, WORKS, TYPES, WORK_CATEGORIES } from './content';
+import { HOME_SCHEMAS } from './home-schema';
+import SiteNav from './components/SiteNav';
+import SiteFooter from './components/SiteFooter';
 
 export default function Home() {
   return (
     <>
-      <a href="#top" className="skip-link">跳到主內容</a>
-      <nav className="nav" id="nav" aria-label="主選單">
-        <div className="shell nav-inner">
-          <a href="#top" className="logo" aria-label="靈境智造首頁">
-            靈境<em>·</em>智造
-          </a>
-          <ul className="nav-links" role="menubar">
-            <li role="none"><a role="menuitem" href="#about">關於我們</a></li>
-            <li role="none"><a role="menuitem" href="#services">服務項目</a></li>
-            <li role="none" className="has-sub">
-              <a role="menuitem" href="#types" aria-haspopup="true">合作方式</a>
-              <ul className="nav-sub" role="menu">
-                <li role="none"><a role="menuitem" href="#automation">AI 自動化代管</a></li>
-                <li role="none"><a role="menuitem" href="#type-brand">品牌形象網站</a></li>
-                <li role="none"><a role="menuitem" href="#type-ecom">電商／購物網站</a></li>
-                <li role="none"><a role="menuitem" href="#type-content">知識／內容網站</a></li>
-                <li role="none"><a role="menuitem" href="#type-service">服務／預約網站</a></li>
-                <li role="none"><a role="menuitem" href="#type-landing">一頁式網站</a></li>
-              </ul>
-            </li>
-            <li role="none" className="has-sub">
-              <a role="menuitem" href="#works" aria-haspopup="true">作品</a>
-              <ul className="nav-sub" role="menu">
-                <li role="none"><a role="menuitem" href="#work-zeng">曾會長｜個人 IP 網站</a></li>
-                <li role="none"><a role="menuitem" href="#work-auslife-jiejie">AUSLIFE｜結界噴霧</a></li>
-                <li role="none"><a role="menuitem" href="#work-auslife-zhaocai">AUSLIFE｜招財噴霧</a></li>
-                <li role="none"><a role="menuitem" href="#work-intelliverse">精油能量圖譜</a></li>
-                <li role="none"><a role="menuitem" href="#work-ausgarden">AUS GARDEN 澳維花園</a></li>
-                <li role="none"><a role="menuitem" href="#work-goldfishion">Gold Fishion 美妝代工</a></li>
-                <li role="none"><a role="menuitem" href="#work-tarot">紫妍塔羅芳療學院</a></li>
-              </ul>
-            </li>
-            <li role="none">
-              <a role="menuitem" href="https://tools.intelliverse.tw" target="_blank" rel="noopener noreferrer" className="nav-external">
-                小工具 <span aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li role="none"><a role="menuitem" href="#faq">常見問答</a></li>
-            <li role="none"><a role="menuitem" href="#contact">聯絡</a></li>
-          </ul>
-          <a href="mailto:linsonder6@gmail.com" className="nav-mail">linsonder6@gmail.com</a>
-          <a href="#menu" className="nav-toggle" aria-label="開啟選單">
-            <span /><span /><span />
-          </a>
-        </div>
-        <div className="nav-drawer" id="menu">
-          <a href="#menu-close" className="nav-drawer-close" aria-label="關閉選單">✕</a>
-          <div className="nav-drawer-links">
-            <a href="#about">關於我們</a>
-            <a href="#services">服務項目</a>
-            <div className="nav-drawer-group">
-              <span className="nav-drawer-group-label">合作方式</span>
-              <a href="#automation">AI 自動化代管</a>
-              <a href="#type-brand">品牌形象網站</a>
-              <a href="#type-ecom">電商／購物網站</a>
-              <a href="#type-content">知識／內容網站</a>
-              <a href="#type-service">服務／預約網站</a>
-              <a href="#type-landing">一頁式網站</a>
-            </div>
-            <div className="nav-drawer-group">
-              <span className="nav-drawer-group-label">作品</span>
-              <a href="#work-auslife-jiejie">AUSLIFE｜結界噴霧</a>
-              <a href="#work-auslife-zhaocai">AUSLIFE｜招財噴霧</a>
-              <a href="#work-intelliverse">精油能量圖譜</a>
-              <a href="#work-ausgarden">AUS GARDEN 澳維花園</a>
-              <a href="#work-goldfishion">Gold Fishion 美妝代工</a>
-              <a href="#work-tarot">紫妍塔羅芳療學院</a>
-            </div>
-            <a href="https://tools.intelliverse.tw" target="_blank" rel="noopener noreferrer">小工具 ↗</a>
-            <a href="#faq">常見問答</a>
-            <a href="#contact">聯絡</a>
-          </div>
-          <a href="mailto:linsonder6@gmail.com" className="nav-drawer-mail">✦ linsonder6@gmail.com</a>
-        </div>
-        <a href="#menu-close" className="nav-drawer-backdrop" aria-hidden="true" id="menu-close" tabIndex={-1} />
-      </nav>
+      <SiteNav />
 
       <main>
       <header id="top" className="hero">
@@ -374,6 +302,20 @@ export default function Home() {
             </ul>
           </div>
 
+          <div className="automation-links">
+            <a href="/skills/" className="automation-library">
+              <div>
+                <span className="automation-library-tag">SKILL LIBRARY</span>
+                <strong>先看看 AI 到底能幫你做哪些事</strong>
+                <p>
+                  我們整理了 18 個 GitHub 熱門 AI 技能的繁體中文說明——
+                  發票整理、競品廣告拆解、商品圖優化、會議記錄，都有實際用法與對話範例。
+                </p>
+              </div>
+              <span className="automation-library-go" aria-hidden="true">→</span>
+            </a>
+          </div>
+
           <a href="mailto:linsonder6@gmail.com?subject=AI%20%E8%87%AA%E5%8B%95%E5%8C%96%E4%BB%A3%E7%AE%A1%E8%A9%A2%E5%95%8F" className="automation-cta">
             <span>有重複的工作想交出去？</span>
             <span>告訴我們你最痛的那一個 <em>→</em></span>
@@ -555,40 +497,7 @@ export default function Home() {
       </section>
       </main>
 
-      <footer id="contact">
-        <div className="shell">
-          <div className="footer-grid">
-            <div className="footer-cta">
-              <div className="footer-kicker">— GET IN TOUCH</div>
-              <h2>
-                有想做的事，<br />
-                就直接 <em>寫信聊聊</em> 吧。
-              </h2>
-              <p>
-                不論是一顆還在草稿階段的點子、一款需要重新被設計的既有商品，
-                或是一次需要加速的廣告投放，都歡迎直接聯絡我們。
-              </p>
-            </div>
-            <div className="footer-block">
-              <h4>CONTACT</h4>
-              <a href="mailto:linsonder6@gmail.com" className="big-link">linsonder6@gmail.com</a>
-              <a href="tel:+886926213896" className="big-link">+886 926-213-896</a>
-              <p>週一至週五 10:00–19:00</p>
-            </div>
-            <div className="footer-block">
-              <h4>STUDIO</h4>
-              <p>靈境智造</p>
-              <p>INTELLIVERSE STUDIO</p>
-              <address>臺中市太平區精美路 122 號</address>
-              <p className="footer-tag">Design · Engineering · Media</p>
-            </div>
-          </div>
-          <div className="footer-base">
-            <div>© 2026 INTELLIVERSE STUDIO · 靈境智造 · ALL RIGHTS RESERVED</div>
-            <div>HARDWARE · SOFTWARE · DESIGN · MEDIA</div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
 
       {/* 導向 #work-* 錨點時：自動展開作品區、把分類重設為「全部」，避免目標卡片被篩選隱藏 */}
       <script
@@ -597,6 +506,15 @@ export default function Home() {
             "(function(){function open(){var h=location.hash;if(!/^#work-/.test(h))return;var a=document.getElementById('wf-all');if(a&&!a.checked)a.checked=true;var d=document.getElementById('works-fold');if(d&&!d.open)d.open=true;requestAnimationFrame(function(){var t=document.querySelector(h);if(t)t.scrollIntoView({block:'start'});});}open();addEventListener('hashchange',open);})();",
         }}
       />
+
+      {/* 首頁專屬結構化資料（WebPage / FAQ / 麵包屑 / 作品集 / 自動化 HowTo） */}
+      {HOME_SCHEMAS.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </>
   );
 }
