@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import SiteNav from '../components/SiteNav';
 import SiteFooter from '../components/SiteFooter';
 import { SKILLS, skillsByCategory } from '../skills-data';
+import { catSlug } from '../skill-categories';
 
 const SITE_URL = 'https://show.intelliverse.tw';
 
@@ -54,11 +55,7 @@ export default function SkillsIndex() {
               AI 能幫你做的事，<br />
               比你想的還多。
             </h1>
-            <p className="page-lede">
-              我們從 GitHub 上最熱門的 AI Agent Skills 開源專案裡，挑出對台灣中小企業、
-              電商經營者與設計工作室真正有用的幾個，翻譯成繁體中文，
-              再改寫成「你看得懂、也知道怎麼開口用」的說明書。
-            </p>
+            <p className="page-lede">你都不會，我們幫你。</p>
             <div className="page-meta">
               <div><b>{SKILLS.length}</b><span>SKILLS</span></div>
               <div><b>{groups.length}</b><span>CATEGORIES</span></div>
@@ -70,7 +67,7 @@ export default function SkillsIndex() {
         <section className="skills-section">
           <div className="shell">
             {groups.map((g) => (
-              <div key={g.category} className="skill-group" id={`cat-${encodeURIComponent(g.category)}`}>
+              <div key={g.category} className="skill-group" id={`cat-${catSlug(g.category)}`}>
                 <div className="skill-group-head">
                   <h2>{g.category}</h2>
                   <span>{g.items.length} 個技能</span>

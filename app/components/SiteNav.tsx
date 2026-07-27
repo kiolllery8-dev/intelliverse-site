@@ -1,4 +1,6 @@
 import { WORKS, TYPES } from '../content';
+import { SKILLS, skillsByCategory } from '../skills-data';
+import { catSlug } from '../skill-categories';
 
 /**
  * 共用主選單。
@@ -6,6 +8,8 @@ import { WORKS, TYPES } from '../content';
  */
 export default function SiteNav({ base = '' }: { base?: string }) {
   const h = (anchor: string) => `${base}#${anchor}`;
+  const skillGroups = skillsByCategory();
+  const SKILL_TOTAL = SKILLS.length;
 
   return (
     <>
@@ -39,7 +43,22 @@ export default function SiteNav({ base = '' }: { base?: string }) {
                 ))}
               </ul>
             </li>
-            <li role="none"><a role="menuitem" href="/skills/">AI 技能庫</a></li>
+            <li role="none" className="has-sub">
+              <a role="menuitem" href="/skills/" aria-haspopup="true">AI 技能庫</a>
+              <ul className="nav-sub" role="menu">
+                {skillGroups.map((g) => (
+                  <li role="none" key={g.category}>
+                    <a role="menuitem" href={`/skills/#cat-${catSlug(g.category)}`}>
+                      {g.category}
+                      <span className="nav-sub-count">{g.items.length}</span>
+                    </a>
+                  </li>
+                ))}
+                <li role="none" className="nav-sub-divider">
+                  <a role="menuitem" href="/skills/">全部 {SKILL_TOTAL} 個技能 →</a>
+                </li>
+              </ul>
+            </li>
             <li role="none">
               <a
                 role="menuitem"
@@ -77,7 +96,15 @@ export default function SiteNav({ base = '' }: { base?: string }) {
                 <a key={w.slug} href={h(w.slug)}>{w.title}</a>
               ))}
             </div>
-            <a href="/skills/">AI 技能庫</a>
+            <div className="nav-drawer-group">
+              <span className="nav-drawer-group-label">AI 技能庫</span>
+              {skillGroups.map((g) => (
+                <a key={g.category} href={`/skills/#cat-${catSlug(g.category)}`}>
+                  {g.category}（{g.items.length}）
+                </a>
+              ))}
+              <a href="/skills/">全部 {SKILL_TOTAL} 個技能 →</a>
+            </div>
             <a href="https://tools.intelliverse.tw" target="_blank" rel="noopener noreferrer">小工具 ↗</a>
             <a href={h('faq')}>常見問答</a>
             <a href={h('contact')}>聯絡</a>

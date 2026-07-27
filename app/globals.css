@@ -223,6 +223,37 @@ a { color: inherit; text-decoration: none; }
   color: var(--gold-deep);
   padding-left: 26px;
 }
+/* 分類項目右側的技能數量 */
+.nav-sub > li > a:has(.nav-sub-count) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.nav-sub-count {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--ink-dim);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 1px 7px;
+  flex-shrink: 0;
+}
+.nav-sub > li > a:hover .nav-sub-count {
+  color: var(--gold-deep);
+  border-color: var(--line-strong);
+}
+/* 「全部技能」放在分隔線之下 */
+.nav-sub-divider {
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  padding-top: 8px;
+}
+.nav-sub-divider > a {
+  color: var(--gold-deep) !important;
+  font-size: 12px !important;
+}
 .nav-mail {
   font-family: 'Inter', monospace;
   font-size: 17px;
