@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * 從 workflow 的 journal.jsonl 萃取文章資料，產生 app/skills-data.ts。
- * 用法：node tools/build-skills-data.js <journal.jsonl 路徑>
+ * 用法：node tools/build-skills-data.js <journal.jsonl> [更多 journal...]
+ * 可傳多個 journal（多批 workflow 的產出），後面的覆蓋前面的同名 slug。
  */
 const fs = require('fs');
 const path = require('path');
@@ -25,18 +26,45 @@ const SOURCES = {
   'prompt-engineer':            { repo: 'Jeffallan/claude-skills',          p: 'skills/prompt-engineer',      stars: '10,747' },
   'security-reviewer':          { repo: 'Jeffallan/claude-skills',          p: 'skills/security-reviewer',    stars: '10,747' },
   'dev-browser':                { repo: 'SawyerHood/dev-browser',           p: 'skills/dev-browser',          stars: '6,479' },
+
+  // ── 第二批：alirezarezvani/claude-skills（23,256 stars）──
+  'local-seo-manager':    { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/local-seo-manager',    stars: '23,256' },
+  'paid-ads':             { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/paid-ads',             stars: '23,256' },
+  'copywriting':          { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/copywriting',          stars: '23,256' },
+  'pricing-strategy':     { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/pricing-strategy',     stars: '23,256' },
+  'seo-audit':            { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/seo-audit',            stars: '23,256' },
+  'page-cro':             { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/page-cro',             stars: '23,256' },
+  'social-media-manager': { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/social-media-manager', stars: '23,256' },
+  'email-sequence':       { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/email-sequence',       stars: '23,256' },
+  'churn-prevention':     { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/churn-prevention',     stars: '23,256' },
+  'ad-creative':          { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/ad-creative',          stars: '23,256' },
+  'schema-markup':        { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/schema-markup',        stars: '23,256' },
+  'process-mapper':       { repo: 'alirezarezvani/claude-skills', p: 'business-operations/skills/process-mapper',   stars: '23,256' },
+  'vendor-management':    { repo: 'alirezarezvani/claude-skills', p: 'business-operations/skills/vendor-management',stars: '23,256' },
+  'financial-analyst':    { repo: 'alirezarezvani/claude-skills', p: 'finance/skills/financial-analyst',            stars: '23,256' },
 };
 
 // 索引頁的分類顯示順序
-const CATEGORY_ORDER = ['文件整理', '行銷內容', '電商經營', '設計創意', '開發工程', '業務開發'];
+const CATEGORY_ORDER = [
+  '文件整理', '行銷內容', '電商經營', '設計創意',
+  '開發工程', '業務開發', '營運管理',
+];
 
-const journalPath = process.argv[2];
-if (!journalPath || !fs.existsSync(journalPath)) {
-  console.error('找不到 journal 檔案:', journalPath);
+const journalPaths = process.argv.slice(2);
+if (!journalPaths.length) {
+  console.error('用法: node tools/build-skills-data.js <journal.jsonl> [更多 journal...]');
   process.exit(1);
 }
+for (const jp of journalPaths) {
+  if (!fs.existsSync(jp)) {
+    console.error('找不到 journal 檔案:', jp);
+    process.exit(1);
+  }
+}
 
-const lines = fs.readFileSync(journalPath, 'utf8').split('\n').filter(Boolean);
+const lines = journalPaths.flatMap((jp) =>
+  fs.readFileSync(jp, 'utf8').split('\n').filter(Boolean)
+);
 
 // 後出現的覆蓋先出現的 —— Fix 階段的結果會蓋掉 Write 階段的
 const bySlug = new Map();

@@ -10,6 +10,7 @@ export const CATEGORY_SLUGS: Record<string, string> = {
   設計創意: 'design',
   開發工程: 'dev',
   業務開發: 'sales',
+  營運管理: 'operations',
 };
 
 export function catSlug(category: string): string {

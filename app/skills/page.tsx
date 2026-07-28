@@ -59,7 +59,7 @@ export default function SkillsIndex() {
             <div className="page-meta">
               <div><b>{SKILLS.length}</b><span>SKILLS</span></div>
               <div><b>{groups.length}</b><span>CATEGORIES</span></div>
-              <div><b>3</b><span>SOURCE REPOS</span></div>
+              <div><b>{new Set(SKILLS.map((s) => s.sourceRepo)).size}</b><span>SOURCE REPOS</span></div>
             </div>
           </div>
         </header>
