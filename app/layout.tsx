@@ -245,6 +245,20 @@ const websiteJsonLd = {
   publisher: { '@id': `${SITE_URL}/#organization` },
 };
 
+/* ---------- 線上客服「工程聊聊」設定 ---------- */
+const CHAT_CONFIG = {
+  origin: 'https://chat.intelliverse.tw',
+  title: '工程聊聊',
+  subtitle: '靈境智造 · 真人回覆，通常幾分鐘內',
+  greeting:
+    '您好，這裡是靈境智造 👋\n\n' +
+    '不論是 AI 自動化、軟硬體整合，還是網站與廣告投放的需求，都可以直接在這裡問。\n\n' +
+    '接手回覆的是真人工程團隊，不是罐頭訊息——先聽懂你的狀況，再告訴你這件事到底做不做得起來、大概要花多少。',
+  // 配合網站的米白＋金色調，覆蓋 widget 預設的綠色
+  color: '#b8924a',
+  color2: '#d9b872',
+};
+
 /* Service 節點 — 為 4 大服務加獨立 @id，方便被 Google Knowledge Graph 認得 */
 const serviceNodes = [
   {
@@ -347,7 +361,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           避免出現在 /skills/* 內頁造成語意錯誤與 BreadcrumbList 重複。
         */}
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+
+        {/*
+          線上客服「工程聊聊」
+          後端沿用家裡 server 上既有的 chat-intelliverse 服務，
+          設定值透過 window.IV_CHAT 覆寫（widget 預設是精油站的綠色配色）。
+          必須在 widget.js 之前定義，否則會吃到預設值。
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.IV_CHAT=${JSON.stringify(CHAT_CONFIG)};`,
+          }}
+        />
+        <script src="https://chat.intelliverse.tw/widget.js" defer />
+      </body>
     </html>
   );
 }
