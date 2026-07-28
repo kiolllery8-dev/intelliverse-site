@@ -247,7 +247,8 @@ const websiteJsonLd = {
 
 /* ---------- 線上客服「工程聊聊」設定 ---------- */
 const CHAT_CONFIG = {
-  origin: 'https://chat.intelliverse.tw',
+  // 不指定 origin —— 讓 widget 由自己的 script src 推導出
+  // https://show.intelliverse.tw/chat，這樣就不依賴 chat.intelliverse.tw
   title: '工程聊聊',
   subtitle: '靈境智造 · 真人回覆，通常幾分鐘內',
   greeting:
@@ -366,16 +367,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/*
           線上客服「工程聊聊」
-          後端沿用家裡 server 上既有的 chat-intelliverse 服務，
-          設定值透過 window.IV_CHAT 覆寫（widget 預設是精油站的綠色配色）。
-          必須在 widget.js 之前定義，否則會吃到預設值。
+          後端是家裡 server 的 chat-intelliverse 容器，經由本站 /chat/ 反代，
+          所以不依賴 chat.intelliverse.tw（該網域另有他用）。
+          widget 會從自己的 script src 推導出 base = /chat，
+          socket.io 也會自動接上 /chat/socket.io。
+          設定必須在 widget.js 之前定義，否則會吃到預設值。
         */}
         <script
           dangerouslySetInnerHTML={{
             __html: `window.IV_CHAT=${JSON.stringify(CHAT_CONFIG)};`,
           }}
         />
-        <script src="https://chat.intelliverse.tw/widget.js" defer />
+        <script src="/chat/widget.js" defer />
       </body>
     </html>
   );
