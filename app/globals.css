@@ -126,6 +126,8 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.14em;
   font-size: 26px;
   color: var(--ink);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .logo em {
   font-style: normal;
@@ -135,6 +137,7 @@ a { color: inherit; text-decoration: none; }
 .nav-links {
   list-style: none;
   display: flex;
+  flex-wrap: nowrap;
   gap: 32px;
   font-size: 17px;
   letter-spacing: 0.08em;
@@ -149,6 +152,7 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
   transition: color .25s ease;
 }
 .nav-links > li > a:hover { color: var(--gold-deep); }
@@ -260,6 +264,8 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.02em;
   color: var(--ink-soft);
   padding: 4px 0;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: color .25s ease;
 }
 .nav-mail::before {
@@ -376,8 +382,29 @@ a { color: inherit; text-decoration: none; }
   pointer-events: auto;
 }
 
-@media (max-width: 860px) {
-  .nav-links, .nav-mail { display: none; }
+/*
+  Nav 需要的最小寬度（實測，nowrap 狀態）：
+    logo 161 + links 805 + mail 215 + shell padding 64 = 1245px
+  低於此寬度就會被擠壓換行，因此分階段讓出空間，
+  最後才切換成漢堡選單。
+*/
+
+/* 1245px 以下：先收掉 email，換回 805 + 32 的空間 */
+@media (max-width: 1245px) {
+  .nav-mail { display: none; }
+}
+
+/* 1080px 以下：縮字級與間距，讓 7 個項目仍排得下 */
+@media (max-width: 1080px) {
+  .nav-links { gap: 22px; font-size: 15px; }
+  .nav-links > li.has-sub > a::before { font-size: 10px; margin-right: 2px; }
+  .nav-external span { font-size: 12px; }
+  .logo { font-size: 22px; letter-spacing: 0.1em; }
+}
+
+/* 940px 以下：橫向選單已無法完整呈現，改用漢堡 */
+@media (max-width: 940px) {
+  .nav-links { display: none; }
   .nav-toggle { display: flex; }
 }
 
