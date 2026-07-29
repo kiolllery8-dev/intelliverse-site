@@ -21,6 +21,10 @@ export async function generateMetadata({
 
   const title = `${skill.nameZh}｜${skill.nameEn} AI 技能用法完整說明`;
   const description = `${skill.tagline}｜${skill.summary}`.slice(0, 155);
+  // 有專屬流程圖就拿它當分享縮圖，比通用 OG 圖更能說明這頁在講什麼
+  const share = skill.image
+    ? { url: skill.image, width: 1200, height: 800, alt: skill.imageAlt }
+    : { url: '/og-image.png', width: 1200, height: 630 };
 
   return {
     title,
@@ -33,7 +37,7 @@ export async function generateMetadata({
       url: `${SITE_URL}/skills/${skill.slug}/`,
       title,
       description,
-      images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+      images: [share],
     },
     twitter: {
       card: 'summary_large_image',
@@ -66,7 +70,7 @@ export default async function SkillPage({
     keywords: skill.keywords.join(', '),
     articleSection: skill.category,
     url: `${SITE_URL}/skills/${skill.slug}/`,
-    image: `${SITE_URL}/og-image.png`,
+    image: `${SITE_URL}${skill.image || '/og-image.png'}`,
     author: { '@id': `${SITE_URL}/#organization` },
     publisher: { '@id': `${SITE_URL}/#organization` },
     isPartOf: { '@id': `${SITE_URL}/#website` },
@@ -86,6 +90,7 @@ export default async function SkillPage({
     name: `${skill.nameZh}怎麼用`,
     description: skill.summary,
     inLanguage: 'zh-Hant-TW',
+    ...(skill.image ? { image: `${SITE_URL}${skill.image}` } : {}),
     step: skill.howToUse.map((s, i) => ({
       '@type': 'HowToStep',
       position: i + 1,
@@ -134,6 +139,20 @@ export default async function SkillPage({
           </header>
 
           <div className="shell skill-body">
+            {skill.image && (
+              <figure className="skill-figure">
+                <img
+                  src={skill.image}
+                  alt={skill.imageAlt}
+                  width={1200}
+                  height={800}
+                  loading="eager"
+                  decoding="async"
+                />
+                <figcaption>{skill.nameZh}的四個操作階段</figcaption>
+              </figure>
+            )}
+
             <section className="skill-block">
               <h2>這是什麼</h2>
               <p className="skill-summary">{skill.summary}</p>

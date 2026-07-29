@@ -75,6 +75,17 @@ export default function SkillsIndex() {
                 <div className="skill-grid">
                   {g.items.map((s) => (
                     <a key={s.slug} href={`/skills/${s.slug}/`} className="skill-card">
+                      {s.image && (
+                        <img
+                          className="skill-card-img"
+                          src={s.image}
+                          alt=""
+                          width={1200}
+                          height={800}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      )}
                       <div className="skill-card-cat">{s.category}</div>
                       <h3>{s.nameZh}</h3>
                       <p className="skill-card-en">{s.nameEn}</p>

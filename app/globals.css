@@ -2063,16 +2063,30 @@ footer::before {
   gap: 20px;
 }
 .skill-card {
+  --card-pad-x: 26px;
+  --card-pad-t: 28px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 6px;
-  padding: 28px 26px 24px;
+  padding: var(--card-pad-t) var(--card-pad-x) 24px;
   transition: all .3s ease;
   position: relative;
   overflow: hidden;
+}
+/* 流程圖滿版貼齊卡片上緣，靠負邊距抵銷卡片內距 */
+.skill-card-img {
+  display: block;
+  width: calc(100% + var(--card-pad-x) * 2);
+  /* height: auto 不能省 —— img 上有 height="800" 屬性，不覆寫的話 aspect-ratio 不會生效，
+     卡片會被撐成 1100px 高 */
+  height: auto;
+  margin: calc(var(--card-pad-t) * -1) calc(var(--card-pad-x) * -1) 6px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
 }
 .skill-card::before {
   content: '';
@@ -2140,7 +2154,7 @@ footer::before {
 @media (max-width: 1000px) { .skill-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) {
   .skill-grid { grid-template-columns: 1fr; gap: 14px; }
-  .skill-card { padding: 22px 20px; }
+  .skill-card { --card-pad-x: 20px; --card-pad-t: 22px; padding: var(--card-pad-t) var(--card-pad-x) 22px; }
   .skill-group { margin-bottom: 44px; }
 }
 
@@ -2236,6 +2250,30 @@ footer::before {
 }
 
 .skill-body { padding-bottom: 96px; }
+
+/* 技能頁頂端的流程示意圖 */
+.skill-figure {
+  margin: 44px 0 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card);
+}
+.skill-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.skill-figure figcaption {
+  padding: 12px 20px;
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--ink-dim);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
 .skill-block {
   padding: 44px 0;
   border-top: 1px solid var(--line);

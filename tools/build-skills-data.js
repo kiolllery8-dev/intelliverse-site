@@ -42,15 +42,108 @@ const SOURCES = {
   'process-mapper':       { repo: 'alirezarezvani/claude-skills', p: 'business-operations/skills/process-mapper',   stars: '23,256' },
   'vendor-management':    { repo: 'alirezarezvani/claude-skills', p: 'business-operations/skills/vendor-management',stars: '23,256' },
   'financial-analyst':    { repo: 'alirezarezvani/claude-skills', p: 'finance/skills/financial-analyst',            stars: '23,256' },
+
+  // ── 第三批 ──
+  // ZeroPointRepo/youtube-skills（438 stars）
+  'transcript':        { repo: 'ZeroPointRepo/youtube-skills', p: 'skills/transcript',        stars: '438' },
+  'youtube-search':    { repo: 'ZeroPointRepo/youtube-skills', p: 'skills/youtube-search',    stars: '438' },
+  'youtube-channels':  { repo: 'ZeroPointRepo/youtube-skills', p: 'skills/youtube-channels',  stars: '438' },
+  'youtube-playlist':  { repo: 'ZeroPointRepo/youtube-skills', p: 'skills/youtube-playlist',  stars: '438' },
+  // ComposioHQ/awesome-claude-skills（70,983 stars）
+  'brand-guidelines':  { repo: 'ComposioHQ/awesome-claude-skills', p: 'brand-guidelines', stars: '70,983' },
+  'canvas-design':     { repo: 'ComposioHQ/awesome-claude-skills', p: 'canvas-design',    stars: '70,983' },
+  'webapp-testing':    { repo: 'ComposioHQ/awesome-claude-skills', p: 'webapp-testing',   stars: '70,983' },
+  // obra/superpowers（262,891 stars）
+  'brainstorming':     { repo: 'obra/superpowers', p: 'skills/brainstorming', stars: '262,891' },
+  'writing-plans':     { repo: 'obra/superpowers', p: 'skills/writing-plans', stars: '262,891' },
+  // addyosmani/agent-skills（80,825 stars）
+  'planning-and-task-breakdown': { repo: 'addyosmani/agent-skills', p: 'skills/planning-and-task-breakdown', stars: '80,825' },
+  // vercel-labs/agent-skills（29,584 stars）
+  'web-design-guidelines': { repo: 'vercel-labs/agent-skills', p: 'skills/web-design-guidelines', stars: '29,584' },
+  'writing-guidelines':    { repo: 'vercel-labs/agent-skills', p: 'skills/writing-guidelines',    stars: '29,584' },
+  // alirezarezvani/claude-skills（23,256 stars）
+  'contract-and-proposal-writer': { repo: 'alirezarezvani/claude-skills', p: 'business-growth/skills/contract-and-proposal-writer', stars: '23,256' },
+  'customer-success-manager':     { repo: 'alirezarezvani/claude-skills', p: 'business-growth/skills/customer-success-manager',     stars: '23,256' },
+  'rfp-responder':                { repo: 'alirezarezvani/claude-skills', p: 'commercial/skills/rfp-responder',                     stars: '23,256' },
+  'competitive-teardown':         { repo: 'alirezarezvani/claude-skills', p: 'product-team/skills/competitive-teardown',            stars: '23,256' },
+  'ui-design-system':             { repo: 'alirezarezvani/claude-skills', p: 'product-team/skills/ui-design-system',                stars: '23,256' },
+  'landing-page-generator':       { repo: 'alirezarezvani/claude-skills', p: 'product-team/skills/landing-page-generator',          stars: '23,256' },
+  'experiment-designer':          { repo: 'alirezarezvani/claude-skills', p: 'product-team/skills/experiment-designer',             stars: '23,256' },
+  'capacity-planner':             { repo: 'alirezarezvani/claude-skills', p: 'business-operations/skills/capacity-planner',         stars: '23,256' },
+
+  // ── 第四批 ──
+  // 影音：長影片自動剪成短影音
+  'youtube-shorts-generator': { repo: 'Anil-matcha/AI-Youtube-Shorts-Generator', p: '.claude/skills/youtube-shorts-generator', stars: '4,415' },
+  'ai-clipping':              { repo: 'SamurAIGPT/Generative-Media-Skills',      p: 'library/edit/ai-clipping',                stars: '3,930' },
+  'clipify':                  { repo: 'louisedesadeleer/clipify',                p: '',                                        stars: '491' },
+  // 文件與行政
+  'legal-compare':      { repo: 'zubair-trabzada/ai-legal-claude',  p: 'skills/legal-compare',    stars: '1,596' },
+  'ai-meeting-notes':   { repo: 'LeoYeAI/openclaw-master-skills',   p: 'skills/ai-meeting-notes', stars: '2,110' },
+  'slide-maker':        { repo: 'addsumtech/slides_maker',          p: 'skills/slide-maker',      stars: '329' },
+  'mineru':             { repo: 'Nebutra/MinerU-Skill',             p: '',                        stars: '87' },
+  'financial-parser':   { repo: 'OneWave-AI/claude-skills',         p: 'financial-parser',        stars: '230' },
+  // 電商經營
+  'product-description-generator': { repo: 'nexscope-ai/eCommerce-Skills', p: 'product-description-generator', stars: '513' },
+  'price-optimization-tool':       { repo: 'nexscope-ai/eCommerce-Skills', p: 'price-optimization-tool',       stars: '513' },
+  'inventory-reorder-planner':     { repo: 'OneWave-AI/claude-skills',     p: 'inventory-reorder-planner',     stars: '230' },
+  'ecom-rfm-analysis':             { repo: 'asgard-ai-platform/skills',    p: 'ecom-rfm-analysis',             stars: '222' },
+  'tw-einvoice-guide':             { repo: 'asgard-ai-platform/skills',    p: 'tw-einvoice-guide',             stars: '222' },
+  'angry-customer-playbook':       { repo: 'composio-community/support-skills', p: 'angry-customer-playbook',  stars: '13' },
+  'ecommerce-customer-service-pro': { repo: 'dvcrn/openclaw-skills-marketplace', p: 'plugins/52yuanchangxing--ecommerce-customer-service-pro/skills/ecommerce-customer-service-pro', stars: '27' },
+  // 營運管理
+  'tw-tax-basics':             { repo: 'asgard-ai-platform/skills',     p: 'tw-tax-basics',             stars: '222' },
+  'cash-flow-forecast':        { repo: 'mohitagw15856/pm-claude-skills', p: 'skills/cash-flow-forecast', stars: '1,237' },
+  'cowork-invoice-chaser':     { repo: 'OneWave-AI/claude-skills',      p: 'cowork-invoice-chaser',     stars: '230' },
+  'job-profitability-analyzer':{ repo: 'OneWave-AI/claude-skills',      p: 'job-profitability-analyzer', stars: '230' },
+  // 設計創意
+  'html-ppt':             { repo: 'lewislulu/html-ppt-skill',        p: '', stars: '7,465' },
+  'social-card-maker':    { repo: 'op7418/guizang-social-card-skill', p: '', stars: '5,659' },
+  'power-design':         { repo: 'ItsssssJack/power-design',         p: '', stars: '573' },
+  'image-prompt-advisor': { repo: 'YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill', p: '', stars: '1,787' },
+  // 行銷 / 業務
+  'last30days': { repo: 'mvanhorn/last30days-skill',   p: 'skills/last30days',              stars: '54,803' },
+  'cold-email': { repo: 'alirezarezvani/claude-skills', p: 'marketing-skill/skills/cold-email', stars: '23,407' },
 };
+
+/**
+ * 台灣用語修正表。
+ * 第一、二批文章是舊 workflow 產的，漏了幾個中國用語；journal 不能改，
+ * 所以在這裡統一過濾，之後重建也不會跑掉。
+ * 只放「確定是中國用語」的：像「點擊率」「菜單」「矩陣」台灣數位行銷本來就這樣講，不要動。
+ */
+const TERM_FIXES = [
+  [/落地頁/g, '銷售頁'],
+  [/第一屏/g, '第一眼'],
+  [/一鍵取消/g, '按一下就取消'],
+];
+
+function twSanitize(value) {
+  if (typeof value === 'string') {
+    return TERM_FIXES.reduce((s, [re, to]) => s.replace(re, to), value);
+  }
+  if (Array.isArray(value)) return value.map(twSanitize);
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, twSanitize(v)]));
+  }
+  return value;
+}
 
 // 索引頁的分類顯示順序
 const CATEGORY_ORDER = [
-  '文件整理', '行銷內容', '電商經營', '設計創意',
+  '文件整理', '行銷內容', '影音內容', '電商經營', '設計創意',
   '開發工程', '業務開發', '營運管理',
 ];
 
-const journalPaths = process.argv.slice(2);
+// --diagrams=<file>：補上流程圖規格（既有技能的 diagram 不在文章 journal 裡）
+const diagArg = process.argv.slice(2).find((a) => a.startsWith('--diagrams='));
+const DIAGRAMS = new Map();
+if (diagArg) {
+  const dp = diagArg.split('=')[1];
+  for (const d of JSON.parse(fs.readFileSync(dp, 'utf8'))) DIAGRAMS.set(d.slug, d);
+  console.log(`載入 ${DIAGRAMS.size} 份流程圖規格`);
+}
+
+const journalPaths = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 if (!journalPaths.length) {
   console.error('用法: node tools/build-skills-data.js <journal.jsonl> [更多 journal...]');
   process.exit(1);
@@ -92,7 +185,7 @@ if (unexpected.length) console.warn('⚠ 非預期的 slug:', unexpected.join(',
 const articles = known
   .filter((slug) => bySlug.has(slug))
   .map((slug) => {
-    const a = bySlug.get(slug);
+    const a = twSanitize(bySlug.get(slug));
     const src = SOURCES[slug];
     return {
       slug: a.slug,
@@ -113,7 +206,20 @@ const articles = known
       sourceRepo: src.repo,
       sourceRepoName: src.repo.split('/')[1],
       sourceStars: src.stars,
-      sourceUrl: `https://github.com/${src.repo}/tree/main/${src.p}`,
+      // p 為空代表 SKILL.md 就在 repo 根目錄，這時連到 repo 首頁就好
+      sourceUrl: src.p
+        ? `https://github.com/${src.repo}/tree/main/${src.p}`
+        : `https://github.com/${src.repo}`,
+      // 流程示意圖：由 tools/gen-skill-images.js 產生，檔案存在才掛上去
+      image: fs.existsSync(path.join(__dirname, '..', 'public', 'skills-img', `${slug}.webp`))
+        ? `/skills-img/${slug}.webp`
+        : null,
+      imageAlt: (() => {
+        const d = a.diagram || DIAGRAMS.get(slug);
+        return d
+          ? `${d.title}流程圖：${(d.steps || []).map((s) => s.label).join('、')}`
+          : `${a.nameZh}流程示意圖`;
+      })(),
     };
   });
 
@@ -148,6 +254,8 @@ export type Skill = {
   sourceRepoName: string;
   sourceStars: string;
   sourceUrl: string;
+  image: string | null;
+  imageAlt: string;
 };
 
 export const SKILL_CATEGORIES = ${JSON.stringify(CATEGORY_ORDER, null, 2)} as const;

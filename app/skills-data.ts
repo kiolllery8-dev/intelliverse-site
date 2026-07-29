@@ -29,11 +29,14 @@ export type Skill = {
   sourceRepoName: string;
   sourceStars: string;
   sourceUrl: string;
+  image: string | null;
+  imageAlt: string;
 };
 
 export const SKILL_CATEGORIES = [
   "文件整理",
   "行銷內容",
+  "影音內容",
   "電商經營",
   "設計創意",
   "開發工程",
@@ -113,7 +116,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/invoice-organizer"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/invoice-organizer",
+    "image": "/skills-img/invoice-organizer.webp",
+    "imageAlt": "發票收據自動歸檔流程圖：收據匯入、辨識金額、改名歸檔、匯出報表"
   },
   {
     "slug": "file-organizer",
@@ -186,7 +191,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/file-organizer"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/file-organizer",
+    "image": "/skills-img/file-organizer.webp",
+    "imageAlt": "下載資料夾自動歸位流程圖：清點檔案、判讀內容、揪出重複、歸位改名"
   },
   {
     "slug": "meeting-insights-analyzer",
@@ -258,7 +265,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/meeting-insights-analyzer"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/meeting-insights-analyzer",
+    "image": "/skills-img/meeting-insights-analyzer.webp",
+    "imageAlt": "會議紀錄變成待辦流程圖：讀逐字稿、拆出待辦、指派負責、附上原句"
   },
   {
     "slug": "competitive-ads-extractor",
@@ -329,7 +338,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/competitive-ads-extractor"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/competitive-ads-extractor",
+    "image": "/skills-img/competitive-ads-extractor.webp",
+    "imageAlt": "對手廣告全面拆解流程圖：鎖定對手、抓下素材、拆解賣點、整理成表"
   },
   {
     "slug": "content-research-writer",
@@ -401,7 +412,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/content-research-writer"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/content-research-writer",
+    "image": "/skills-img/content-research-writer.webp",
+    "imageAlt": "長文從大綱寫到定稿流程圖：先要大綱、查證出處、逐段回饋、定稿檢查"
   },
   {
     "slug": "image-enhancer",
@@ -474,7 +487,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/image-enhancer"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/image-enhancer",
+    "image": "/skills-img/image-enhancer.webp",
+    "imageAlt": "模糊圖片變清晰放大流程圖：放入圖片、檢視畫質、放大銳化、批次輸出"
   },
   {
     "slug": "lead-research-assistant",
@@ -547,7 +562,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/lead-research-assistant"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/lead-research-assistant",
+    "image": "/skills-img/lead-research-assistant.webp",
+    "imageAlt": "找出該聯絡的潛在客戶流程圖：釐清賣點、篩出名單、評分排序、客製開場"
   },
   {
     "slug": "domain-name-brainstormer",
@@ -619,7 +636,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/domain-name-brainstormer"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/domain-name-brainstormer",
+    "image": "/skills-img/domain-name-brainstormer.webp",
+    "imageAlt": "品牌命名與網址查詢流程圖：描述品牌、發想名稱、比對網域、排序推薦"
   },
   {
     "slug": "twitter-algorithm-optimizer",
@@ -692,7 +711,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/twitter-algorithm-optimizer"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/twitter-algorithm-optimizer",
+    "image": "/skills-img/twitter-algorithm-optimizer.webp",
+    "imageAlt": "社群貼文健檢改寫流程圖：貼上草稿、逐句健檢、多版改寫、比對成效"
   },
   {
     "slug": "raffle-winner-picker",
@@ -764,7 +785,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/raffle-winner-picker"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/raffle-winner-picker",
+    "image": "/skills-img/raffle-winner-picker.webp",
+    "imageAlt": "留言名單自動開獎流程圖：匯入名單、設定權重、隨機抽出、留存紀錄"
   },
   {
     "slug": "tailored-resume-generator",
@@ -836,7 +859,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/tailored-resume-generator"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/tailored-resume-generator",
+    "image": "/skills-img/tailored-resume-generator.webp",
+    "imageAlt": "依需求量身寫提案流程圖：貼上需求、盤點案例、落差分析、輸出提案"
   },
   {
     "slug": "video-downloader",
@@ -908,7 +933,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/video-downloader"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/video-downloader",
+    "image": "/skills-img/video-downloader.webp",
+    "imageAlt": "長影片變短影音貼文流程圖：貼上網址、核對片名、挑選畫質、抽音轉稿"
   },
   {
     "slug": "changelog-generator",
@@ -980,7 +1007,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "ComposioHQ/awesome-claude-skills",
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
-    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/changelog-generator"
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/changelog-generator",
+    "image": "/skills-img/changelog-generator.webp",
+    "imageAlt": "開發紀錄變客戶月報流程圖：抓取改動、分類歸檔、白話改寫、校稿寄出"
   },
   {
     "slug": "shopify-expert",
@@ -1053,7 +1082,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "Jeffallan/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "10,747",
-    "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/shopify-expert"
+    "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/shopify-expert",
+    "image": "/skills-img/shopify-expert.webp",
+    "imageAlt": "電商版型與功能客製流程圖：盤點需求、提供店址、改寫版型、檢查上線"
   },
   {
     "slug": "wordpress-pro",
@@ -1126,7 +1157,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "Jeffallan/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "10,747",
-    "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/wordpress-pro"
+    "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/wordpress-pro",
+    "image": "/skills-img/wordpress-pro.webp",
+    "imageAlt": "網站維運與加值開發流程圖：描述症狀、揪出元兇、備份測試、修復上線"
   },
   {
     "slug": "prompt-engineer",
@@ -1198,7 +1231,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "Jeffallan/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "10,747",
-    "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/prompt-engineer"
+    "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/prompt-engineer",
+    "image": "/skills-img/prompt-engineer.webp",
+    "imageAlt": "寫好指令讓回答不跑掉流程圖：定義標準、附上範例、實跑測試、存成模板"
   },
   {
     "slug": "security-reviewer",
@@ -1271,7 +1306,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "Jeffallan/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "10,747",
-    "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/security-reviewer"
+    "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/security-reviewer",
+    "image": "/skills-img/security-reviewer.webp",
+    "imageAlt": "揪出網站的資安漏洞流程圖：指定專案、掃描漏洞、風險分級、安全報告"
   },
   {
     "slug": "dev-browser",
@@ -1343,7 +1380,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "SawyerHood/dev-browser",
     "sourceRepoName": "dev-browser",
     "sourceStars": "6,479",
-    "sourceUrl": "https://github.com/SawyerHood/dev-browser/tree/main/skills/dev-browser"
+    "sourceUrl": "https://github.com/SawyerHood/dev-browser/tree/main/skills/dev-browser",
+    "image": "/skills-img/dev-browser.webp",
+    "imageAlt": "讓電腦幫你抄後台數字流程圖：安裝一次、選瀏覽器、口述步驟、匯出表格"
   },
   {
     "slug": "local-seo-manager",
@@ -1416,7 +1455,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/local-seo-manager"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/local-seo-manager",
+    "image": "/skills-img/local-seo-manager.webp",
+    "imageAlt": "讓客人在地圖上找到你流程圖：填商家檔、逐項健檢、寫地區頁、回覆評論"
   },
   {
     "slug": "paid-ads",
@@ -1432,7 +1473,7 @@ export const SKILLS: Skill[] = [
       "一次產出三組標題、內文與行動呼籲，可直接貼進後台上線",
       "設計再行銷分層與排除名單，避免對已買過的人重複投放",
       "算出扣掉成本的真實 ROAS 與 CPA，跟平台回報數字對照",
-      "成效掉的時候判斷該換素材、改受眾，還是先修落地頁"
+      "成效掉的時候判斷該換素材、改受眾，還是先修銷售頁"
     ],
     "scenarios": [
       {
@@ -1455,7 +1496,7 @@ export const SKILLS: Skill[] = [
       },
       {
         "step": "確認轉換追蹤真的有在跑",
-        "detail": "它會先要你確認像素和轉換事件測過真實訂單、UTM 有掛、落地頁三秒內載得完。這一步沒過就別急著討論素材，因為數字不準的話，後面所有優化判斷都是憑感覺。"
+        "detail": "它會先要你確認像素和轉換事件測過真實訂單、UTM 有掛、銷售頁三秒內載得完。這一步沒過就別急著討論素材，因為數字不準的話，後面所有優化判斷都是憑感覺。"
       },
       {
         "step": "請它一次給完整廣告組",
@@ -1471,7 +1512,7 @@ export const SKILLS: Skill[] = [
     "tips": [
       "加預算一次不要超過三成，加完等三到五天再動。一口氣把日預算從一千拉到五千，等於叫演算法重新學一次。",
       "平台回報的 ROAS 一定比實際好看，它會把「看過廣告後自己搜尋進來」的訂單算給自己。以 GA4 和實際出貨對帳為準。",
-      "點擊率高但沒人下單，問題八成在落地頁不在廣告。先檢查廣告寫的優惠，落地頁第一屏有沒有出現同一句話。"
+      "點擊率高但沒人下單，問題八成在銷售頁不在廣告。先檢查廣告寫的優惠，銷售頁第一眼有沒有出現同一句話。"
     ],
     "bestFor": "每月固定有廣告預算在跑的電商賣家、品牌主、接案工作室。特別適合已經投了一段時間、但說不出錢到底花得值不值的人。",
     "keywords": [
@@ -1489,7 +1530,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/paid-ads"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/paid-ads",
+    "image": "/skills-img/paid-ads.webp",
+    "imageAlt": "抓出賠錢的廣告組流程圖：填客單價、檢查追蹤、產廣告組、揪賠錢組"
   },
   {
     "slug": "copywriting",
@@ -1549,7 +1592,7 @@ export const SKILLS: Skill[] = [
     "bestFor": "有官網、產品介紹頁或一頁式銷售頁，但流量進來就是不轉單的電商賣家、設計接案公司、開課講師，以及要交文案給客戶的行銷企劃。",
     "keywords": [
       "網頁文案怎麼寫",
-      "落地頁文案",
+      "銷售頁文案",
       "一頁式銷售頁",
       "官網首頁文案改寫",
       "CTA 按鈕文案",
@@ -1562,7 +1605,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/copywriting"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/copywriting",
+    "image": "/skills-img/copywriting.webp",
+    "imageAlt": "把官網文案改成人話流程圖：貼上舊頁、挑標題稿、重排段落、改按鈕字"
   },
   {
     "slug": "pricing-strategy",
@@ -1635,7 +1680,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/pricing-strategy"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/pricing-strategy",
+    "image": "/skills-img/pricing-strategy.webp",
+    "imageAlt": "訂出客人願意付的價格流程圖：攤開現價、定收費制、排三段價、試算漲價"
   },
   {
     "slug": "seo-audit",
@@ -1708,14 +1755,16 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/seo-audit"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/seo-audit",
+    "image": "/skills-img/seo-audit.webp",
+    "imageAlt": "找出網站排不上的原因流程圖：提供網址、檢查收錄、逐頁評分、排修正單"
   },
   {
     "slug": "page-cro",
     "nameEn": "Page Conversion Optimizer",
     "nameZh": "有人看沒人買的頁面改造",
     "category": "電商經營",
-    "tagline": "從第一屏到結帳，逐段標出流失點和改法",
+    "tagline": "從第一眼到結帳，逐段標出流失點和改法",
     "summary": "把商品頁或活動頁交給 AI，它會用七個角度逐段檢查：五秒內看不看得懂你在賣什麼、標題有沒有講到好處、購買按鈕好不好找、有沒有評價與保證撐腰、客人的疑問有沒有被回答、價格運費有沒有寫清楚、下單前有沒有多餘欄位。最後給三組建議：現在就能改的、值得重做的、該拿去 A/B 測試的。",
     "painPoint": "廣告花錢把人帶進來，瀏覽數很漂亮，加入購物車卻沒幾個。看得出來有問題，卻說不出訪客是在哪一段離開的。",
     "whatItDoes": [
@@ -1729,7 +1778,7 @@ export const SKILLS: Skill[] = [
     "scenarios": [
       {
         "title": "廣告點擊高但沒轉單",
-        "body": "FB 廣告寫「買一送一最後三天」，點進去的一頁式活動頁卻整頁在講品牌故事，優惠躲在最下面。AI 會直接指出訊息沒接上，建議把優惠和倒數搬到第一屏、拿掉導覽列免得訪客點去別頁，並把「立即選購」改成寫明優惠內容的按鈕文案。"
+        "body": "FB 廣告寫「買一送一最後三天」，點進去的一頁式活動頁卻整頁在講品牌故事，優惠躲在最下面。AI 會直接指出訊息沒接上，建議把優惠和倒數搬到第一眼、拿掉導覽列免得訪客點去別頁，並把「立即選購」改成寫明優惠內容的按鈕文案。"
       },
       {
         "title": "蝦皮商品頁沒人下單",
@@ -1759,7 +1808,7 @@ export const SKILLS: Skill[] = [
       }
     ],
     "examplePrompt": "這是我們新品的蝦皮商品頁，FB 廣告一天花兩千幾乎沒轉單，幫我逐段看哪裡有問題，先給我今天就能改的。",
-    "exampleResult": "AI 會先給頁面轉換分數，例如 46 分，扣分集中在信任訊號和按鈕層級。接著逐項指出：第一屏只有品牌標語沒講產品用途、購買按鈕滑到第四屏才出現、五個按鈕互相搶注意力、整頁沒有評價也沒寫成分來源、表單要填八個欄位。然後給三個標題替代版本、兩組按鈕文案並說明差在哪，最後列出兩個值得 A/B 測試的假設和對應的成功指標。",
+    "exampleResult": "AI 會先給頁面轉換分數，例如 46 分，扣分集中在信任訊號和按鈕層級。接著逐項指出：第一眼只有品牌標語沒講產品用途、購買按鈕滑到第四屏才出現、五個按鈕互相搶注意力、整頁沒有評價也沒寫成分來源、表單要填八個欄位。然後給三個標題替代版本、兩組按鈕文案並說明差在哪，最後列出兩個值得 A/B 測試的假設和對應的成功指標。",
     "tips": [
       "一次只改一件事再看數字。同時換標題、換主圖、改按鈕，數字動了也不知道是哪一項的功勞。",
       "蝦皮、momo 的版型能動的有限，把力氣放在主圖順序、標題前二十個字和前三段賣點，那才是真正影響下單的位置。",
@@ -1769,7 +1818,7 @@ export const SKILLS: Skill[] = [
     "keywords": [
       "轉換率優化",
       "商品頁沒人下單",
-      "落地頁怎麼優化",
+      "銷售頁怎麼優化",
       "廣告有點擊沒轉單",
       "一頁式銷售頁",
       "加入購物車率提升",
@@ -1781,7 +1830,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/page-cro"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/page-cro",
+    "image": "/skills-img/page-cro.webp",
+    "imageAlt": "讓看的人真的按下購買流程圖：貼上頁面、打轉換分、標流失點、先改再測"
   },
   {
     "slug": "social-media-manager",
@@ -1854,7 +1905,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/social-media-manager"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/social-media-manager",
+    "image": "/skills-img/social-media-manager.webp",
+    "imageAlt": "社群發文行事曆規劃流程圖：盤點客群、貼上數據、排發文表、存成模板"
   },
   {
     "slug": "email-sequence",
@@ -1927,7 +1980,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/email-sequence"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/email-sequence",
+    "image": "/skills-img/email-sequence.webp",
+    "imageAlt": "自動信件流程設計流程圖：挑選信種、提供語氣、產出信稿、設定觸發"
   },
   {
     "slug": "churn-prevention",
@@ -1962,7 +2017,7 @@ export const SKILLS: Skill[] = [
     "howToUse": [
       {
         "step": "先講清楚你的現況",
-        "detail": "告訴 AI 你現在的取消是怎麼走的：後台一鍵取消，還是要寫信給客服？每月大概掉幾成客人、金流用綠界還是藍新、有沒有在收退訂原因。講得越具體，給出來的流程就越貼你的後台，不會是一份用不上的通用範本。"
+        "detail": "告訴 AI 你現在的取消是怎麼走的：後台按一下就取消，還是要寫信給客服？每月大概掉幾成客人、金流用綠界還是藍新、有沒有在收退訂原因。講得越具體，給出來的流程就越貼你的後台，不會是一份用不上的通用範本。"
       },
       {
         "step": "選一種模式開始",
@@ -2000,7 +2055,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/churn-prevention"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/churn-prevention",
+    "image": "/skills-img/churn-prevention.webp",
+    "imageAlt": "留住要退訂的客人流程圖：說明方案、設計問卷、配對挽留、排催款信"
   },
   {
     "slug": "ad-creative",
@@ -2073,7 +2130,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/ad-creative"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/ad-creative",
+    "image": "/skills-img/ad-creative.webp",
+    "imageAlt": "廣告文案量產把關流程圖：說明商品、指定平台、量產標題、檢查字數"
   },
   {
     "slug": "schema-markup",
@@ -2146,7 +2205,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/schema-markup"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/schema-markup",
+    "image": "/skills-img/schema-markup.webp",
+    "imageAlt": "幫網站加上星等標記流程圖：提供網址、掃描頁面、貼上標記、官方驗證"
   },
   {
     "slug": "process-mapper",
@@ -2219,7 +2280,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/process-mapper"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/process-mapper",
+    "image": "/skills-img/process-mapper.webp",
+    "imageAlt": "找出流程卡住的關卡流程圖：選定流程、拆解關卡、畫泳道圖、找出瓶頸"
   },
   {
     "slug": "vendor-management",
@@ -2292,7 +2355,9 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/vendor-management"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/vendor-management",
+    "image": "/skills-img/vendor-management.webp",
+    "imageAlt": "廠商與訂閱服務體檢流程圖：盤點廠商、記錄表現、逐家打分、決定續約"
   },
   {
     "slug": "financial-analyst",
@@ -2365,7 +2430,3302 @@ export const SKILLS: Skill[] = [
     "sourceRepo": "alirezarezvani/claude-skills",
     "sourceRepoName": "claude-skills",
     "sourceStars": "23,256",
-    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/finance/skills/financial-analyst"
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/finance/skills/financial-analyst",
+    "image": "/skills-img/financial-analyst.webp",
+    "imageAlt": "財務健檢與現金流預測流程圖：準備報表、試算比率、預估現金、每月對帳"
+  },
+  {
+    "slug": "transcript",
+    "nameEn": "Transcript",
+    "nameZh": "把影片內容整包變成文字",
+    "category": "影音內容",
+    "tagline": "貼上影片網址，整支影片講過的話就變成可搜尋、可複製的文字稿",
+    "summary": "你把 YouTube 影片網址貼給它，它會把整支影片講過的每一句話交回來，還附上時間點和影片標題。接下來要整理重點、挑金句、翻成中文，還是改寫成一則貼文，都在同一個對話裡繼續講就好。一支四十分鐘的教學影片，不用真的坐著看完四十分鐘。",
+    "painPoint": "同業出了一支新影片，你想知道他到底講什麼，只能整支看完；想引用其中一句話，還要來回拉進度條找位置。一天看個三支，兩個小時就沒了。",
+    "whatItDoes": [
+      "把整支影片講過的話變成文字，每一句都標時間，回頭要對畫面很快",
+      "順便帶回影片標題、頻道名稱和封面圖，整理資料時不用另外開一個分頁去查",
+      "長影片先給你重點摘要，真的需要全文再開口要就好",
+      "英文或日文影片可以邊抓內容邊翻成中文，不用再另外找人翻",
+      "Shorts 短影片和短網址都認得，網址原樣貼上就好，不用先下載檔案"
+    ],
+    "scenarios": [
+      {
+        "title": "同業的開箱影片在講什麼",
+        "body": "你在蝦皮上架一款新的保濕面膜，發現同類商品有支開箱影片四十分鐘、三萬觀看。網址丟進去，不用整支看完，你手上就有：他從第幾分鐘開始講成分、哪一段在比價格、他抱怨了什麼、又漏講了什麼。這些直接變成你商品頁要補強的段落，也看得出消費者在意的順序長什麼樣。"
+      },
+      {
+        "title": "把一場直播拆成一週貼文",
+        "body": "你在 IG 開了一小時直播，講得很順，但講完就散了。把重播網址丟進去，請它挑出十個你講過的問答，一則問答就是一則 Threads 貼文，語氣照你講話的樣子留著。剩下的整理成一篇問答，發到 LINE 官方帳號給老客人。原本講完就沒了的直播，變成接下來一週的發文素材。"
+      },
+      {
+        "title": "平台教學影片變成書面流程",
+        "body": "momo 後台改版、蝦皮出新的活動規則，官方通常只丟一支教學影片。你自己看完要三十分鐘，新來的工讀生還要再看一次。把影片變成文字之後請它整理成步驟一二三，貼在群組裡，同事照著做就好。以後規則再改，重做一份不必再從頭看一次影片。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先把影片網址複製起來",
+        "detail": "在 YouTube 上點分享，或直接把網址列整串複製起來，貼進對話就行。不管是一般影片、Shorts 短影片，還是 youtu 開頭的短網址，它都認得，你不用先下載檔案，也不用轉檔。手機上看到的影片一樣可以，用分享按鈕複製連結再貼過來就好。"
+      },
+      {
+        "step": "講清楚你拿這支影片要幹嘛",
+        "detail": "只說「幫我看這支影片」，你會拿到一份四平八穩的摘要，用處不大。改成「我要判斷這支影片的賣點能不能用在我的商品頁」，或「幫我找出他講得不精準的地方」，同樣一支影片，整理出來的東西完全不一樣。目的講在前面，比事後改十次快。"
+      },
+      {
+        "step": "指定你要的整理格式",
+        "detail": "可以要條列重點加時間點，方便你回去看那一段畫面；可以要純文字不帶時間，適合直接拿去翻譯或改寫；也可以要它做成表格，一欄放他說的話、一欄放你的評論。格式先講好，後面就不用一直來回改，也省得你自己重排一次。"
+      },
+      {
+        "step": "把內容直接變成你要的東西",
+        "detail": "文字稿只是半成品，真正省時間的是下一步。接著請它改寫成三則社群貼文、一段商品頁文案，或是一份給同事看的重點筆記。要求它引用原話時把時間點標出來，之後你想確認有沒有斷章取義，回去對照那一秒就好。"
+      }
+    ],
+    "examplePrompt": "這是一支同業的商品開箱影片：https://www.youtube.com/watch?v=xxxxxxxxxxx 幫我把整支影片的內容抓出來，然後做三件事。第一，條列他從頭到尾講了哪些賣點，每一點標上出現的時間。第二，挑出三句他用來說服觀眾的話，原話照抄，不要改寫。第三，指出他完全沒提到、但我們家商品有的地方。最後把第三點改寫成兩則 Threads 貼文草稿，語氣輕鬆一點，不要有業配感，也不要出現任何療效字眼。",
+    "exampleResult": "你會先看到一份分段的重點清單，像是「03:12 開始講成分濃度」「11:40 抱怨質地太黏」，每一點都能點回去對照畫面。接著是三句原話照抄的關鍵句，可以直接當社群貼文的引言。最後是兩則寫好的 Threads 草稿，一則從他沒講到的使用感受切入，一則講回購後的心得，語氣是你平常講話的樣子，貼上去前改幾個字就能發。",
+    "tips": [
+      "影片沒有開字幕就抓不到內容，先看影片下方有沒有字幕按鈕，直播剛結束通常要等一段時間才會有。",
+      "拿別人的話當參考可以，整段搬過去當自己的文案不行，一定要改寫過再用。",
+      "化妝品和保養品的說法特別要小心，同業敢講不代表你能講，療效字眼自己再篩一次。",
+      "超過一小時的影片先要摘要，覺得不夠再要全文，對話才不會被一大堆文字塞住。"
+    ],
+    "bestFor": "常盯同業影片、常開直播，或手上有一堆平台教學影片想變成文字資料的電商賣家和小編。",
+    "keywords": [
+      "YouTube 逐字稿",
+      "影片轉文字",
+      "同業開箱分析",
+      "直播重播整理",
+      "影片重點摘要",
+      "社群素材",
+      "時間點引用"
+    ],
+    "sourceRepo": "ZeroPointRepo/youtube-skills",
+    "sourceRepoName": "youtube-skills",
+    "sourceStars": "438",
+    "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/transcript",
+    "image": "/skills-img/transcript.webp",
+    "imageAlt": "影片變成文字素材流程圖：貼上網址、抓出字幕、整理重點、產出草稿"
+  },
+  {
+    "slug": "youtube-search",
+    "nameEn": "YouTube Search",
+    "nameZh": "用關鍵字挖出整批同業影片",
+    "category": "影音內容",
+    "tagline": "說一個題目，它把相關的影片和頻道撈成一張帶數字的清單",
+    "summary": "給它一個關鍵字，它會在 YouTube 上撈出相關影片，一次最多五十支，附上標題、頻道、觀看數、上架時間和影片長度。也可以改成找頻道，看看這個題目底下有哪些人在做內容。找到想看的那幾支，再叫它把裡面講的話抓出來就好。",
+    "painPoint": "想知道同業最近在推什麼角度，只能自己開 YouTube 一頁一頁滑，滑到後面忘了前面看過什麼，也分不出哪支是真的有人看、哪支只是標題下得聳動。",
+    "whatItDoes": [
+      "用一句關鍵字撈出相關影片，一次最多五十支，附觀看數和上架時間",
+      "改成找頻道，就看得出這個題目下有哪些人固定在做內容",
+      "限定在某一個頻道裡面搜，例如只看某位美妝創作者講防曬的那幾支",
+      "清單會標出哪幾支有字幕，有字幕的才抓得到裡面講什麼",
+      "撈完可以接著請它讀內容、比較說法，整理成一張比較表"
+    ],
+    "scenarios": [
+      {
+        "title": "上架新品前先看市場在講什麼",
+        "body": "你要在 momo 上架一支新的保濕精華，先請它搜「保濕精華 推薦」，撈三十支排序給你。看完清單你會發現前五名都在講「熬夜隔天救急」，沒人講換季，而且大部分是兩年前的影片。那你的商品頁主打就有方向了，也知道消費者搜這個詞的時候，腦袋裡先跳出來的是什麼畫面。"
+      },
+      {
+        "title": "找合作創作者的名單",
+        "body": "與其在 IG 一個一個看，直接請它用你的商品類別去找頻道，一次列出十五個，帶訂閱數、頻道簡介和更新頻率。你再挑出五個題材對得上、最近三個月還有在上片的，做成一張表當寄信名單。訂閱數三萬但一年沒更新的，在清單上就被你刷掉，不用寄了才發現人早就不做了。"
+      },
+      {
+        "title": "找出還沒人做的題目",
+        "body": "同一個題目搜四十支影片下來，你會很明顯看到大家都擠在同一個角度。像芳療類的，十支有八支在講薰衣草，幾乎沒人講白天工作的時候能用什麼。這個空缺就是你的題目。與其硬跟第一名比誰講薰衣草講得好，不如去做那個還沒人講的角度，至少不用跟一堆同類影片擠在同一個關鍵字底下。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先想清楚你要找片還是找人",
+        "detail": "找影片是要看內容和角度，找頻道是要看有誰在做這件事、規模多大。這兩件事給出來的清單完全不同，開口前先講清楚。要找合作對象就說找頻道，要研究市場說法就說找影片；兩個都要也可以，讓它分成兩張表給你，一次看完。"
+      },
+      {
+        "step": "關鍵字用消費者會打的字",
+        "detail": "你在公司裡講「玻尿酸複合精華」，消費者在搜尋框打的是「臉很乾 推薦」。用內部的商品名去搜，撈回來的多半是同業自家的影片；用消費者的口語去搜，才看得到真正在搶這個字的內容。不確定就兩個都搜一次，比一比差多少。"
+      },
+      {
+        "step": "請它整理成表格再排序",
+        "detail": "一長串影片標題看下去很累，直接要它做成表格，欄位放標題、頻道、觀看數、上架時間、長度、有沒有字幕。再請它照觀看數由高到低排，順便把三年前的舊片標出來。這樣一眼就看得出哪幾支是現在還有人在看的。"
+      },
+      {
+        "step": "挑三到五支再細看內容",
+        "detail": "清單只是篩選，真正有價值的是挑出來那幾支的內容。選觀看數明顯高於同類的、標題角度特別的，請它把裡面講的話抓出來，比較他們各自主打什麼。三十支全部看完你會累死，五支看透反而想得出東西來。"
+      }
+    ],
+    "examplePrompt": "幫我在 YouTube 搜「保濕精華 推薦」，撈三十支影片，整理成表格：影片標題、頻道名稱、觀看數、上架時間、影片長度、有沒有字幕，照觀看數由高到低排。排完先告訴我三件事：這三十支裡最常出現的三個訴求是什麼、哪些品牌被提到最多次、有沒有明顯沒人講的角度。我要決定新品該用什麼角度切入，這一輪先不要幫我寫文案。",
+    "exampleResult": "你會拿到一張三十列的表格，最上面那幾支通常是觀看數破十萬的開箱片，旁邊標著兩年前上架。表格下面是它幫你歸納的結論：大家最常講的是熬夜救急、成分濃度、划不划算；被提到最多次的是三個開架品牌；而換季和口罩肌幾乎沒人講。最後它會挑出五支建議你細看的，並說明為什麼是這五支，你點進去看或叫它接著讀內容都可以。",
+    "tips": [
+      "關鍵字打消費者的口語，不要打公司內部的商品名，搜出來的結果差很多。",
+      "觀看數高不一定是新片，一定要看上架時間，三年前的影片參考價值有限。",
+      "沒有字幕的影片抓不到裡面講什麼，先在清單上過濾掉，再挑要細看的幾支。",
+      "一次撈三十支就夠了，撈五十支你也看不完，寧可多搜幾個不同的關鍵字。"
+    ],
+    "bestFor": "要研究市場說法、找合作創作者，或每次做新品都不知道從哪切入的電商賣家和行銷企劃。",
+    "keywords": [
+      "YouTube 搜尋",
+      "同業影片研究",
+      "市場調查",
+      "創作者名單",
+      "選題靈感",
+      "關鍵字調查",
+      "頻道搜尋"
+    ],
+    "sourceRepo": "ZeroPointRepo/youtube-skills",
+    "sourceRepoName": "youtube-skills",
+    "sourceStars": "438",
+    "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/youtube-search",
+    "image": "/skills-img/youtube-search.webp",
+    "imageAlt": "關鍵字撈同業影片流程圖：設定題目、撈出清單、排序篩選、挑片細看"
+  },
+  {
+    "slug": "youtube-channels",
+    "nameEn": "YouTube Channels",
+    "nameZh": "盯著同業頻道最近上了什麼片",
+    "category": "影音內容",
+    "tagline": "給一個頻道，它幫你盯著對手上了什麼片、多少人看、講了什麼",
+    "summary": "貼一個頻道網址或帳號，它能列出對方最近十五支影片，帶精確觀看數和上架日期；也能把整個頻道歷年上傳的影片全部列出來；還能在單一頻道裡用關鍵字搜。想深入哪一支，再請它把裡面講的話抓出來就好。",
+    "painPoint": "你心裡有名單，知道哪幾個同業做得比你好，但沒空天天去他頻道看新片。等你發現他有一支影片爆了，留言區已經三百則，想跟上這個題目也慢了半拍。",
+    "whatItDoes": [
+      "列出指定頻道最近十五支影片，帶精確觀看數和上架日期，不是模糊的幾萬次",
+      "把整個頻道歷年上傳的影片全部列出來，幾百支也翻得完",
+      "在單一頻道裡用關鍵字搜，例如只找他講過敏感肌的那幾支",
+      "貼帳號或頻道網址都認得，不用自己先去查那一串頻道編號",
+      "每週固定問一次，同一份名單累積下來就是同業的上片紀錄"
+    ],
+    "scenarios": [
+      {
+        "title": "每週一的同業巡邏",
+        "body": "你列出五個最在意的同業頻道，每週一早上問一次：這五個頻道上週上了什麼片、觀看數多少。一杯咖啡的時間看完，你就知道誰在衝、誰停更了、誰換了題材方向。以前這件事你會拖到季報要交才做，現在每週都有一份，連著看下來，誰的觀看數在往上、誰在往下，一眼就分得出來。"
+      },
+      {
+        "title": "拆解一個頻道的內容佈局",
+        "body": "看到一個做得很好的同業，把他頻道三百支影片全部列出來，請它照題材分類，再比較各類的觀看數。你可能會發現真正撐起他流量的只有兩類，其他都是做完就沒下文的嘗試；也會看到他的標題有固定寫法，長度幾乎都控制在八分鐘上下。這些是看單支影片看不出來的。"
+      },
+      {
+        "title": "查對手怎麼講同一件事",
+        "body": "客戶問你「敏感肌能不能用」，你想知道市場上大家怎麼回答。在某個同業頻道裡直接搜「敏感肌」，撈出他六支講過這題的影片，再請它把裡面講的話抓出來比對。你會看到他兩年前講得很滿，最近改口變保守了。可能是被檢舉過，也可能是規範改了，你剛好知道哪些話現在不好講。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先列出你真的要盯的頻道",
+        "detail": "不要一次盯二十個，那會變成沒人看的報表。挑三到五個就好：一個是規模最像你的直接對手、一個是做得比你大的標竿、一個是題材相近但角度不同的。把這幾個帳號整理成一份清單，之後每次只要說「照上次那份名單」就行了。"
+      },
+      {
+        "step": "從最近上片開始看起",
+        "detail": "先看每個頻道最近十支到十五支，這一段最能反映對方現在的做法。請它把上架日期和觀看數列出來，你自己抓一下節奏：多久上一支、哪一支特別突出。看到明顯爆量的那支就記下來，那通常代表市場最近對這個題目有反應。"
+      },
+      {
+        "step": "想深入就把整個頻道撈出來",
+        "detail": "決定要認真研究某一個對手，就請它把那個頻道從頭到尾的影片全部列出來，然後照題材分類、照觀看數排。這一步比較花時間，不用每個頻道都做，一季挑一個做就夠。做完你會看得很清楚：他把力氣押在哪裡、哪些嘗試做完就沒再繼續。"
+      },
+      {
+        "step": "把發現接回你的選題表",
+        "detail": "看完不做事等於白看。每次巡邏完，請它從觀察裡整理出三個你也能做、但角度不一樣的題目，直接寫進你的發文排程。重點是角度不一樣，不是照抄；同一個題目你用自己客人常問的問題去切，通常比跟風更有話講。"
+      }
+    ],
+    "examplePrompt": "幫我看這三個頻道最近上了什麼，帳號我貼在下面。每個頻道列出最新十支，欄位放影片標題、上架日期、觀看數，照日期由新到舊排。列完幫我挑出三支表現特別好的，判斷方式是觀看數明顯高於同一個頻道的其他影片，並說明這三支的標題和題材有什麼共同點。最後給我三個我們也能做、但切入角度不一樣的題目。這一輪不用寫腳本。",
+    "exampleResult": "你會拿到三張小表格，一個頻道一張，每一列是標題、日期和觀看數，一眼就看得出誰上片勤、誰停了。表格下面是它挑出來的三支高表現影片，例如某支問句型標題的影片，觀看數是同頻道平均的四倍，而三支的共同點都是「新手最容易做錯的事」這種角度。最後是三個給你的題目建議，各附一句話說明為什麼你做會不一樣，可以直接抄進發文排程。",
+    "tips": [
+      "看最近上片這件事很輕鬆，每週問一次沒負擔；整個頻道全撈比較慢，一季做一次就好。",
+      "觀看數要跟同一個頻道的其他影片比才有意義，跨頻道比大小看不出東西。",
+      "先看標題和數字就好，真的覺得有料的那幾支，再叫它把裡面講的話抓出來細看。",
+      "同業敢講不代表你能照抄，化妝品的說法搬過來很容易踩到廣告規範。"
+    ],
+    "bestFor": "有固定幾個同業要盯、想知道對手內容怎麼安排的品牌經營者和社群小編。",
+    "keywords": [
+      "同業監控",
+      "YouTube 頻道追蹤",
+      "對手內容策略",
+      "上片提醒",
+      "選題參考",
+      "頻道內搜尋",
+      "內容排程"
+    ],
+    "sourceRepo": "ZeroPointRepo/youtube-skills",
+    "sourceRepoName": "youtube-skills",
+    "sourceStars": "438",
+    "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/youtube-channels",
+    "image": "/skills-img/youtube-channels.webp",
+    "imageAlt": "同業頻道追蹤流程流程圖：指定頻道、抓最新片、比對熱度、排進選題"
+  },
+  {
+    "slug": "youtube-playlist",
+    "nameEn": "YouTube Playlist",
+    "nameZh": "把一整串影片變成能用的文字",
+    "category": "影音內容",
+    "tagline": "貼上播放清單網址，整串影片講的話就變成可以搜、可以改寫的文字",
+    "summary": "你丟一個 YouTube 播放清單或頻道網址，它會把裡面每支影片的標題、片長、觀看數一次列出來。你挑幾支，它就把影片講的話變成文字稿。同業在推什麼、哪個題目最多人看、他們怎麼開場怎麼收尾，不用一支一支看完。整理出來的文字可以拿來想貼文題目、寫腳本大綱，或抓商品頁的賣點方向。",
+    "painPoint": "同業一週上三支影片，你光是點開看完就半天沒了。想知道他們在講什麼、哪支最多人看，只能一支一支看，看完還記不住重點，隔天又忘光。",
+    "whatItDoes": [
+      "貼一個播放清單或頻道網址，把每支影片的標題、片長、觀看數一次列出來",
+      "一次撈超過一百支也沒問題，會自動往下翻頁，把整串影片抓完才停",
+      "挑出你要的那幾支，把影片講的話整段轉成文字稿，還可以標上時間點",
+      "從一堆影片裡找出觀看數特別高的，看看它們的標題和主題有什麼共同點",
+      "把文字稿整理成貼文草稿、腳本大綱或商品賣點，不用重看一遍影片",
+      "同業頻道的上傳清單也適用，每個月撈一次就知道他們最近主打什麼"
+    ],
+    "scenarios": [
+      {
+        "title": "盯著同業頻道最近在推什麼",
+        "body": "你賣香氛，最大的同業每週上片，主題橫跨開箱、居家佈置、香調教學。與其每週花兩小時看完，不如把他們的頻道清單丟進去，先看四十幾支影片的標題和觀看數排序。三分鐘就會發現他們最紅的六支全是「同價位比較」這一類，而不是你以為的質感開箱。你要跟的是那個題目，不是那個拍法。"
+      },
+      {
+        "title": "把自己的舊影片變成貼文庫存",
+        "body": "你去年拍了二十支產品教學，每支五到八分鐘，發完就躺在頻道裡。把清單丟進去，挑十支轉成文字，一支影片通常能拆出三到四個可以獨立成篇的段落。原本要從零想題目的一個月社群排程，變成從自己講過的話裡面挑，語氣本來就是你的，也不用擔心寫得不像。"
+      },
+      {
+        "title": "上課影片一次整理成筆記",
+        "body": "買了一套十二堂的電商課，總長六小時，你只想知道「蝦皮流量怎麼來」那段講了什麼。把課程清單丟進去，先看每堂的標題和長度，挑出相關的三堂轉成文字，再請它整理成重點條列。六小時的內容變成三頁筆記，之後要查也搜得到，不用再拖著進度條找。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先把清單網址複製起來",
+        "detail": "打開 YouTube 的播放清單頁面，把網址列整串複製給它就行，不用自己拆出中間那串英數編號。想追整個頻道的話，點進頻道的「影片」頁，複製上傳清單的網址也可以。清單必須是公開的，設成私人或不公開它看不到，遇到這種先去把權限改回公開再試。"
+      },
+      {
+        "step": "請它先列出整串影片",
+        "detail": "先讓它列清單，不要一開始就要文字稿。清單會有標題、片長、觀看數，超過一百支會自動往下翻完。拿到之後自己掃一眼，通常兩分鐘就看得出對方主打哪幾個題目、哪支特別紅。這一步花不到幾分鐘，卻是後面所有判斷的底，跳過就等於在猜。"
+      },
+      {
+        "step": "挑幾支抓完整內容",
+        "detail": "從清單裡挑三到五支值得細看的，請它把影片內容轉成文字，也可以要求標時間點，之後想回頭確認某一段比較好找。挑的原則不是只看觀看數最高的，也刻意挑一支明顯偏低的，兩邊對照才看得出差別到底在標題、在開場，還是在題目本身。"
+      },
+      {
+        "step": "講清楚你要什麼產出",
+        "detail": "文字稿本身沒什麼用，重點是接下來要它做什麼。你可以說「整理成三個貼文題目」「抓出他們每支影片的前十五秒都在講什麼」「列出他們提過的所有賣點」。講得越具體，拿到的東西越能直接用；只說「幫我整理」，它就只會還你一大段文字。"
+      }
+    ],
+    "examplePrompt": "這是我同業的 YouTube 頻道播放清單：（貼上網址）。先幫我把裡面所有影片列出來，包含標題、片長和觀看數，照觀看數由高到低排。列完之後告訴我前十支影片的主題大概分成幾類，哪一類最多人看。接著挑觀看數最高的三支，把影片內容轉成文字，整理出他們怎麼開場、講了哪些賣點、最後怎麼收尾。最後幫我想三則 Threads 貼文的方向，不要抄他們的內容，是我們可以用自己角度講的題目。",
+    "exampleResult": "它會先給你一份表：四十七支影片、標題、片長、觀看數，前十名一眼看得出來。接著告訴你這十支裡有六支在講開箱比較、三支在講售後問題，開箱那一類的平均觀看數是其他的兩倍。再往下是三支影片的內容整理：前十五秒都在講價格、中段固定拿別家對比、結尾都導到留言區問問題。最後是三則貼文方向，每則附上為什麼這個角度換我們講會更有立場。",
+    "tips": [
+      "先列清單再挑影片抓內容。整串一百支全抓文字稿通常沒必要，挑觀看數前十支就足夠看出方向，也省時間。",
+      "頻道的「所有影片」其實也是一種清單，把上傳清單的網址給它，每個月就能固定追一次同業動態。",
+      "沒有字幕、或是把字幕關掉的影片抓不到內容。抓不到先確認是不是這個原因，不要以為是它壞掉。",
+      "抓下來的是別人的內容，當研究參考沒問題，改幾個字就當自己的貼文會有爭議，題目可以借、句子要自己寫。"
+    ],
+    "bestFor": "常看同業影片找靈感的電商賣家、需要把影片內容再利用的社群小編，還有想快點讀完整套教學影片的老闆。",
+    "keywords": [
+      "YouTube 播放清單",
+      "影片文字稿",
+      "競品影片分析",
+      "頻道監控",
+      "影音素材再利用",
+      "社群貼文素材",
+      "逐字內容整理"
+    ],
+    "sourceRepo": "ZeroPointRepo/youtube-skills",
+    "sourceRepoName": "youtube-skills",
+    "sourceStars": "438",
+    "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/youtube-playlist",
+    "image": "/skills-img/youtube-playlist.webp",
+    "imageAlt": "整串影片變文字素材流程圖：貼上網址、列出片單、抓回內容、整理素材"
+  },
+  {
+    "slug": "brand-guidelines",
+    "nameEn": "Brand Guidelines",
+    "nameZh": "讓所有素材看起來像同一家品牌",
+    "category": "設計創意",
+    "tagline": "把品牌色票和字體訂成一份規範，之後每張圖每份簡報都照著走",
+    "summary": "這個技能會把品牌的顏色、字體、什麼場合用哪一個，整理成一份可以重複套用的規範。之後不管是商品頁、社群貼圖、報價單封面還是給客戶的簡報，做出來都照同一套色票和字體走。新來的小編或外包設計師不用再猜「我們家的橘到底是哪一個橘」，把規範丟過去就好。",
+    "painPoint": "同一個品牌，商品頁一種藍、IG 貼文另一種藍、簡報又換一種藍。每次換人做就要重講一次色號，講到自己都煩，做出來還是三個樣子。",
+    "whatItDoes": [
+      "把主色、輔助色、文字色整理成一張色票表，標清楚每個顏色用在什麼地方",
+      "訂好標題和內文的字體搭配，連電腦沒裝字體時要用什麼替代都先講好",
+      "做簡報、圖卡、文件時自動套上品牌色和字體，不用每次重講一遍",
+      "圖表、色塊、裝飾元素輪流用輔助色，畫面有變化但不會亂掉",
+      "看背景深淺自動換文字顏色，不會出現深色底配深色字看不清楚",
+      "規範存成一份文件，外包設計師或新同事直接照這份做就好"
+    ],
+    "scenarios": [
+      {
+        "title": "換了三個外包，品牌還是很亂",
+        "body": "上個月找 A 設計師做蝦皮主圖，這個月換 B 做 momo 形象圖，兩張擺在一起像兩個牌子。品牌規範先建好，之後不管誰接手，第一件事就是把這份丟給他，顏色和字體不用再靠口頭傳話。自己叫 AI 出圖也一樣，講一次規範就能一直沿用下去。"
+      },
+      {
+        "title": "簡報前一晚才發現顏色不對",
+        "body": "明天要提案，簡報是三個人分頭做的，合起來才發現標題字體有三種、藍色深淺不一。有規範在，做簡報時標題就會統一成同一套字體、色塊統一用品牌色，不用一頁一頁手動改。臨時再加兩頁進去，顏色也不會又跑掉。"
+      },
+      {
+        "title": "商品頁跟官網長得不像一家",
+        "body": "官網是設計公司做的，商品頁是自己排的，客人點進來會覺得像兩個品牌。先把官網的色票和字體抓出來變成規範，之後寫 momo、蝦皮、LINE 商店的商品圖說明都照這套配色，客人在哪個平台看到都認得出是你家的東西。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先把現有的素材交給它看",
+        "detail": "把 logo、官網截圖、以前做過的貼文或商品圖丟給它，說清楚這些是我們現在在用的。它會從裡面抓出主要顏色和字體感覺，整理成一份初步的色票清單。手上已經有品牌手冊或色號筆記的話，直接貼上去更快，不用讓它重猜一遍。"
+      },
+      {
+        "step": "確認主色、輔色和字體搭配",
+        "detail": "它會列出主色、深色文字、淺色背景和兩到三個輔助色，再建議標題和內文各用什麼字體。這一步要自己看過：哪個顏色是招牌一定要留，哪個其實只是某次活動用過的可以拿掉。確認完請它整理成一份規範文件存起來，順便把不要再用的舊顏色寫一行標起來，免得下次又冒出來。"
+      },
+      {
+        "step": "叫它照規範做出實際的東西",
+        "detail": "規範訂好之後，直接說「用我們的品牌規範做一份提案簡報」或「做三張活動貼文圖」。它會自動把標題套上指定字體、色塊換成輔助色、文字顏色跟著背景深淺調整，你不用每次再貼一次色號。做出來不滿意就說哪裡不對，它會照規範改，不會又跑出新的顏色。"
+      },
+      {
+        "step": "把規範存起來給團隊共用",
+        "detail": "請它輸出一份規範文件，寫清楚每個顏色的色號、用在哪裡、字體怎麼搭。以後外包設計師、印刷廠、新來的小編都收這一份。品牌之後換色或加新的輔助色，回頭改這份文件就好，不用去追每個人手上的舊版本。檔名記得寫上日期，才知道對方拿的是不是最新那一份。"
+      }
+    ],
+    "examplePrompt": "這是我們品牌的資料：主色是暖米色 #D4B8A8，文字用深咖 #3A322C，背景是米白 #FAF7F2。標題想要圓潤一點的黑體，內文要好讀的字體，客人是 30 到 45 歲女性，走溫柔自然的調性。請幫我做三件事：第一，整理成一份品牌視覺規範，寫清楚每個顏色用在什麼地方；第二，補兩個可以搭的輔助色，用在圖表和裝飾；第三，用這套規範做一份給通路採購看的品牌介紹簡報，六頁，第一頁封面、中間四頁講產品線、最後一頁聯絡方式。字體如果電腦沒有，請一併給我替代字體。",
+    "exampleResult": "先拿到一份規範文件：主色、文字色、背景色和兩個輔助色各自的色號與使用場合，標題和內文的字體搭配，還有沒裝字體時的替代方案。接著是六頁簡報，封面米白底配深咖標題，產品線那幾頁的色塊輪流用兩個輔助色，圖表數字自動挑了在該背景上看得清楚的顏色。整份翻下來字體只有兩種、顏色只有五個，看起來就是同一個品牌做出來的。",
+    "tips": [
+      "色號一定要給到六碼，只說「我們的藍」它只能用猜的，出來的顏色常常跟你想的差一截。",
+      "輔助色抓兩到三個就夠，超過五個畫面會亂，反而看不出品牌到底是什麼個性。",
+      "字體挑大家電腦都有的，不然檔案傳給客戶或印刷廠，開起來整份跑版更麻煩。",
+      "規範訂好存成一份文件放在固定位置，每次開新專案先貼給它，比重講一次快很多。"
+    ],
+    "bestFor": "一人身兼老闆和小編、常換外包設計師，或東西同時放在官網和好幾個電商平台的品牌經營者。",
+    "keywords": [
+      "品牌規範",
+      "品牌色票",
+      "字體搭配",
+      "視覺一致",
+      "簡報美化",
+      "品牌手冊",
+      "設計外包"
+    ],
+    "sourceRepo": "ComposioHQ/awesome-claude-skills",
+    "sourceRepoName": "awesome-claude-skills",
+    "sourceStars": "70,983",
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/brand-guidelines",
+    "image": "/skills-img/brand-guidelines.webp",
+    "imageAlt": "品牌視覺統一流程流程圖：盤點素材、訂出色票、套用產出、留存規範"
+  },
+  {
+    "slug": "canvas-design",
+    "nameEn": "Canvas Design",
+    "nameZh": "做出有設計感的主視覺海報",
+    "category": "設計創意",
+    "tagline": "先想清楚設計概念，再畫成一張可以直接用的海報或主視覺",
+    "summary": "它不是套現成版型，是先幫你寫出一套設計概念，講清楚這張要用什麼形狀、什麼顏色、什麼節奏說話，再照著概念畫成圖檔。文字刻意留很少，讓畫面自己講故事。畫完還會回頭精修一次，把間距、對齊、留白調乾淨。活動主視覺、展場海報、包裝概念圖這種要一眼抓住人的東西最適合。",
+    "painPoint": "要一張活動主視覺，找設計師報價一萬五、來回改三輪；自己用線上範本做，出來就是一看就知道套版的樣子，貼出去沒人停下來看。",
+    "whatItDoes": [
+      "先寫一份設計概念說明，講清楚這張的形狀、顏色和氣氛是從哪裡來的",
+      "照著概念畫成單張海報，輸出成可以直接印、直接貼的圖檔",
+      "把主題藏在畫面裡，懂的人看得出來，不懂的人也單純覺得好看",
+      "文字只留最必要的幾個字，當成畫面的一部分，不是貼上去的說明",
+      "畫完再精修一輪，檢查有沒有元素超出邊界、互相重疊或間距怪怪的",
+      "要成套的時候可以延伸出多張，風格一致但每張畫面都不一樣"
+    ],
+    "scenarios": [
+      {
+        "title": "週年慶主視覺，明天就要",
+        "body": "檔期臨時提前，設計師排不進來。給它品牌色、活動名稱和你要的氣氛，先拿一張主視覺出來墊檔，IG 主圖、蝦皮活動 banner 都能用同一張裁切。不滿意就說「太吵了，安靜一點」，它會回去把畫面收乾淨，而不是再往上加東西。"
+      },
+      {
+        "title": "提案要一張概念圖撐場",
+        "body": "跟客戶提品牌改造，簡報裡光講文字很空。先產一張概念視覺放在第二頁，客戶一看就知道你講的「沉穩一點、留白多一點」長什麼樣子。比口頭形容快，也比丟一堆網路參考圖有說服力，因為那張是為這個案子做的，不是別人家的東西。"
+      },
+      {
+        "title": "香氛新品的包裝氣氛圖",
+        "body": "新蠟燭要上架，商品照還沒拍，先要一張氣氛圖給通路看。告訴它調性是木質、微苦、雨後的森林，它會先訂出一套視覺語言再畫，出來的不會是那種到處都看得到的免費圖庫感。之後照片拍完，這張還能當商品頁的開頭主圖。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "用形容詞描述你要的氣氛",
+        "detail": "不用講排版怎麼排，講感覺就好：安靜的、粗獷的、像老照片的、像實驗紀錄的。再補上用途，是活動海報、商品氣氛圖還是展場主視覺，還有要多大張。形容詞越具體，它抓到的方向越準；只說「好看一點」，出來的東西通常也很模糊。心裡已經有想到的東西，直接講那是哪一類的感覺就好，不用真的去找參考圖。"
+      },
+      {
+        "step": "先看它寫的設計概念再開畫",
+        "detail": "它會先給一份設計概念說明，講這張要走什麼路線、顏色怎麼配、留白怎麼處理。這份一定要看完再讓它動手，概念錯了，畫得再細也是白畫。覺得方向不對，這一步改最便宜，直接說「太冷了，我要溫一點」就可以，不用等圖出來才後悔。"
+      },
+      {
+        "step": "拿到圖之後只給減法意見",
+        "detail": "改的時候盡量說「把某個東西拿掉」「間距再開一點」「字再小一點」，而不是「再加一個元素」。這個技能本來就往減法走，愈加愈容易變成塞滿的傳單。想換方向就回上一步改概念，不要在成品上一直疊東西，疊到最後自己也說不出重點在哪。"
+      },
+      {
+        "step": "要成套就請它照著延伸",
+        "detail": "主視覺定了之後，說「照這個概念再延伸三張，風格一樣但畫面不同」，就能拿到一組系列圖，一張當主圖、其他張放 IG 輪播或商品頁分隔。記得同時說明每張要用在哪裡，尺寸不同它會自己調構圖，不會硬把橫的裁成直的。哪一張最弱就單獨指出來，讓它只重畫那一張，其他的留著。"
+      }
+    ],
+    "examplePrompt": "幫我做一張香氛品牌的秋季主視覺海報，直式，之後會放在 IG 主圖和蝦皮活動頁。品牌調性是溫柔、木質、有點手作感，主色是暖米色 #D4B8A8，可以搭深咖和霧綠。畫面上只放三個字「慢下來」和小小的品牌名，其他都用畫面說話，不要放一堆文案。請先給我一份設計概念說明，講清楚顏色、留白和形狀你打算怎麼處理，我看過同意之後再開始畫。不要那種免費圖庫的漸層感，我要看起來像慢慢做出來的東西。",
+    "exampleResult": "先收到一份設計概念說明，方向大概是「用重複的細線和大片留白表現時間慢慢過去」，附上顏色怎麼配、文字放哪裡。看過同意後拿到一張直式圖檔：畫面大半留白，中間偏下是一組重複的細線紋理，暖米色底配深咖線條，「慢下來」三個字很小地放在左下角，品牌名更小地放在右下。整張沒有多餘裝飾，放大看邊界乾淨、沒有東西超出去。",
+    "tips": [
+      "形容氣氛時舉個具體例子，像「日本攝影集那種安靜」，比說「高級感」有用太多。",
+      "文字給到三到五個字就好，想放整段文案的話那是商品頁的事，不是主視覺。",
+      "要印刷就先講尺寸和出血，事後放大會糊，重做一次比一開始講清楚更花時間。",
+      "不要在同一張圖上一直加東西，覺得不對就退回設計概念那一步重講方向。"
+    ],
+    "bestFor": "需要活動主視覺、包裝氣氛圖或提案概念圖，但沒預算每次都發包給設計師的品牌和接案工作室。",
+    "keywords": [
+      "主視覺",
+      "海報設計",
+      "活動視覺",
+      "品牌氣氛圖",
+      "設計概念",
+      "包裝概念",
+      "展場視覺"
+    ],
+    "sourceRepo": "ComposioHQ/awesome-claude-skills",
+    "sourceRepoName": "awesome-claude-skills",
+    "sourceStars": "70,983",
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/canvas-design",
+    "image": "/skills-img/canvas-design.webp",
+    "imageAlt": "從一句話到一張海報流程圖：描述氣氛、訂出概念、畫成主圖、二次精修"
+  },
+  {
+    "slug": "webapp-testing",
+    "nameEn": "Webapp Testing",
+    "nameZh": "自動把網站點過一遍找出問題",
+    "category": "開發工程",
+    "tagline": "改完網站不用自己一頁頁點，它會開瀏覽器走一遍再截圖回報。",
+    "summary": "這個技能會實際開一個瀏覽器，照你描述的客人動作一步一步把網站點過一遍：進首頁、選商品、填表單、按送出，每一步都截圖，最後告訴你卡在哪。它也會把畫面背後跳出的錯誤訊息抓出來。改版後重跑同一份流程，馬上知道有沒有把原本好好的功能弄壞。",
+    "painPoint": "網站改一次就怕別的地方壞掉，可是你不可能每次都自己從首頁點到結帳。等客人來說「我下不了單」，已經掉了好幾張。",
+    "whatItDoes": [
+      "照你描述的流程，自己開瀏覽器把每個步驟點一遍",
+      "每一步都截圖存下來，壞在哪一步打開圖就看得出來",
+      "幫你填表單、按送出，確認有沒有真的出現成功畫面",
+      "把畫面背後跳出的錯誤訊息抓出來，不用你自己去翻",
+      "同一套流程可以在手機、平板、電腦三種尺寸各跑一次",
+      "改版後重跑同一份流程，確認原本會動的地方沒有被改壞"
+    ],
+    "scenarios": [
+      {
+        "title": "改版後怕舊功能被改壞",
+        "body": "這次只是換首頁的橫幅圖，工程師說五分鐘就好。上線後兩天才發現商品頁的加入購物車按鈕在手機上被擠到看不見。如果改完當下就讓它把下單流程重跑一遍，五分鐘就會看到第三步的截圖不對，不會等到月底對帳才發現那兩天單量怪怪的。"
+      },
+      {
+        "title": "客人說表單一直送不出去",
+        "body": "客服收到三則訊息說聯絡表單按了沒反應，但你自己在辦公室電腦點都正常。請它用手機尺寸把表單從頭填到送出，截圖顯示送出按鈕被跳出的鍵盤蓋住，要先收起鍵盤才點得到。問題不在功能壞掉，在手機上根本按不到，這種你自己在電腦前點一整天也不會發現。"
+      },
+      {
+        "title": "工程師說他那邊正常",
+        "body": "你說結帳頁面會卡住，工程師回你「我這邊測都正常」，來回三天沒進展。讓它把整段結帳流程跑一次，附上每一步截圖跟背後跳出的錯誤訊息，你直接把這份轉過去。討論的東西從「你覺得我覺得」變成同一份紀錄，兩邊看的是同一個畫面。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "把客人的動作寫成步驟",
+        "detail": "用客人的角度一步一步寫：打開首頁、點「線上預約」、選日期、填姓名跟手機、按送出。寫得越具體越好，連要填什麼字都直接寫出來，它才不會亂猜。一次描述一條完整流程就好，不要把預約、結帳、退貨三件事混在同一段裡講。"
+      },
+      {
+        "step": "先讓它跑一次現況",
+        "detail": "先照現在的狀況跑一遍當基準。就算目前一切正常也值得跑，因為這份紀錄就是你下次改版時的對照組。跑完你會拿到每一步的截圖，順便可以看看哪一頁載入特別慢、哪一頁的畫面在手機上被切掉，這些平常滑過去不會注意到。"
+      },
+      {
+        "step": "照截圖找出卡在哪",
+        "detail": "出問題的時候不要只看它的結論，把截圖點開自己看。很多狀況不是功能壞掉，是按鈕被鍵盤蓋住、提示文字跑到畫面外、載入太久客人以為當掉了。這種問題你自己點反而不容易發現，因為你早就知道按鈕在哪，手指會自動移過去。"
+      },
+      {
+        "step": "固定在每次改版後重跑",
+        "detail": "把最常用的幾條流程固定下來：下單、預約、聯絡表單、登入。每次改版後全部重跑一次，大概幾分鐘就結束。這樣工程師調整某個功能、不小心碰壞另一個功能的時候，是你先看到，不是客人打電話來罵你才知道。"
+      }
+    ],
+    "examplePrompt": "幫我測我們網站的預約流程，網站現在跑在我自己的電腦上。請照這個順序走一遍：打開首頁、點上方的「線上預約」、選最近一個可以預約的日期、姓名填王小明、手機填 0912345678、備註寫想約下午、按送出。每一步都截圖，最後告訴我有沒有出現預約成功的畫面。如果中途卡住，告訴我卡在哪一步、畫面上顯示什麼、背後有沒有跳錯誤訊息。手機尺寸跟電腦尺寸各跑一次，我特別想知道手機上送出按鈕會不會被鍵盤擋住。",
+    "exampleResult": "它會回一份按步驟排的紀錄，每一步都附截圖：第一步首頁正常、第二步預約按鈕正常、第三步日曆載入慢了兩秒但有出來、第四步手機尺寸下送出按鈕被鍵盤蓋住，要先收鍵盤才點得到、第五步送出後停在原地沒有成功畫面，背後跳出一則欄位驗證錯誤。最後會分出哪一步是真的壞了、哪一步只是慢，你可以直接把截圖跟訊息轉給工程師。",
+    "tips": [
+      "流程寫得越具體越好，寫「填表單」它會亂猜，寫「姓名填王小明」才準。",
+      "它是拿來測你自己的網站或還沒公開的測試站，不要拿去點別人家的網站。",
+      "改版前先把常用流程存成固定一份，改完直接重跑，比自己一頁頁點省事很多。",
+      "它只會回報畫面上發生什麼事，不會自己動手修，修改還是要交給工程師。"
+    ],
+    "bestFor": "有自己網站、預約系統或購物車的小型團隊，以及交件前要確認功能沒壞的接案工程與設計者。",
+    "keywords": [
+      "網站測試",
+      "流程檢查",
+      "改版驗收",
+      "截圖回報",
+      "錯誤排查",
+      "表單測試",
+      "手機版測試"
+    ],
+    "sourceRepo": "ComposioHQ/awesome-claude-skills",
+    "sourceRepoName": "awesome-claude-skills",
+    "sourceStars": "70,983",
+    "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/webapp-testing",
+    "image": "/skills-img/webapp-testing.webp",
+    "imageAlt": "網站操作自動驗收流程流程圖：描述流程、開啟網站、逐步操作、截圖回報"
+  },
+  {
+    "slug": "brainstorming",
+    "nameEn": "brainstorming",
+    "nameZh": "開工前先把想法問成企劃書",
+    "category": "營運管理",
+    "tagline": "先把你問清楚再動手，省下做完才發現方向錯的那次重做。",
+    "summary": "這是一個會反過來問你問題的助理。你丟一句「我想做一檔中秋禮盒活動」，它不會馬上生一堆文案，而是一次問你一個問題：賣給誰、預算多少、什麼時候要、怎樣算成功。問到夠了才給你兩三個做法，講清楚各自的好處跟代價並推薦一個，你點頭之後才整理成企劃書存起來。",
+    "painPoint": "每次都是想到什麼就叫人去做，做到一半才發現當初講的跟自己想的不一樣，設計師重畫、文案重寫，時間跟錢都燒掉了。",
+    "whatItDoes": [
+      "先看你手上已經有的資料和做過的東西，不會叫你從零重講一遍",
+      "一次只問一個問題，多半是選擇題，你回一個字就能往下走",
+      "同一件事給你兩到三種做法，講清楚各自的好處跟代價，並推薦一個",
+      "發現你要的其實是三個獨立的案子，會先提醒你拆開來一件一件做",
+      "企劃分段給你看，每一段都問你「這樣對嗎」，錯了當場改",
+      "定稿後存成一份企劃書檔案，之後給外包或同事看都是同一份"
+    ],
+    "scenarios": [
+      {
+        "title": "新品上架前先把方向講定",
+        "body": "你想在蝦皮上一支新的身體乳。它會問：這支打的是價格還是成分？跟你現有那支會不會互相搶單？主圖走乾淨風還是熱鬧風？廣告預算開不開？問完給你兩條路線：低價衝評價數，或用成分故事撐單價。你選一條，它才開始寫文案。"
+      },
+      {
+        "title": "客戶只丟一句話就要你提案",
+        "body": "接案最怕「你先給我一個想法」。你把客戶那幾句模糊的話原封不動貼進來，它會幫你整理成有取捨、有理由的方案，你拿去跟客戶對，客戶挑一個你才開工。少掉「畫了三版都不對」的那三版，也少掉沒收錢的加班。"
+      },
+      {
+        "title": "想開新服務又怕一次做太大",
+        "body": "例如你想同時弄官網、LINE 官方帳號自動回覆、再加會員集點。它會直接說這是三件事，建議先做哪一件、為什麼是這一件，剩下兩件排到後面。避免三件事同時開工，三個月後三件都做到一半。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "把還沒想清楚的想法直接講出來",
+        "detail": "不用先整理。你可以只說「我想弄個母親節活動」或「客戶想要新網站，但他自己也講不清楚要什麼」。越模糊越適合用這個。它會先看你資料夾裡相關的舊東西，例如過去的商品頁、貼文、報價單，再開始問你問題，不會叫你把背景重講一次。"
+      },
+      {
+        "step": "一次回一個問題，不確定就說不確定",
+        "detail": "它一次只問一題，多半附選項。你回「A」或「都不是，其實是⋯」都可以。不要一次把答案全部倒給它，讓它一題一題問，才問得出你自己原本沒想到的地方。真的沒想過的題目就說「還沒想」，它會告訴你這題現在不決定的話後面會卡在哪。"
+      },
+      {
+        "step": "從兩三個做法裡挑一個",
+        "detail": "它會推薦一個並講理由，其他選項也一起列出來。三個都不喜歡就直接說哪裡不喜歡，例如「太花錢」「我沒人手」，它會再想別的。這一步不要急著跳過，現在多花五分鐘，後面常常就少改幾版，是整套流程裡最該花時間的地方。"
+      },
+      {
+        "step": "分段確認企劃內容，滿意才讓它存檔",
+        "detail": "它會一段一段唸給你聽：賣給誰、怎麼做、什麼算成功、哪裡可能出事，每段問你對不對。全部點頭之後才寫成檔案。之後要真的開工，直接接下一個技能把這份企劃變成一步一步的執行單，不用重講一遍，同一份企劃往下接就好。"
+      }
+    ],
+    "examplePrompt": "我想在九月幫我們家的保濕精華做一檔活動，目標是把一批庫存清掉，同時衝一點評價。目前只有這個方向，其他都還沒想。請你先看一下我之前的商品頁跟貼文，然後一次問我一個問題，把這檔活動的對象、預算、期間、成功標準問清楚。問完之後給我兩到三個做法，講清楚各自的好處跟代價，並推薦一個。我選定之後，再分段把企劃寫給我確認，確認完存成檔案。過程中不要自己先動手寫文案。",
+    "exampleResult": "它會先回你一題：「這檔的主要目的是清庫存還是養評價？兩個都要的話哪個先？」你答完再問下一題。大約六到八題之後，它給你三條路：買一送一衝件數、加價購綁高單價品、限時折扣配開箱合作，每條講清楚要花多少人力、傷多少毛利、哪裡可能出狀況。你挑一條，它把企劃分成四段唸給你確認，最後存成檔案，裡面連「什麼情況要喊停」都寫好了。",
+    "tips": [
+      "它問問題的時候不要嫌煩。多回答一題，通常就少一次做完才發現方向錯的重做。",
+      "講得越模糊越好用。已經想得很清楚的事直接叫它做就行，不用走這一套。",
+      "發現它問偏了，直接打斷說「這題不重要，我更在意成本」，它會馬上換方向。",
+      "企劃存檔之後給同事或外包看，比你口頭交代一次清楚很多，事後也少掉爭議。"
+    ],
+    "bestFor": "常常想到就做、做到一半才改方向的老闆，還有客戶只丟一句話就要你提案的接案工作者。",
+    "keywords": [
+      "企劃發想",
+      "需求釐清",
+      "提案準備",
+      "專案規劃",
+      "想法整理",
+      "決策比較",
+      "營運管理"
+    ],
+    "sourceRepo": "obra/superpowers",
+    "sourceRepoName": "superpowers",
+    "sourceStars": "262,891",
+    "sourceUrl": "https://github.com/obra/superpowers/tree/main/skills/brainstorming",
+    "image": "/skills-img/brainstorming.webp",
+    "imageAlt": "模糊想法變成企劃書流程圖：盤點現況、逐題追問、比較做法、定稿存檔"
+  },
+  {
+    "slug": "writing-plans",
+    "nameEn": "writing-plans",
+    "nameZh": "把企劃變成能發下去的執行單",
+    "category": "營運管理",
+    "tagline": "把談定的企劃拆成一步一步的執行單，換人接手也不用重講一遍。",
+    "summary": "企劃書講的是「要做什麼」，這個技能負責寫出「第一步做什麼、做完長怎樣才算過關」。它假設拿到單子的人完全不懂你的生意，所以每一步都寫得很明確：會碰到哪些東西、要準備什麼素材、怎麼確認做對了。寫完它會自己回頭對照企劃，看有沒有哪一條沒被排進去。",
+    "painPoint": "交代事情永遠要講三次。工讀生做出來不是我要的，外包交回來還要自己改，最後乾脆自己做比較快，但自己哪來那麼多時間。",
+    "whatItDoes": [
+      "先盤點這件事會動到哪些東西：商品頁、後台、圖檔、對帳表，一樣一樣列出來",
+      "把工作切成兩三分鐘一步的小動作，不會出現「把商品上架」這種一句話大工程",
+      "每一步都寫清楚做完應該長什麼樣，做的人自己就能判斷過了沒",
+      "不會出現「細節之後補」「同上面第三項」這種偷懶寫法，每一項都寫完整",
+      "寫完自己對照原本的企劃檢查一遍，漏掉的直接補上去",
+      "標出哪些地方做完要先存一版，免得後面改壞了回不去"
+    ],
+    "scenarios": [
+      {
+        "title": "新品上架流程寫成一張單",
+        "body": "你有十二支新品要上蝦皮跟 momo。它把流程拆成：拍主圖、寫標題、填規格、設運費、排上架時段、開賣後第三天回頭看曝光。每一步標明誰做、大概多久、做完該長什麼樣。助理照著走，你只在中間跟最後各看一眼，不用整天被問。"
+      },
+      {
+        "title": "接案專案發包給外包",
+        "body": "客戶的官網改版談定了，你要發給三個外包。它把工作切成互不干擾的工單，每張寫明要交什麼檔案格式、尺寸、幾版、什麼時候交。你不用再跟每個人各講一次，也不會出現兩個人做同一頁、或兩個人都以為對方會做那一頁。"
+      },
+      {
+        "title": "檔期籌備不再漏東漏西",
+        "body": "雙十一前一個月。它把要做的事排成一張帶時間的執行單：素材什麼時候要好、廣告什麼時候開、客服話術什麼時候給業務看過、庫存什麼時候盤完。每個時間點都註明「這件沒做完會卡到誰」，卡住的時候你一眼就知道要先救哪一條。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先有一份談定的企劃再用它",
+        "detail": "這個技能不負責幫你想方向，它負責把已經決定的事變成能執行的單子。所以先用上一個技能把想法問清楚，或你自己把「要做什麼、給誰、什麼時候要」寫成一段話丟給它。方向還在飄的時候用，只會產出一張很詳細但方向錯的單子，改起來更累。"
+      },
+      {
+        "step": "告訴它執行的人是誰、懂多少",
+        "detail": "這一步最關鍵。跟它說「執行的是剛來兩週的工讀生，不熟後台」或「是配合三年的外包設計師，知道我們的品牌規範」，寫出來的細緻程度差很多。不講的話它會預設對方完全不懂你的生意，每一步寫得極細，你可能會嫌囉唆。"
+      },
+      {
+        "step": "檢查有沒有「之後再說」的地方",
+        "detail": "拿到單子先掃一遍，看有沒有哪一步只寫了要做什麼、沒寫做完該長怎樣。真的有就直接說「第五步太籠統，補上驗收標準」。這種模糊的一步，實際做的時候就是會來回問你三次的那一步，現在花三十秒補掉最划算。"
+      },
+      {
+        "step": "貼到群組，做完一項打一個勾",
+        "detail": "單子的價值在執行時真的被拿出來用。每一項都是可以打勾的，做完就劃掉，誰做到哪裡大家都看得到。中間卡住就跟它說「第七步卡在攝影器材沒到」，它會把後面的順序重排，不用整張重寫，也不用你再口頭交代一次。"
+      }
+    ],
+    "examplePrompt": "我們決定十月要在 momo 上架八支新的香氛蠟燭，主打秋冬跟送禮。企劃已經定了：定價 590、走禮盒組、搭一檔滿千折百。請幫我寫一張執行單，執行的人是剛來一個月的助理，對 momo 後台不太熟。每一步要小到兩三分鐘做得完，寫清楚會碰到哪些東西、要先準備什麼素材、做完長什麼樣才算過關。不要出現「細節後補」這種寫法。寫完幫我對照企劃檢查一次，看有沒有漏掉的。",
+    "exampleResult": "你會拿到一張分段的單子。開頭先列這次會動到什麼：八組商品圖、八份文案、後台商品建檔頁、運費設定頁、活動設定頁。接著是編號步驟，例如「第 3 步：主圖存成 800x800，檔名用品號加 01，放到共用資料夾的十月新品夾」，下一步是「打開後台商品建檔，貼上標題，確認字數沒超過上限」。每三到四步有一個停下來檢查的點，最後附一張漏項對照表。",
+    "tips": [
+      "一定要講執行的人是誰。同一件事給老手跟新人，單子的詳細程度差很多。",
+      "單子太長就叫它拆成兩張，一張今天做完、一張明天做完，人比較不會放棄。",
+      "執行途中改了做法，回頭叫它更新單子，不要只在腦袋裡改，下次多半就忘了。",
+      "這張單子同時也是交接文件。人走了，下一個人照著單子走就能接手。"
+    ],
+    "bestFor": "要把工作交給工讀生、外包或新同事，又不想每次都從頭講一遍的老闆和接案者。",
+    "keywords": [
+      "執行計畫",
+      "工作交辦",
+      "流程 SOP",
+      "外包發包",
+      "專案管理",
+      "交接文件",
+      "上架流程"
+    ],
+    "sourceRepo": "obra/superpowers",
+    "sourceRepoName": "superpowers",
+    "sourceStars": "262,891",
+    "sourceUrl": "https://github.com/obra/superpowers/tree/main/skills/writing-plans",
+    "image": "/skills-img/writing-plans.webp",
+    "imageAlt": "企劃拆成一張執行單流程圖：盤點範圍、切小步驟、寫明驗收、回頭補漏"
+  },
+  {
+    "slug": "planning-and-task-breakdown",
+    "nameEn": "planning-and-task-breakdown",
+    "nameZh": "大專案拆成排好順序的小任務",
+    "category": "營運管理",
+    "tagline": "專案大到不知道從哪開始時，幫你排先後、切小塊、標檢查點。",
+    "summary": "一個十件事纏在一起的專案，它會先看誰卡誰，把不能同時做的排出先後，再切成一次做得完的小任務。切法很重要：不是先把所有照片拍完再全部寫文案，而是先讓一支商品完整走到能賣，走通了再複製到其他支。每兩三個任務之間插一個檢查點，錯了當場發現。",
+    "painPoint": "每次接大案子都一樣：前兩週不知道要幹嘛，最後一週全部擠在一起趕，然後發現有件事忘了做，整條卡住。",
+    "whatItDoes": [
+      "找出誰卡誰：哪件事沒做完，後面三件都動不了",
+      "把工作切成一次做得完的小塊，太大的直接叫你再拆",
+      "一次只走通一條完整流程，而不是每個環節都做一半",
+      "每個任務都寫上「怎樣算做完」，不是做了就算，是驗過才算",
+      "每兩三個任務插一個檢查點，順便讓你決定要不要繼續",
+      "標出哪些事可以同時發給不同人做，哪些一定要排隊"
+    ],
+    "scenarios": [
+      {
+        "title": "官網改版排不出先後",
+        "body": "你要改版公司網站：換版型、重寫文案、補作品集、接客服聊天、還要顧搜尋排名。它會告訴你版型沒定案，文案怎麼寫都是白寫；作品集跟搜尋排名這兩條互不相干，可以一起開工。排完你會拿到一張有先後的清單，第一週該做什麼很清楚。"
+      },
+      {
+        "title": "新賣場從零開到能出貨",
+        "body": "要開一個新的蝦皮賣場。它不會叫你先把四十支商品的照片全部拍完，而是先讓一支商品完整跑到有人下單、能出貨、能對帳。這一條走通了，你才知道哪個環節會卡，再複製到剩下三十九支，中間少走很多冤枉路。"
+      },
+      {
+        "title": "三個人分工卻常常撞在一起",
+        "body": "你、一個設計、一個小編。它會標出哪些事三個人可以同時做，例如設計出圖、小編寫貼文、你去談合作；哪些一定要等，例如定價沒定就不能寫文案。也會標出「這兩個人要先講好尺寸格式再各自開工」的那幾件。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "把整包事情一次講完，不要只講一半",
+        "detail": "它排順序的能力來自看到全貌。所以連「這件要等客戶回覆」「那台機器月底才到」都要講。講一半的話，它排出來的順序看起來很漂亮，但實際做到第二天就卡住。人力和時間限制也一起講，例如「只有我跟一個工讀生，兩個月內要好」。"
+      },
+      {
+        "step": "先看它畫出來的先後關係對不對",
+        "detail": "它會先告訴你哪件事卡著哪件事。這一步你一定要看，因為只有你知道自家的實際狀況，例如「文案其實可以先寫，反正版型不影響字數」。糾正它一次，後面整張表都會跟著調整，比事後發現順序錯好太多，也不用整份重排。"
+      },
+      {
+        "step": "檢查有沒有任務大到做不完",
+        "detail": "看到「建置會員系統」這種一整條的任務，直接說太大請再拆。好的任務大概是一個下午做得完、做完有東西可以給人看，例如「會員註冊頁做好、能填能送出」。太大的任務最後都變成「一直在做但一直沒做完」，這也是專案拖延最主要的來源。"
+      },
+      {
+        "step": "照著檢查點走，卡住就回來重排",
+        "detail": "每兩三個任務會有一個停下來確認的點。到了就真的停下來看：這幾件真的做完了嗎、方向還對嗎。如果狀況變了，例如客戶延期、素材沒到，把新狀況講給它，它會重排剩下的順序，不用整份重來，也不用你自己重畫一次表。"
+      }
+    ],
+    "examplePrompt": "我要在兩個月內把公司官網改版好，同時開一個新的蝦皮賣場，人力只有我跟一個兼職設計。網站要換版型、重寫十頁文案、補三個作品集；蝦皮要上四十支商品。請先幫我看哪些事卡著哪些事，把不能同時做的排出先後，再切成一次做得完的小任務，每個任務寫清楚怎樣算做完。太大的任務請直接拆掉。每兩三個任務給我一個檢查點，最後告訴我哪裡最可能出事。",
+    "exampleResult": "你會先看到一張先後關係：版型定案卡著十頁文案，商品定價卡著蝦皮文案，作品集跟這兩條都不相干可以一起做。接著是分成三階段的任務清單，第一階段是「把一支商品從建檔到能結帳完整跑一遍」，而不是「拍完四十支照片」。每個任務底下有兩三行驗收條件，階段之間有檢查點，最後附一張可能出事的地方：兼職設計的工時、客戶回覆速度。",
+    "tips": [
+      "一定要講人力和時間限制，不然它排出來的順序很理想，但你根本做不完。",
+      "先讓一件事完整走通再複製到其他件，比每個環節都做一半安全很多。",
+      "任務名稱裡出現「和」這個字，通常代表那其實是兩件事，該拆成兩個。",
+      "檢查點到了就真的停下來看一遍，不要為了看起來有進度硬往下衝。"
+    ],
+    "bestFor": "同時扛好幾個案子、常常覺得事情很多卻不知道先做哪一件的老闆和小團隊負責人。",
+    "keywords": [
+      "任務拆解",
+      "專案排程",
+      "先後順序",
+      "分工協作",
+      "進度檢查",
+      "專案管理",
+      "時程規劃"
+    ],
+    "sourceRepo": "addyosmani/agent-skills",
+    "sourceRepoName": "agent-skills",
+    "sourceStars": "80,825",
+    "sourceUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/planning-and-task-breakdown",
+    "image": "/skills-img/planning-and-task-breakdown.webp",
+    "imageAlt": "大專案拆成小任務流程圖：攤開全貌、找出卡關、切成小塊、插檢查點"
+  },
+  {
+    "slug": "web-design-guidelines",
+    "nameEn": "Web Design Guidelines",
+    "nameZh": "幫網頁做一次介面體檢",
+    "category": "設計創意",
+    "tagline": "把你的網頁對照國際介面準則，一條一條指出哪裡會卡到客人。",
+    "summary": "這個技能會把你的網站或活動頁，拿去跟一份持續更新的國際網頁介面準則逐條對照，然後告訴你哪一段出問題、客人會遇到什麼狀況、該怎麼改。它看的不是好不好看，是好不好用：手機點不點得到、字看不看得清、表單填一半會不會消失。上線前跑一次，交件前也可以自己先驗收一輪。",
+    "painPoint": "網站在你電腦上看起來很正常，客人用手機就是點不到按鈕、字太淡看不清、表單填到一半跳掉。你也不知道要問工程師什麼，只能說「怪怪的」。",
+    "whatItDoes": [
+      "用手機尺寸檢查按鈕夠不夠大、間距夠不夠，避免客人手指一滑就點錯",
+      "檢查文字跟背景的對比，確認年紀大一點的客人也看得清楚",
+      "檢查表單好不好填：會不會跳出正確鍵盤、送出有沒有回應、錯誤訊息講不講人話",
+      "抓出載入時畫面亂跳、圖片被壓變形、捲動卡卡的這些惱人小毛病",
+      "確認用鍵盤或輔助工具也操作得動，符合基本的無障礙要求",
+      "把問題整理成一張清單，標出在哪一段、為什麼要改、改成什麼樣"
+    ],
+    "scenarios": [
+      {
+        "title": "交件前先自己驗收一輪",
+        "body": "客戶下週一驗收，你週五晚上把首頁跟聯絡表單交給它掃一次，回來十二項問題：手機上主選單按鈕高度不夠、頁尾電話是淺灰字幾乎看不到、表單送出後三秒鐘畫面沒有任何反應。週末先改掉最嚴重的五項，週一客戶問「手機上會不會很難按」，你有答案，不是被現場問倒。"
+      },
+      {
+        "title": "活動頁上線前最後檢查",
+        "body": "檔期活動頁明天早上十點開賣，設計稿看起來很漂亮，但沒人真的用手機從頭滑到底過。跑一次檢查，發現購買按鈕在 iPhone 上要滑兩下才看得到、優惠倒數的數字會把下方版面往下推。這種問題開賣後才發現，等於整個上午的廣告費都在賠。"
+      },
+      {
+        "title": "舊網站客人一直說難用",
+        "body": "網站是三年前找人做的，最近常收到客人回訊說「你們網頁我用不太起來」，但講不出哪裡。把幾個主要頁面交給它看過，才知道問題集中在表單：電話欄位跳出英文鍵盤、必填欄位沒標記、送錯只回一行英文提示。這三項改掉，客人至少不會再卡在同一個地方。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚要檢查哪幾頁",
+        "detail": "開新對話直接說「幫我檢查官網首頁跟聯絡表單」，把網址或檔案給它。一次挑三到五頁最重要的就好：首頁、主打商品頁、結帳或表單頁。它會先去抓最新版本的介面準則，再一頁一頁對照，不是憑印象講，所以每次用到的標準都是當下最新那一版。"
+      },
+      {
+        "step": "說明你的客人怎麼看網站",
+        "detail": "告訴它客人的樣子：幾成用手機、從哪裡連過來、年齡層大概多少。像是七成從 IG 點進來、四十歲以上居多，它就會把字級、對比、按鈕大小的標準抓緊一點。如果客人常常是從蝦皮或 LINE 內建的瀏覽器進來，行為跟一般瀏覽器不太一樣，記得一併講。"
+      },
+      {
+        "step": "拿到清單先分輕重緩急",
+        "detail": "回來的清單通常有二三十項，不用全部照做。先問它哪幾項會直接擋住客人下單或送出表單，那幾項今天就改；純粹是排版細節的，排進下一次改版。清單上每一項都會寫位置跟建議做法，你可以整段複製給工程師，不用自己再轉述一遍。"
+      },
+      {
+        "step": "改完請它再跑一次",
+        "detail": "改完叫它跑一次同樣的頁面，比對前後差多少，第二次通常比第一次快很多。建議養成兩個習慣：每次改版後跑一次、每一季固定跑一次。因為準則本身會更新，半年前還沒問題的寫法，現在可能已經被列為該調整的項目了。"
+      }
+    ],
+    "examplePrompt": "幫我檢查官網的三個頁面：首頁、精油商品頁、聯絡我們的表單頁。我的客人有七成用手機從 IG 連過來，年齡三十五到五十五歲，不少人不太會放大縮小。請對照最新的網頁介面準則逐條檢查，重點看：手機上按鈕會不會太小或太靠近、文字跟背景對比夠不夠、表單填一半跳走資料會不會不見、送出後有沒有明確回饋。檢查完照嚴重程度排序，寫成一張清單：問題在哪一段、客人會遇到什麼狀況、建議怎麼改。不用技術術語，給我看得懂的白話版本，我要拿去跟工程師討論。",
+    "exampleResult": "你會拿到一張分級清單。最嚴重的三項：手機上「加入購物車」按鈕高度不足，手指容易點到旁邊的分享；表單的電話欄位跳出的是英文鍵盤；淺灰色說明文字對比太低，中高齡客人看不清楚。中等的五項多半是圖片載入時把版面撐開造成畫面亂跳、送出後沒有等待提示。每一項都會標明在哪個區塊、為什麼是問題、改成什麼樣子，可以整段轉給工程師。",
+    "tips": [
+      "準則會持續更新，重要頁面建議每一季跑一次，不要只在改版時才想到檢查。",
+      "它看的是好不好用，不是好不好看。想調整風格美感，要另外找設計討論。",
+      "一次可能列出二三十項，先修會擋住客人下單的那幾項，其他排進下次改版就好。",
+      "蝦皮、LINE 內建的瀏覽器行為跟一般瀏覽器不同，提問時記得特別註明。"
+    ],
+    "bestFor": "自己有官網或活動頁的電商賣家，還有交件前想先自我驗收的接案設計師與小型工作室。",
+    "keywords": [
+      "網頁檢查",
+      "介面體檢",
+      "無障礙",
+      "手機版體驗",
+      "網站改善",
+      "接案交件",
+      "表單體驗"
+    ],
+    "sourceRepo": "vercel-labs/agent-skills",
+    "sourceRepoName": "agent-skills",
+    "sourceStars": "29,584",
+    "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
+    "image": "/skills-img/web-design-guidelines.webp",
+    "imageAlt": "網頁介面體檢流程流程圖：更新準則、掃過頁面、逐條比對、標出問題"
+  },
+  {
+    "slug": "writing-guidelines",
+    "nameEn": "Writing Guidelines",
+    "nameZh": "照你的規矩逐句檢查文案",
+    "category": "行銷內容",
+    "tagline": "把你的用字規則交給它，稿子出門前先逐句挑出不合規矩的地方",
+    "summary": "你先把公司的用字規則講清楚：品牌名怎麼寫、哪些字不能用、語氣要什麼調性。之後每一篇稿子丟給它，它會逐句對過，指出第幾段第幾句違反哪一條，並附上改好的版本。它不會替你重寫整篇，只標出要改的地方，決定權還在你手上。多人寫稿、外包交稿、法規敏感的商品文案，特別需要這一關。",
+    "painPoint": "三個人寫文案就有三種寫法，品牌名一下全大寫一下中英夾雜。更麻煩的是化妝品文案不能亂寫療效，每次都要自己一句一句抓，抓漏一句就是一張罰單。",
+    "whatItDoes": [
+      "把你的用字規則、品牌寫法、禁用詞整理成一份標準，之後每一篇稿子都照這份對",
+      "逐句掃過整篇稿子，指出哪一段哪一句有問題，不是丟一句「再修一下」給你",
+      "每個抓到的問題都附上建議改法，你可以直接採用，也可以說這條不算",
+      "一次檢查多篇，這週要發的貼文、商品頁、電子報可以一起過一遍",
+      "外包寫手交稿時先過一輪，省下你來回改三次、對方也不知道錯在哪的時間",
+      "規則會隨時間變，改一次規則之後所有稿子都照新的來，不用再一個一個交代"
+    ],
+    "scenarios": [
+      {
+        "title": "化妝品文案不能踩的療效字眼",
+        "body": "新品要上 momo，文案裡寫了「修復肌膚屏障」「淡化細紋」，看起來很順，實際上都踩線。這關就是在稿子送審之前先把這些句子全部標出來，告訴你違反的是哪一條、可以換成什麼講法。一篇兩千字的商品頁通常抓得出五到十處，你自己看第三遍的時候，眼睛早就滑過去了。"
+      },
+      {
+        "title": "三個人寫稿卻要像同一個人寫的",
+        "body": "你自己寫 IG、工讀生寫蝦皮、外包寫官網文章。品牌名有時候有空格有時候沒有，有時候稱呼「您」有時候「你」，客人不會說什麼，但整個品牌看起來就是散的。把規則寫成一份清單之後，三個人交出來的稿子都先過同一關，語氣不會完全一樣，但至少不會互相打架。"
+      },
+      {
+        "title": "外包交稿先過一輪再看",
+        "body": "發五篇部落格文章給外包，一篇兩千字。以前你要自己讀完五篇、標出問題、寫信說明、等對方改回來，一來一回三天。現在稿子進來先過一輪，拿到一份逐條的問題清單，你只要看要改的地方，不同意的劃掉，剩下的直接轉給對方。少來回一到兩次，這個時間差一個月下來很有感。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先把規則寫成一份清單",
+        "detail": "不用寫得很正式，條列就好。品牌名怎麼寫、哪些字絕對不能出現、稱呼用你還是您、價格怎麼標、標題長度上限、各通路有什麼限制。想不到就把過去被退件或改過的地方回想一遍，那些就是規則。第一版有十條就夠開始用，不用一次寫到完美。"
+      },
+      {
+        "step": "把要檢查的稿子交給它",
+        "detail": "一次可以給一篇，也可以把這週要發的貼文、商品頁、電子報一起給。記得說清楚這篇要發在哪裡，蝦皮商品頁和 IG 貼文的規則不一樣，同一句話在一邊完全沒問題，在另一邊會出事。講明通路，它抓的重點才會對。"
+      },
+      {
+        "step": "看它列出的問題逐條決定",
+        "detail": "它會列出第幾段第幾句、違反哪一條、建議怎麼改。你逐條看，同意的就採用，不同意的直接說這條不算。不要讓它整篇重寫，重寫過的稿子常常變得四平八穩，你原本寫得最有味道的那幾句也一起被磨掉了，最後還要自己再改回來。"
+      },
+      {
+        "step": "規則邊用邊補越補越準",
+        "detail": "每次你說「這條不算」或「這裡它沒抓到」，就把這件事補進規則裡。用個兩三個月，規則會從十條長到三四十條，抓出來的東西也會越來越接近你自己看稿的標準。這份規則本身就是公司的資產，之後換人接手也不用從頭教一次。"
+      }
+    ],
+    "examplePrompt": "我們是化妝品品牌，文案規則是這樣：品牌名一律寫成 AUS LIFE，中間空一格；不能出現美白、抗老、修復、療效這類字眼；不要用您，一律用你；蝦皮商品頁不能夾網頁語法，只能用純文字符號；價格一律寫成 NT$ 加數字。這是我們新的商品頁草稿（貼上文案）。請你逐段檢查，把不符合規則的句子標出來，說明違反哪一條，並給一個改好的版本。沒問題的段落不用列出來，我只要看要改的地方。",
+    "exampleResult": "它會列出像這樣的清單：第二段第一句「幫肌膚修復屏障」踩到禁用詞，建議改成「幫肌膚打好底」；第四段品牌名寫成 AUSLIFE 沒空格；第六段用了「您可以」，要改成「你可以」；第九段夾了網頁的粗體語法，蝦皮會直接顯示成亂碼，建議換成全形符號。沒問題的段落不會出現在清單上，所以清單有多長，就代表還有多少要改。",
+    "tips": [
+      "規則寫得越具體越有用。「語氣要親切」它抓不到，「不要用您、一律用你」它就抓得到，能被看見的才寫得進規則。",
+      "被抓出來的不一定都要改。它只負責標出來，改不改是你決定，尤其是那種你刻意打破規則的句子。",
+      "化妝品、保健食品、醫材的廣告用字有法規，把主管機關公告的禁用詞也一起放進規則裡，這一條最省事。",
+      "每次改稿發現的新問題就補進規則。用三個月之後，它抓稿的標準會越來越像你自己在看。"
+    ],
+    "bestFor": "有多個人一起寫文案的品牌、常發外包稿的行銷窗口，以及賣化妝品、保健食品這類用字要小心的賣家。",
+    "keywords": [
+      "文案檢查",
+      "品牌用字規範",
+      "禁用詞",
+      "法規敏感文案",
+      "外包稿驗收",
+      "風格一致",
+      "商品頁校對"
+    ],
+    "sourceRepo": "vercel-labs/agent-skills",
+    "sourceRepoName": "agent-skills",
+    "sourceStars": "29,584",
+    "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/writing-guidelines",
+    "image": "/skills-img/writing-guidelines.webp",
+    "imageAlt": "照規矩逐句檢查文案流程圖：訂好規則、貼上稿子、逐句比對、標出問題"
+  },
+  {
+    "slug": "contract-and-proposal-writer",
+    "nameEn": "Contract and Proposal Writer",
+    "nameZh": "接案報價單與合約一次擬好",
+    "category": "業務開發",
+    "tagline": "從報價到簽約的文件都幫你擬好，付款分期和驗收標準寫清楚",
+    "summary": "你把案子的條件講一遍，它就幫你把提案書、報價單、工作範圍說明、保密協議和合作契約整套擬出來。付款怎麼分期、改稿改幾次、驗收算不算過、著作權歸誰，這些最容易吵架的地方都會先寫進去。內容確認好之後，可以直接排成能列印簽名的正式文件寄給客戶。",
+    "painPoint": "每次接新案就翻出舊報價單複製貼上，改到一半才發現條款根本對不上這個案子。客戶說改稿三次，合約裡沒寫，最後改到第八次還在改。",
+    "whatItDoes": [
+      "把案子條件整理成正式提案書，含工作範圍、時程與報價明細",
+      "擬合作契約，付款分幾期、每期什麼時候收都排成一張表",
+      "寫保密協議，給客戶看素材、報價或名單之前先簽",
+      "補上最容易漏的條款：改稿次數、追加需求怎麼算錢、驗收期限",
+      "著作權與作品集使用權寫清楚，作品能不能放官網先講好",
+      "接海外客戶時，換成當地常見的合約寫法與個資保護條款"
+    ],
+    "scenarios": [
+      {
+        "title": "客戶要報價單但你只有口頭聊過",
+        "body": "客戶在 LINE 上聊了二十分鐘需求，最後說「你報個價給我」。你把聊天重點講一遍，它會整理成有工作範圍、交付項目、時程與金額的正式報價單，還會把不含哪些項目單獨列一段。之後客戶說要多做一頁的時候，你有東西可以指著講。"
+      },
+      {
+        "title": "跟大公司合作要簽保密協議和合約",
+        "body": "對方採購丟一份合約過來，或反過來要你出一份。你把條件講清楚，它會擬出一份雙方對等的版本，責任上限、付款天數、逾期利息、終止條件都列出來。你沒交代到的欄位會標成待補，不會自己編一個數字填進去。"
+      },
+      {
+        "title": "月費維護客戶要簽長期約",
+        "body": "網站維護、廣告代操這種月費案，最怕沒寫清楚一個月含幾小時、超過怎麼算、沒用完能不能累積到下個月。它會把這些做成一張表，再加上要提前多久通知才能終止、急件多久回覆，客戶就不會每個月再來問一次。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚這案子的條件",
+        "detail": "告訴它你要哪一種文件、雙方是誰、案子在做什麼、總價或時薪多少、什麼時候開始跟結束。講不出來的先跳過沒關係，它會把缺的欄位標成待補，讓你之後填。條件講得越細，文件出來之後要回頭改的地方就越少，通常一次就能寄出去。"
+      },
+      {
+        "step": "挑對要用的文件類型",
+        "detail": "單次專案用合作契約加工作範圍說明；長期配合用月費合約；還在爭取階段就先出提案書；要看對方資料之前先簽保密協議。不確定的話直接問它「這種案子該簽哪一種」，它會先推薦一種，再說明幾種文件差在哪裡，你再決定要用哪一份。"
+      },
+      {
+        "step": "補上最會吵架的那幾條",
+        "detail": "文件出來之後，重點看四個地方：改稿次數與追加需求怎麼計價、驗收流程與逾期視同驗收、付款分期與逾期利息、著作權什麼時候移轉。這四條沒寫清楚，後面一定會來回。你可以直接叫它把哪一條改嚴一點、哪一條放寬一點。"
+      },
+      {
+        "step": "排成正式文件寄出去",
+        "detail": "內容確認之後請它整理成可以列印簽名的版本，標題、條號、簽名欄都會排好，你只要存成文件檔或印出來蓋章。金額比較大或條件比較特殊的案子，簽之前還是找律師看過一次；這份文件是很好的起點，但不等於法律意見。"
+      }
+    ],
+    "examplePrompt": "我是接案設計公司，要跟一家做保養品的客戶簽網站改版案。總價 18 萬，分三期收：簽約五成、測試版三成、驗收兩成，工期兩個月。幫我擬一份合作契約，要包含：改稿三次為限、第四次起每次另計、客戶七個工作天內沒回覆就視同驗收、著作權在尾款付清後移轉、作品可以放我們官網作品集但上線前不公開。我還沒確定的欄位幫我標成待補，不要自己填數字。",
+    "exampleResult": "回來的是一份完整合約草稿：雙方資料、服務範圍與交付清單、三期付款表、改稿次數與追加計價、七日驗收條款、著作權移轉時點、作品集使用權、保密與終止條件，一路排到簽名欄。你沒給的統一編號、地址、負責人姓名都會標成待補，填完就能寄出去。",
+    "tips": [
+      "金額大或條件特殊的案子，簽之前還是請律師看過，這份文件是好用的起點，不是法律意見。",
+      "公司抬頭、統編、地址、負責人先存成一份固定資料，以後每份文件都不用重打一次。",
+      "改稿次數和追加需求怎麼計價一定要寫進合約，比事後跟客戶在 LINE 上吵有用得多。",
+      "談成之後把最終版留一份當範本，下次同類型的案子直接叫它照這份改。"
+    ],
+    "bestFor": "接案設計公司、工作室、自由接案者，還有常常要出報價單和合約的中小企業老闆。",
+    "keywords": [
+      "接案合約",
+      "報價單",
+      "提案書",
+      "保密協議",
+      "工作範圍說明",
+      "驗收條款",
+      "著作權歸屬"
+    ],
+    "sourceRepo": "alirezarezvani/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "23,256",
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-growth/skills/contract-and-proposal-writer",
+    "image": "/skills-img/contract-and-proposal-writer.webp",
+    "imageAlt": "報價到簽約的流程流程圖：說清條件、選對文件、補齊條款、排版送簽"
+  },
+  {
+    "slug": "customer-success-manager",
+    "nameEn": "Customer Success Manager",
+    "nameZh": "盤點老客戶誰快跑掉誰能加購",
+    "category": "業務開發",
+    "tagline": "把客戶名單丟進去，排出誰快流失、誰該先打電話、誰可以加購",
+    "summary": "把手上的客戶資料整理成一張表，它會從下單或使用狀況、互動熱度、客訴情形、關係深淺四個面向算出健康分數，分成綠燈、黃燈、紅燈。接著標出續約有風險的那幾家，再挑出還有加購空間的客戶，照該先聯絡誰排好順序。分數是拿來排先後的，不是預言誰一定會走。",
+    "painPoint": "客戶多了以後，誰快跑掉全靠感覺。通常是收到終止合作的訊息，你才想起來這家三個月沒下單，你也三個月沒聯絡了。",
+    "whatItDoes": [
+      "幫每個客戶算一個健康分數，分成綠燈、黃燈、紅燈三級",
+      "跟上一期的分數比對，找出正在往下掉但還沒出事的客戶",
+      "排出流失風險高低，並標出哪幾家該老闆親自出面",
+      "找出可以加購、升級或推薦給其他部門的客戶，估一個大概金額",
+      "產出季度檢討會的簡報大綱，讓你帶著數字去跟客戶開會",
+      "給新客戶前三個月的上手檢查清單，避免簽完約就沒人管"
+    ],
+    "scenarios": [
+      {
+        "title": "網站維護月費客戶悄悄不續約",
+        "body": "代操或維護型的客戶最會無聲流失。把每家的近期聯絡次數、開單數量、會議有沒有出席、合約到期日整理成表，它會標出紅燈那幾家，通常是連續兩個月沒開會、窗口又換人、剛好三個月後到期的那種。你就知道這禮拜該先打哪三通電話。"
+      },
+      {
+        "title": "批發客戶太多不知道先跟誰",
+        "body": "化妝品批發或經銷有幾十家在跑，業務只顧著顧最大的那幾家。把每家的下單頻率、最近一次下單日、退換貨次數、有沒有回訊息丟進去，它會排出一張優先聯絡表。有時候排第三的不是最大戶，而是這一季量掉最快的那家。"
+      },
+      {
+        "title": "不知道哪些老客戶還能加購",
+        "body": "已經合作的客戶最好談，但你不會記得誰只買了官網、還沒做社群，誰買了十個帳號其實只用四個。它會把這些空缺列出來，標成加購、升級、或推薦給同集團其他部門三種，再排出先談哪一家。談的時候你手上有具體理由，不是硬推。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先把客戶名單整理成一張表",
+        "detail": "一家一列，欄位放公司名、規模、年度金額、最近一次下單或開會、開了幾張客訴單、有沒有回訊息、合約到期日。從蝦皮後台、發票系統或你自己的對帳表撈出來就好，不用一次很完整，有幾欄就先填幾欄，之後再慢慢補。"
+      },
+      {
+        "step": "請它算分數並分綠黃紅",
+        "detail": "跟它說這是你的客戶名單，請它算健康分數。它會依下單或使用狀況三成、互動與滿意度兩成五、客訴處理兩成、關係深淺兩成五加權算出來，七十五分以上綠燈、五十到七十四黃燈、五十以下紅燈。權重覺得不合你的生意，直接叫它改。"
+      },
+      {
+        "step": "看趨勢不要只看當下分數",
+        "detail": "一個從九十掉到七十六的綠燈客戶，比一直維持在六十的黃燈客戶更急，因為它正在往下走。把上一季的分數也給它，它會標出掉最多的那幾家。這份名單就是你這個月要親自打電話的順序，從第一家往下打就對了。"
+      },
+      {
+        "step": "拿分數去談續約和加購",
+        "detail": "要開季度檢討會之前，請它把這家客戶的分數變化、用了什麼、什麼還沒用、還能加購什麼整理成大綱。開會時你講的是具體數字，不是「我們合作很愉快」。談加購也一樣，先講對方哪裡還沒被照顧到，再談方案。"
+      }
+    ],
+    "examplePrompt": "我做保養品批發，有 38 家經銷商。我整理了一張表，欄位有店名、去年進貨金額、最近一次下單日期、今年下單次數、退貨次數、上次聯絡日期、合約到期月份。請幫我做三件事：一、每家算健康分數並標綠黃紅；二、把三個月內到期又是黃燈或紅燈的挑出來，照緊急程度排；三、綠燈裡面挑五家最有機會加購新品線的，各寫一句我開場可以講的話。",
+    "exampleResult": "回來的是三張清單。第一張三十八家全部依分數排序，紅燈四家、黃燈十一家。第二張是六家要優先處理的，每家寫了原因，例如半年沒下單又下個月到期。第三張是五家加購名單，寫明他們只進了基礎線、沒進臉部精華，還附上開場的第一句話。你照著順序打電話就好。",
+    "tips": [
+      "分數只是拿來排先後順序的，最後還是你自己判斷，別把它當成預測。",
+      "資料不用一次到齊，先從下單日期和聯絡日期兩欄開始，就看得出不少東西。",
+      "窗口換人是最準的警訊之一，看到就先約時間見面，不要等對方主動開口。",
+      "每季固定跑一次，跟上一季比才有意義，只跑一次看不出誰正在往下掉。"
+    ],
+    "bestFor": "有月費客戶、經銷商或回購型會員要顧的老闆，客戶數多到記不住的時候最有感。",
+    "keywords": [
+      "客戶健檢",
+      "流失風險",
+      "續約管理",
+      "加購機會",
+      "經銷商管理",
+      "客戶分級",
+      "季度檢討"
+    ],
+    "sourceRepo": "alirezarezvani/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "23,256",
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-growth/skills/customer-success-manager",
+    "image": "/skills-img/customer-success-manager.webp",
+    "imageAlt": "老客戶健檢的流程流程圖：整理名單、算出分數、標出風險、排定聯繫"
+  },
+  {
+    "slug": "rfp-responder",
+    "nameEn": "RFP Responder",
+    "nameZh": "拆解標案需求並判斷該不該投",
+    "category": "業務開發",
+    "tagline": "把厚厚一本需求書拆成清單，標出必要條件，再算這案值不值得投",
+    "summary": "收到標案須知、企業採購需求書或比稿邀請的時候，它會把整份文件拆成一條一條的要求，分成一定要有、有配分、加分用三種。再拿你手上的實績去對，哪幾條你有東西可以證明、哪幾條根本沒有，一次列清楚。最後給一個要投、找夥伴合投、還是這次先放掉的建議。",
+    "painPoint": "每次收到標案文件都幾十頁，看到第三天才發現有一條資格根本過不了。三個人熬夜寫完投出去，也沒下文。",
+    "whatItDoes": [
+      "把幾十頁的需求書拆成逐條清單，標出繳件期限、份數和格式限制",
+      "分出哪些是資格門檻、哪些有配分、哪些只是寫來加分",
+      "每一條對照你的實績案例，標成有把握、勉強、完全沒有",
+      "整理出三到五個貫穿全案的主打論點，不是空話式的自我介紹",
+      "沒把握的地方明白列出來，不會幫你編一個實績湊數",
+      "依對手、關係深淺、有沒有現任廠商，估一個大概的機會高低"
+    ],
+    "scenarios": [
+      {
+        "title": "政府標案文件三十頁看不完",
+        "body": "投標須知加規格說明常常四五十頁，資格條件還散在不同章節。把檔案整份給它，它會列成一張表：哪幾條是硬門檻、哪幾條有配分、幾號幾點截止、要交幾份紙本。資格過不了的那一條第一天就會跳出來，不會寫到第十天才發現白做工。"
+      },
+      {
+        "title": "客戶找了五家比稿要不要接",
+        "body": "對方已經跟其中一家配合三年，你是後來才被找進去的。它會把這些都算進去：有沒有現任廠商、你是不是在需求寫完之後才進場、決策的人你認不認識，然後給一個機會高低的判斷。有時候答案就是不要投，把那三天留給另一個案子。"
+      },
+      {
+        "title": "大公司採購丟來一份廠商評估表",
+        "body": "一百多題的廠商評估表或資安問卷，題目又臭又長。它會逐題整理，能答的填上你的實際做法，答不出來的直接標出來，讓你決定要補件還是誠實說明。重點是照對方的題號和順序回，不要自己重排，評審是照他們那張表在打分數的。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先把需求文件整份給它",
+        "detail": "投標須知、規格書、評選辦法、附件表格全部給它，不要只挑你看得懂的那幾頁。它會逐條拆開，把「應」「須」這種硬性字眼和「宜」「得」這種彈性字眼分成兩堆，順便抓出截止日、份數、裝訂方式這些漏掉就會被扣分的細節。"
+      },
+      {
+        "step": "把自己的實績攤開給它看",
+        "detail": "過去做過的案子、拿過的證照、客戶願意具名的推薦、可以查證的數字，整理一份給它。它會逐條標上有把握或沒把握，拿不出證據的說法會被歸到沒把握，不會自動變成有。這一步偷懶，後面整份提案寫出來都是空的。"
+      },
+      {
+        "step": "想出三到五個主打論點",
+        "detail": "論點要站在對方的角度講，不是「我們是業界領導品牌」，而是「你們行銷部門不用加人，每季就多四支影片可以用」。它會檢查每個論點有沒有貫穿到兩條以上的需求，只出現一次的那個通常是拿來充版面的，會被單獨標出來讓你換掉。"
+      },
+      {
+        "step": "投或不投，先講好標準",
+        "detail": "在看到案子之前先訂一條線，例如硬門檻要七成以上有把握、要有一個說得上話的窗口，再決定投不投。等到已經投入三天才在想值不值得，判斷就歪了。它會依現有條件給建議，最後拍板的還是你，它不會替你決定要押多少人力進去。"
+      }
+    ],
+    "examplePrompt": "我開設計公司，收到一份市政府觀光網站改版的招標文件，內容貼在下面。幫我做三件事：第一，把所有要求列成表格，標出哪些是資格門檻、哪些有配分、配幾分；第二，用我們做過的三個政府網站案子去對照，哪幾條有把握、哪幾條沒有；第三，我們沒跟這個單位合作過，以這個情況判斷值不值得投，並說明理由。",
+    "exampleResult": "先給一張需求對照表，六十幾條要求逐條列出，硬門檻另外標記，旁邊寫上你哪個案子可以拿來當證明。接著是一份沒把握清單，其中兩條牽涉到資安認證，你手上沒有。最後是一段判斷：沒有既有關係、又有現任廠商在，機會偏低，建議找有認證的夥伴一起投，或這次先觀察。",
+    "tips": [
+      "答題順序照對方的題號走，不要為了好讀自己重排，評審是照他們的表在打分。",
+      "沒有真實案例或證書可以佐證的說法就不要寫，被追問拿不出東西反而更慘。",
+      "哪幾題配分高就把力氣放在那裡，每題都平均用力，反而拿不到高分。",
+      "決定不投也是一種結果，省下來的三天可以拿去談成交機會更高的案子。"
+    ],
+    "bestFor": "常投政府標案、參加比稿，或要應付大企業採購問卷的接案公司與中小企業。",
+    "keywords": [
+      "政府標案",
+      "招標文件",
+      "比稿提案",
+      "需求說明書",
+      "廠商評估表",
+      "投標評估",
+      "機會判斷"
+    ],
+    "sourceRepo": "alirezarezvani/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "23,256",
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/rfp-responder",
+    "image": "/skills-img/rfp-responder.webp",
+    "imageAlt": "投標前的判斷流程流程圖：拆解需求、標記門檻、比對實績、投或不投"
+  },
+  {
+    "slug": "competitive-teardown",
+    "nameEn": "Competitive Teardown",
+    "nameZh": "把對手強在哪弱在哪拆給你看",
+    "category": "行銷內容",
+    "tagline": "不用再猜對手為什麼賣得好，把定價、賣點、評價攤在同一張表上",
+    "summary": "你給它兩到四家對手，它會去看他們的商品頁、定價、顧客評價和公開資訊，整理成一張跟你並排的比較表，再用十二個面向逐項打分，每個分數都要附上看到什麼證據。最後拿到的不是一堆資料，是可以直接拿去開會的結論：對手強在哪、弱在哪、你可以從哪裡切，還有這個月就能動手的三件事。",
+    "painPoint": "你知道隔壁那家賣得比你好，但講不出來到底好在哪。價格？包裝？還是評論比較多？每次開會都在猜，猜完誰也不敢下決定，下個月又原地打轉。",
+    "whatItDoes": [
+      "把對手的商品頁、定價、組合方式整理成一張並排比較表，你自己的產品也放進去對照",
+      "翻他們的顧客評價，分成稱讚、抱怨、許願三類，抱怨那一堆通常就是你的機會",
+      "用十二個面向逐項打分，每一分都要附上證據，不能憑印象隨便給",
+      "排出價格分布，看誰在殺價、誰在賣品牌，你自己現在卡在哪個位置",
+      "整理出對手的強項弱項和你可以切進去的缺口，寫成主管或客戶看得懂的結論",
+      "最後給短中長期的行動清單，哪些這個月就能做、哪些要排到下一季"
+    ],
+    "scenarios": [
+      {
+        "title": "對手突然降價你要不要跟",
+        "body": "同類商品的第一名把價格從 590 砍到 449，你的成本根本跟不下去。與其硬跟，先拆一次：他的 449 是單入還是雙入、有沒有偷偷提高免運門檻、評價裡是不是開始出現「包裝變薄」。常見的情況是他在清庫存，過一陣子就會調回去。你要做的不是降價，是把商品頁第一張圖換成你們材質的說明。"
+      },
+      {
+        "title": "要進新品類前先看看水多深",
+        "body": "你賣保養品賣得不錯，想加香氛蠟燭這條線。先挑三家現在賣得好的來拆：價格帶落在哪、主打什麼香調、評價裡最常被抱怨什麼。如果三家的抱怨都集中在「燒不完」和「味道太淡」，那就是你進場的角度；如果三家都已經做到 SGS 檢驗和禮盒組，那你要準備的預算跟原本想的不一樣。"
+      },
+      {
+        "title": "幫客戶提案時附一份市場分析",
+        "body": "客戶找你做品牌改版，你報了三十萬，對方猶豫。提案書裡多一段競品拆解，把他跟三個對手並排比較，指出他的商品頁在哪三個地方輸人，附上對手評價的原句佐證。這段不是為了嚇客戶，是讓他知道你動手之前先看過市場，少來回兩次解釋，他也比較快抓到你要改的是什麼。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚要拆哪幾家",
+        "detail": "把兩到四家對手的名字或賣場網址列給它，並說明哪一家是主要對手。同時講清楚你自己的定位：賣什麼、客單價多少、主要通路是蝦皮還是 momo、有沒有官網。少了這個對照，它拆出來的會變成一份誰都能看的市場報告，看起來很專業，但你看完不知道要做什麼。"
+      },
+      {
+        "step": "把手上有的資料先丟給它",
+        "detail": "你自己截的對手商品頁、抄下來的價格、客服被客人念過的話，都先給它。公開資訊它查得到，你手上的第一手觀察它查不到。尤其是跟老客戶聊過的內容，那些常常才是真正的差別，比任何公開資料都準，也是報告裡最有份量的部分。"
+      },
+      {
+        "step": "請它逐項打分並附證據",
+        "detail": "要求每個面向的分數旁邊都寫清楚是看到什麼才這樣打，是哪一則評價、哪一頁定價、哪一張商品圖。沒有出處的分數一律當作沒有。你看到證據之後常常會不同意它的判斷，這很正常，直接跟它說哪裡不對、你知道的實際狀況是什麼，讓它重打一次。"
+      },
+      {
+        "step": "要一份能直接開會用的結論",
+        "detail": "最後請它把東西收成幾頁重點：對手的威脅程度、他們最強的一件事、我們最有機會的一個缺口、這個月能做的三件事。細節資料留在後面當附錄。老闆或客戶要看的是結論和下一步，不是十二張評分表，表格是被追問的時候才翻出來的。"
+      }
+    ],
+    "examplePrompt": "我在蝦皮賣香氛蠟燭，客單價 480，主要客群是二十五到三十五歲女生。想拆三家同類賣家：（貼上三個賣場網址）。請先整理他們的價格帶、組合方式、運費門檻和主打賣點，做成一張跟我並排的比較表。接著看他們的商品評價，把稱讚、抱怨、許願分成三類，抱怨的部分請直接引用原句。然後用你的十二個面向幫每一家打分，每個分數都要說明是看到什麼才這樣打。最後給我三件這個月就能做的事，還有兩件要排到下一季的事。",
+    "exampleResult": "你會拿到一張三家並排的比較表，價格帶、組合、運費門檻一列一列排好。評價那段會直接引用原句：「味道很淡」出現十一次、「玻璃杯有瑕疵」七次。十二個面向的分數旁邊都寫著理由，例如包裝那項給兩分，是因為評價裡有九則提到外盒壓損。最後的行動清單長這樣：這個月把運費門檻從 990 調到 690、商品頁第一張圖改成香氣濃度說明；下一季再看要不要開禮盒組。",
+    "tips": [
+      "對手最多挑三家。挑五家以上，每家都只能寫兩句，看起來很豐富，其實你一件事都做不了。",
+      "顧客評價至少要看二十則以上再下結論，只看三五則很容易被特別誇張的那幾則帶偏方向。",
+      "打分數一定要求附證據，看到哪一則評論、哪一頁定價。沒有出處的分數就是它自己編的印象分，不能拿去開會。",
+      "同一批對手每季重做一次，兩次之間差異的地方，比單看一次的分數更有參考價值。"
+    ],
+    "bestFor": "在蝦皮、momo 上跟同類商品硬碰硬的賣家，以及要幫客戶做市場分析、寫提案前置研究的接案公司。",
+    "keywords": [
+      "競品分析",
+      "對手拆解",
+      "定價比較",
+      "顧客評價分析",
+      "市場定位",
+      "電商選品",
+      "提案前置研究",
+      "優劣勢盤點"
+    ],
+    "sourceRepo": "alirezarezvani/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "23,256",
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/competitive-teardown",
+    "image": "/skills-img/competitive-teardown.webp",
+    "imageAlt": "拆解對手寫成報告流程圖：鎖定對手、蒐集情報、逐項打分、產出對策"
+  },
+  {
+    "slug": "ui-design-system",
+    "nameEn": "UI Design System",
+    "nameZh": "把設計稿變成工程師照做的規格",
+    "category": "設計創意",
+    "tagline": "給一個主色，展開整套顏色字級間距規格，設計和工程照同一份做",
+    "summary": "給它一個品牌主色，它會展開成一整套規格：深淺十階的顏色、大小配好的字級、以整數往上加的間距、圓角、陰影，還有手機平板電腦的斷點。同時檢查文字和背景的對比夠不夠，避免淺灰字配白底看不清楚。最後輸出成工程師可以直接放進專案的規格檔，設計和工程從頭到尾看同一份。",
+    "painPoint": "設計稿看起來好好的，工程師做出來按鈕高度差三個像素、灰色又比較深，來回改到大家都不想講話。改個主色更慘，整站要一頁一頁翻出來換。",
+    "whatItDoes": [
+      "一個主色展開成十個深淺階，按鈕、滑過、按下、停用各用哪一階都標好",
+      "算出成套的字級和行高，標題到說明文字之間的落差有規律可循",
+      "間距用八的倍數排，畫面上的距離不會這裡十三、那裡十七",
+      "檢查文字和背景的對比夠不夠無障礙標準，淺色字配淺底會被抓出來",
+      "按鈕、輸入框、卡片、彈出視窗各要用哪些規格，三種尺寸三種樣式都定好",
+      "輸出成工程師能直接用的規格檔，也能貼回設計軟體裡共用"
+    ],
+    "scenarios": [
+      {
+        "title": "接案交付時少吵三輪",
+        "body": "設計稿丟給客戶的工程團隊，對方問「這個灰是哪個灰」「間距到底多少」，一問就是半天。先產一份規格表附在交付檔案裡，色號、字級、間距、圓角全部寫死，工程師照抄就好。驗收時也有依據，不用再拿兩台螢幕比對誰的比較準。"
+      },
+      {
+        "title": "品牌換色，整站不用重做",
+        "body": "主色從藍換成墨綠，當初每個顏色都是隨手填的話，就得整站翻一遍。有規格表就只改主色那一格，其他深淺階跟著重算，按鈕、連結、提示訊息一起換過去。做季節活動臨時換色也一樣，換完再檢查一次對比夠不夠就能上。"
+      },
+      {
+        "title": "網站在手機上一直跑版",
+        "body": "電腦看好好的，客人用手機點進來標題太大擠成三行，區塊之間又貼太近。規格表會直接給手機、平板、電腦各自的字級和間距，還有讓字隨螢幕寬度平順縮放的做法。商品頁和一頁式銷售頁最需要這個，因為客人多半是滑手機在看。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講主色和整體風格",
+        "detail": "給品牌主色的六碼色號，再挑一個風格：俐落現代、穩重經典，或活潑一點。風格會影響圓角要多圓、陰影要多明顯、字體怎麼挑。不確定風格的話，把品牌現有的網站或商品頁截圖給它看，讓它先判斷再回頭問你對不對。風格挑錯這一步重來很快，比後面整套規格都出來了才想換省事。"
+      },
+      {
+        "step": "確認展開出來的規格表",
+        "detail": "它會列出顏色深淺階、字級、間距、圓角、陰影和斷點。這時候要看的是：有沒有哪個顏色在你家背景上看不清楚、字級的落差夠不夠明顯、間距是不是太緊。這一步花十分鐘看過，比日後整站一頁一頁微調省事很多。看到不對就直接說「這個灰太淺」，讓它重算一次再往下走。"
+      },
+      {
+        "step": "把常用元件的樣子定下來",
+        "detail": "請它把按鈕、輸入框、卡片、彈出視窗各列出三種尺寸和三種樣式，還有滑過、按下、停用、鎖定時分別長什麼樣。這份定好，之後不管誰做新頁面，按鈕都會長一樣，也不會出現同一個網站有五種圓角的狀況。最容易漏掉的是滑過和停用的樣子，記得一起要，不要只看正常狀態。"
+      },
+      {
+        "step": "輸出規格交給工程師",
+        "detail": "請它輸出成工程師可以直接放進專案的格式，再附一份你自己看得懂的說明：哪個顏色用在哪、間距怎麼取。交付時兩份一起給，後面有人接手也看得懂。之後要改，回頭改這份規格再重新輸出，不要在單一頁面上直接硬改。"
+      }
+    ],
+    "examplePrompt": "我們要重做官網，品牌主色是墨綠 #2F5D50，風格俐落、圓角不要太圓。請展開一整套設計規格：主色的十個深淺階、中性灰、成功和錯誤的提示色、字級和行高、以八為倍數的間距、圓角和陰影，還有手機平板電腦三種斷點。文字對比請照無障礙標準檢查，不合格的標出來並給我替代色號。另外把按鈕、輸入框、卡片這三個元件的三種尺寸和三種樣式列成表格。最後輸出一份工程師可以直接放進專案的規格檔，再附一份我自己看得懂的中文說明。",
+    "exampleResult": "先拿到一張顏色表：墨綠從最淺到最深十階，每階標明用在背景、邊框、文字還是按下的狀態，旁邊是中性灰和兩個提示色。接著是字級表，從十二到四十八共八級，各自配好行高；間距是八、十六、二十四這樣往上排。對比檢查那段會直接寫「淺灰字配白底不合格，建議改用第七階」。最後是元件表、規格檔和一份中文說明。",
+    "tips": [
+      "主色給六碼色號，不要只說「我們的綠」，深淺差一點點，整站看起來就不一樣。",
+      "對比檢查不要跳過，淺灰字配白底在辦公室看得到，客人在陽光下滑手機就看不到了。",
+      "手機上可以點的地方留大一點，太小的按鈕手指戳不準，客人常常就直接關掉了。",
+      "規格定完就當成唯一版本，之後要改回頭改這份，不要在單一頁面上直接硬改數字。"
+    ],
+    "bestFor": "要交網站或應用程式設計稿給工程師的接案設計師，以及想讓官網、商品頁、銷售頁看起來是同一套的品牌方。",
+    "keywords": [
+      "設計規格",
+      "色階",
+      "字級",
+      "間距",
+      "無障礙對比",
+      "元件規範",
+      "設計交付",
+      "響應式"
+    ],
+    "sourceRepo": "alirezarezvani/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "23,256",
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/ui-design-system",
+    "image": "/skills-img/ui-design-system.webp",
+    "imageAlt": "一個主色展開整套規格流程圖：選定主色、展開色階、檢查對比、交付規格"
+  },
+  {
+    "slug": "landing-page-generator",
+    "nameEn": "Landing Page Generator",
+    "nameZh": "把一頁式銷售頁整頁做出來",
+    "category": "電商經營",
+    "tagline": "從開頭標題到購買按鈕，一頁式銷售頁整頁做好，文案版面一起給。",
+    "summary": "給它商品名稱、賣點、價格跟客人是誰，它會產出一整頁可以直接上線的銷售頁：開頭主打、賣點區塊、方案比較、常見問答、評價、購買按鈕、頁尾一次到位。文案照銷售的順序寫，先講客人的煩惱再給解法，不是填空用的樣板字。搜尋結果會顯示的標題和描述、分享到 LINE 時的預覽圖尺寸也一起補上。",
+    "painPoint": "每檔活動都要一張一頁式銷售頁。文案自己憋、版面等設計排、改一版又要三天，等頁面終於好了，檔期都過一半。",
+    "whatItDoes": [
+      "一次產出完整一頁：開頭主打、賣點區塊、方案比較、常見問答、購買按鈕、頁尾",
+      "文案照銷售順序寫：先講煩惱、再放大後果、最後給解法，不是空話堆在一起",
+      "同一支商品可以生兩三版不同說法，拿去投廣告比比看哪一版有人按",
+      "搜尋結果會顯示的標題描述、分享到 LINE 或 FB 的預覽圖，都一起補齊",
+      "手機優先排版，價格跟購買按鈕在客人開始滑之前就看得到",
+      "圖片尺寸事先寫好，避免載入時版面亂跳讓客人手滑點錯"
+    ],
+    "scenarios": [
+      {
+        "title": "母親節檔期只剩五天",
+        "body": "組合價週一才敲定，禮盒照片週二才拍好，活動週六就要開跑。把商品資料、價格、期限一次給它，當天下午就拿到完整一頁：主圖標題、三個賣點、五題問答、倒數與購買按鈕。你剩下的時間拿去對價格、換真實評價、確認庫存，而不是坐在那裡想第一句話要怎麼寫。"
+      },
+      {
+        "title": "同一支商品想試兩種說法",
+        "body": "洗面乳你不確定客人買的是「省時」還是「敏感肌也能用」。請它用兩種訴求各生一版，兩版的開頭跟賣點順序不同，其他一樣。各投幾百塊廣告跑三天，看哪一版有人真的滑到底、按下購買。有結果再把表現好的那版擴寫成主推頁，另一版收起來當備案。"
+      },
+      {
+        "title": "客戶要一張講座報名頁",
+        "body": "接案客戶下週辦實體講座，要一張報名頁，預算不高、時間也趕。用它先產出整頁，你把重心放在客戶品牌色、講師照片跟活動細節上。原本要花兩天排的版一個下午就有雛形，報價單上的工時可以誠實算，剩下的時間拿去接下一個案子。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "把商品資料一次給齊",
+        "detail": "商品名稱、售價、活動期限、規格、三個最強賣點、客人是誰、他們在煩什麼，一次講完再讓它動筆。資料越具體，文案越不像樣板；只丟一句「幫我做香氛蠟燭的銷售頁」，出來的就是誰都能用的空話。手邊有舊的商品頁或真實評價，也一起貼給它學語氣。"
+      },
+      {
+        "step": "選一個說故事的順序",
+        "detail": "同一支商品有三種講法：先講煩惱再給解法、先抓住注意力再堆疊想要、先講改變前後再說怎麼做到。禮品類適合講改變前後，功能型商品適合先講煩惱。不確定的話，請它三種各寫一段開頭給你挑，挑完再往下擴寫成整頁，不用一開始就決定。"
+      },
+      {
+        "step": "先看文案再看版面",
+        "detail": "先只看文字：標題有沒有講到客人真正的煩惱、價格寫對沒、期限對不對、有沒有不能講的療效字眼。文案定了再看版面跟顏色。順序反過來的話，你會花一小時調間距，最後發現整段訴求要重寫，版面等於白調一次。"
+      },
+      {
+        "step": "上線後用數字換段落",
+        "detail": "頁面上線後看客人滑到哪裡就離開。多數人停在賣點區前面，就把最強的證據往上搬；滑到最後卻沒按購買，通常是價格旁邊少了讓人安心的東西，像退換貨說明或真實評價。一次改一段、觀察幾天、再改下一段，才知道是哪一段有效。"
+      }
+    ],
+    "examplePrompt": "幫我做一頁式銷售頁。商品是香氛蠟燭禮盒，一組三入，售價一千二百八十元，母親節限定到五月十日。客人主要是三十到四十五歲的上班族女性，煩惱是想送媽媽有質感又不俗氣的禮物，但預算有限，又怕香味挑錯。主要賣點：大豆蠟不嗆鼻、每顆可燃約三十五小時、附手寫卡片、可指定包裝。請用先講煩惱再給解法的寫法，風格乾淨簡約、米白色系。要有開頭主打、三個賣點區塊、常見問答五題、評價區，以及固定在下方的購買按鈕。手機打開要一眼看到價格跟按鈕。",
+    "exampleResult": "你會拿到一頁可以直接上線的完整頁面：最上面是主圖配一句「送禮不踩雷」的標題，往下接三個賣點區塊，再來是禮盒內容、五題常見問答、四則評價，最後是倒數與購買按鈕，手機滑動時按鈕固定在底部。文案不是樣板字，每一段都對著你給的煩惱寫。搜尋結果會顯示的標題描述、分享到 LINE 的預覽圖尺寸也會一併附上。",
+    "tips": [
+      "價格、期限、庫存這些數字自己再對一次，它會照你給的寫，你給錯就整頁錯。",
+      "化妝品保養品不要放療效字眼，產完請它把誇大用詞換成使用感受的描述。",
+      "先讓它出兩版標題跟開頭，投一點廣告測過，再決定哪一版擴寫成完整頁。",
+      "評價區一定要放真的評論，還沒有真實評價就先拿掉，不要用它生的假評價。"
+    ],
+    "bestFor": "常做檔期活動的電商賣家，以及要幫客戶做活動頁、報名頁的設計工作室與接案者。",
+    "keywords": [
+      "一頁式銷售頁",
+      "活動頁",
+      "銷售文案",
+      "檔期行銷",
+      "商品頁",
+      "報名頁",
+      "轉換率"
+    ],
+    "sourceRepo": "alirezarezvani/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "23,256",
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/landing-page-generator",
+    "image": "/skills-img/landing-page-generator.webp",
+    "imageAlt": "一頁式銷售頁產出流程流程圖：給齊資料、選定說法、寫出文案、排成整頁"
+  },
+  {
+    "slug": "experiment-designer",
+    "nameEn": "Experiment Designer",
+    "nameZh": "幫你測出商品頁改版有沒有效",
+    "category": "電商經營",
+    "tagline": "一次只改一件事，算好要跑多久、看多少人，再決定留不留",
+    "summary": "這個技能陪你把「我想改一下商品頁」變成一次講得清楚、看得懂結果的測試。改之前先寫下你預期什麼會變、變多少，選好一個決定去留的指標，再算出要累積多少人看過、多少張單才分得出差別。跑完幫你判斷差異是真的，還是只是這幾天剛好比較旺。",
+    "painPoint": "主圖換了、標題也改了，這週業績好像有變好，但到底是改對了，還是剛好碰上發薪日？每次都憑感覺決定要不要留，改回去又不甘心。",
+    "whatItDoes": [
+      "把想改的地方寫成一句可以驗證的話：改什麼、預期哪個數字變多少、為什麼",
+      "幫你挑一個決定去留的主要指標，另外設幾條不能變差的底線，像退貨率和客訴數",
+      "算出這次要累積多少人看過、多少張單，才有辦法分辨真的差異",
+      "把一堆想改的東西排先後，看哪一個先做最划算",
+      "事先講好什麼時候停、什麼情況直接喊卡，避免看到一天好數字就提早收工",
+      "跑完幫你讀結果，分清楚是真的變好，還是只是新鮮感或運氣"
+    ],
+    "scenarios": [
+      {
+        "title": "蝦皮主圖到底要不要換",
+        "body": "你做了兩版主圖，一版情境照、一版白底加賣點文字，同事各喜歡一版，最後靠猜。先寫下：換成白底加文字，預期點進來的比例多兩個百分點，因為手機上滑很快，文字比情境好認。再算出以現在一天四百次曝光，要累積幾天才分得出兩個百分點的差別。答案可能是十天，那就跑滿十天，第三天贏了也不要提早收。"
+      },
+      {
+        "title": "免運門檻要不要拉高",
+        "body": "原本滿六百免運，想拉到八百，怕客單價上去但訂單數掉更多。這時候主要指標不是客單價，是每個進來的人平均帶來多少營收；同時把訂單數和取消率設成底線，掉超過你能忍受的幅度就停。跑完會告訴你客單提高的部分有沒有把流失的訂單補回來，還是只是把數字換個位置放。"
+      },
+      {
+        "title": "一次想改五個地方的時候",
+        "body": "新的商品頁想同時換主圖、改標題、加開箱影片、調價格、換按鈕文字。全部一起上，做好了不知道是哪一項有用，做壞了也不知道該退哪一項。它會把這五件事按照「可能影響多大、有幾成把握、做起來多快」排出先後，先做最划算的一兩件，其他排進後面的月份。三個月下來，手上就會有一份自己商品真正有效的清單。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先寫下你賭的是什麼",
+        "detail": "用一句話講完：把商品頁第一張圖從情境照換成白底加賣點，預期加入購物車的比例從百分之八升到百分之十，因為多數人用手機滑很快，白底文字看得清楚。這句話要有「改什麼、哪個數字、變多少、為什麼」四個部分。寫不出「為什麼」，通常代表你只是想換換看，那不急著測。"
+      },
+      {
+        "step": "挑一個指標決定去留",
+        "detail": "只能有一個說了算的數字，其他都是參考。賣單價高的看下單率，衝流量的看點進率，做回購的看三十天內回購。另外設兩三條不能變差的底線，例如退貨率、客訴則數、平均出貨天數。指標超過三個，最後就會變成挑對自己有利的那個看，那等於沒測。"
+      },
+      {
+        "step": "算清楚要跑多久才看得準",
+        "detail": "告訴它現在成交比例大概多少、希望至少看出多大的差距，它會算出要累積多少人看過才夠。差距愈小要的量愈大：想分辨百分之八和百分之十不難，想分辨百分之八和百分之八點五，可能要跑到你等不起。這時候與其硬跑，不如換一個幅度更大的改法，反而更快有答案。"
+      },
+      {
+        "step": "跑完再一起看結果",
+        "detail": "說好幾天就跑幾天，中間不要每天看數字然後見好就收，那是最容易騙自己的做法。跑完把結果丟回來，它會告訴你差異落在什麼範圍、有沒有可能只是運氣，以及這個幅度換算成一個月的營收值不值得改。如果剛上線那幾天特別好、後面回落，那多半是新鮮感，不是真的變好。"
+      }
+    ],
+    "examplePrompt": "我在蝦皮賣香氛蠟燭，商品頁一天大約六百人看過，加入購物車的比例大概百分之八。我想把第一張主圖從情境照換成白底加賣點文字，希望加購比例至少提高兩個百分點。請幫我把這個想法寫成完整假設，決定主要看哪個指標、哪些數字不能變差，算出要跑幾天、累積多少瀏覽才分得出差別，並先講好什麼情況要提早喊停。另外我還想測免運門檻從六百拉到八百、標題加上香調關鍵字，請一併排這三件事的先後。",
+    "exampleResult": "它會先把你的想法補成一句完整假設，然後說主要指標是加入購物車比例，退貨率和客訴則數設為底線。接著算給你看：從百分之八提高到百分之十，兩組各需要大約三千五百次瀏覽，以一天六百人平分兩組計算，大概要跑十二天，中途不看不停。三件事的順序會排成先換主圖、再改標題、最後才動免運門檻，因為前兩件改起來快、差別也看得出來，動價格條件的風險最大。最後附上喊停條件：加購比例掉超過一成五就直接收掉。",
+    "tips": [
+      "一次只改一件事。主圖和標題一起換，贏了也不知道功勞算誰的，下次沒辦法複製。",
+      "不要每天偷看然後見好就收。說好跑十天就跑滿，提早收的結果多半是運氣。",
+      "差距太小就別測。流量不夠的賣場與其測百分之零點五的差別，不如做幅度大一點的改動。",
+      "剛換版前三天特別好很常見，那是老客人看到新東西的反應，過一週再看才準。"
+    ],
+    "bestFor": "有固定流量、常在改商品頁或廣告素材的蝦皮 momo 賣家，也適合要跟客戶交代成效的接案團隊。",
+    "keywords": [
+      "AB測試",
+      "商品頁改版",
+      "轉換率",
+      "蝦皮賣場",
+      "成效驗證",
+      "免運門檻",
+      "素材測試",
+      "電商實驗"
+    ],
+    "sourceRepo": "alirezarezvani/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "23,256",
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/experiment-designer",
+    "image": "/skills-img/experiment-designer.webp",
+    "imageAlt": "商品頁改版驗證流程流程圖：寫下假設、選定指標、算出天數、讀懂結果"
+  },
+  {
+    "slug": "capacity-planner",
+    "nameEn": "Capacity Planner",
+    "nameZh": "算出旺季客服要補幾個人才夠",
+    "category": "營運管理",
+    "tagline": "拿真實單量和處理時間，算出旺季要補幾個人、現在人力差多少",
+    "summary": "這個技能把你手上真實的單量、一筆要處理多久、想做到的回覆速度，換算成「到底幾個人才接得住」。它不抓平均值亂估，而是看你最忙那幾天的量，算出照現在人力會有多少比例的訊息回不完，再排出未來四季各該補幾個人、什麼時候該多一位組長。",
+    "painPoint": "每次雙十一都一樣：客服訊息爆量，回慢了被打一星，事後檢討只會講「明年多請兩個人」，但兩個到底夠不夠，從來沒人算得出來。",
+    "whatItDoes": [
+      "把過去三個月的量攤開，分出平常日、忙日、最爆那一天各是多少",
+      "用你的平均處理時間和目標回覆速度，算出七成、八成、九成負載各要幾個人",
+      "算出照現在人力，忙日和爆量日各有多少比例會來不及回",
+      "逐一列出每個人手上的件數，標出誰已經滿載、誰還有餘裕、分配平不平均",
+      "排出未來四季的補人時間表，把新人上手期和離職遞補都算進去",
+      "算出人數到幾個該多一位主管帶，提前一季提醒你開始找人"
+    ],
+    "scenarios": [
+      {
+        "title": "雙十一前先算客服要幾個人",
+        "body": "去年雙十一，蝦皮和 momo 的客服訊息一天湧進八百多則，兩個人回到半夜，隔天還有一堆未讀。今年九月先把去年整季的量攤出來，它會算出以現在兩個人、一則平均三分鐘，尖峰那天大約四成訊息會等超過一小時。要壓到一成以內，檔期那兩週得多一個人支援。這樣你有理由提前找工讀生，而不是事後跟客人道歉。"
+      },
+      {
+        "title": "接案公司排設計師的檔期",
+        "body": "三個設計師手上同時十二個案子，每次客戶問「可以插一件小的嗎」你都很難回。把每週進來的需求數、平均一件要花多久、承諾的交件天數放進去，會看到三個人已經跑在九成負載，再插件就是延誤別人的交期。它會直接講：以現在的量，第三季要補一個人，或者把交件承諾從五天改成七天。兩條路選一條。"
+      },
+      {
+        "title": "團隊有人快撐不住的時候",
+        "body": "你隱約覺得某個同事最近回訊息變慢、常請假，但說不出哪裡不對。把每個人手上的件數和工時列出來，會標出誰長期超過八成五負載、誰其實有空、整組人的落差有多大。如果落差超過三成，那不是缺人，是分配的問題。先把工作重新分過，通常比急著招人有用，也省下一筆薪水。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先把三個月的量翻出來",
+        "detail": "打開蝦皮聊聊、momo 客服後台、LINE 官方帳號的紀錄，把最近九十天每天進來幾則訊息或幾張單抓出來。不用整理得多漂亮，一份日期加數量的表就夠。重點是要有「每天」的數字，不能只給一個月平均。平均值會把最忙那幾天藏起來，而那幾天才是真正會出事的日子。"
+      },
+      {
+        "step": "講清楚一件事花多久、多久要回",
+        "detail": "告訴它一則客訴平均花幾分鐘處理、一張出貨單多久弄完，還有你要求自己多久內要回覆。另外把開會、教育訓練、請假、休息這些不能處理單的時間也講出來，通常佔三成上下。這一段沒講清楚，算出來的人數會比實際需要少，人請了照樣塞車。"
+      },
+      {
+        "step": "直接看八成負載那一行",
+        "detail": "它會給你七成、八成、九成負載各要幾個人。看八成那一行，那是留有餘裕又不浪費的位置。排到九成以上看起來省錢，實際上只要有人請假或當天量多一點，整條線就會塞住，而且愈塞愈慢。同一張表也會告訴你，照現在人力，忙日和爆量日各有多少比例會來不及回。"
+      },
+      {
+        "step": "把補人的時間排進四季",
+        "detail": "告訴它年底想到幾個人、新人大概多久才上手、去年走了幾個。它會把補人拆到四季，前面多排一點、後面少一點，因為新人要兩三個月才算戰力。離職遞補也會算進去，所以帳面上「多五個人」的計畫，實際上可能要面試十幾個人。這個數字拿去跟合夥人談預算，比較站得住腳。"
+      }
+    ],
+    "examplePrompt": "我開蝦皮和 momo 兩個賣場，另外有 LINE 官方帳號。最近九十天客服訊息平均一天三百二十則，最忙那天七百八十則，一般忙的日子四百八十則。現在客服兩個人，一則平均處理四分鐘，我希望八成的訊息一小時內回覆，他們還要出貨對帳跟開會，大概三成時間不在回訊息。請幫我算：照現在兩個人，忙日和爆量日各有多少比例會超時？要做到我要的回覆速度需要幾個人？年底想撐到日均五百則，接下來四季該怎麼補人？新人約兩個月上手，去年走了一個。",
+    "exampleResult": "它會先回：以現在兩個人、四分鐘一則來算，平常日剛好打平，但忙日大約三成五的訊息會等超過一小時，爆量那天逼近七成，等於那天基本上回不完。要做到八成一小時內回覆，忙日需要三個人力、爆量日需要四個。接著給你一張四季表：第一季先補一名正職，第三季再補一名，第四季檔期用短期支援頂住。同時提醒你去年走了一個人，所以要面試的不是兩人份而是三人份。最後列出你還沒答的問題，像是爆量那天的備案是什麼。",
+    "tips": [
+      "只給平均值算出來一定偏少。務必準備每天的數字，最忙那幾天才是決定你要請幾個人的關鍵。",
+      "先確認塞住的地方真的是人不夠。有時候是卡在等主管簽核或等倉庫回覆，補人補不到點上。",
+      "排到九成以上不是省錢，是把風險藏起來，只要一個人請假整條線就會慢下來。",
+      "新人不是報到就有戰力。兩三個月的上手期要算進去，不然帳面人數對、實際還是回不完。"
+    ],
+    "bestFor": "客服、出貨、對帳這類工作一件一件排隊進來的團隊，尤其是旺季會爆量、正在猶豫要不要多請人的老闆。",
+    "keywords": [
+      "客服人力",
+      "旺季排班",
+      "人力盤點",
+      "補人計畫",
+      "電商客服",
+      "團隊負荷",
+      "招募規劃",
+      "營運管理"
+    ],
+    "sourceRepo": "alirezarezvani/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "23,256",
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/capacity-planner",
+    "image": "/skills-img/capacity-planner.webp",
+    "imageAlt": "客服人力盤點流程流程圖：調出單量、找出尖峰、試算人力、排定補人"
+  },
+  {
+    "slug": "youtube-shorts-generator",
+    "nameEn": "youtube-shorts-generator",
+    "nameZh": "長影片自動挑爆點剪成短影音",
+    "category": "影音內容",
+    "tagline": "貼一個長影片網址，自動挑出最有梗的段落，切成直式短片",
+    "summary": "你把一支長影片的網址交給它，它會自己下載、聽成逐字稿，再逐段打分數，判斷哪一段最容易讓人停下來看。分數高的幾段直接切出來、裁成手機直式畫面，還附上開頭第一句鉤子和一句挑它的理由。你只要挑哪幾支拿去發就好。",
+    "painPoint": "一場兩小時的直播錄下來，你知道裡面一定有幾段講得特別好，但要把它找出來得整支重看一遍。看完剪完天都黑了，最後乾脆不發。",
+    "whatItDoes": [
+      "把影片網址或電腦裡的影片檔抓下來，自動轉成有時間點的逐字稿",
+      "用八種訊號掃描全片：開場鉤子、情緒高點、犀利觀點、反轉、衝突、金句、故事高潮、實用做法",
+      "每一段都給零到一百的分數，時間重疊的候選只留分數最高的那一個",
+      "自動裁成手機直式畫面，講話的人會留在中間，簡報畫面也認得出來",
+      "每支附上開頭第一句鉤子，和一句為什麼挑這段的說明",
+      "超過三十分鐘的影片會自動分段掃描，跨段落的精彩片段也接得起來"
+    ],
+    "scenarios": [
+      {
+        "title": "直播錄影變成整週的貼文",
+        "body": "你在蝦皮開了兩小時美妝直播，錄影就躺在電腦裡。丟給它之後，它會挑出你講產品用法講得最順、觀眾留言最熱的那幾段，切成六十秒左右的直式短片。你當天就能排進限動和脆，一場直播撐一週的內容量。"
+      },
+      {
+        "title": "作品講解剪成提案短片",
+        "body": "接案設計師錄了一支四十分鐘的作品講解，原本只放在自己網站。交給它之後，最能打動人的三段會單獨切出來，像是講到為什麼要重做那面招牌，還附上開頭第一句。這幾支放到脆，比整支長片更容易被看完。"
+      },
+      {
+        "title": "講座錄影變成招生短片",
+        "body": "你辦了一場兩小時的課程說明會，錄影很完整但沒人想看完。它會找出你講得最有畫面的段落，像是學員當場提問你直球回答的那一刻，切成三十到七十五秒的直式短片並打分數。分數高的先發，反應好再加碼，不用自己猜哪段有用。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先申請好雲端金鑰",
+        "detail": "這個技能的聽寫和挑段落是送到國外的雲端服務跑的，要先申請一組金鑰貼進設定裡。費用按影片分鐘數算，第一次先拿一支十分鐘的舊影片試，確認扣款方式和成品品質你能接受，再拿正式的長片下去跑。金鑰去哪申請不用自己查，直接問它，它會一步一步帶你設定完。"
+      },
+      {
+        "step": "把網址或影片檔交給它",
+        "detail": "打開對話，直接把網址貼給它就好；影片沒公開的話，就把電腦裡那支檔案給它。它會自己下載、轉成有時間點的逐字稿，這段最花時間，兩小時的影片要等一陣子。中間不用你盯著，先去忙店裡的事，回來看結果就行。"
+      },
+      {
+        "step": "說清楚要幾支和比例",
+        "detail": "你不講的話，它預設給三支直式短片。要多一點就直接說給我八支；想放 IG 貼文版位就說要一比一正方形。影片是台語或中英夾雜，先講一聲要用哪個語言聽寫，聽錯的機會會少很多。想留完整紀錄，也可以叫它把所有候選段落和逐字稿一起存下來，之後自己再挑一輪。"
+      },
+      {
+        "step": "看分數挑片再改鉤子",
+        "detail": "它會回一張排名表：第幾名、幾分、從第幾分幾秒到幾分幾秒、標題、開頭第一句，還有挑這段的理由。你先看分數八十以上的，點開確認畫面沒切到奇怪的地方。開頭那句通常還要自己改成品牌講話的口吻，改完再上字幕、加商品標籤才發出去。"
+      }
+    ],
+    "examplePrompt": "我有一支上週的直播錄影放在網路上，等一下把網址貼給你。幫我用長影片挑爆點的技能處理：給我六支直式短片，比例九比十六，語言是中文。挑段落的時候優先找我在講產品怎麼用、和觀眾一來一往聊天的那種段落，太安靜或在等人留言的段落不要。每一支請告訴我分數、時間區間、開頭第一句話，還有為什麼你覺得這段適合發。全部候選段落也一起存一份給我，我要自己再挑一輪。",
+    "exampleResult": "它會先回報影片長度和逐字稿完成，接著給你一張表：第一名九十二分、第十二分零三秒到第十三分零七秒、標題是「這罐我用了三年才敢推薦」、開頭第一句是對觀眾問題的直球回答，理由寫著有明確時間數字加上個人背書。往下第二名八十七分、第三名八十一分，六支都附上可以直接下載的直式影片。你點開看過、改掉開頭那句，就能排進發文。",
+    "tips": [
+      "這個技能要另外申請雲端服務金鑰，聽寫按影片分鐘數計費，不是免費工具，先拿短片試算成本。",
+      "它挑的是容易被停下來看的段落，不等於適合你的品牌。化妝品的功效說法還是要自己再看一次。",
+      "回來的支數比你要的少是正常的，代表影片裡沒那麼多亮點，不要硬湊數量交差。",
+      "第一句鉤子是機器寫的，語氣會有點誇張，發之前一定要改成自己平常講話的樣子。"
+    ],
+    "bestFor": "常開直播、錄講座或拍長開箱的老闆和小編，手上一堆長影片卻沒時間重看重剪。",
+    "keywords": [
+      "短影音",
+      "長影片剪輯",
+      "直播剪片",
+      "自動剪輯",
+      "逐字稿",
+      "爆點分析",
+      "社群影片",
+      "九比十六"
+    ],
+    "sourceRepo": "Anil-matcha/AI-Youtube-Shorts-Generator",
+    "sourceRepoName": "AI-Youtube-Shorts-Generator",
+    "sourceStars": "4,415",
+    "sourceUrl": "https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator/tree/main/.claude/skills/youtube-shorts-generator",
+    "image": "/skills-img/youtube-shorts-generator.webp",
+    "imageAlt": "長影片變短影音流程流程圖：貼上網址、轉成逐字、逐段評分、裁成直式"
+  },
+  {
+    "slug": "ai-clipping",
+    "nameEn": "ai-clipping",
+    "nameZh": "把長片丟上雲端切成直式短片",
+    "category": "影音內容",
+    "tagline": "電腦不用好，影片丟上雲端，回來就是人臉置中的直式短片",
+    "summary": "這支不用你的電腦出力，影片送上雲端就跑完整套：聽寫、判斷哪段精彩、去掉重疊的、裁成直式，連鏡頭跟著講話的人走都處理好。回來的是幾支可以直接下載的短片，各自帶著分數和開頭第一句。電腦效能普通的人用這支最省事。",
+    "painPoint": "你想剪短影音，但公司電腦連轉個檔都要半天，剪輯軟體一開風扇就狂轉。發包出去一支的價錢又不低，量一多就撐不住。",
+    "whatItDoes": [
+      "整套流程都在雲端跑，你的電腦只負責上傳和下載，不用裝剪輯軟體",
+      "鏡頭會跟著正在講話的人移動，兩個人對談也不會有人被切掉半張臉",
+      "一次可以指定要幾支，直式、正方形、四比五三種比例都能出",
+      "每支附上零到一百的分數、開頭第一句，和一句這段為什麼耐看的說明",
+      "只要時間點不要成品也行，剪輯的人可以拿去自己排版做品牌樣式",
+      "一整排網址可以排隊丟，睡前送出、隔天早上回來收成品"
+    ],
+    "scenarios": [
+      {
+        "title": "筆電跑不動也能天天出片",
+        "body": "社群小編手上是一台三年前的筆電，開剪輯軟體就卡。品牌每週有一場兩小時的直播，過去只能勉強剪一支交差。改成把影片丟上雲端跑之後，同一場直播一次出五支直式短片，筆電全程只是在等下載，剪片這件事不再卡在硬體上。"
+      },
+      {
+        "title": "雙人對談自動追臉不出框",
+        "body": "你和店長錄了一集聊產品的對談，兩個人一左一右坐著。轉成直式最怕的就是有人被切掉半邊臉。這支會自己追著正在講話的人跑，畫面永遠對著開口的那位。剪出來的短片放到脆或 IG 連續短片，看起來像本來就用手機直拍的。"
+      },
+      {
+        "title": "一次丟十支影片隔天收貨",
+        "body": "代操社群的接案者手上有五個客戶，每個客戶都有幾支舊長片沒用。把網址整理成一排一次送出去，人就可以下班。隔天早上回來，每支影片各自的精彩段落、分數和成品都在，直接分裝寄給不同客戶。原本卡了整週的舊素材，一個晚上清完一輪。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先開通雲端服務和金鑰",
+        "detail": "這支是把工作外包給國外的雲端服務，要先辦一組金鑰、綁好付款方式才叫得動，收費看你送多少分鐘的影片上去。建議第一次先送一支五到十分鐘的舊影片，看看扣多少錢、成品順不順眼，抓得出一支長片大概多少成本再正式用。不知道去哪辦就直接問它，它會帶你一步步設定。"
+      },
+      {
+        "step": "把影片網址或檔案給它",
+        "detail": "影片已經在網路上有公開網址，直接貼給它最快；還在電腦裡也行，它會先幫你傳上去再開始跑。上傳會花一點時間，之後全在雲端處理，你把視窗關掉去顧店都沒關係，跑完再回來收成品，不用一直盯著進度。"
+      },
+      {
+        "step": "指定支數和畫面比例",
+        "detail": "不講的話預設給三支直式短片。你要幾支就直接說，八支、十支都行。畫面比例看你要發哪裡：手機直式的短影音用九比十六，IG 貼文版位用一比一正方形，想在動態裡佔高一點的位置就用四比五。同一支影片可以先出一輪直式，覺得好用再叫它出正方形版。"
+      },
+      {
+        "step": "收成品或只收時間點",
+        "detail": "跑完它會給你一張排名表和每支的下載連結，你點開挑順眼的存下來。如果你有配合的剪輯，或想套自己的字幕樣式，也可以跟它說只要時間點就好，它就只回哪一段到哪一段，成品你自己剪。這樣雲端那邊的費用也會省下一截。"
+      }
+    ],
+    "examplePrompt": "我這裡有一支上個月直播的錄影連結，等一下貼給你，內容是兩個人坐著聊產品，大概一小時四十分。幫我用雲端切片的技能跑：出八支直式短片，比例九比十六，鏡頭要跟著正在講話的人。跑完給我一張表，寫清楚每支的名次、分數、從幾分幾秒到幾分幾秒、開頭第一句，還有下載連結。另外幫我標出哪三支你覺得最適合放在蝦皮商品頁旁邊當說明影片。",
+    "exampleResult": "你會先看到影片上傳完成、雲端開始處理的訊息，中間它會回報還在跑。跑完給你一張八支的排名表：第一名九十四分、第二十七分十二秒到第二十八分二十秒，標題和開頭第一句都寫好，後面接一句說明「兩人互相吐槽的段落，節奏快」。每一列都有可以點開下載的直式影片，畫面裡講話的人固定在正中間。最後再標出它挑的三支商品頁適用款。",
+    "tips": [
+      "這支全程靠付費的雲端服務，按影片長度計費，不是裝好就免費一直跑，先幫自己設每月預算上限。",
+      "影片要讓雲端那邊讀得到。放在只有你能開的資料夾或需要登入的頁面會失敗，先傳成公開連結。",
+      "畫面裡如果一直切鏡頭或穿插字卡，追臉會比較沒把握，這種素材建議先自己抓段落再交給它裁。",
+      "同一支影片重跑要再算一次錢，先想清楚要幾支和什麼比例再送出，不要邊跑邊改。"
+    ],
+    "bestFor": "電腦效能普通、不想裝一堆軟體，又要穩定產出短影音的小編、店家和代操接案者。",
+    "keywords": [
+      "雲端剪片",
+      "短影音",
+      "人臉追蹤",
+      "直式影片",
+      "批次處理",
+      "社群影片",
+      "直播剪輯",
+      "免裝軟體"
+    ],
+    "sourceRepo": "SamurAIGPT/Generative-Media-Skills",
+    "sourceRepoName": "Generative-Media-Skills",
+    "sourceStars": "3,930",
+    "sourceUrl": "https://github.com/SamurAIGPT/Generative-Media-Skills/tree/main/library/edit/ai-clipping",
+    "image": "/skills-img/ai-clipping.webp",
+    "imageAlt": "雲端切片產出流程流程圖：上傳影片、雲端分析、人臉追焦、下載成品"
+  },
+  {
+    "slug": "clipify",
+    "nameEn": "clipify",
+    "nameZh": "自己電腦剪出帶字幕的直式短片",
+    "category": "影音內容",
+    "tagline": "影片不外傳，在自己電腦挑出笑點、轉直式、上動態字幕",
+    "summary": "它會先把影片聽成逐字稿，找出好笑、有反轉、有金句的三到五段給你挑，剪成十到二十五秒的片段。橫的畫面要轉直式時有兩種做法：鏡頭跟著講話的人切換，或上下分割兩個人都看得到。最後燒上一個字一個字跳的字幕。全程在你自己的電腦跑，不用付雲端費用。",
+    "painPoint": "你想剪對談影片的精華，但客戶素材和內部教育訓練影片不能亂丟上網。想自己剪，光上字幕就要對時間對到眼花，一支剪掉兩三個小時。",
+    "whatItDoes": [
+      "把整支影片聽成逐字稿，掃出笑點、反轉、冷場後的爆點和金句",
+      "先給你三到五個候選段落和為什麼好笑，你點頭它才真的動手剪",
+      "橫式轉直式可以選鏡頭跟著講話的人跳，或上下分割讓兩人同框",
+      "燒上一個字一個字跳的字幕，大白字黃高亮、四字一組綠色、乾淨無高亮三選一",
+      "你有喜歡的字幕樣式，貼一張截圖給它，它會照著做一版出來",
+      "整個過程在你自己的電腦跑，影片不會離開這台機器"
+    ],
+    "scenarios": [
+      {
+        "title": "客戶素材不外流也能剪",
+        "body": "接案做社群代操，客戶給的原始影片常常有未上市的商品或內部人員入鏡，合約上寫明不能上傳到第三方平台。這支從聽寫到上字幕全在你自己的電腦跑，素材不用出去外面繞一圈。交件時可以直接跟客戶說明檔案沒有外傳，省掉一輪來回確認。"
+      },
+      {
+        "title": "兩人對談自動切鏡位",
+        "body": "你和合作夥伴錄了一集聊創業的對談，攝影機固定拍著兩個人。要轉成直式，它會先判斷誰在講話，做出一條講者時間軸，然後畫面就在兩人之間硬切，看起來像旁邊有人幫你切鏡。不想切鏡也可以選上下分割，兩張臉都在，正在講話的那張放上面。"
+      },
+      {
+        "title": "一次剪好三支帶字幕短片",
+        "body": "店裡拍了一支四十分鐘的教學影片，你想從裡面挑幾段好笑的放到脆。它會先列出五個候選、附上為什麼好笑和建議標題，你挑三個，它就剪出三支十幾秒的直式短片，字幕一個字一個字跳，存到影片旁邊的新資料夾，還會自動打開第一支給你看。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "把影片檔給它就開工",
+        "detail": "這支不用申請任何金鑰，也不用綁信用卡，你只要把電腦裡的影片交給它。它會先抽出聲音、聽成逐字稿，這步在自己機器上跑，影片長一點就等久一點。第一次用建議先拿一支十分鐘以內的短片試手感，順了再拿長片。英文對談跑得最快最準，中文素材記得先跟它說一聲要換成聽中文的模式。"
+      },
+      {
+        "step": "看候選清單挑段落",
+        "detail": "它不會自作主張直接剪，會先給你三到五個候選：從幾分幾秒到幾分幾秒、為什麼這段好笑、建議的標題。你就當作在看剪輯師提案，覺得第二段和第四段可以就跟它說，都不夠好就叫它換一批，或直接指定幫我剪第十八分鐘那段。挑完它才開始動刀。"
+      },
+      {
+        "step": "選直式做法和字幕樣式",
+        "detail": "接著決定畫面：要發短影音就直式，要留在長影片平台就維持橫的，IG 貼文版位用正方形。橫轉直如果畫面裡有兩個人，它會問你要鏡頭跟著講話的人切換，還是上下分割兩人都在。字幕有三種：大白字配黃色高亮、四個字一組配綠色、乾淨無高亮。你有喜歡的樣式就丟一張截圖給它照做。"
+      },
+      {
+        "step": "檢查成品再叫它微調",
+        "detail": "剪完它會把成品放在原始影片旁邊新開的資料夾，一支一行列出檔名、長度、好笑在哪，還會自動幫你打開第一支。你看過覺得字幕太大、鏡頭切太頻繁，或想換成分割畫面，直接講一句就好，它會用同一段素材重出一版，不用整個從頭來過。"
+      }
+    ],
+    "examplePrompt": "我電腦裡有一支我跟店長聊保養品的對談錄影，四十分鐘，兩個人一左一右坐著，鏡頭沒有動。幫我用本機剪片的技能處理：先聽成逐字稿，挑出五個最好笑或最有金句的段落，每段十到二十秒，跟我說時間、為什麼好笑、建議標題，我挑完你再剪。剪的時候轉成直式九比十六，鏡頭跟著正在講話的那個人切，字幕用大白字加黃色高亮那種。內容是中文，記得換成聽中文的模式。",
+    "exampleResult": "它會先回一句已經聽完，然後列出五個候選：像是第十二分四十秒到第十二分五十八秒，理由是店長講到自己用錯保養品那段被你當場吐槽，建議標題「店長的黑歷史」。你回覆挑第一、第三、第五段之後，它才開始剪。跑完在影片旁邊的新資料夾放三支直式短片，每支都標了長度和好笑在哪，第一支還會自動打開讓你看。",
+    "tips": [
+      "這支全部在你自己的電腦跑，不用申請金鑰也不用付雲端費用，敏感或未上市的素材適合用它。",
+      "跑起來吃電腦效能，長片會比較慢。素材如果是超高畫質，先轉成一般畫質再剪，速度差很多。",
+      "一段裡面如果鏡頭切來切去，追臉的框會抓不準，這種段落建議選上下分割或乾脆維持橫式。",
+      "它挑段落的標準偏向好不好笑，走專業知識路線的內容，自己直接指定時間點會比較準。"
+    ],
+    "bestFor": "常錄雙人對談或教學影片、素材不方便上傳外部平台，又想自己控制字幕樣式的人。",
+    "keywords": [
+      "本機剪輯",
+      "動態字幕",
+      "雙人對談",
+      "橫轉直式",
+      "不用金鑰",
+      "短影音",
+      "分割畫面",
+      "逐字稿"
+    ],
+    "sourceRepo": "louisedesadeleer/clipify",
+    "sourceRepoName": "clipify",
+    "sourceStars": "491",
+    "sourceUrl": "https://github.com/louisedesadeleer/clipify",
+    "image": "/skills-img/clipify.webp",
+    "imageAlt": "本機剪片上字流程流程圖：挑出笑點、剪成片段、切換鏡位、燒上字幕"
+  },
+  {
+    "slug": "legal-compare",
+    "nameEn": "Contract Comparison",
+    "nameZh": "合約新舊版逐條比對",
+    "category": "文件整理",
+    "tagline": "兩份合約丟進去，哪一條被偷改、哪個保護被拿掉，逐條標給你看",
+    "summary": "把客戶或代工廠回傳的版本，跟你原本那份一起丟給 AI，它會逐條對照，告訴你哪幾條是新加的、哪幾條被刪掉、哪幾條字改了但意思差很多。每一項標明對哪一方有利、風險多高，最後給你一份誰吃虧的總結，還會列出簽之前該優先爭取回來的三件事。",
+    "painPoint": "代工廠回傳的合約說「只改了幾個小地方」，你眼睛掃過去看起來也差不多，簽完半年才發現賠償上限那句被拿掉了。",
+    "whatItDoes": [
+      "先分辨這是同一份合約的新舊版，還是兩份不同的合約，再決定怎麼比",
+      "逐條分成新增、刪除、實質修改、只改文字四類，只改文字的可以直接跳過",
+      "每一條標出對哪一方有利，以及是重大、輕微，還是純粹排版問題",
+      "特別抓常見的九種陷阱：偷塞條款、保護被拿掉、賠償變無上限、對方可單方面改約",
+      "原文照引不改寫，舊版寫什麼、新版寫什麼並排放，不用自己兩份翻來翻去",
+      "最後講清楚哪一版對你比較有利，非簽不可時該優先爭取回來哪三條"
+    ],
+    "scenarios": [
+      {
+        "title": "代工廠回傳的修訂版",
+        "body": "保養品代工廠把合約寄回來，附註「微調幾處」。丟進去比對後發現：交期延誤的違約金從一天千分之三改成「雙方另行協商」，配方保密的年限從五年縮到兩年。兩處都藏在附件裡，不逐條看很難抓到。"
+      },
+      {
+        "title": "平台合約年度換約",
+        "body": "momo 或蝦皮寄來新年度的廠商合約，跟去年那份放一起比。退貨責任歸屬、廣告分攤比例、下架通知天數這幾處的差異會被抓出來，開會前先知道哪幾條要問招商，不用把四十頁整份重讀一次。"
+      },
+      {
+        "title": "設計接案的委任合約",
+        "body": "客戶法務把你的報價合約改成他們的版本回傳。比對後看到著作權從「驗收付款後移轉」變成「交付即歸客戶所有」，追加修改次數的上限整段消失。談之前先看到，總比簽完再吵好處理。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "兩個版本都先備齊",
+        "detail": "把原始版跟對方回傳的版本都準備好，Word、PDF 或直接複製整段文字都可以。告訴 AI 哪一份是你原本給出去的、哪一份是對方改過的，順序講清楚，比對結果的方向才不會反過來。兩份都是掃描檔的話，先確認文字看得清楚，糊掉的條款它讀不出來。"
+      },
+      {
+        "step": "先看危險變動那段",
+        "detail": "報告最前面會有一段標成高風險的變動，通常三到五條，每一條都寫了改前改後的原文、白話解釋、為什麼危險。先只看這段，這裡沒問題的話，後面幾十條細節可以留到有空再看。很多時候看完這一段，就知道這份要不要往下談。"
+      },
+      {
+        "step": "請它把純排版的濾掉",
+        "detail": "有時候對方只是重新編號、換個同義詞，這種會被標成純文字調整。跟 AI 說只留實質變動的部分，四十條差異常常剩下六七條，開會或問律師的時候一頁就講得完。律師按小時計費，少講三十條就是少算一段時間。"
+      },
+      {
+        "step": "拿它列的清單去談",
+        "detail": "報告結尾會告訴你哪一版對你比較有利，還會列出三條最該爭取回來的。把這三條整理成回信重點，一次講完，不要對方改一版你回一次、來回五趟。談完之後把最終版再比一次，確認刪掉的條款沒有被默默放回去，這一步很多人會漏掉。"
+      }
+    ],
+    "examplePrompt": "這兩份是同一份代工合約，第一份是我三月給對方的原版，第二份是代工廠上週回傳的修訂版。請幫我逐條比對，先列出對我方不利的重大變動，每一條附上改前改後的原文跟白話說明；純粹改編號或換同義詞的排版調整放到最後，不用細講。最後告訴我，如果一定要簽，我應該優先要求對方改回來的是哪三條。",
+    "exampleResult": "開頭一張表：共十四處差異，其中三處重大、五處輕微、六處純排版，整體偏向對方有利。接著是危險變動區，第一條就是原版的「賠償以合約總價為上限」整段被刪掉，改前改後原文並排列出，標成高風險。最後是三條建議優先爭取的條款，照該講的順序排好，可以直接抄進回信。",
+    "tips": [
+      "這是幫你讀合約，不是法律意見，金額大或牽涉智慧財產的合約還是要給律師看過。",
+      "掃描的紙本合約先確認字看得清楚，糊掉的條款它讀不到，就不會出現在報告裡。",
+      "不用另外付費訂閱或申請什麼服務，但合約全文會送進 AI 處理，機密的部分自己先評估。",
+      "談完的最終版記得再比一次，確認對方沒有把刪掉的條款默默放回去。"
+    ],
+    "bestFor": "常跟代工廠、平台、客戶簽約換約，但公司沒有法務、合約都自己看的老闆。",
+    "keywords": [
+      "合約比對",
+      "合約審查",
+      "條款差異",
+      "代工合約",
+      "風險條款",
+      "新舊版比對",
+      "法務助理"
+    ],
+    "sourceRepo": "zubair-trabzada/ai-legal-claude",
+    "sourceRepoName": "ai-legal-claude",
+    "sourceStars": "1,596",
+    "sourceUrl": "https://github.com/zubair-trabzada/ai-legal-claude/tree/main/skills/legal-compare",
+    "image": "/skills-img/legal-compare.webp",
+    "imageAlt": "合約新舊版比對流程流程圖：兩版並排、逐條對照、標出風險、談判清單"
+  },
+  {
+    "slug": "ai-meeting-notes",
+    "nameEn": "AI Meeting Notes",
+    "nameZh": "會議亂筆記變待辦清單",
+    "category": "文件整理",
+    "tagline": "開完會的潦草筆記貼進去，變成誰要做什麼、哪一天要交的清單",
+    "summary": "開會時隨手打的片段、線上會議轉出來的逐字稿、LINE 群組裡討論到一半的對話，整包貼進去就好。它會給你一段摘要、一份編號的待辦清單，每一項寫明誰負責、哪一天交，還會把當天拍板的決定跟沒結論的問題分開列。清單可以挑幾項加進長期追蹤，之後問一句就知道哪些逾期。",
+    "painPoint": "開完會大家都說知道了，一週後沒人記得誰要交什麼。你筆記本上一堆沒頭沒尾的字，重看還要再想一次當時在講什麼。",
+    "whatItDoes": [
+      "把亂七八糟的筆記收成兩三句摘要，一眼看懂這場會在講什麼",
+      "抓出每一件要做的事，標上負責人跟期限，沒講期限的標成待定",
+      "當天拍板的決定跟還沒結論的問題分開列，下次不用再吵一遍",
+      "逐字稿、往返信件、群組對話、影片字幕檔都吃得下，不用先整理格式",
+      "每場會各存一份，之後可以問上次那件事怎麼決定、某個人手上還有哪些",
+      "挑幾項加進長期待辦，之後問一句就知道哪些逾期、哪些今天到期"
+    ],
+    "scenarios": [
+      {
+        "title": "跟代工廠開完會之後",
+        "body": "兩小時的打樣會議，筆記本上是十幾行片段。貼進去之後變成八條待辦：業務三天內回瓶身報價、你週五前給標籤稿、對方下週提供成分表。每一條都有人有日期，會後直接貼進 LINE 群組，不用再自己重打一次。"
+      },
+      {
+        "title": "客戶提案的會後追蹤",
+        "body": "設計案討論完，客戶在會中丟了七八個修改想法，有些當場就否決了。整理後決定跟未決分開，你回信只寫確定的那四項，避免下次客戶說「上次不是講好要改成藍色」。錄音轉出來的逐字稿也能直接貼。"
+      },
+      {
+        "title": "一個人的每週盤點",
+        "body": "小工作室沒有專案管理工具，事情全散在 LINE 群組。每週把群裡的討論複製下來整理一次，累積成一份待辦。週一問一句哪些逾期，它列出來，不用自己往上翻三百則訊息回想上週答應了什麼。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "筆記直接貼不用整理",
+        "detail": "不用先分段、不用補標點，會議中打的片段、錄音轉出來的逐字稿、群組對話複製貼上都可以。只要跟它說幫我整理成待辦清單，它會自己判斷這是哪一種內容再處理。筆記只有幾行也沒關係，它就有的部分整理，缺的地方會標出來問你。"
+      },
+      {
+        "step": "先補上人名跟日期",
+        "detail": "筆記裡如果只寫了「下週處理」，它就照樣標成下週。整理完先掃一遍清單，把模糊的期限改成明確日期、沒有負責人的補上名字。這一步花兩分鐘，之後追進度才有依據，不然一個月後回頭看，還是一樣不知道誰該交什麼。"
+      },
+      {
+        "step": "挑重要的加進追蹤",
+        "detail": "整理完它會問要不要把哪幾項加進長期待辦。不用全加，挑真的會忘記的三五項就好，加太多之後你就不會打開來看了。加進去之後隨時可以問哪些逾期、哪些今天要交、某個人手上有哪幾件，不用自己維護一張表。"
+      },
+      {
+        "step": "隔天再問一次進度",
+        "detail": "每天早上問它一句今天有什麼要交，它會分成逾期、今天到期、這週內、沒設期限四塊列出來。做完的直接跟它說第幾項完成了，它會歸檔。累積幾週之後，回頭問某個客戶的案子談過什麼也查得到，比翻舊筆記快。"
+      }
+    ],
+    "examplePrompt": "這是今天跟代工廠開會的筆記，很亂，時間順序也是跳的。請幫我整理成三個部分：兩三句的會議摘要、編號的待辦清單（每一項寫清楚誰負責、期限是哪一天，沒講期限的標成待定），以及當天確定的決定和還沒有結論的問題。整理完直接問我要把哪幾項加進待辦追蹤。",
+    "exampleResult": "上方是會議標題跟日期，接一段三句摘要。中間是編號待辦：第一項寫著業務阿哲週三前回瓶身報價、第二項是你週五前交標籤稿。下面列出當天拍板的兩個決定跟一個沒結論的問題。最後問你要把哪幾項加進追蹤，回一句「全部」或「一、三、五」就好。",
+    "tips": [
+      "它不會自己進去會議裡錄音，逐字稿或筆記要你先貼給它，錄音檔得另外轉成文字。",
+      "不用另外訂閱付費服務，但客戶名字、報價這類內容會送進 AI，敏感的先自己刪掉。",
+      "同一個人前後叫法不一致（阿哲、哲哥、王先生）會被當成三個人，先統一講法。",
+      "加進追蹤的項目控制在十項以內，太多就變成另一張沒人打開的清單。"
+    ],
+    "bestFor": "開會多但沒有專案管理工具，會後追進度全靠記憶跟 LINE 群組的小團隊。",
+    "keywords": [
+      "會議記錄",
+      "待辦清單",
+      "逐字稿整理",
+      "會議摘要",
+      "開會筆記",
+      "會後追蹤",
+      "進度追蹤"
+    ],
+    "sourceRepo": "LeoYeAI/openclaw-master-skills",
+    "sourceRepoName": "openclaw-master-skills",
+    "sourceStars": "2,110",
+    "sourceUrl": "https://github.com/LeoYeAI/openclaw-master-skills/tree/main/skills/ai-meeting-notes",
+    "image": "/skills-img/ai-meeting-notes.webp",
+    "imageAlt": "會議筆記變待辦清單流程圖：貼上筆記、整理摘要、抓出待辦、加入追蹤"
+  },
+  {
+    "slug": "slide-maker",
+    "nameEn": "Slide Maker",
+    "nameZh": "問完幾個問題就交出簡報檔",
+    "category": "文件整理",
+    "tagline": "先問你四個問題，再產出可以用 PowerPoint 打開來改的簡報檔",
+    "summary": "它會像一個資深簡報設計師，先問你講給誰聽、講多久、有沒有現成素材和版型，再決定每一頁要說什麼、長什麼樣。內容和設計你都會先看過一輪才動工。最後產出的是真的 PowerPoint 檔，圖表可以點進去改數字，文字可以直接編輯，不是一張張截圖。",
+    "painPoint": "客戶明天下午要看提案，你手上只有一份訪談記錄和幾張產品照。你不是不會做簡報，是每次都要從空白頁開始排版，排到半夜還是覺得很陽春。",
+    "whatItDoes": [
+      "動工前先問你：講給誰聽、講幾分鐘、要不要套用你現有的版型",
+      "先把每一頁要講的重點排出來給你確認，你點頭了才開始排版",
+      "產出真的 PowerPoint 檔，圖表可以點開改數字，不是一張圖片",
+      "會自己把每頁轉成圖檢查，抓出文字爆框、壓到頁尾、對比太低的問題",
+      "另外派一個角色當評審把整份挑剔一遍，過不了就退回去重修",
+      "口說的完整句子會放進備忘稿，投影片上只留關鍵字，不會變成一面字牆"
+    ],
+    "scenarios": [
+      {
+        "title": "隔天就要交的客戶提案",
+        "body": "你手上有一份需求訪談記錄和三張參考圖，客戶明天下午兩點要看。告訴它對象是傳產老闆、時間十五分鐘、目的是讓對方點頭做官網，它會先給你十二頁的重點大綱，你改掉兩頁順序之後它才開始排版，隔天早上拿到檔案還能自己微調用字。"
+      },
+      {
+        "title": "每個月都要做的業績檢討",
+        "body": "每個月都要把蝦皮和 momo 的銷售數字做成投影片。把匯出的表格丟給它，說明要做成前後對比和趨勢圖。做出來的圖表在 PowerPoint 裡可以直接點開改數字，下個月不用重做一份，把檔案丟回去說要換成新一期的數字就好。"
+      },
+      {
+        "title": "把用了三年的舊簡報翻新",
+        "body": "那份每頁塞滿字的公司簡介，貼上去說「這份太密了，幫我重做」。它會先把舊檔拆開來看，列出三到五個最大的問題和打算改到什麼程度，等你確認範圍才動手，不會擅自把你的品牌色和 logo 全部換掉。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "開頭就一次把四件事講清楚",
+        "detail": "它一定會先問四件事：要不要套用你現有的版型、講給誰聽講多久、有沒有現成素材、風格和語言。與其等它問，不如第一句就講完，可以省一輪來回。例如「給傳產老闆看，十五分鐘，目標是讓對方決定要不要做官網，繁體中文，風格偏正式」。"
+      },
+      {
+        "step": "先把大綱確認過再讓它排版",
+        "detail": "它會先給你一份只有內容沒有設計的大綱，每頁一句重點。這是最便宜的修改時機，這時候調一頁順序只花一分鐘，等排完版再改就是重做。務必把每頁的結論句念過一遍，順序不對、少了一頁、講得太細，現在講。"
+      },
+      {
+        "step": "看過設計方向再往下走",
+        "detail": "大綱過了之後它會提設計方向：配色、字級、每頁用什麼版面、要不要動畫，一樣先給你看。中文簡報這一步要特別交代「用繁體中文，字型要能顯示中文」，不然可能整頁變成一格一格的空白方塊。不喜歡的配色現在講最省事。"
+      },
+      {
+        "step": "拿到資料夾自己開一次確認",
+        "detail": "完成後你會拿到一個資料夾，裡面有簡報檔和每一頁的預覽圖。務必自己用 PowerPoint 開一次，確認字型和圖表在你的電腦上正常。如果還要 PDF 或是可以用瀏覽器翻頁的預覽檔，最後主動說一聲，它不會預設幫你產。"
+      }
+    ],
+    "examplePrompt": "幫我做一份提案簡報。對象是台中一家做五金零件的傳產老闆，六十歲上下，不太懂網路；時間十五分鐘，我當場講；目的是讓他決定要不要做一個能接海外詢價的官網。素材我放在附件的需求訪談記錄，裡面有他的三個痛點和我們的報價區間。全部用繁體中文，字型請用能顯示中文的字體。風格要正式一點但不要太冷，重點是讓他覺得這件事沒有想像中複雜。先給我大綱，我確認過再排版。",
+    "exampleResult": "它會先回你一份十一頁的大綱，每頁一句結論，例如「你現在的海外詢價全靠展會，一年只有兩次機會」。你確認之後它會提設計方向：主色用你們的品牌藍、每頁最多三個重點、報價那頁用對比圖表。都過了才開始排版。最後給你一個資料夾，裡面有可以編輯的簡報檔、每頁預覽圖，還有一份口說用的備忘稿。",
+    "tips": [
+      "中文簡報一定要明講「用繁體中文、字型要能顯示中文」。沒交代的話整頁可能變成空白方塊，得整份重來。",
+      "大綱那一關不要隨便按過。順序和取捨在這裡改只要一分鐘，等排完版再改等於重做一份。",
+      "要它生成配圖的話，走的是外部付費的圖像服務，會另外算錢。它會先問過你才動用，不想花就直接說不要，改用自己的產品照。",
+      "它會另外找一個角色當評審把整份挑剔一遍，所以會來回幾輪。趕時間的話開頭就說「這份不用太講究，快一點」。"
+    ],
+    "bestFor": "常要對客戶、老闆、廠商做正式簡報，卻每次都卡在排版做到半夜的接案設計師、業務和小企業主。",
+    "keywords": [
+      "簡報製作",
+      "PowerPoint",
+      "提案簡報",
+      "業績檢討",
+      "簡報排版",
+      "可編輯圖表",
+      "簡報翻新"
+    ],
+    "sourceRepo": "addsumtech/slides_maker",
+    "sourceRepoName": "slides_maker",
+    "sourceStars": "329",
+    "sourceUrl": "https://github.com/addsumtech/slides_maker/tree/main/skills/slide-maker",
+    "image": "/skills-img/slide-maker.webp",
+    "imageAlt": "簡報從問答到交檔流程圖：先問四題、確認大綱、排版出檔、挑錯交件"
+  },
+  {
+    "slug": "mineru",
+    "nameEn": "MinerU",
+    "nameZh": "把紙本和掃描檔轉成可編輯文字",
+    "category": "文件整理",
+    "tagline": "PDF、掃描檔、手機拍的紙本丟進去，變回可以複製改寫的文字稿",
+    "summary": "這是把文件變回文字的工具。你把 PDF、Word、簡報、Excel 或手機拍的紙本照片交給它，它會讀懂版面，把標題、段落、表格分開來，輸出成乾淨的純文字稿。掃描檔和照片會自動做文字辨識，預設就認得中文。轉完的文字可以直接拿去改寫成商品頁，或請它接著整理成一張表。",
+    "painPoint": "代工廠寄來一疊 PDF 規格書，客戶又傳來手機拍的合約照片，你要做商品頁只能一個字一個字重打，一份打半小時，打完還打錯成分含量。",
+    "whatItDoes": [
+      "把 PDF、Word、簡報、Excel 的內容抽出來，變成可以複製貼上的純文字",
+      "掃描檔、傳真件、手機拍的紙本會自動做文字辨識，預設就認得中文",
+      "表格會保留成表格的樣子，欄位不會整排數字擠成一團",
+      "一整個資料夾可以一次轉完，中途斷了再跑會跳過已經好的那幾份",
+      "可以只轉指定頁數，例如只要合約的第三到第五頁，不用整份跑",
+      "轉好的文字可以在同一個對話裡接著請它改寫、翻譯或整理成表"
+    ],
+    "scenarios": [
+      {
+        "title": "代工廠規格書變成商品頁素材",
+        "body": "廠商寄來十二頁的原料規格 PDF，成分表、檢驗數據、產地都在裡面。轉成文字之後，直接接著說「幫我把這份規格整理成蝦皮商品頁的成分說明，療效字眼先標出來不要放進去」。原本要重打半小時的資料，通常十幾分鐘就有一版初稿可以改。"
+      },
+      {
+        "title": "一整年的紙本單據交給記帳士",
+        "body": "抽屜裡那疊出貨單、收據、託運單，用手機一張一張拍完放進同一個資料夾，整批轉成文字，再請它整理成一張含日期、品項、金額的表。交給記帳士的時候不用再手抄一次，也不用擔心抄錯統一發票號碼。"
+      },
+      {
+        "title": "英文原廠資料變成中文素材",
+        "body": "澳洲原廠寄來的產品手冊是掃描的 PDF，一個字都複製不了。轉成文字之後再請它翻成繁體中文、抓出五個賣點，就能拿去寫 IG 貼文、做教育訓練投影片，或是給業務當說帖，不必再對著螢幕重打一次。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "把檔案準備在同一個資料夾",
+        "detail": "先把要轉的檔案集中放好，PDF、Word、簡報、Excel、照片混在一起也沒關係。手機拍的紙本盡量拍正、光線平均，字歪掉或反光的部分辨識率會明顯掉。如果只需要其中幾頁，先記下頁碼，等一下直接告訴它，不用整份都跑一次。"
+      },
+      {
+        "step": "告訴它要轉什麼、想要什麼結果",
+        "detail": "直接說「幫我把這個資料夾裡的 PDF 都轉成文字」就會動。如果是掃描檔或照片，記得補一句「這是掃描檔，要做文字辨識」，它才會啟動辨識。文件是中文的不用特別交代，預設就是中文；如果是英文或日文的原廠資料，講一聲語言，準確度會差很多。"
+      },
+      {
+        "step": "先抽查表格和數字對不對",
+        "detail": "拿到文字稿之後，第一件事是抽查表格和金額。版面複雜的規格表、有合併儲存格的報價單，偶爾會把欄位對錯一格。發現哪一段怪怪的，就把原檔的那一頁單獨再轉一次，或請它只處理那幾頁，通常就會正常。"
+      },
+      {
+        "step": "接著請它做你真正要的事",
+        "detail": "轉出文字只是中繼站，重點是下一步。轉完直接接著說「整理成商品頁成分表」「把金額抓出來做成對帳表」「翻成繁體中文並抓五個賣點」。在同一個對話裡接續處理最省事，不用把幾千字貼來貼去。"
+      }
+    ],
+    "examplePrompt": "我桌面上「原料規格」這個資料夾裡有八份 PDF，都是代工廠寄來的成分規格書，其中三份是掃描檔要做文字辨識，內容是中文的。請幫我全部轉成純文字，表格要保留原本的欄位。轉完之後，把每一份的成分名稱、含量、來源產地、檢驗項目整理成一張總表給我。如果原檔裡有寫到功效的敘述，先幫我另外標出來但不要放進表格，我要另外處理化妝品廣告用詞的問題。",
+    "exampleResult": "它會先回報八份都轉好、其中三份掃描檔走了文字辨識，並提醒你第五份第二頁有一段字太模糊，建議自己再核對。接著給你一張八列的總表，欄位是成分名稱、含量、來源產地、檢驗項目。最後另外列出十二句原檔中提到功效的敘述，每一句標上是哪一份、第幾頁，讓你自己判斷要不要用。",
+    "tips": [
+      "機密文件請留意，預設是把檔案送到雲端處理。合約、客戶名單、還沒公開的配方，先問清楚能不能改成本機處理，不然別丟。",
+      "免費額度有上限，單檔大約十 MB、二十頁以內。超過或要整批跑，得到官網申請一組免費金鑰才會開通。",
+      "掃描品質決定成果。手機拍紙本記得拍正、避開反光，歪斜和陰影是辨識出錯字最常見的原因。",
+      "表格和數字一定要自己抽查。它抓版面很強，但合併儲存格的複雜表格偶爾會對錯欄，報價金額這種不能錯的自己看過一遍。"
+    ],
+    "bestFor": "每天在處理廠商 PDF、紙本單據和原廠英文資料的電商賣家與行政人員，尤其是常得把同一份資料重打一次的人。",
+    "keywords": [
+      "PDF 轉文字",
+      "掃描辨識",
+      "文件整理",
+      "文字辨識",
+      "資料重打",
+      "商品頁素材",
+      "批次轉檔"
+    ],
+    "sourceRepo": "Nebutra/MinerU-Skill",
+    "sourceRepoName": "MinerU-Skill",
+    "sourceStars": "87",
+    "sourceUrl": "https://github.com/Nebutra/MinerU-Skill",
+    "image": "/skills-img/mineru.webp",
+    "imageAlt": "掃描檔變成可編輯文字流程圖：備妥檔案、版面辨識、轉出文字、接續改寫"
+  },
+  {
+    "slug": "financial-parser",
+    "nameEn": "Financial Document Parser",
+    "nameZh": "發票收據整理成分類明細",
+    "category": "文件整理",
+    "tagline": "一疊收據帳單丟進去，變成分類好的明細表，順便揪出重複扣款",
+    "summary": "把發票、收據、信用卡帳單、銀行對帳單拍照或存成檔案丟給它，它會一筆一筆讀出日期、對象、品項、金額，照包材、軟體訂閱、運費、廣告費這些類別分好，算出每一類多少錢。同時標出每月固定扣的訂閱、重複入帳的款項，還有金額特別大的那幾筆，最後給你一份可以直接貼進試算表的明細。",
+    "painPoint": "每個月底一疊收據攤在桌上，一張一張打進試算表打到半夜，打完還不確定有沒有漏，記帳士那邊又在催。",
+    "whatItDoes": [
+      "認得出發票、收據、請款單、信用卡帳單、銀行對帳單，各抓各的重點欄位",
+      "一筆一筆讀出日期、店家、品項、單價、稅額和總額，金額照原樣不四捨五入",
+      "照包材、軟體訂閱、差旅、運費、廣告、外包費用等類別歸類並統計金額",
+      "找出每月固定扣款的訂閱、同一筆重複入帳、金額異常大的支出，各標一區",
+      "帳號和卡號只留末四碼，不把完整號碼寫進報表裡",
+      "整理成可以直接貼進試算表的格式，寄給記帳士或自己對帳都能用"
+    ],
+    "scenarios": [
+      {
+        "title": "月底跟記帳士對帳",
+        "body": "一個月三十幾張進項發票加運費單，以前手打要兩個晚上。整批丟進去，出來是一張分類明細：包材多少、廣告多少、物流多少，貼進試算表就能寄給記帳士。有兩筆同一家廠商同日同金額被標成疑似重複，回頭一查真的請了兩次款。"
+      },
+      {
+        "title": "查每個月被扣的訂閱",
+        "body": "公司信用卡帳單拉半年出來丟進去，它列出十一筆每月固定扣款的訂閱，其中兩套設計軟體早就沒在用，一年多繳一萬多。這種東西不整批看不容易發現，帳單上就一行小小的英文，金額又不大，每次都翻過去了。"
+      },
+      {
+        "title": "電商平台的撥款對帳",
+        "body": "蝦皮跟 momo 的撥款明細格式不一樣，一邊一邊比很花時間。把兩邊的對帳單、綠界的入帳紀錄一起丟進去，讓它算出每個平台這個月實收多少、扣了多少手續費，再跟銀行入帳金額核對，差額多少一次看到。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "一次丟一整批進去",
+        "detail": "不用一張一張處理。同一個月份的發票、收據、對帳單放在一起，掃描檔、拍的照片、下載的檔案混著也可以。跟它說這是幾月份的、要整理成分類明細就好。紙本拍照時把整張拍進去，角落被切掉的金額它讀不到，就會漏一筆。"
+      },
+      {
+        "step": "先講好你自己的分類",
+        "detail": "它預設的類別是通用的，跟你記帳的分法不見得對得起來。第一次先告訴它你習慣怎麼分，例如包材、代工、平台手續費、廣告費、外包設計。之後每個月都用同一套，跨月比較才有意義，記帳士收到也不用每次重新問，這五分鐘值得花。"
+      },
+      {
+        "step": "看它標出來的那幾筆",
+        "detail": "報表最後會有一段是需要注意的項目：疑似重複入帳、金額特別大的、看不清楚讀不出來的。這幾筆一定要自己核一次，尤其讀不清楚的那些，它會誠實標出來而不是猜一個數字。總額對不上的時候，先從這一區查起。"
+      },
+      {
+        "step": "明細匯出給記帳士",
+        "detail": "跟它說要轉成可以貼進試算表的格式，欄位用日期、對象、摘要、類別、金額、可否列帳。貼進試算表軟體再存成檔案寄出去。每個月固定同一套欄位，記帳士收到就不用再回頭問你這筆是什麼，來回一趟信就省下來了。"
+      }
+    ],
+    "examplePrompt": "這裡是六月份的進項發票、運費單跟公司信用卡帳單，一共二十八張。請幫我整理成一份明細表，欄位要有日期、廠商、摘要、金額、稅額和費用類別；類別請用包材、代工、物流、廣告投放、平台手續費、雜支這六種。另外幫我把每月固定扣款的訂閱、疑似重複的入帳、還有單筆超過三萬的支出各列一區，最後給我可以直接貼進試算表的格式。",
+    "exampleResult": "先是一張總表，六類各多少錢、佔比多少，總計金額跟你自己加的對得起來。接著是二十八筆逐筆明細，每一筆有日期、廠商、摘要、金額和類別。最後三小塊：四筆每月訂閱共兩千八、一組疑似重複的請款、兩筆讀不清楚要自己確認的。下面附上可以直接貼進試算表的整理格式。",
+    "tips": [
+      "它讀不清楚的地方會標出來、不會亂猜，但金額還是自己抽幾筆核對過比較安心。",
+      "不用另外買辨識服務或付費訂閱，但發票和帳單會送進 AI 處理，卡號帳號建議先塗掉。",
+      "這是幫你整理明細，不是報稅，能不能列帳、稅務怎麼認列還是要問記帳士。",
+      "模糊或反光的照片辨識率差很多，用掃描的，或平放、光線均勻再拍。"
+    ],
+    "bestFor": "每月要整理一堆發票收據跟平台撥款單，但沒有請會計的電商賣家和接案工作室。",
+    "keywords": [
+      "發票整理",
+      "收據辨識",
+      "對帳單解析",
+      "費用分類",
+      "記帳",
+      "訂閱扣款",
+      "重複扣款",
+      "報帳"
+    ],
+    "sourceRepo": "OneWave-AI/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "230",
+    "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/financial-parser",
+    "image": "/skills-img/financial-parser.webp",
+    "imageAlt": "發票帳單整理流程流程圖：整批上傳、逐筆讀取、分類統計、匯出明細"
+  },
+  {
+    "slug": "product-description-generator",
+    "nameEn": "Product Description Generator",
+    "nameZh": "把商品頁漏掉的關鍵字補回來",
+    "category": "電商經營",
+    "tagline": "貼上競品網址，找出你漏寫的關鍵字，照平台字數重寫商品頁。",
+    "summary": "這套工具把「同業在寫什麼、你少寫了什麼」攤開在同一張表上。給它商品規格加一到三個競品網址，它會抓下對方的標題與賣點，整理成關鍵字清單並排出先後順序，再照你要上架的平台字數限制，寫出標題、五條賣點和完整描述。原本要開三個分頁一個字一個字比對，現在一次列出來，改版才有依據。",
+    "painPoint": "商品頁寫了三個小時，標題塞滿字卻沒人點；看同業明明差不多，人家排前面你排後面，又講不出到底差在哪，只好整頁砍掉重寫。",
+    "whatItDoes": [
+      "抓下你指定的競品頁面，整理出對方標題和賣點裡真正在用的字。",
+      "幫每個關鍵字打分數，分出該放標題、該放賣點、該放描述的層級。",
+      "照蝦皮這類賣場的標題字數上限和賣點條數產出，不會寫到貼不進去。",
+      "列一張缺口表，標出哪些關鍵字你已經有、哪些完全沒寫到。",
+      "每條賣點先寫買家得到什麼，再加一個具體規格佐證，不是只列規格。",
+      "自動把競品的品牌名清掉，不會不小心把別人的牌子寫進你的商品頁。"
+    ],
+    "scenarios": [
+      {
+        "title": "新品上架前先看同業",
+        "body": "一款新的身體乳液要上蝦皮，你手上只有代工廠給的成分表。把成分、容量、香調丟給它，再貼三個賣得好的同類商品網址，它會告訴你這三家標題共同都有的字是哪幾個、只有一兩家有的又是哪些，然後給你一組控制在平台字數內的標題和五條賣點，複製貼上就能開賣。"
+      },
+      {
+        "title": "老商品沒人看想救回來",
+        "body": "一支賣了一年的洗髮精，每月出貨從四十件掉到十幾件。把現在的標題和描述整段貼給它，再給兩個現在排在你前面的同類商品，它會做一張對照表：你有的字打勾、少的字標紅，再把該補的字排進標題和賣點，並附上改前改後對照，你可以只採用其中幾條。"
+      },
+      {
+        "title": "同一支商品要上三個賣場",
+        "body": "同一款香氛蠟燭要同時放蝦皮、自家官網和 LINE 商店，三邊的字數限制和寫法都不一樣。同一份商品資料丟一次，請它分別產出蝦皮版的長標題加五條賣點、官網版的搜尋標題與描述、LINE 商店版的短版介紹，不用你自己一份份剪貼調字數。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚商品和平台",
+        "detail": "開頭直接說要上哪個平台、商品叫什麼、品牌是誰、幾個核心規格，例如容量、材質、成分重點。資料愈具體，寫出來的賣點愈不像罐頭文案。如果你只丟一句「幫我寫商品頁」，它會回頭問你一輪，反而多花時間。順手講一下你想吸引誰買、要什麼語氣，專業、親切、精品感都可以指定。"
+      },
+      {
+        "step": "貼上兩到三個競品網址",
+        "detail": "找目前搜尋排在你前面、規格接近的同類商品，貼上網址。一到三個就夠，太多反而讓重點分散。它會抓對方的標題、賣點和描述，整理成關鍵字清單。如果某個頁面抓不到內容，它會改用搜尋補資料，或請你把對方的標題直接複製貼上，不會硬掰一份給你。"
+      },
+      {
+        "step": "先看缺口表再決定要不要寫",
+        "detail": "產出文案前它會先給一張表，列出每個關鍵字的分數、該放的位置，以及你現在的商品頁有沒有寫到。這張表比文案本身還有用，你可以直接看出自己漏的是規格類、用途類還是族群類的字。看完覺得某幾個字不符合品牌調性，當場說「這幾個拿掉」就好，不用整篇重來。"
+      },
+      {
+        "step": "拿到文案自己校一次",
+        "detail": "輸出會分成標題、賣點、描述、標籤幾塊，直接複製貼上到賣家後台。上架前務必自己讀過一遍：化妝品、保健相關的形容詞有法規限制，效果類的字要自己刪；規格數字也要對著代工廠的資料再核一次，容量或成分寫錯一個，之後就是退貨和客訴。"
+      }
+    ],
+    "examplePrompt": "我要在蝦皮上架一款身體乳液，幫我寫商品頁。品牌是 ALOOMOO，容量 250 毫升，主打成分是燕麥萃取和神經醯胺，質地清爽好吸收，無香精版本，適合乾燥和敏感肌。想吸引的是二十五到四十歲、冬天會全身乾癢的女生，語氣要親切不要太廣告。這三個是賣得比我好的同類商品：（貼上網址一）（貼上網址二）（貼上網址三）。請先給我關鍵字缺口表，再照蝦皮的標題字數上限寫標題、五條賣點和商品描述，效果類的字先不要寫。",
+    "exampleResult": "先出現一張關鍵字表：燕麥萃取、身體乳液、清爽不黏膩三個字分數最高，排進標題；敏感肌、無香精排進賣點；冬季乾癢放描述。接著是一個貼進蝦皮不會被截掉的長標題、五條各自對應一個賣點加規格佐證的條列，以及分成使用時機與成分說明的描述。最後附一張覆蓋表，告訴你原本漏掉的五個字現在補回幾個。",
+    "tips": [
+      "這個技能本身不用另外付費，也不用申請金鑰，但它要能連網抓競品頁面；蝦皮頁面偶爾抓不到，直接把對方標題複製貼給它就好。",
+      "原始設定裡沒有 momo 的欄位規則，momo 的商品名長度和規格欄位都不一樣，要自己指定字數，或請它照蝦皮版再壓縮一次。",
+      "它整理的關鍵字來自公開頁面，不是真實搜尋量；當作同業都在寫什麼的參考就好，不要當成搜尋熱度數據。",
+      "化妝品和保健食品的文案有法規紅線，產出的形容詞一定要自己再刪一次，不要直接貼上架。"
+    ],
+    "bestFor": "蝦皮或自家官網一次要上十幾支商品、沒有專職小編、標題都靠自己憑感覺塞字的賣家。",
+    "keywords": [
+      "商品頁文案",
+      "蝦皮上架",
+      "關鍵字缺口",
+      "競品比對",
+      "商品標題",
+      "電商文案",
+      "賣點撰寫"
+    ],
+    "sourceRepo": "nexscope-ai/eCommerce-Skills",
+    "sourceRepoName": "eCommerce-Skills",
+    "sourceStars": "513",
+    "sourceUrl": "https://github.com/nexscope-ai/eCommerce-Skills/tree/main/product-description-generator",
+    "image": "/skills-img/product-description-generator.webp",
+    "imageAlt": "競品字詞比對改寫流程圖：貼上競品、抓出字詞、比對缺口、限字改寫"
+  },
+  {
+    "slug": "price-optimization-tool",
+    "nameEn": "Price Optimization Tool",
+    "nameZh": "算出保本底價再決定降不降",
+    "category": "電商經營",
+    "tagline": "把抽成、金流、運費補貼算進成本，先找出不虧的底價，再談要不要降。",
+    "summary": "這是一套算價格的工具，重點不在猜市場能接受多少，而在把每一筆會被扣掉的錢先攤出來。它用平台抽成、金流手續費、運費補貼、退貨率算出每件實賺多少、底價落在哪，再把幾個候選價放進保守、基準、樂觀三種情境比較，最後告訴你該直接調、該先小範圍試，還是資料不夠先別動。",
+    "painPoint": "同行降價你也跟著降，營業額看起來沒掉，月底扣完抽成和運費補貼才發現白做一場；想漲又怕評價掉，價格就一直卡在說不出理由的數字。",
+    "whatItDoes": [
+      "把平台抽成、金流手續費、運費補貼、退貨損耗全部列進變動成本。",
+      "算出每個售價實際入袋和實賺多少，看清楚哪一檔其實是在做白工。",
+      "用抽成比例回推保本底價，低於這個數字就別再讓利。",
+      "同時看基準、保守、樂觀三種情境，不會只給你一個看起來很準的數字。",
+      "算出降價之後要多賣幾件，才不會比原價賺得少。",
+      "判斷你的資料夠不夠估銷量會掉多少，不夠就直說，不會硬套同業數字。"
+    ],
+    "scenarios": [
+      {
+        "title": "週年慶前要不要跟著降",
+        "body": "momo 週年慶檔期，同類商品的同行掛出六九折，你不確定要不要跟。把成本、平台抽成、免運補貼門檻和平常每月出貨量給它，它會算出六九折之後每件實際入袋多少、要多賣幾件才追得回原本的獲利。常見的結果是要多賣兩倍以上，這時候你就有理由不跟，改做買二送一或加價購。"
+      },
+      {
+        "title": "組合包該定多少錢",
+        "body": "兩支單價五百八的商品想做成組合包。它會分別算單買和組合的實賺金額，把包材、多一次出貨的物流費算進去，再提醒你組合包會不會吃掉原本單買的訂單。如果折扣讓組合包的每件實賺低於單買，它會直接標出來，而不是幫你包裝成看起來很划算。"
+      },
+      {
+        "title": "同一支商品多平台不同價",
+        "body": "同一支商品在蝦皮、官網和 LINE 商店的抽成與金流費率都不一樣，官網走綠界或藍新的費率又和平台不同。把三邊的費率各給它一次，它會分別算出三個保本底價，你才會知道為什麼官網可以賣便宜一點還比較賺，也才知道哪一邊值得多花廣告錢。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "把成本一項一項攤開",
+        "detail": "先給它進貨成本或代工廠報價、包材、寄倉費、超商或宅配運費、平台抽成百分比、金流手續費、平均退貨率。這些數字愈完整，後面算出來才有意義。不確定的項目就講「大概」，它會標成假設放在旁邊，不會偷偷當成事實混進計算裡，之後你也知道哪幾格要回頭補。"
+      },
+      {
+        "step": "講清楚你這次要什麼",
+        "detail": "要衝營業額、要守獲利、還是要出清庫存換現金，這三件事的答案完全不同。開頭就講明白，它才不會在你想守獲利的時候給你一個衝件數的建議。順便講你能接受的最低價和最高價，超出範圍的方案就不用浪費時間看，直接從剩下的裡面挑。"
+      },
+      {
+        "step": "看底價和情境比較表",
+        "detail": "它會列出每個候選價的實際入袋、實賺金額和比例，並標出哪幾個已經跌破保本底價。接著給保守、基準、樂觀三欄的銷量假設，讓你看到降價要多賣幾件才划算。這一段請自己讀過，尤其是它列出的假設，假設不合理的話，後面所有數字都不準。"
+      },
+      {
+        "step": "小範圍測完再全面改",
+        "detail": "它會建議先挑一支商品或一段固定期間試，並事先寫好什麼情況要收手，例如實賺掉多少、退貨率升到多少就改回原價。價格要自己到賣家後台改，它不會也不該替你動線上的價格。改動前後記得記下日期，不然之後根本分不清是價格的效果還是檔期的效果。"
+      }
+    ],
+    "examplePrompt": "幫我看一支蝦皮商品要不要降價。目前售價六百八，進貨成本兩百四，包材二十，平均運費補貼六十，蝦皮成交手續費加金流大約百分之十二，退貨率大概百分之五，最近三個月平均每月賣一百二十件。同行最近降到五百九。我的目標是守住獲利，不是衝件數，最低可以接受五百五。請先算出我的保本底價，再比較六百八、六百三、五百九這三個價位在保守和樂觀情境下的實賺金額，最後告訴我該直接調、先測，還是先別動。",
+    "exampleResult": "先出現一張成本攤開表，指出運費補貼和抽成合計吃掉將近三成。接著算出守住目前獲利的保本底價大約落在五百八十幾，也就是跟到五百九幾乎沒有空間。三個價位的情境表顯示，降到五百九要多賣四成以上才追得回原本的實賺金額。結論給的是先別全面降，改用滿額免運測兩週，並附上什麼情況要收手的條件。",
+    "tips": [
+      "這個技能不用付費金鑰，但要有你自己的成本和銷售紀錄；沒有資料它只會給你一個空架構，不會編數字充數。",
+      "抽成一定要用實際帳單上的百分比，不是公告費率；活動檔期的加成和運費補貼都要算進去。",
+      "它不會也不該幫你改線上價格，所有調價都要自己登入賣家後台操作，並記下改動日期。",
+      "不要對同時看到的買家顯示不同價格，也不要為了做出折扣感先抬高原價，這在平台規範和消費者保護上都有風險。"
+    ],
+    "bestFor": "賣蝦皮、momo 又有自家官網，抽成和運費補貼算不清楚，每次調價都靠直覺的賣家。",
+    "keywords": [
+      "定價策略",
+      "毛利計算",
+      "平台抽成",
+      "保本底價",
+      "降價評估",
+      "組合包定價",
+      "電商獲利"
+    ],
+    "sourceRepo": "nexscope-ai/eCommerce-Skills",
+    "sourceRepoName": "eCommerce-Skills",
+    "sourceStars": "513",
+    "sourceUrl": "https://github.com/nexscope-ai/eCommerce-Skills/tree/main/price-optimization-tool",
+    "image": "/skills-img/price-optimization-tool.webp",
+    "imageAlt": "從成本算到定價流程圖：攤開成本、算出底價、排出價位、小量測價"
+  },
+  {
+    "slug": "inventory-reorder-planner",
+    "nameEn": "Inventory Reorder Planner",
+    "nameZh": "算出這週該補哪些貨補幾件",
+    "category": "電商經營",
+    "tagline": "丟進銷售紀錄和庫存，它算出這週該補哪些貨、每樣補幾件",
+    "summary": "它讀你匯出的訂單紀錄和目前庫存，算出每個品項賣得多快、供應商要等幾天到貨，再推回來告訴你什麼時候該下單、下多少。斷貨那幾天不算進銷售速度，熱賣款才不會被誤判成賣不動。順便挑出躺在倉庫超過三個月沒動的貨，告訴你卡了多少現金、可以怎麼出清。",
+    "painPoint": "熱賣的那幾支永遠在缺，客人問就只能說補貨中；不太動的反而堆滿倉庫，錢全卡在裡面。每次補貨都憑印象抓數量，抓錯了就是兩頭賠。",
+    "whatItDoes": [
+      "從訂單紀錄算出每個品項一週賣幾件，賣得越不穩定的就抓越多安全庫存。",
+      "把斷貨那幾天從計算裡拿掉，只用有貨的日子算速度，熱賣款才不會被誤判成賣不動。",
+      "照營收貢獻把品項排成 A、B、C 三級，A 級留足緩衝，C 級抓緊一點，不會全部一個標準。",
+      "算出每個品項的再訂購點，庫存掉到那條線就提醒你下單，並附上算式讓你自己核對。",
+      "把要補的貨按供應商分組，湊到最低訂購量和整箱數，整理成可以直接下的單。",
+      "挑出九十天沒賣過還有庫存的品項，算出卡了多少錢，每一項再給一個出清方向。"
+    ],
+    "scenarios": [
+      {
+        "title": "換季前不知道該囤多少",
+        "body": "十月要準備冬季的滋潤款，去年賣得不錯但你只記得「大概兩百多組」。它會翻出去年同期的實際出貨量，跟今年前三季的成長幅度比一比，告訴你這款去年十一月到一月的量是平常月份的幾倍，再乘回今年的水位。而且會直接標出這是資料看得出來的季節性，還是資料不夠只能靠你判斷，不會硬掰一個數字給你。"
+      },
+      {
+        "title": "代工廠交期要等一個月",
+        "body": "代工廠說三到四週，可是你每次都是看到快沒了才下單，結果中間空了半個月。它會把交期換算成「剩幾件就該下單」：一週賣十八瓶、等三週到貨，那就是剩五十四瓶時該動作，再加一週半的緩衝抓到八十。這條線寫在清單上，你每週看一眼就好，不用每次都重新想一遍。"
+      },
+      {
+        "title": "倉庫堆滿去年的贈品組",
+        "body": "架上那幾箱去年檔期剩下的組合，你知道賣不掉但一直沒空處理。它會把九十天內完全沒出貨、手上還有存貨的品項全部撈出來，算出各佔多少成本、最後一筆出貨是幾個月前，每一項再給一個處理方向：搭熱賣款做組合、直接折扣清掉，或是報損認賠。很多老闆最容易忘記的一筆現金，就卡在這張表上。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先匯出近一年的訂單紀錄",
+        "detail": "打開蝦皮賣家中心或 momo 後台，把過去十二個月的訂單明細匯出成表格，至少要有日期、品項、數量三欄。有實體店的話，POS 的銷售報表也一起給。時間拉一年是為了看得出季節，只有三個月它算得出速度但看不出換季。檔案直接給就好，不用先整理漂亮，它會自己認欄位；退貨和測試單如果分得出來，先標一下會更準。"
+      },
+      {
+        "step": "把現在的庫存數量一起給它",
+        "detail": "光有銷售紀錄它只知道賣多快，不知道你手上還剩幾件。庫存表用最簡單的兩欄就行：品項和目前數量。如果貨分在自倉和 momo 倉，請分開列，因為 momo 倉補貨進去還要時間。已經下單但還沒到的量也一併說，不然它會叫你重複下單。這一步最常出錯的是庫存表跟訂單表的品項名稱對不起來，先確認兩邊叫同一個名字。"
+      },
+      {
+        "step": "告訴它每家供應商要等幾天",
+        "detail": "交期是整個計算的關鍵。你要說的是「下單到貨進倉」的實際天數，不是廠商講的理想值：對方說三週但實際常常四週，就寫四週。同一家供應商不同品項交期不同，也可以分開講。順便把最低訂購量、一箱幾件、有沒有數量折扣一起說，它才會把建議數量湊成你真的下得出去的單，不會叫你訂 137 瓶這種數字。"
+      },
+      {
+        "step": "看懂它給的清單再下單",
+        "detail": "清單每一行都附算式，像是「週銷 18、交期 3 週、安全庫存 1.5 週，剩 81 瓶就下單」。先挑幾個你最熟的品項核對，數字跟直覺差太多就直接問它為什麼，通常是斷貨那幾天沒扣掉，或活動暴量沒排除。標成急件的先處理，其他按供應商分組一次下完。下次下單前重跑一次，並告訴它上次實際賣了多少，它會自己修正。"
+      }
+    ],
+    "examplePrompt": "我是蝦皮和 momo 的保養品賣家，手上大概 60 個品項。我把去年七月到今年七月的訂單紀錄整理好了，另外附一張現在的庫存表，自倉和 momo 倉分開列。我的代工廠交期通常三到四週，最低訂購量是每款 300 瓶，一箱 24 瓶。請幫我算出每個品項的再訂購點和安全庫存，有斷貨的那幾天請不要算進銷售速度。最後給我一份這週要下單的清單，按供應商分好，標出哪些如果現在不下就會在到貨前賣完。另外幫我列出超過九十天沒賣的品項，還卡了多少錢。",
+    "exampleResult": "你會拿到一張補貨清單：每個品項一行，寫著現在剩幾件、一週賣幾件、要等幾週、什麼時候會賣完、這次建議下幾件。急件會被標出來，例如「玫瑰精華 30ml：剩 42 瓶，週銷 18 瓶，交期 3 週，到貨前會有 5 天沒貨，建議立刻下單 720 瓶湊滿 30 箱」。下面接一份滯銷表，列出躺著沒動的品項和卡住的金額，例如「去年聖誕禮盒 86 組，成本 3 萬 4，最後一筆出貨在 11 個月前」，並附上出清方向。",
+    "tips": [
+      "不用另外買軟體或申請付費金鑰，但你至少要能匯出蝦皮、momo 的訂單報表，只給截圖它算不出來。",
+      "新上架不到一個月的品項沒有足夠紀錄，它會另外標成靠判斷下的量，不要當成算出來的數字看。",
+      "檔期、雙 11、母親節那幾天的暴增會拉高平均，記得跟它說哪些日子是活動，別把活動量當成日常。",
+      "每週或每次下單前重跑一次，並把上次的建議跟實際賣掉的量對一下，數字才會越跑越貼近你的生意。"
+    ],
+    "bestFor": "手上超過三十個品項、常常一邊缺貨一邊積壓，補貨還在靠印象抓數字的電商賣家和實體店老闆。",
+    "keywords": [
+      "庫存管理",
+      "補貨",
+      "安全庫存",
+      "再訂購點",
+      "滯銷出清",
+      "電商庫存",
+      "採購清單"
+    ],
+    "sourceRepo": "OneWave-AI/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "230",
+    "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/inventory-reorder-planner",
+    "image": "/skills-img/inventory-reorder-planner.webp",
+    "imageAlt": "從銷量算出補貨清單流程圖：匯出銷量、扣掉斷貨、算補貨點、列採購單"
+  },
+  {
+    "slug": "ecom-rfm-analysis",
+    "nameEn": "Ecommerce RFM Analysis",
+    "nameZh": "分出誰是老主顧誰快跑掉",
+    "category": "電商經營",
+    "tagline": "把訂單紀錄丟進去，它分出誰是老主顧、誰快跑掉、誰發了也沒用",
+    "summary": "它看三件事：這個人上次買是多久以前、總共買過幾次、一共花了多少。三個分數合起來，把名單分成常客、快流失、只買過一次的新客等幾群。分完你就知道 LINE 群發該發給誰、該講什麼，不用整包名單全發一次，也不會把力氣浪費在早就不會回來的人身上。",
+    "painPoint": "客戶名單累積了幾千筆，每次做活動就整包群發，訊息費一次噴掉好幾千，回應的還是那幾個熟面孔。想知道誰快不見了，但打開後台只看得到一筆一筆訂單。",
+    "whatItDoes": [
+      "算出每個客戶上次買是幾天前、買過幾次、總共花多少，三項各給一到五分。",
+      "把名單分成常客、忠實客、潛力客、快流失、沉睡、新客等群組，每群多少人一目了然。",
+      "揪出曾經很常買、最近卻安靜下來的那批人，這群通常最值得先花力氣挽回。",
+      "告訴你前 20% 的客戶貢獻了多少營收，讓你知道名單裡真正撐業績的是誰。",
+      "每一群各建議該講什麼、用哪個管道發，讓 LINE 群發只發給值得發的人。",
+      "遇到八成客戶都只買過一次的情況，會改用適合你的分法，不會硬套五等分。"
+    ],
+    "scenarios": [
+      {
+        "title": "母親節檔期只想發給該發的人",
+        "body": "名單三千人，整包群發一次訊息費就是一筆錢，大半的人還根本不會開。分完群你會看到常客一百八十人、快流失兩百六十人、只買過一次的一千九百人。母親節可以只發前面那四百多人，內容還不一樣：常客講新品優先買，快流失講好久不見這張券七天內有效。發的人少了，訊息費跟著降，也比較看得出來是哪一群有反應。"
+      },
+      {
+        "title": "訂閱制客單價都一樣怎麼分",
+        "body": "如果你做的是每月固定金額的訂閱盒，每個人花的錢都差不多，金額這一項就分不出東西來。這種情況它會直接把金額拿掉，只看多久沒續和續了幾期兩項，分群反而更準。同樣的道理，B2B 客戶一季下一次單算正常，B2C 客人一季才回來一次就算冷掉了，它會先問你是哪一種，再決定判斷的標準。"
+      },
+      {
+        "title": "找出去年常買今年沒回來的人",
+        "body": "有一群人以前每兩個月就買一次，今年開始安靜了，夾在三千筆名單裡你根本看不出來。這群在分析裡叫快流失，最值得先花力氣：他們買過很多次代表產品沒問題，只是被別家接走或單純忘了。它會列出這群的人數、平均多久沒買、過去平均買過幾次，你先做一次挽回，再看回來多少人。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "匯出一到兩年的訂單明細",
+        "detail": "你需要三個欄位：能認出同一個人的客戶編號、下單日期、實付金額。蝦皮後台可以匯出訂單明細，官網如果是 Shopline、Cyberbiz 這類服務也都有匯出功能。時間建議抓十二到二十四個月：太短看不出誰變冷了，太長會把三年前買過一次的人也算進來。同一個人在不同平台各買過，如果編號對不起來就先分開跑，不要硬合。"
+      },
+      {
+        "step": "先把退貨和測試單清掉",
+        "detail": "這一步最影響結果。退款、取消、自己下的測試單、公司內部請購，如果留在資料裡，會有人被算成高金額常客，其實一毛沒進帳。刷卡分期或分批出貨造成一筆訂單變多筆的情況也要說明，不然次數會虛胖。另外，匯出後先把客戶姓名、電話、地址那幾欄刪掉，只留編號，分群完全不需要真名。"
+      },
+      {
+        "step": "請它分群並看每一群多少人",
+        "detail": "請它先給一張分群表：每群幾人、佔比、平均多久沒買、平均買過幾次、平均花多少。先看比例合不合理，如果只買過一次的佔了八成，那是常態不是異常，代表你的重點在第二次購買，這時硬套五等分沒意義，可以請它換一套適合你的分法。看到跟印象差很多的群，請它列幾個客戶編號出來，你回後台對一下。"
+      },
+      {
+        "step": "照分群擬訊息再排群發",
+        "detail": "同一檔活動，不同群要講不同的話：常客講新品先買、快流失講一張有效期短的券、只買過一次的講第二件搭配。請它每群寫一版短訊息，再挑真的要發的群。快流失那群一次講清楚就好，連發只會換來封鎖。發完隔兩三週再跑一次，看有多少人從快流失回到常客，那個數字才是這次活動真正的成績。"
+      }
+    ],
+    "examplePrompt": "我做保養品電商，蝦皮加官網加起來大概 3,000 個買過的客戶。我匯出了 2025 年 8 月到 2026 年 7 月的訂單明細，欄位有客戶編號、下單日期、實付金額，退貨和測試單我已經刪掉了，姓名電話也拿掉只留編號。請幫我做 RFM 分群，先告訴我每一群各有多少人、佔比多少、平均多久沒買、平均買過幾次、平均花多少。我要特別知道以前很常買、最近三個月沒動的那群，因為母親節檔期我只打算發這群和常客。最後請每一群各給我一句最該講的話，我要拿去寫 LINE 群發。",
+    "exampleResult": "你會先看到一張分群表：常客 180 人佔 6%、平均 21 天前買過、買過 7 次、累積花 2 萬 3；快流失 260 人、平均 118 天沒動，但過去平均買過 5 次。接著是幾句直接能用的判斷，例如「只買過一次的有 1,900 人，佔六成，第二次購買才是你最大的空間」。最後每群配一個動作和管道，像是快流失那群建議發一次限時回購禮，發完就停，不要連發。",
+    "tips": [
+      "不用另外申請付費服務，它算的是你自己匯出的訂單，但欄位至少要有客戶編號、日期、金額三項。",
+      "匯出時把客戶姓名、電話、地址拿掉，只留一個編號，分群不需要真名，也少一層個資風險。",
+      "LINE 官方帳號的群發是按則計費，分完群再發通常比整包發省，但實際省多少要看你目前的方案。",
+      "快流失那群一次發一封講清楚就好，一直連發只會被封鎖或退訂，名單反而越洗越薄。"
+    ],
+    "bestFor": "手上有幾百筆以上重複購買紀錄、每次做活動都整包群發，想先知道該對誰花錢的電商賣家。",
+    "keywords": [
+      "RFM",
+      "客戶分群",
+      "回購",
+      "客戶名單",
+      "LINE 群發",
+      "電商行銷",
+      "流失客戶",
+      "分眾發訊"
+    ],
+    "sourceRepo": "asgard-ai-platform/skills",
+    "sourceRepoName": "skills",
+    "sourceStars": "222",
+    "sourceUrl": "https://github.com/asgard-ai-platform/skills/tree/main/ecom-rfm-analysis",
+    "image": "/skills-img/ecom-rfm-analysis.webp",
+    "imageAlt": "從訂單分出客戶等級流程圖：匯出訂單、三項打分、歸群貼標、分眾發訊"
+  },
+  {
+    "slug": "tw-einvoice-guide",
+    "nameEn": "Taiwan E-Invoice Guide",
+    "nameZh": "搞懂電子發票怎麼開怎麼對帳",
+    "category": "電商經營",
+    "tagline": "從申請字軌到每兩個月對一次帳，把電子發票該做的事排成一張清單",
+    "summary": "它把台灣電子發票的整套流程講成人話：要裝財政部提供的軟體自己開，還是交給綠界、藍新這類加值中心，還是讓 POS 廠商處理。順便幫你把二聯三聯、手機條碼、捐贈碼、字軌不夠用、開錯要作廢還是走折讓這些細節排清楚，做成一張有時程、標得出誰負責的檢查清單。",
+    "painPoint": "客人結帳問載具你只會掃那條槓；月底記帳士說發票對不起來，你也講不出哪裡錯。查財政部的說明全是法規名詞，看半天還是不知道自己這種規模該怎麼做。",
+    "whatItDoes": [
+      "照你的規模和賣的平台，建議走財政部的軟體、加值中心，還是直接讓 POS 廠商處理。",
+      "講清楚開給公司行號的三聯式和開給消費者的二聯式差在哪，稅額要不要分開列。",
+      "整理手機條碼、自然人憑證、會員載具、捐贈碼各是什麼格式、什麼時候該問客人。",
+      "提醒你字軌要提前跟國稅局申請，用完就開不了票，先算好一期大概要幾號才夠。",
+      "說明開錯了什麼時候還能作廢、過了期只能走折讓，以及每天該核對哪一份紀錄。",
+      "排出一張含時程的檢查清單，從註冊、測試到正式開第一張票各要多久、誰負責。"
+    ],
+    "scenarios": [
+      {
+        "title": "蝦皮和官網的發票兩套系統",
+        "body": "蝦皮的發票平台幫你開，官網走綠界自己開，兩邊各有一套號碼和紀錄，月底記帳士要的資料你得手動拼。它會先幫你確認哪些單是平台代開、哪些要自己開，避免同一筆重複開兩張；再列出申報時兩邊該怎麼合起來看，以及每天要拿哪一份紀錄去跟財政部平台核對。財政部平台上的紀錄才是準的，你自己的後台只是副本。"
+      },
+      {
+        "title": "客人要統編但已經開成二聯",
+        "body": "客人結帳時沒說，隔天才 LINE 你說要統編報帳。這種狀況能不能作廢重開，要看是不是還在同一個兩個月的期別內：期別還沒結束通常可以作廢重開，過了就只能走折讓，程序麻煩很多。它會把時間界線、該留什麼紀錄、要跟客人怎麼講一次說清楚，也會建議你在結帳流程裡多問一句，少掉大半這種事。"
+      },
+      {
+        "title": "這期字軌快用完了",
+        "body": "發票號碼不是你自己編的，是國稅局配給你一段號碼區間，用完就開不出票。旺季一到量翻上去，很多人是當天開到一半才發現沒號碼可用，現場結帳就卡住。它會提醒你依上一期用量再加一段緩衝去申請，也會算給你看檔期那個月大概要多少張，讓你提前處理，不要等系統跳警告才動作。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚你賣什麼、開幾張",
+        "detail": "一開始就把幾件事講明：公司還是行號、賣的是實體商品還是服務、在哪些平台賣、每個月大概開幾張票、其中多少張客人會要統編、有沒有自己的工程師。這幾項決定了後面的建議會完全不同，每月三十張的工作室和每月五千張的電商，適合的做法差很多。蝦皮這種平台代開的部分也要說，才不會同一筆重複開票。"
+      },
+      {
+        "step": "請它比較三種開票方式",
+        "detail": "主要有三條路：裝財政部提供的軟體自己批次上傳、接綠界藍新這類加值中心、或直接讓 POS 廠商處理。請它照你的量和有沒有技術人力，列出各自要花多少時間、大概要付誰錢、日後誰維護。這裡不要只看便宜，沒有工程師卻選了要自己維護的做法，出問題那天你會很痛苦。它會推薦一個並說理由，其他讓你自己決定。"
+      },
+      {
+        "step": "照清單一項一項準備",
+        "detail": "它會給一張含時程的清單：財政部平台註冊、申請字軌、測試環境開票、作廢和捐贈碼各測一次、正式上線。你要做的是每一項標上誰負責，有些自己來，有些丟給外包廠商或 POS 業者。字軌務必提前，那是唯一卡住就完全開不了票的事。測試時記得用真的手機條碼掃一次，斜線加七碼的格式，很多掃描設備要另外設定才讀得到。"
+      },
+      {
+        "step": "上線後照它給的節奏對帳",
+        "detail": "上線不是結束。每天拿你系統裡開出的張數，跟財政部平台上的紀錄核一次，數量對不上當天就查，拖到月底就變考古。每兩個月申報前，把作廢、折讓、捐贈的部分整理成一份給記帳士，這幾項最容易對不起來。它可以把每日和每期要核對的項目列成固定清單，你貼在後台旁邊照著做，不用每次重想一遍。"
+      }
+    ],
+    "examplePrompt": "我在蝦皮和自己的官網賣保養品，公司是有限公司，每個月大概開 400 到 600 張發票，其中十來張客人會要統編。目前蝦皮那邊的發票是平台代開，官網用綠界收款但發票還沒串。我沒有工程師，網站是外包廠商維護的。請幫我判斷官網這邊該怎麼開發票最省事，並說明兩邊的發票要怎麼合在一起對帳。另外我常搞不清楚客人給的載具格式，也想知道字軌要怎麼申請、一期大概要申請幾號才夠。最後給我一張含時間的準備清單，我要拿去跟外包廠商討論。",
+    "exampleResult": "你會拿到一份判斷加一張清單。判斷的部分會直接說：以你每月五百張的量又沒有工程師，官網走加值中心最省事，並列出蝦皮代開和官網自開兩邊發票在申報時該怎麼合起來看。清單的部分會標出誰要做、要多久，例如「向國稅局申請字軌，抓比上期多兩成，作業約一到兩週」「請廠商在測試環境開十張測試票，含作廢和捐贈碼各一張」。最後附一段每日和每兩個月各要核對什麼。",
+    "tips": [
+      "這張清單本身不用付費工具，但加值中心像綠界、藍新是要收費的，通常按張數或月租計，實際費率要自己去問。",
+      "字軌一定要提前申請，用完就開不了票，檔期前先把量抓寬一點，寧可剩下也不要不夠。",
+      "作廢有時間限制，過了那一期就只能走折讓，流程麻煩很多，發現開錯當下就處理最省事。",
+      "這裡給的是規劃和檢查清單，不是稅務意見，正式申報前還是請你的記帳士或國稅局再確認一次。"
+    ],
+    "bestFor": "剛要開始開電子發票，或蝦皮和官網兩邊發票老是對不起來的中小企業老闆與電商賣家。",
+    "keywords": [
+      "電子發票",
+      "統一發票",
+      "載具",
+      "字軌",
+      "綠界",
+      "藍新",
+      "營業稅",
+      "發票對帳"
+    ],
+    "sourceRepo": "asgard-ai-platform/skills",
+    "sourceRepoName": "skills",
+    "sourceStars": "222",
+    "sourceUrl": "https://github.com/asgard-ai-platform/skills/tree/main/tw-einvoice-guide",
+    "image": "/skills-img/tw-einvoice-guide.webp",
+    "imageAlt": "電子發票從開立到對帳流程圖：挑對管道、申請字軌、上線開票、按期對帳"
+  },
+  {
+    "slug": "angry-customer-playbook",
+    "nameEn": "Angry Customer Playbook",
+    "nameZh": "客人火大時的回話劇本",
+    "category": "電商經營",
+    "tagline": "先告訴你這次不能說哪句話，再給一則可以直接送出的回覆。",
+    "summary": "把客人那則帶火氣的訊息原封不動貼進去，它會先判斷這是哪一種生氣、真正的火源在哪，再列出這次絕對不能說的話，最後給你一則可以直接送出的回覆。如果客人繼續鬧，它連下一步怎麼接、什麼時候該讓老闆出面、什麼時候該把界線畫出來，都先幫你想好。",
+    "painPoint": "蝦皮聊聊跳出一則帶著一整排驚嘆號的訊息，你手指懸在鍵盤上二十分鐘，打了刪、刪了打。怕回太軟被得寸進尺，怕回太硬明天就多一顆一星。",
+    "whatItDoes": [
+      "分辨客人是單純不耐煩、帶著敵意、酸言酸語，還是又急又無助，四種火要用不同滅法。",
+      "往下找真正的火源：東西壞了、跟商品頁不一樣、沒人回訊息，還是他已經反映過第二次。",
+      "誠實告訴你這次客人的怒氣合不合理，不會一味叫你道歉了事。",
+      "列出這次不能說的話，例如他已經聽過三次的那句我了解您的心情就別再出現。",
+      "照著先接住情緒、認錯、給做法與時間、說明怎麼避免再發生的順序，寫好一則回覆。",
+      "先想好客人如果繼續鬧要怎麼接，以及什麼時候該讓老闆出面、什麼時候該明講不接受辱罵。"
+    ],
+    "scenarios": [
+      {
+        "title": "包裹延誤三天，客人在聊聊開罵",
+        "body": "宅配卡在轉運中心，客人第四天傳來一整排問號加上到底要不要出貨。它會看出這是又急又無助那一型：他不是想吵架，是隔天要送人。回覆重點不是解釋物流有多塞，而是先講清楚包裹現在在哪、你今天幾點會做什麼、如果明天中午前還沒到又怎麼處理，把時間講死他才會鬆手。"
+      },
+      {
+        "title": "一星評價已經上去，要不要回",
+        "body": "momo 商品下面掛了一則一星，內容半是事實半是誤會。它會分開處理：哪些是你真的沒做好、要在公開回覆裡大方認下來；哪些是誤會、要用不帶刺的方式講清楚。公開回覆是寫給後面來看的人看的，所以它會控制長度和語氣，不讓你在留言區跟客人來回拉扯。"
+      },
+      {
+        "title": "客人開始人身攻擊，該怎麼收",
+        "body": "訊息裡開始出現髒話跟我要去爆料。它會先分辨這是氣話還是真的準備走法律途徑，把後面幾句該怎麼接寫給你：先把能處理的部分處理掉，同時用不挑釁的說法把界線畫出來，並且提醒你哪幾句話一講出去，明天就會變成對方截圖貼在社團裡。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "把原始訊息整段貼上",
+        "detail": "不要自己先摘要成客人在生氣。原封不動複製整段，包含髒話、標點、跳針的部分，語氣強度就是判斷依據。如果聊聊已經來回好幾輪，把前面的對話一起貼，它才看得出客人是不是已經聽過同一套說法。截圖也行，直接貼給它看。"
+      },
+      {
+        "step": "補上你這邊的事實",
+        "detail": "客人買了什麼、幾號下單、包裹現在在哪、你們的退換貨規則、之前有沒有回過他。這些不講，它只能寫得模糊。最重要的是講你真的做得到什麼：能不能今天補寄、退款要幾個工作天、運費誰付。它不會替你亂承諾，但你沒說的它也生不出來。"
+      },
+      {
+        "step": "先看禁語再看回覆",
+        "detail": "拿到結果先讀不能說的話那一段，那是最容易踩的地方。再往下看回覆草稿，逐句對照你們家真實的規則，把時間、金額、單號補成正確的。如果草稿裡有你做不到的承諾，直接刪掉，不要想說先安撫再說。改完自己念一遍，念起來不像機器人再送出。"
+      },
+      {
+        "step": "把處理結果記回來",
+        "detail": "送出後把客人的反應貼回來，它會判斷火有沒有降下來，還是換一種方式繼續。順手把這則存成範本，下次同型客訴改幾個字就能用。同一個問題如果一個月內出現第三次，那就不是客服問題而是商品或包材的問題，這時候要處理的是上游，不是話術。"
+      }
+    ],
+    "examplePrompt": "這是蝦皮聊聊的客訴，請幫我做一份回覆劇本。客人七月二十二號下單一組保養組合，七月二十五號出貨，到今天物流還顯示在轉運中。他剛剛傳：到底要不要出貨？？？前天問一次沒人理，這種賣家也敢做生意，我要去評價。我這邊的事實：貨確實出了，是宅配塞車；我可以今天再補寄一組先出，或全額退款兩個工作天。請告訴我這次絕對不能說的話，再給我一則可以直接送出的回覆，還有他如果繼續鬧我要怎麼接。",
+    "exampleResult": "它會判斷這是又急又無助、再加上被晾過一次的複合型，火源是沒人回訊息而不是物流本身。禁語那段會直接說：不要先解釋宅配多塞、不要用我了解您的心情，因為他前天已經被晾過一次。回覆會從前天那則我們沒回到、是我們的疏失開頭，接著給兩個選項讓他挑，附上你會在幾點前完成。最後補一段：如果他堅持要留評價，你可以怎麼接才不會愈描愈黑。",
+    "tips": [
+      "它給的是草稿不是聖旨。退款天數、運費誰付、能不能補寄，一定要換成你們家真的做得到的數字再送出。",
+      "不要把客人的姓名、電話、地址整段貼進去，改成某位客人就好，判斷結果不會因此變差。",
+      "訊息裡如果明確提到消保官、法律途徑或向主管機關檢舉，先別急著自己回，這種要老闆或專業人士看過。",
+      "它不會自己連進你的蝦皮或 momo 後台，客人的訊息和你這邊的事實都要手動貼給它。"
+    ],
+    "bestFor": "自己回聊聊訊息的蝦皮、momo 賣家，還有沒有主管可以商量、每則客訴都要自己扛的小編。",
+    "keywords": [
+      "客訴處理",
+      "蝦皮聊聊",
+      "一星評價",
+      "退款糾紛",
+      "客服話術",
+      "情緒安撫",
+      "負評回覆"
+    ],
+    "sourceRepo": "composio-community/support-skills",
+    "sourceRepoName": "support-skills",
+    "sourceStars": "13",
+    "sourceUrl": "https://github.com/composio-community/support-skills/tree/main/angry-customer-playbook",
+    "image": "/skills-img/angry-customer-playbook.webp",
+    "imageAlt": "客訴訊息的降火順序流程圖：貼上訊息、判斷怒點、標出禁語、產出回覆"
+  },
+  {
+    "slug": "ecommerce-customer-service-pro",
+    "nameEn": "E-commerce Customer Service Pro",
+    "nameZh": "客服訊息一次給四種版本",
+    "category": "電商經營",
+    "tagline": "說清楚你賣什麼、客人卡在哪，一次拿到能送出的短版和完整版。",
+    "summary": "它不會馬上動筆，會先確認你賣哪一類商品、客人卡在哪一段：問價格、催出貨、要退款，還是已經在留言區發火。確定之後才寫，而且一次給四塊：可以直接貼上送出的短版、給真人客服用的完整版、只給自己人看的處理備註，還有需要你確認的欄位。送出前它會擋掉療效字眼和做不到的承諾。",
+    "painPoint": "同一句可以退嗎，蝦皮聊聊要短、momo 客服信箱要正式、LINE 上的老客人又不能太官腔。你一天回三十則，每則都在重新想一次開頭該怎麼寫。",
+    "whatItDoes": [
+      "先確認你賣的是保養品、食品、服飾還是家電，不同類別能講的話差很多。",
+      "認出客人卡在哪一段：下單前問規格、催出貨、物流異常、退換貨，還是已經在留評價。",
+      "一次給四塊：直接送出的短版、給真人客服的完整版、內部處理備註，以及要你確認的欄位。",
+      "送出前把療效字眼、最低價宣稱、幾天必到這類會出事的說法擋下來。",
+      "同一句話換語氣重寫：平台官方的簡潔版、給老客人的親切版、品牌書面版。",
+      "把重複出現的問題整理成常見問答與快捷回覆，新來的小編照著回，口徑比較不會走鐘。"
+    ],
+    "scenarios": [
+      {
+        "title": "保養品客人問有沒有效",
+        "body": "客人在蝦皮聊聊直接問這罐可以去痘疤嗎。這題答錯就是廣告違規，答太保守又留不住人。它會把回覆繞開療效，改成講成分、質地、擦起來的感受、多久用一次、哪種膚況適合，最後給一句不越線的建議。內部備註那塊還會提醒你，哪幾個字這輩子都別打在聊聊裡。"
+      },
+      {
+        "title": "檔期爆量出貨來不及",
+        "body": "週年慶接單接爆，兩百多張單要延到下週才出得了。它會寫兩種：一種是主動發給所有客人的公告，語氣穩、把新的出貨日講死；一種是回給已經在追進度那幾位的，多一段補償說法。內部備註會提醒你先跟倉庫確認日期再發，公告改第二次比延遲本身更傷。"
+      },
+      {
+        "title": "新來的小編不知道怎麼回",
+        "body": "工讀生第一天上工，退貨規則、運費誰付、發票怎麼重開全都要問你。它可以把店裡最常出現的三十題整理成一份問答表，每題附一句能直接貼的回覆，再標出哪幾題不准自己決定、一定要先問老闆。設進後台當快捷回覆，新人照著回，口徑比較不會各說各話。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚你賣什麼",
+        "detail": "保養品、食品、服飾、3C、寵物用品，能講的話差非常多，保養品和食品這兩類卡在法規上，它會自動變保守。順便講你在哪個平台：蝦皮聊聊偏簡短口語，momo 客服信箱要正式一點，LINE 官方帳號可以像跟熟客講話。這兩件事先說了，出來的東西才不用大改。"
+      },
+      {
+        "step": "把真實規則一起給它",
+        "detail": "幾天內可以退、運費誰負擔、瑕疵怎麼認定、發票怎麼處理、出貨要幾個工作天。這些不給它就只能留空格，或寫得模模糊糊。它被設定成不會自己編政策，所以你給多少它用多少，寧可留一個待填欄位，也不會隨手生一個天數給你，這點反而要當成優點來用。"
+      },
+      {
+        "step": "挑一版，其他留著改",
+        "detail": "短版拿去貼聊聊，完整版留給要打電話或寫信的狀況。內部備註不要送給客人，那是寫給你自己或客服同事看的：這題誰能決定、超過多少錢要往上報、幾天沒回覆要主動追。最後那塊待填欄位一定要逐項確認過再送出，那裡通常放著金額和天數。"
+      },
+      {
+        "step": "回得好的存成範本",
+        "detail": "哪一則回完客人就沒再吵，就把它存進店裡的快捷回覆。累積三十則之後請它整理成一份常見問答，以後新人照著回就好。每隔一季拿出來看一次，把規則改過的、活動結束的那幾則更新掉，免得客服照著唸出一個早就結束的優惠。"
+      }
+    ],
+    "examplePrompt": "我在蝦皮和 momo 賣保養品。客人在蝦皮聊聊問：這罐精華液可以淡斑嗎，我臉上有曬斑很多年了。我們的規則是七天鑑賞期可退、拆封過的不退、瑕疵品我們付來回運費、平日下午三點前下單當天出貨。請幫我寫回覆，要避開任何療效說法。給我一個聊聊可以直接貼的短版、一個比較完整的版本，還有內部備註提醒我哪些字不能打。請用繁體中文和台灣的說法，語氣親切一點，不要太官方。",
+    "exampleResult": "短版大約三行：先謝謝提問，接著說這罐主要做保濕與提亮膚色的日常保養，講成分、質地清爽、早晚各一次，最後說每個人膚況不同，建議先從小容量試起。完整版會多一段使用順序與搭配建議，以及七天鑑賞期怎麼算。內部備註直接列出不能打的字：淡斑、去斑、美白、治療、有效。最後附一張待填欄位表，提醒你補上容量和成分名稱。",
+    "tips": [
+      "它不會連進你的蝦皮或 momo 後台，訂單編號、物流狀態、退款進度都要你自己貼進去給它看。",
+      "保養品和食品的法規會改，它擋掉的字眼當參考就好，真的要上架的文案還是要自己再查一次現行規定。",
+      "內部備註那一塊千萬別整段複製給客人，裡面常常寫著這題可以讓到八折這種只給自己人看的話。",
+      "它原本是用簡體中文寫的，預設的購物情境也不是台灣，開頭先說用繁體中文、賣場在蝦皮和 momo，用字才不會怪。"
+    ],
+    "bestFor": "一天要回幾十則訊息的蝦皮、momo 賣家，特別是賣保養品或食品、每句話都怕踩到法規的品牌。",
+    "keywords": [
+      "電商客服",
+      "蝦皮聊聊",
+      "客服話術",
+      "退換貨",
+      "常見問答",
+      "廣告合規",
+      "出貨通知"
+    ],
+    "sourceRepo": "dvcrn/openclaw-skills-marketplace",
+    "sourceRepoName": "openclaw-skills-marketplace",
+    "sourceStars": "27",
+    "sourceUrl": "https://github.com/dvcrn/openclaw-skills-marketplace/tree/main/plugins/52yuanchangxing--ecommerce-customer-service-pro/skills/ecommerce-customer-service-pro",
+    "image": "/skills-img/ecommerce-customer-service-pro.webp",
+    "imageAlt": "客服回覆的產出流程流程圖：選定類別、判斷場景、擋掉違規、產出四版"
+  },
+  {
+    "slug": "tw-tax-basics",
+    "nameEn": "Taiwan Tax Basics",
+    "nameZh": "一年該繳哪些稅的行事曆",
+    "category": "營運管理",
+    "tagline": "講清楚公司現在的樣子，它就排出今年每一個該繳稅的日子。",
+    "summary": "台灣的公司固定要面對三種稅：每兩個月一次的營業稅、五月的營所稅、每個月十號的扣繳。它會照你的公司狀況把該繳的挑出來，排成一年的行事曆，估個大概金額，再點出最容易被忽略的九月暫繳，還有付錢給國外服務要先扣的那一筆。它不取代記帳士，是讓你聽得懂記帳士在講什麼。",
+    "painPoint": "記帳士傳來一句這期要繳三萬八、麻煩今天匯，你連這是哪一種稅都不確定。等九月又冒出一筆暫繳，才發現帳上那筆錢早就拿去進貨了。",
+    "whatItDoes": [
+      "把營業稅、營所稅、扣繳這三種最常搞混的稅分清楚，講明白各自在算什麼。",
+      "排出一整年的日期：單月十五號、五月、九月、每月十號，還有一月底那一次。",
+      "用你給的營業額和成本估個大概金額，讓你知道那個月要留多少現金。",
+      "提醒最常漏掉的兩件事：九月的營所稅暫繳，還有付錢給個人時每月十號的扣繳。",
+      "說明為什麼只有拿到統一發票才能扣抵，一般收據不算，這條每年都有人踩。",
+      "列出小公司可能用得到的減免，像研發抵減、課稅所得十二萬以下免稅那一條。"
+    ],
+    "scenarios": [
+      {
+        "title": "公司剛設立不知道要繳什麼",
+        "body": "行號或公司剛登記完，國稅局的信一封一封來，你不知道哪封該理。把設立日期、資本額、有沒有請員工、預估一年營業額講給它，它會列出你這家真正要面對哪幾種稅、第一次申報是哪一天、要先去申請哪些東西。列完直接抄進手機行事曆，設在到期前一週提醒自己。"
+      },
+      {
+        "title": "發外包稿費忘了扣繳",
+        "body": "你找自由接案的設計師畫一組商品圖，付了五萬塊，錢直接匯出去。這種執行業務所得在付款當下就要先扣起來一成，下個月十號前繳給國稅局，隔年一月底還要申報憑單，單次超過兩萬還有二代健保補充保費。很多人是隔年被通知才知道。它會把這個月付給哪幾類對象、各扣多少、什麼時候繳，列成一張表。"
+      },
+      {
+        "title": "九月又多一筆暫繳稅",
+        "body": "五月才剛繳完營所稅，九月又要繳一筆暫繳，金額大約是去年那筆的一半。這不是多繳，是先預繳明年五月要算的那筆，但現金還是當下就得拿出來。它排行事曆的時候就會把九月標起來，告訴你大概要準備多少，讓你七、八月旺季進貨的時候心裡先有個數。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講公司的基本狀況",
+        "detail": "公司還是行號、什麼時候設立、資本額多少、有沒有請正職員工、去年營業額和大概的毛利、有沒有付錢給國外的服務。這幾項決定了你要面對哪幾種稅、大概繳多少。不知道確切數字就給區間，它會用估的，但要記得那只是抓個規模，不是拿來對帳用的。"
+      },
+      {
+        "step": "請它排一年的行事曆",
+        "detail": "要它把每一個日期都列出來：單月十五號的營業稅、五月的營所稅、九月的暫繳、每月十號的扣繳、一月底的憑單申報。每一列要有日期、稅目、大概金額、要準備什麼文件。排完直接建進手機行事曆，提前一週提醒，不要提前一天，因為文件湊不齊的時間比繳錢還長。"
+      },
+      {
+        "step": "把估出來的錢先留下",
+        "detail": "它算出來的金額當作現金流的預警。你跟客人收的營業稅本來就不是你的錢，是替國家先收著的，最好另外開一個帳戶放。五月和九月這兩個月抓寬一點，很多小公司就是卡在這兩個月周轉不過來，明明帳上是有賺的，只是錢都變成庫存了。"
+      },
+      {
+        "step": "拿問題去問記帳士",
+        "detail": "它整理出來的疑問可以直接拿去問記帳士：我這筆能不能列費用、付給國外平台的錢要不要先扣、研發抵減我這種規模申請划不划算。你帶著具體問題去問，半小時就問得完，比讓對方從頭解釋省事很多。實際要送出去的申報書，還是要由記帳士或會計師處理。"
+      }
+    ],
+    "examplePrompt": "幫我排今年剩下的繳稅行事曆。我是有限公司，前年設立，資本額一百萬，做化妝品電商，主要在蝦皮和 momo 賣。去年營業額大約六百萬，毛利大概四成。目前兩位正職員工，另外每個月會付兩三萬給外面的接案設計師。每個月還有一筆美金要付給國外的雲端服務。請列出從現在到明年一月我要繳的每一筆稅、日期、大概金額，並且特別標出最容易漏掉的那幾筆，還有我該先準備多少現金。",
+    "exampleResult": "它會排出一張表：九月十五號的營業稅、九月的營所稅暫繳、每個月十號要繳上個月付給設計師時扣下來的那一成、十一月十五號的營業稅，還有明年一月十五號的營業稅和一月底的憑單申報。付給國外雲端服務那一筆會被特別圈起來，提醒你按規定要先扣一筆再匯出去，細節去問記帳士。最後給一段現金提醒：九月要準備的錢比其他月份多，因為暫繳和營業稅撞在同一個月。",
+    "tips": [
+      "它講的是通則，稅法幾乎年年在改，真正要送出去的申報還是要由記帳士或會計師處理。",
+      "它估的金額只能拿來抓個規模，別拿去跟國稅局對帳，實際數字以你帳上的發票和憑證為準。",
+      "付給國外的雲端服務、廣告費、軟體訂閱，這類匯出去的錢常常忘了先扣繳，有疑慮就先問記帳士。",
+      "它不會連你的公司帳或發票系統，營業額、成本、付款對象都要你自己講給它聽才算得出來。"
+    ],
+    "bestFor": "剛設公司或行號、還在自己看帳的電商賣家與接案工作室老闆，想在跟記帳士講話前先聽懂對方在說什麼。",
+    "keywords": [
+      "營業稅",
+      "營所稅",
+      "扣繳",
+      "九月暫繳",
+      "報稅行事曆",
+      "統一發票",
+      "記帳士"
+    ],
+    "sourceRepo": "asgard-ai-platform/skills",
+    "sourceRepoName": "skills",
+    "sourceStars": "222",
+    "sourceUrl": "https://github.com/asgard-ai-platform/skills/tree/main/tw-tax-basics",
+    "image": "/skills-img/tw-tax-basics.webp",
+    "imageAlt": "報稅日期的盤點方式流程圖：講清現況、列出稅目、排出日期、設好提醒"
+  },
+  {
+    "slug": "cash-flow-forecast",
+    "nameEn": "Cash Flow Forecast",
+    "nameZh": "看出未來十三週哪一週會沒錢",
+    "category": "營運管理",
+    "tagline": "用實際入帳日排出十三週現金表，先看到哪一週會見底。",
+    "summary": "這是一張看得懂的十三週現金表。每一週的期初現金加上真正會入帳的錢、減掉真正要付的錢，滾成下一週的期初，一路推到季底。重點不是預測多準，而是提早看到最低點落在第幾週、缺多少，以及哪些假設一旦跳票就會出事。它不會幫你編數字，你沒給的欄位會留成待填。",
+    "painPoint": "帳上明明有獲利，月底要付代工廠尾款卻湊不出來；momo 的貨款還要一個多月才進來，薪水和房租卻是月初就要付，每次都到最後一刻才知道差多少。",
+    "whatItDoes": [
+      "把未來十三週的現金進出排成一張表，一週一列，看得到節奏。",
+      "用各平台真正撥款的日子填收入，不是用開發票或出貨的日子。",
+      "標出最低點在第幾週、缺口多大，以及哪幾週會變成負數。",
+      "把薪資、房租、代工廠尾款、營業稅、勞健保分開列，看得出是哪一筆壓垮。",
+      "缺錢時列出可用的手段和各自的代價，不是只叫你去借錢。",
+      "把收款天期這類假設寫在表下面，方便你之後回頭對哪裡估錯。"
+    ],
+    "scenarios": [
+      {
+        "title": "代工廠尾款和貨款撞期",
+        "body": "三月要付代工廠三十萬尾款，momo 二月的貨款要到四月中才撥。把兩邊的日期照實填進去，表上會直接顯示第幾週期末剩不到五萬、第幾週轉負。看到之後你有兩個選擇：先跟代工廠談分兩期，或把某檔廣告延後兩週，兩個做法的影響會分別顯示在後面的週次上。"
+      },
+      {
+        "title": "要不要請第一個正職",
+        "body": "想從接案改成請一位正職，月薪加勞健保大約四萬多。把這筆從某一週開始固定加進支出，重新滾一次十三週，你會看到最低點從原本的二十萬掉到八萬。這時候問題就變得很具體：不是「請不請得起」，而是「第八週那筆款有沒有把握準時進來」。"
+      },
+      {
+        "title": "五月報稅前先抓現金",
+        "body": "五月要繳營所稅，同時每兩個月一期的營業稅也在排隊。把這幾筆確定的金額和日期先放進表裡，加上蝦皮和官網每週比較穩定的入帳，你會提早六週知道那個月會不會卡住。真的會卡的話還有時間處理，比報稅前一週才發現好太多。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講今天銀行有多少",
+        "detail": "開頭給它目前公司帳戶的實際餘額，這是整張表的起點。如果不想講真實數字，就說一個代號金額，最後自己換回來，它會照你給的數字算，不會自己填一個看起來合理的餘額。順便講這張表要幫你決定什麼，是撐過一次資金缺口、評估要不要請人，還是要跟銀行談額度。"
+      },
+      {
+        "step": "用實際入帳日填收入",
+        "detail": "這一步最容易出錯。momo 的貨款是月結後再撥、蝦皮撥款有自己的週期、官網刷卡經過金流也要幾天才到帳。請照真正看到錢的那一天填，不要用開發票或出貨的日子。設計案的請款更要小心，客戶說的付款日和實際匯款日常常差兩三週，寧可估晚一點。"
+      },
+      {
+        "step": "把固定支出照日期排",
+        "detail": "薪資、勞健保、房租、代工廠訂金與尾款、每兩個月的營業稅、記帳士費用、廣告費、平台年費，全部照實際扣款日排進對應的那一週。已經簽約確定的和只是預估的要分開標，最後那張假設清單就是靠這個區分出來，也是之後回頭檢討的依據。"
+      },
+      {
+        "step": "看最低點再決定怎麼補",
+        "detail": "表出來以後先看兩個地方：最低點落在第幾週、那一週還剩多少。如果會轉負，再看它列的幾個做法，例如提前跟客戶收款、跟供應商談延後、砍掉可延的支出、動用信用額度。每個做法都有代價，關係和利息都算代價。金額大或牽涉稅務的決定，記得跟記帳士確認過再做。"
+      }
+    ],
+    "examplePrompt": "幫我做一張十三週現金流表。公司目前帳上有六十二萬。收入方面：蝦皮平均每週入帳八萬左右；momo 是月結六十天，五月的貨款約四十五萬會在七月底撥；有一個設計案尾款三十萬，客戶說八月中付，但通常會晚兩到三週。支出方面：每月五號發薪連勞健保共十八萬，十號房租五萬八，代工廠尾款三十六萬要在八月二十號付，九月初要繳一期營業稅約四萬。請照實際入帳日排，標出最低點在第幾週、會不會轉負，並把假設列出來。",
+    "exampleResult": "你會拿到一張十三週的表，每列有期初、收入、支出、淨額、期末，收入和支出各自拆成幾條主要項目。表下面直接寫出最低點落在第八週、期末剩不到四萬；如果設計案尾款照慣例晚三週，第九週會轉負十幾萬。再下面是假設清單，標明哪幾筆已經確定、哪幾筆只是預估，最後列出四個補洞的做法和各自的代價。",
+    "tips": [
+      "這個技能不用付費金鑰，也不用接你的銀行或金流帳戶，數字都是你自己填進去的，安全，但也代表填錯就會全錯。",
+      "收入寧可估晚一點、估少一點，支出寧可估早估多；一張太樂觀的現金表，等於沒做。",
+      "每週固定花十分鐘把上週的實際數字換掉，滾動更新才有用，做一次放著就只是一張好看的表。",
+      "這是規劃用的表，不是財務或稅務建議；要跟銀行談額度或牽涉稅務安排前，先讓記帳士或會計師看過。"
+    ],
+    "bestFor": "有庫存要壓、平台貨款慢撥、每個月都在算幾號會不會周轉不過來的小型電商和接案公司。",
+    "keywords": [
+      "現金流",
+      "十三週預測",
+      "資金缺口",
+      "週轉",
+      "貨款撥款",
+      "營運管理",
+      "財務規劃"
+    ],
+    "sourceRepo": "mohitagw15856/pm-claude-skills",
+    "sourceRepoName": "pm-claude-skills",
+    "sourceStars": "1,237",
+    "sourceUrl": "https://github.com/mohitagw15856/pm-claude-skills/tree/main/skills/cash-flow-forecast",
+    "image": "/skills-img/cash-flow-forecast.webp",
+    "imageAlt": "逐週現金滾動表流程圖：盤點餘額、填入入帳、排入支出、找出低點"
+  },
+  {
+    "slug": "cowork-invoice-chaser",
+    "nameEn": "Cowork Invoice Chaser",
+    "nameZh": "把沒收到的尾款一筆筆追回來",
+    "category": "營運管理",
+    "tagline": "對完帳算出誰欠你多久，再把催款信草稿一起寫好",
+    "summary": "把開出去的請款單和銀行入帳紀錄丟給它，它會一筆一筆核對，算出每個客戶欠了多久、欠多少，再依逾期天數寫出語氣不同的催款信草稿。金額對不起來的先另外列出來讓你自己判斷，不會亂催。信只寫草稿，寄不寄、什麼時候寄，都還是你決定。",
+    "painPoint": "案子交了三個月，尾款還躺在那裡。你不好意思一直問，又怕問了傷感情，結果每個月底才想起來還有幾筆沒收，回頭翻對帳單又翻不出到底是誰沒付。",
+    "whatItDoes": [
+      "把每張請款單的客戶、金額、開立日、付款期限抓出來，和銀行入帳一筆筆對起來",
+      "做出一張帳齡表：還沒到期、逾期一到三十天、三十到六十天、六十天以上分開列",
+      "金額對不上、或有一筆入帳看起來很像但不確定的，單獨列成待確認，不會自動當成沒付",
+      "依逾期天數寫出四種語氣的催款信草稿，從善意提醒到最後通知，全部只存草稿不寄出",
+      "同一個客戶就算欠三筆也只寫一封信，不會一個早上連發三封把關係搞僵",
+      "標出付款習慣變了的客戶：一向準時的人突然拖一個月，那是關係訊號不只是一筆帳"
+    ],
+    "scenarios": [
+      {
+        "title": "設計接案公司的季末對帳",
+        "body": "工作室手上同時跑八個案子，有的訂金尾款分兩期，有的簽約後分三期。季末要對帳，發現有兩筆客戶其實早就匯了，但備註打成公司簡稱，翻對帳單根本認不出來。把請款單資料夾和網銀匯出的入帳明細一起給它，很快就對出真正還沒收的只有三筆，其中一筆已經逾期七十天。"
+      },
+      {
+        "title": "不敢開口催的那筆老客戶尾款",
+        "body": "合作五年的老客戶，這次拖了快兩個月。直接打電話問怕尷尬，不問又卡著現金流。把這個客戶標成重要客戶，它寫出來的信不會用制式催收語氣，而是提一次金額和匯款資訊，再問一句大概什麼時候方便處理。你看過覺得可以，複製到信箱自己寄，語氣拿捏的部分不用再想半小時。"
+      },
+      {
+        "title": "每週固定盤一次應收帳款",
+        "body": "以前是月底才發現有帳沒收，發現時已經逾期五十天，追起來很硬。改成每週固定跑一次，新入帳的自動勾掉，逾期天數往前推一格的就換一種語氣的草稿。同一筆帳不會在同一個階段被追兩次，你打開來只要決定哪幾封要寄、哪幾筆要打電話，五分鐘結束。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先把請款單和入帳紀錄放在一起",
+        "detail": "開一個資料夾，把開給客戶的請款單或報價確認單放進去，格式不用統一，PDF、Word、掃描檔都可以。再從網銀匯出這段期間的入帳明細，或是把綠界、藍新的撥款報表一起放進去。資料越完整，它對得越準；缺的部分它會直接告訴你缺什麼，不會自己編。"
+      },
+      {
+        "step": "告訴它每個客戶的關係分級",
+        "detail": "講一句話就好：哪幾家是不能得罪的重要客戶、哪幾家是一般往來、哪幾家是每次都要催三輪的。分級會直接影響信的語氣，重要客戶就算逾期六十天，也不會收到制式催收信。另外把付款條件講清楚，例如月結三十天或驗收後付款，逾期天數才算得對。"
+      },
+      {
+        "step": "先看帳齡表和待確認清單",
+        "detail": "它會先給你一張表：總共還有多少沒收、平均拖幾天、最大的三筆卡在誰身上。旁邊另外一欄是它不敢下判斷的，例如有一筆匯款金額少了三百塊，可能是客戶自己扣了匯費、也可能是別的案子。這欄一定要你自己看過再決定，這種帳它絕對不會寫催款信。"
+      },
+      {
+        "step": "逐封看過草稿，自己決定寄誰",
+        "detail": "草稿依逾期天數分四種語氣：快到期的是善意提醒、剛逾期的當作對方漏看、拖一個月以上的直接問付款日、超過九十天的用最後通知的語氣，並提醒你考慮要不要走法律程序。你可以逐封改，也可以叫它把某一封寫軟一點。改完自己複製到信箱寄出，它不會、也不該替你按送出。"
+      }
+    ],
+    "examplePrompt": "我是設計接案工作室，手上有一個資料夾放今年開給客戶的請款單，另外有一份網銀匯出的入帳明細。請幫我：一、把每張請款單和入帳一筆筆核對，做出帳齡表，分成未到期、逾期三十天內、三十一到六十天、六十一到九十天、九十天以上。二、金額對不起來或不確定的另外列一區，不要當成沒付。三、還沒收到的每個客戶各寫一封催款信草稿，同一個客戶只寫一封，把所有欠款列在裡面；合作五年的那家是重要客戶，語氣要客氣。所有信都只出草稿，不要幫我寄出。",
+    "exampleResult": "你會拿到一張帳齡表：總共還沒收多少、平均逾期幾天、最大的三筆卡在誰身上；一份待確認清單，例如某筆匯款少了三百塊，疑似被扣匯費；還有四封分開的催款信草稿。逾期十二天的那封只輕輕提一下金額和匯款帳號，逾期七十天的那封會直接問哪一天可以付、並提議通個電話。最後附一段本週摘要：這週收到哪幾筆、還沒收的比上週少多少、誰的付款習慣變了。",
+    "tips": [
+      "信一律只出草稿。催錯一個已經付款的客戶，賠掉的信任比那筆帳貴多了，寄出前一定自己看過。",
+      "滯納金只有合約或請款單上真的寫了才能提。沒寫卻在信裡講違約金，反而變成你理虧。",
+      "要每週自動重跑得用有排程功能的付費方案；平常對話裡它不會自己醒來，得你開口叫它跑這週的。",
+      "入帳明細記得把客戶名稱那欄一起匯出。只有金額和日期，它對不出是誰付的，待確認清單會爆掉。"
+    ],
+    "bestFor": "同時跑好幾個案子、款項分期收、每個月都有幾筆尾款收不回來的接案工作室和小型設計公司。",
+    "keywords": [
+      "應收帳款",
+      "催款信",
+      "帳齡分析",
+      "對帳",
+      "接案收款",
+      "現金流",
+      "尾款追蹤"
+    ],
+    "sourceRepo": "OneWave-AI/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "230",
+    "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/cowork-invoice-chaser",
+    "image": "/skills-img/cowork-invoice-chaser.webp",
+    "imageAlt": "應收帳款追款流程流程圖：請款對帳、排出帳齡、標出疑義、草稿待審"
+  },
+  {
+    "slug": "job-profitability-analyzer",
+    "nameEn": "Job Profitability Analyzer",
+    "nameZh": "算出每個案子真正賺多少",
+    "category": "營運管理",
+    "tagline": "把工時、外包和管銷攤回每個案子，看清楚哪個客戶其實在虧錢",
+    "summary": "營業額高不等於有賺。它把每個案子的實際工時、外包費、材料費和分攤到的房租水電加總，算出真正的毛利和一個更殘忍的數字：這個客戶實際付你多少時薪。不少人排完才發現，接最多、最常喊急的那個大客戶，時薪是所有客戶裡最低的。",
+    "painPoint": "每個月帳面上有進錢，年底一結卻沒剩多少。你隱約覺得某個客戶很吃時間，但改到第五版、深夜回訊息、免費加的小需求，從來沒有人算進成本。",
+    "whatItDoes": [
+      "把每筆收入對回它屬於哪個案子，再把工時、外包、材料和直接費用一筆筆掛上去",
+      "人力成本用含勞健保、勞退和加班的實際成本算，不是月薪除以工時，兩者差很多",
+      "房租、水電、軟體訂閱這些管銷按工時攤到每個案子，毛利和真實淨利分開給你看",
+      "每個客戶都算出一個實際時薪，照這個數字重排名次，順序常常跟你原本以為的不一樣",
+      "賠錢的案子會告訴你為什麼：報價太低、需求一直加、還是有一堆工時根本沒開帳單",
+      "算出要漲多少才回得到你要的毛利，或是把這些工時挪給好客戶，收入大概會差多少"
+    ],
+    "scenarios": [
+      {
+        "title": "年底檢討要砍掉哪個客戶",
+        "body": "一年做了十四個案子，帳面上最大的那家佔了四成營業額，理所當然被當成金主。攤完工時才發現，那家平均改七版、每次都口頭追加，實際時薪只有六百多；反而是一家小型民宿的網站案，一次過稿，時薪一千四。這張表出來以後，明年的接案順序就不用再靠感覺排。"
+      },
+      {
+        "title": "調價前先把數字算清楚",
+        "body": "想跟合作三年的客戶漲價，但開不了口，因為講不出具體理由。它會算給你看：這個客戶去年十二個案子，平均超出報價工時四成，超出的部分全部沒收錢，等於你每個月免費送三天。要回到目標毛利，單價要調一成八。有了這個數字，談判時講的是成本，不是感覺你被虧待。"
+      },
+      {
+        "title": "電商自營商品的隱形成本",
+        "body": "賣化妝品的老闆看報表，蝦皮那條線營業額最漂亮。把包貨工時、客服回訊時間、平台抽成、免運補貼和退貨處理一起攤進去，才看到某個熱賣款每賣一件淨賺不到二十塊，而且是最花人力的那一款。相反地，單價高、問題少的那組禮盒，才是真正撐住毛利的東西。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "準備收入和工時兩份資料",
+        "detail": "收入端可以是請款單、平台撥款報表或自己記的收款表，重點是每一筆要看得出屬於哪個案子或哪個客戶。工時端最理想是有記時間的表，就算只有月曆上的手寫紀錄、或你憑印象估的區間也可以先開始。它會標出哪些案子的工時是估的，結論裡不會假裝那是精確數字。"
+      },
+      {
+        "step": "講清楚人力成本和管銷怎麼算",
+        "detail": "告訴它每個人的月薪，還有勞健保、勞退、獎金大概加幾成，它才算得出真實的每小時成本。你自己的時間也要算，很多老闆沒把自己算進去，結果每個案子看起來都有賺。管銷就給一個月的房租、水電、軟體訂閱、記帳士費用總額，它會按工時攤到每個案子，並且告訴你用的是哪一種攤法。"
+      },
+      {
+        "step": "先看實際時薪那一欄",
+        "detail": "排名表出來後，不要先看毛利金額，先看每個客戶的實際時薪。金額大的案子往往只是花的時間也大。時薪最低的那幾家，再往下看它的診斷：是報價本來就低、還是工時暴增。它也會告訴你這個客戶總共只做過一個案子還是五個，一次失手不能當定論，連續三次才算模式。"
+      },
+      {
+        "step": "拿結論去決定漲價或收手",
+        "detail": "時薪最低的那幾家，可以叫它算出兩個數字：報價要調多少才回到你要的毛利、以及不做這個客戶、把時間挪給前三名，收入大概會差多少。兩個數字放在一起，要不要留就不難決定。也可以請它把客戶最常追加的項目列成清單，下次報價直接寫進合約，先講好加需求要另外算錢。"
+      }
+    ],
+    "examplePrompt": "我開設計工作室，三個人。我這邊有去年的請款明細（每筆都有客戶和案名）、一份大概的工時紀錄，還有房租水電和軟體訂閱的月支出。請幫我算：一、每個案子的直接毛利，人力成本請用月薪加三成五當實際成本。二、管銷按工時攤，攤前攤後的利潤都要看到。三、每個客戶的實際時薪，由高到低排。四、時薪最低的三家，告訴我是報價太低還是工時超支，並算出要漲多少才能到四成毛利。工時是我估的地方請直接標出來。",
+    "exampleResult": "你會拿到一份排名表：每個案子和每個客戶的毛利金額、毛利率，還有實際時薪。通常最上面幾行會讓人愣一下，因為最大的客戶排在後段。下面接著是賠錢案子的解剖，例如某案報價八萬、估三十小時、實際做了七十二小時，超出的部分沒有一小時開過帳單。最後是建議：這家要漲一成八，那家的改稿次數要寫進合約。",
+    "tips": [
+      "人力成本一定要算含勞健保和獎金的版本。只用月薪除工時，每個案子的毛利都會看起來比實際漂亮。",
+      "老闆自己的工時最常被漏掉。你不把自己的時間算成成本，這張表就會告訴你每個案子都有賺。",
+      "沒有工時紀錄就先估，但要老實標出來。它不會幫你捏造數字，寧可標成資料不足也不要假精確。",
+      "一個案子做壞不代表這個客戶不好。至少累積三個案子再下結論，也記得看它標的樣本數。"
+    ],
+    "bestFor": "同時服務多個客戶、報價常靠經驗抓、又說不出哪個案子真的有賺的設計公司、工程行和小型代理商。",
+    "keywords": [
+      "案件毛利",
+      "實際時薪",
+      "客戶獲利分析",
+      "報價調整",
+      "工時成本",
+      "管銷攤提",
+      "接案定價"
+    ],
+    "sourceRepo": "OneWave-AI/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "230",
+    "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/job-profitability-analyzer",
+    "image": "/skills-img/job-profitability-analyzer.webp",
+    "imageAlt": "案件獲利拆解流程流程圖：收支歸案、工時成本、攤提管銷、客戶排名"
+  },
+  {
+    "slug": "html-ppt",
+    "nameEn": "HTML PPT Studio",
+    "nameZh": "用瀏覽器開簡報還能偷看講稿",
+    "category": "設計創意",
+    "tagline": "用瀏覽器就能開講的簡報，另外開一個只有你看得到的講者視窗",
+    "summary": "它產出的是一份網頁簡報，用瀏覽器打開、方向鍵翻頁，把連結傳出去對方就能看，不用管對方電腦有沒有 PowerPoint。內建三十幾種現成風格、三十幾種版型和多種進場動畫。最實用的是按一個鍵會跳出講者視窗，同時顯示目前這頁、下一頁、你的逐字稿和計時器。",
+    "painPoint": "你答應去公會講一場四十分鐘的分享，簡報做好了，但一想到要站在台上邊看小抄邊翻頁就開始緊張，很怕講到一半忘記下一頁是什麼。",
+    "whatItDoes": [
+      "產出一份網頁簡報，用瀏覽器開、方向鍵翻頁，把連結傳給對方就能看",
+      "按一個鍵跳出講者視窗，同時顯示這頁、下一頁、逐字稿和計時器",
+      "幫你把逐字稿寫好，每頁一百五到三百字，寫成口語不是書面語",
+      "三十六種現成風格隨時切換，從商務提案到清爽雜誌感都有",
+      "講者視窗的四張卡片可以拖、可以縮放，位置下次會記得",
+      "可以把每一頁存成圖片，拿去發社群、當講義或放進報告裡"
+    ],
+    "scenarios": [
+      {
+        "title": "公會或社群的四十分鐘分享",
+        "body": "你要去講一場四十分鐘的分享，最怕的是忘詞。請它把逐字稿寫進每一頁，開講時螢幕接投影機給觀眾看，筆電上另外開講者視窗，逐字稿用大字顯示、旁邊有計時器，你隨時知道現在第幾頁、講了幾分鐘、下一頁要接什麼。"
+      },
+      {
+        "title": "傳一個連結給客戶看的提案",
+        "body": "客戶人在外面用手機看，或是他公司的電腦根本沒裝 PowerPoint。網頁簡報放上去之後傳一個連結就能翻，動畫都在、排版不會跑掉，也不會因為對方電腦沒有你的字型就整份走樣。"
+      },
+      {
+        "title": "一年要講六次的新人訓練",
+        "body": "同一份教育訓練簡報一年要講六次，每次講的人還不一樣。逐字稿是寫在檔案裡跟著簡報走的，換人講不用重新交接一輪，計時器也能讓每個人都控制在差不多的時間內講完。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚場合和聽眾是誰",
+        "detail": "開口就說要講給誰聽、大概幾頁、多長時間、什麼場合。它會依照場合推薦風格，商務提案跟技術分享的版型差很多。如果你已經有講稿或大綱，直接貼上去，它會幫你拆頁；沒有的話它會先問你幾個問題再動手。"
+      },
+      {
+        "step": "明講你要逐字稿和講者視窗",
+        "detail": "這是它最強的地方，但你不說它不一定會做滿。直接說「我要帶逐字稿的版本，我怕講不順」，它會用專門的講者模式版型，每一頁寫一百五到三百字的口語稿，重點字加粗，剛好是兩三分鐘一頁的節奏。"
+      },
+      {
+        "step": "開場前一定要先彩排一次",
+        "detail": "在真的會用的那台電腦、那個瀏覽器上，把簡報開起來按一次講者鍵，確認講者視窗有跳出來。有些瀏覽器預設會擋掉這種另外開的視窗，要先允許。順便確認字型正常顯示，字型是連網抓的，網路不穩的場地建議提早到場開一次。"
+      },
+      {
+        "step": "要圖片版或想換風格隨時說",
+        "detail": "講完想把內容發到社群，請它把每一頁存成圖片就好。想換個氣質也不用重做，直接說換成哪一種風格，內容不動、外觀整個換掉。存成圖片的功能原本是照 Mac 設定寫的，用 Windows 的話講一聲請它先改。"
+      }
+    ],
+    "examplePrompt": "我下個月要去台中的美容從業人員聚會分享四十分鐘，題目是「小品牌怎麼經營蝦皮和 momo 的商品頁」，聽眾大約三十位，都是自己開工作室的老闆，不太懂技術。我要一份網頁版簡報，大概二十頁，風格乾淨一點、不要太科技感。重點是我很怕講不順，請每一頁都寫一百五到三百字的逐字稿，用口語不要用書面語，關鍵字幫我加粗。另外我要那個講者視窗，現場我會接投影機。",
+    "exampleResult": "你會拿到一份可以用瀏覽器打開的簡報，方向鍵翻頁，二十頁分成四個段落。每一頁背後都藏著一段兩三分鐘的口語稿，例如「先問大家一個問題喔，你們的商品頁，第一張圖是不是產品照？」按一個鍵會跳出另一個視窗，左邊是現在這頁、中間是下一頁、右邊是放大的逐字稿，下面有計時器，四張卡片都可以拖到自己順手的位置。",
+    "tips": [
+      "它產出的是網頁不是 PowerPoint 檔，沒辦法用 PowerPoint 打開來改。主辦單位要求繳交簡報檔的場合先問清楚。",
+      "講者視窗是另外開一個視窗，有些瀏覽器預設會擋掉。上台前一定要在真的要用的那台電腦上試一次。",
+      "字型是連網抓的。場地網路不穩或完全離線時，畫面可能跟你在家看的不一樣，提早到場開一次最保險。",
+      "把每頁存成圖片的功能原本是照 Mac 的設定寫的，用 Windows 要先請它調整，不然會找不到瀏覽器。"
+    ],
+    "bestFor": "要上台分享又怕忘詞的講師、社群小編、業務，以及想把提案用一個連結傳出去的接案設計師。",
+    "keywords": [
+      "網頁簡報",
+      "逐字稿",
+      "講者視窗",
+      "演講提詞",
+      "簡報風格",
+      "教育訓練",
+      "提案連結"
+    ],
+    "sourceRepo": "lewislulu/html-ppt-skill",
+    "sourceRepoName": "html-ppt-skill",
+    "sourceStars": "7,465",
+    "sourceUrl": "https://github.com/lewislulu/html-ppt-skill",
+    "image": "/skills-img/html-ppt.webp",
+    "imageAlt": "網頁簡報加逐字稿流程圖：交代場合、挑選風格、寫入講稿、開窗彩排"
+  },
+  {
+    "slug": "social-card-maker",
+    "nameEn": "Social Card Maker",
+    "nameZh": "把文章拆成一整套社群圖卡",
+    "category": "設計創意",
+    "tagline": "丟一篇文章進去，直接排出封面加內頁的一整套直式社群圖卡",
+    "summary": "它會把你手上的文章、商品說明或影片逐字稿讀完，先幫你決定一共要幾張圖、每張圖講哪一件事，再套進兩套現成的視覺系統排版，最後輸出可以直接上傳的圖檔。它不是丟一個空白版型讓你自己填，而是連拆頁、標題長度、字級大小、留白比例都先替你決定好。",
+    "painPoint": "每次要發 IG 或 Threads，文案寫完了卻卡在圖。自己一張一張排，八張圖搞掉一個下午，排完還發現字太小、下面空一大塊，隔週又得再來一次。",
+    "whatItDoes": [
+      "把一篇長文拆成五到九張圖，第一張是勾人的封面，後面每張只講一個重點",
+      "兩套現成視覺系統可選：雜誌編輯風偏溫潤耐看，瑞士排版風偏俐落有系統感",
+      "照 IG、Threads、蝦皮活動圖各自的比例出圖，直式跟方形都排得滿，不會上下留空",
+      "你給的商品照或賣家後台截圖，它會決定放大到哪、裁在哪、文字擺哪不會壓到臉",
+      "排完自己檢查有沒有文字爆出邊界、字級太小、下半部空一大塊，有問題回頭修",
+      "同一則內容還能再產一組直式加方形的封面，一稿發多個平台不用重做"
+    ],
+    "scenarios": [
+      {
+        "title": "一篇部落格文章要發 IG 輪播",
+        "body": "你在官網寫了一篇兩千字的保養觀念文，想同步發 IG。直接把文章丟進去，它會抓出五到七個可以獨立成立的重點，第一張做成一句話的封面鉤子，後面每張各講一件事，段落太長的自動壓成短句。你只要看排出來的圖對不對味，不用再從頭想每張要寫什麼。"
+      },
+      {
+        "title": "蝦皮檔期活動要做一組宣傳圖",
+        "body": "雙十一要推五款組合，你手上只有商品照跟一張賣家後台的優惠設定截圖。把照片跟折扣條件丟進去，說明要走俐落有系統感的版型，它會排出一張主視覺加四張規則說明圖，價格跟折扣寫得夠大，截圖的部分也不會被壓小到看不清楚。"
+      },
+      {
+        "title": "接案作品整理成 Threads 圖卡",
+        "body": "設計接案要在 Threads 累積能見度，但每次貼作品都只丟一張圖，滑過去就沒了。把某個案子的來龍去脈寫成幾百字丟進去，它會排成「原本的問題／我們怎麼想／改完長什麼樣」的圖卡組，作品照放大到看得見細節，說明文字退成小字擺旁邊。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先把內容跟圖片備齊",
+        "detail": "開新對話，把要做成圖卡的文字整段貼上，或直接給檔案。手上有商品照、實拍照、賣家後台截圖就一起給，並說清楚哪一張要放在哪。這一步最關鍵：有你自己的真實照片，排出來才不會有那種一看就是 AI 做的塑膠感。真的完全沒有圖，它會問你要自己補、去免費圖庫找、還是用 AI 生，選一個就好。"
+      },
+      {
+        "step": "講清楚要發哪裡、幾張",
+        "detail": "說明是要發 IG、Threads、還是蝦皮商品頁上方的活動圖，比例會不一樣。順便講幾張以內、有沒有一定要出現的字，例如品牌名、活動日期、優惠代碼。如果你已經有品牌色，直接把色碼給它；沒有的話它會從兩套現成配色裡挑一組，你再說喜不喜歡。"
+      },
+      {
+        "step": "先看拆頁表再讓它排版",
+        "detail": "叫它先給你「第幾張／講什麼／配哪張圖」的清單，不要直接排。這張清單看過一遍最省時間——順序不對、少講了一個賣點、或某張根本可以刪掉，在這裡改一句話就好；等圖都排完才發現要動，等於整批重做。確認完再說「照這個排」。"
+      },
+      {
+        "step": "出圖後看縮圖再定稿",
+        "detail": "圖出來以後別在電腦上放大看，把它縮到手機那麼小再看一次，標題還讀得出來才算過。它自己也有一套檢查，會抓文字爆出邊界、字級太小、下半部留白太多這幾種常見的排版失誤，你可以直接叫它跑一遍再修。定稿後它會告訴你圖檔存在哪個資料夾，拿去上傳就好。"
+      }
+    ],
+    "examplePrompt": "幫我把下面這篇文章做成一組 IG 輪播圖卡，直式比例，六到八張。第一張是封面，要一句話讓人想滑下去；後面每張只講一個重點，字不要多。風格走雜誌編輯感，配色偏暖，品牌主色是 #D4B8A8。我附了三張商品實拍照，請放在講質地跟使用方式的那幾張，人臉不要被文字壓到。做之前先給我「第幾張／講什麼／用哪張照片」的清單讓我確認，我點頭你再排版出圖。文章內容如下：（貼上文章）",
+    "exampleResult": "它會先回一張七行的清單：第一張封面「香氛不是味道，是你回家的開關」，第二到六張各講一個重點並標好配哪張照片，第七張收尾放品牌名。你確認後才開始排版，幾分鐘後給你七張圖檔跟一句話說明，尺寸標好、可以直接上傳。如果第五張文字太多擠出邊界，它會自己壓縮字數重排，不會丟一張爆版的圖給你。",
+    "tips": [
+      "輸出圖檔是靠瀏覽器截圖做的，第一次用要先讓它裝一個小工具，會多等幾分鐘，之後就順了。",
+      "要做會動的動態圖卡，成品得先傳進 iPhone 相簿才發得出去，電腦跟 Android 發不了，先確認流程配合得上。",
+      "沒圖時它會去免費圖庫抓，版權它不替你保證，商用前自己確認；要放真實地圖還得另外申請地圖服務的金鑰。",
+      "內容牽扯到療效、成分功效、價格保證這類字眼，出圖前自己再看一遍，它不會幫你擋廣告法的地雷。"
+    ],
+    "bestFor": "自己要顧文案又要顧圖的電商賣家、社群小編，以及沒有專職設計、但每週都得產出貼文圖的接案工作者。",
+    "keywords": [
+      "社群圖卡",
+      "IG 輪播圖",
+      "Threads 貼文圖",
+      "蝦皮活動圖",
+      "貼文排版",
+      "自動出圖",
+      "圖文拆頁"
+    ],
+    "sourceRepo": "op7418/guizang-social-card-skill",
+    "sourceRepoName": "guizang-social-card-skill",
+    "sourceStars": "5,659",
+    "sourceUrl": "https://github.com/op7418/guizang-social-card-skill",
+    "image": "/skills-img/social-card-maker.webp",
+    "imageAlt": "一篇文章變成整套圖卡流程圖：備齊素材、拆頁確認、選版排圖、出圖檢查"
+  },
+  {
+    "slug": "power-design",
+    "nameEn": "Power Design",
+    "nameZh": "照你的品牌調性做簡報和網頁",
+    "category": "設計創意",
+    "tagline": "給一個網址抓出品牌的色系跟字型，直接產出整份簡報或一頁式網頁",
+    "summary": "它會先問你要做簡報還是網頁，再問品牌是誰。給網址就自動抓出主色、輔色、字型跟說話語氣，沒網址就給你一套乾淨的中性風格。接著照兩份固定的設計規範來排——簡報二十條、網頁二十條，字級多大、留白多少、對比多少都有數字。產出是一個檔案，用瀏覽器打開就是成品。",
+    "painPoint": "客戶明天要看提案，你在簡報軟體裡一張一張調字級、對齊、抓色碼，弄到半夜排出來還是像十年前的版型，真正該想的內容反而只剩三十分鐘。",
+    "whatItDoes": [
+      "給一個網址就把那個品牌的主色、輔色、標題字型跟說話語氣抓出來，直接套用",
+      "做簡報時每張只講一件事，標題十個字以內，一張最多七個區塊，不讓你硬塞",
+      "做網頁時從手機寬度開始排，桌機再放大，不會出現手機上要左右滑的慘況",
+      "內文字級、行高、對比度、按鈕大小都照固定數字走，不會這頁十六那頁十四",
+      "網頁自帶淺色深色兩套，跟著看的人的系統走，也能自己按鈕切換",
+      "內建七十幾組現成的品牌設定，做給國際客戶的提案可以直接挑一組來用"
+    ],
+    "scenarios": [
+      {
+        "title": "客戶提案簡報要有對方的品牌感",
+        "body": "接案最常遇到的狀況：明天要跟客戶簡報，但你手上只有內容大綱。把客戶官網網址丟進去，它抓出對方的色系跟字型，整份簡報就用客戶自己的視覺語言寫。開會時對方看到熟悉的顏色，比較容易把注意力放回內容，而不是先花十分鐘討論版面好不好看。"
+      },
+      {
+        "title": "新品要一頁式介紹頁導到蝦皮",
+        "body": "新品上架，蝦皮商品頁的排版被平台綁死，你想另外做一頁能放品牌故事跟成分說明的網頁，最後把人帶去蝦皮下單。跟它說要單頁、主要動作是「去蝦皮買」，它會排出開頭主打、特色、實證、常見問題、行動按鈕這條標準骨架，按鈕大小夠手指點，手機上不會跑版。"
+      },
+      {
+        "title": "募資或年度計畫的內部簡報",
+        "body": "要跟銀行、投資人或股東報告，內容你都有了，就是排不好看。它會把重點拆成一張一句話的節奏，圖表只留必要的線條，不加陰影不加漸層，一張只有一個重點顏色。整份就是一個檔案，投影或轉成 PDF 寄出去都可以，不用擔心對方電腦沒有你的字型。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚是簡報還是網頁",
+        "detail": "這兩條路的規則完全不一樣，一開始講明省得繞路。簡報就說明給誰看、大概幾張、核心訊息是什麼；網頁就說明是單頁還是多頁、看的人進來最該做哪一件事——加 LINE 官方帳號、留資料、還是去蝦皮下單。這個「一件事」會決定整頁的按鈕怎麼擺、擺幾次。"
+      },
+      {
+        "step": "給品牌網址或直接給色碼",
+        "detail": "有官網就把網址丟給它，它會去讀那頁的配色、字型跟寫作語氣。沒有官網、或網站本身就做得不好看，那就直接給主色的色碼、想要的字型感覺（明體偏溫潤、黑體偏俐落），再附一段你平常寫給客人的文字當語氣範本，效果一樣好，有時候還更準。"
+      },
+      {
+        "step": "內容給重點就好不要給整篇",
+        "detail": "簡報給一句主標加三到五個重點就夠，它會自己展開成一張一件事的節奏；你貼一整篇兩千字進去，反而會被硬塞成滿版文字牆。網頁也一樣，一句話講清楚你在賣什麼，加上幾個段落標題，比丟整份產品手冊有用。真的要細節，等骨架出來以後再一段一段補進去。"
+      },
+      {
+        "step": "開檔案在瀏覽器裡逐項調",
+        "detail": "產出是一個網頁檔，用瀏覽器打開就是成品。網頁記得把視窗拉窄到手機寬度看一次，順便切一下深色模式。要改就直接講人話：「第三張太擠」「按鈕不夠明顯」「開頭那句太長」，它會照規則改而不是整份亂動。簡報要交出去，就在瀏覽器裡列印成 PDF。"
+      }
+    ],
+    "examplePrompt": "幫我做一份提案簡報，總共十到十二張，對象是傳統食品廠的老闆，主題是幫他們做品牌重塑跟電商上架。品牌調性請去抓這個網址：（貼上客戶官網），用他們自己的顏色跟字型。內容重點有四個：現在的包裝在貨架上被淹沒、蝦皮跟 momo 的商品頁沒有一致性、產品照風格不統一、我們的做法跟時程。每張只講一件事，數字不要編，沒有的數據就留空白讓我自己填。左下角放我們公司的小字商標。",
+    "exampleResult": "它會先確認商標要不要每張都放，然後產出一個檔案，用瀏覽器打開就能看。十二張全部用客戶官網的深綠配米白，標題字級一致，每張一個重點，需要數字的地方留成待填欄位，不會隨便編一個給你。你說「第七張太滿」，它就把第七張拆成兩張，不會整份重排。要交件就在瀏覽器裡列印成 PDF。",
+    "tips": [
+      "抓網址那段是接外部的網頁擷取服務，要自己去申請金鑰，有免費額度但用量大就要付費。嫌麻煩就直接給色碼跟字型。",
+      "產出是網頁檔不是簡報檔，要能再編輯的格式得另外轉，先確認客戶收不收 PDF。",
+      "它嚴格照設計規則走，所以你說「字再大一點」有時會被擋，因為那會破壞整體比例。想破例要講明是哪一張、為什麼。",
+      "內建的品牌設定多半是國際品牌，台灣本地品牌還是給網址或色碼比較準。"
+    ],
+    "bestFor": "要對外提案的接案設計師與工作室老闆，還有想自己做一頁式介紹網頁、但不想再學一套網頁工具的品牌經營者。",
+    "keywords": [
+      "品牌簡報",
+      "提案簡報",
+      "一頁式網頁",
+      "品牌色系",
+      "簡報排版",
+      "響應式網頁",
+      "設計規範"
+    ],
+    "sourceRepo": "ItsssssJack/power-design",
+    "sourceRepoName": "power-design",
+    "sourceStars": "573",
+    "sourceUrl": "https://github.com/ItsssssJack/power-design",
+    "image": "/skills-img/power-design.webp",
+    "imageAlt": "品牌色變成簡報與網頁流程圖：決定用途、抓品牌色、套用規範、開檔微調"
+  },
+  {
+    "slug": "image-prompt-advisor",
+    "nameEn": "Image Prompt Advisor",
+    "nameZh": "挑對範本再把生圖指令寫準",
+    "category": "設計創意",
+    "tagline": "從一萬多組現成的生圖指令裡挑三組給你看成品，選一組再改成你的",
+    "summary": "生圖工具最難的不是操作，是那段英文描述怎麼寫。它手上有一萬多組別人試過的指令，每組都附成品圖。你說要什麼，它挑三組最接近的，連圖一起給你看；你挑順眼的那組，它再把你的商品或內容套進去，改寫成可以直接複製去生圖的完整指令。",
+    "painPoint": "想生一張商品情境圖，打了「保養品放在大理石桌上，很有質感」，出來的東西完全不能看。改了十次還是不對，最後只好放棄，回頭去買圖庫。",
+    "whatItDoes": [
+      "先問清楚你要哪種圖、主題是什麼、給誰看，資訊不夠它不會亂猜就開始做",
+      "一次最多推三組指令，每組都附一張成品範例圖，你看圖就知道會長什麼樣",
+      "涵蓋商品情境圖、社群貼文圖、大頭照、海報、資訊圖表、影片縮圖等常見類型",
+      "你挑定一組後，會問性別、年齡、場景這些會影響畫面的細節，再改寫成你的版本",
+      "有文章或腳本的話會讀完抓出主題跟情緒，把配圖指令調成跟內容對得上",
+      "庫裡沒有合適的它就直說沒有，另外幫你寫一組並註明是自己寫的，不會魚目混珠"
+    ],
+    "scenarios": [
+      {
+        "title": "新品情境圖要拍但預算不夠",
+        "body": "一款新的香氛擴香要上架，商品去背照有了，但缺一張放在居家場景裡的氛圍圖，找攝影棚拍一組要好幾千。跟它說要商品情境圖、走溫暖的木質調、桌面上有書跟毛毯，它挑三組給你看範例圖，你選一組，它把瓶身顏色、材質、想要的時間感寫進去，複製到生圖工具就有圖了。"
+      },
+      {
+        "title": "部落格文章缺一張首圖",
+        "body": "官網每週要發一篇文章，寫完卡在首圖。把整篇貼給它，它會抓出主題、關鍵概念跟情緒基調，再挑幾組風格對得上的範本。像談睡眠的文章就不會給你亮橘色的活潑風，會偏低彩度的安靜感。同一篇還可以要它給兩個方向，一張走實拍感、一張走插畫感，都試試看哪張點閱好。"
+      },
+      {
+        "title": "活動圖跟影片縮圖要一起做",
+        "body": "檔期活動要一張蝦皮首圖、一張 IG 方圖、一張影片縮圖，三個尺寸三種調性。分開講清楚用途，它會分別從不同類型裡找，海報類的構圖留白多、縮圖類的主體大對比強。挑完之後你手上就有三段指令，一次生完，風格還能維持一致，不會三張看起來像三個品牌。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚要哪一種圖",
+        "detail": "不要只說「幫我生一張圖」，那樣它會回頭問你一堆問題。直接講三件事：哪一種圖（商品情境圖／貼文圖／海報／影片縮圖）、主題是什麼（哪個商品、哪篇文章）、給誰看（媽媽族群／設計同業／年輕客層）。這三句先講完，它挑出來的東西才會接近你要的。"
+      },
+      {
+        "step": "看範例圖再決定不要只看字",
+        "detail": "它給的三組都會附一張成品範例圖，那張圖才是真正的資訊。指令的英文你看不懂沒關係，看圖判斷這個光線、這個構圖、這個氛圍是不是你要的就好。有些範本會註明需要你先提供參考圖，例如要放你自己的商品或人像，這種就要先把素材準備好再選。"
+      },
+      {
+        "step": "挑一組後老實回答細節",
+        "detail": "選定之後它會問幾個問題：畫面裡的人是男是女、大概幾歲、室內還是室外、要專業感還是輕鬆感。這些問題不是廢話，答得越具體，改寫出來的指令越準。有商品的話順便把材質、顏色、瓶身形狀講清楚，不然生出來的瓶子會長得跟你的完全不一樣。"
+      },
+      {
+        "step": "拿指令去生圖再回來微調",
+        "detail": "它最後給你的是一段英文指令，複製到你在用的生圖工具跑。出來不對就把哪裡不對講回去——「太暗」「桌面太亂」「瓶子形狀不對」，它會改指令而不是叫你重挑一輪。同一組指令換掉幾個字就能生系列圖，商品線有五款就一次把五段都改好，風格才會統一。"
+      }
+    ],
+    "examplePrompt": "我要幫一款新的擴香瓶做商品情境圖，放在蝦皮商品頁跟 IG 用。瓶身是霧面白色玻璃、木頭蓋、藤枝，走乾淨簡約的路線，客層是三十到四十歲、家裡有小孩的女性。想要的感覺是早上剛整理完家、有自然光斜射進來那種安靜感，不要太商業攝影棚的白底。先推三組給我看範例圖，我挑完你再把我的瓶子細節寫進去，最後給我可以直接貼到生圖工具的完整指令。",
+    "exampleResult": "它會給你三組附圖的選擇：一組是窗邊斜光的居家桌面、一組是淺色木紋層架、一組是浴室檯面。你選第一組之後，它問你要不要有人入鏡、季節感偏暖還是偏涼、桌上還要不要別的東西。答完就給你一段英文指令，把霧面白玻璃、木蓋、藤枝、斜射晨光、淺景深都寫進去，並在下面列出跟原本範本改了哪幾處，你自己看得懂哪裡還能再動。",
+    "tips": [
+      "它只給指令不生圖，你還是要有自己的生圖工具，多數要另外付月費，先確認手上有哪一個。",
+      "指令是英文的不用怕，生圖模型吃英文比較準，你只要看範例圖判斷合不合意就好。",
+      "有些範本標明需要參考圖，得先準備好自己的商品照或人像，不然生出來的東西會走鐘。",
+      "指令庫是社群共同累積的，每天更新，第一次用會先下載一份資料，之後幾乎不用等。"
+    ],
+    "bestFor": "常常需要商品情境圖、貼文配圖，但沒有攝影預算、也不想學一堆生圖術語的電商賣家與社群小編。",
+    "keywords": [
+      "生圖指令",
+      "AI 生圖",
+      "商品情境圖",
+      "指令範本",
+      "貼文配圖",
+      "影片縮圖",
+      "文章首圖"
+    ],
+    "sourceRepo": "YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+    "sourceRepoName": "nano-banana-pro-prompts-recommend-skill",
+    "sourceStars": "1,787",
+    "sourceUrl": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
+    "image": "/skills-img/image-prompt-advisor.webp",
+    "imageAlt": "從範本挑到可用指令流程圖：說清用途、搜庫比對、看圖挑組、改寫指令"
+  },
+  {
+    "slug": "last30days",
+    "nameEn": "last30days",
+    "nameZh": "撈出最近一個月網友在吵什麼",
+    "category": "行銷內容",
+    "tagline": "丟一個題目，把最近三十天網路上真的有人在講的話撈回來。",
+    "summary": "你給一個題目，它會跑一輪 Threads、Instagram、YouTube、Reddit、X、TikTok 這些地方，只撈最近三十天的貼文和留言，照按讚和留言數排序，整理成一份有網友原話、有連結的報告。重點是只看最近一個月，不會把三年前的舊資料當成現在的風向講給你聽。",
+    "painPoint": "問 AI 現在流行什麼，它給你兩年前的答案；自己滑 Threads、滑社團滑了一小時，只記得幾則零散貼文，還是講不出到底哪個題目現在真的有人在關心。",
+    "whatItDoes": [
+      "一次跑七八個社群平台，只撈最近三十天的貼文，更早的一律不算。",
+      "連留言一起抓，把按讚最高的網友原話整段引出來，不是只丟標題給你。",
+      "把散在各平台的討論歸成幾條故事線，也標出哪幾條是好幾個平台都在講。",
+      "兩個品牌或商品可以做對照表，原本要開好幾個分頁來回比，現在一次列完。",
+      "問它現在什麼題目正熱，它會列出可以做的題目，各附一句影片和文章切角。",
+      "每份報告都留成檔，之後能搜尋以前查過的題目，也能做成一頁網頁給客戶看。"
+    ],
+    "scenarios": [
+      {
+        "title": "上架前先看競品被罵什麼",
+        "body": "你準備在蝦皮上架一款平價卸妝油，先讓它去查同類商品最近三十天的討論。撈回來的不是官方文案，是網友留言：三十幾則在抱怨洗完緊繃、有一則兩百多讚的留言說按壓頭第三次就卡住。這些話直接變成你商品頁的賣點順序，也提醒你叫代工廠先把按壓頭換掉，不要等上架後才被評價打下來。"
+      },
+      {
+        "title": "小編這週要發什麼想不出來",
+        "body": "每週一早上問它最近芳療圈在吵什麼，它會列出三到五個真的有人在討論的題目，每個題目附上網友原話跟連結，還各給一句可以拿去拍影片的切角。小編不用再從零想梗，挑一個討論度最高的，把留言裡的疑問直接當成貼文開頭，一則 Threads 十分鐘就寫完，而且是照著別人真的在問的東西寫。"
+      },
+      {
+        "title": "客戶提案要有現在的證據",
+        "body": "接案要跟客戶提改版方案，客戶問你怎麼知道現在的人在意這個。你事前查一輪，提案第三頁直接放三則最近一個月的真實留言加連結，其中一則有一千多個讚。比起你說「依我的經驗」，客戶看到的是他自己也能點進去驗證的東西，開會的方向就從辯論變成排優先順序。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "第一次先花三十秒設定",
+        "detail": "第一次叫它做事，它會先問你要開哪些來源：YouTube 和 X 需要簡單授權，TikTok 和 Instagram 要另外申請一把免費金鑰。你也可以全部略過，光靠免費的 Reddit、論壇和網頁搜尋照樣能用。設定只做一次，之後每次直接講題目就好；現在不想弄就選略過，哪天想加，說一句話就補得回來。"
+      },
+      {
+        "step": "用一句話講清楚要查誰",
+        "detail": "主題越具體越準。只打保養品會撈回一堆雜訊；打無矽靈洗髮精頭皮出油，或直接打品牌名，抓到的就是真的在講這件事的人。如果你要查的是常見人名或普通名詞，記得多加一個能認人的字，例如某某精油品牌，不然它會把同名的人事物一起撈回來，整份報告都會歪掉。"
+      },
+      {
+        "step": "看它整理出來的討論線",
+        "detail": "報告先給你幾段結論，每段前面是一句粗體重點，後面接網友原話跟連結。下面還有一份清單，列出這個月重複出現的幾個模式。你先看有哪幾條是三個以上平台都在講的，那通常才是真的有量的話題；只有單一來源的它會標出來，你當參考就好，不要拿去當提案結論。"
+      },
+      {
+        "step": "叫它接著寫成你要的東西",
+        "detail": "查完之後這批資料就在它手上，可以直接接著說：把第二點寫成一則 Threads、幫我做成給客戶看的一頁網頁、用老闆的角度重寫成五點。它不會再重查一次，會拿剛剛那批留言當素材。你也可以說這題我已經做過了，它會記起來，下次推題目時不會再推同一個。"
+      }
+    ],
+    "examplePrompt": "幫我查最近三十天大家在討論的香氛蠟燭味道持久度，範圍鎖在台灣賣家會在意的角度。我要知道：一、消費者最常抱怨的三件事，各附一則按讚數最高的原話跟連結；二、有沒有哪個品牌被拿出來當比較基準；三、大家講到價格時的接受區間大概在哪。整理完之後，直接把第一點寫成三則 Threads 貼文草稿，語氣像在跟朋友聊天、不要業配感，每則不超過一百五十字。",
+    "exampleResult": "先給你一段結論，例如香味撐不過兩小時是這個月最大的抱怨點，後面接一則兩百多讚的留言原話和連結。再往下是四到五條重複出現的模式，例如大家普遍拿某個日系品牌當比較基準、超過八百元就開始猶豫。最後附上這次總共翻了幾則貼文、幾則留言、來自哪些平台，每個來源都點得進去看原文。接著就直接給你三則寫好的 Threads 草稿。",
+    "tips": [
+      "TikTok、Instagram、Threads 要另外申請一把免費金鑰，前一萬次查詢免費，超過才開始收費，不想花錢可以先不要開。",
+      "查中文題目要有心理準備：Reddit 這類英文論壇幾乎撈不到台灣的討論，中文題目主要靠 Threads、Instagram、YouTube 和網頁搜尋撐。",
+      "它需要電腦裡有 Python 這個免費的基礎軟體，版本要 3.12 以上；沒裝的話它會直接告訴你怎麼裝，不會硬跑然後給你假資料。",
+      "它只看最近三十天，不適合查歷史或長期趨勢；想看更短可以叫它只抓七天，拿來做每週的社群回顧剛剛好。"
+    ],
+    "bestFor": "每週要交內容的小編、上架前想先摸清市場的電商賣家，還有提案需要拿出即時證據的接案設計師。",
+    "keywords": [
+      "社群輿情",
+      "近期趨勢",
+      "競品調查",
+      "內容題材",
+      "網友評價",
+      "Threads 行銷",
+      "上架前調查",
+      "資料查證"
+    ],
+    "sourceRepo": "mvanhorn/last30days-skill",
+    "sourceRepoName": "last30days-skill",
+    "sourceStars": "54,803",
+    "sourceUrl": "https://github.com/mvanhorn/last30days-skill/tree/main/skills/last30days",
+    "image": "/skills-img/last30days.webp",
+    "imageAlt": "最新網路討論盤點流程圖：丟出主題、只撈近月、依讚排序、原話佐證"
+  },
+  {
+    "slug": "cold-email",
+    "nameEn": "Cold Email",
+    "nameZh": "寫出不像推銷的第一封開發信",
+    "category": "業務開發",
+    "tagline": "幫你寫出像同業之間閒聊、而不是像業務推銷的第一封陌生信",
+    "summary": "寫給沒見過面、也沒留過資料的潛在客戶的第一封信。它會先問清楚你賣什麼、對方是誰、為什麼是現在寫給他，再寫出一封只有三五句、開頭講對方的事而不是講你產品的信，附上兩三個像內部信件的主旨。要做後續追蹤的話，會排出五到六封各有新角度的信，最後一封漂亮收尾。",
+    "painPoint": "名單有了，信也寄了三十封，一封回覆都沒有。你重看一遍也知道問題在哪：開頭是「您好，我是某某公司」，後面整段都在講自己多厲害。",
+    "whatItDoes": [
+      "先問你賣什麼、想約到誰、為什麼挑這個時間點寫，資訊不夠它會直接說寫不出好信",
+      "第一封信控制在一百五十字以內，開頭講對方的處境，結尾只問一個問題",
+      "主旨給你兩三個版本，都是短、看起來像同事寄來的那種，不寫公司名也不用驚嘆號",
+      "依對方職位調整長度：老闆三四句就好，主管五到七句，第一線人員可以講細一點",
+      "排出五到六封的追蹤信，每封換一個角度，絕不出現「跟您確認一下有沒有看到」這種",
+      "也可以把你現在在用的信丟給它檢查：哪句是廢話、哪個字容易被當成廣告信、開口要求是不是太重"
+    ],
+    "scenarios": [
+      {
+        "title": "設計工作室主動找新客戶",
+        "body": "靠介紹接案接了三年，今年案源突然變少。你在網路上看到一家在地食品廠剛拿到通路上架、包裝卻還是十年前的樣子。把這個觀察講給它聽，它寫出來的第一封信會從「看到你們上架全聯」開始，中間一句話帶到你做過類似的改版，最後只問一句：是自己設計還是有配合的廠商。全信不到一百五十字。"
+      },
+      {
+        "title": "電商想談通路和聯名",
+        "body": "保養品品牌想找連鎖美容沙龍談鋪貨，對方採購一天收幾十封廠商信。它會建議把第一封寫成三句話：一句講你注意到他們最近開了兩家新店、一句講你手上有客單價相近的品項、最後問一句需不需要看價目表。要寄的話還會排出後面幾封，一封換一個角度，不是一直重複問有沒有看到。"
+      },
+      {
+        "title": "把寄不出去的舊信改一遍",
+        "body": "你手上那封信寄了兩個月都沒回覆。丟給它，它會一句一句挑：第一句「希望這封信一切安好」直接刪、第二段整段在介紹公司沿革也刪、最後那句「有興趣再跟我說」改成一個具體問題。改完剩下四句，再給你三個主旨去輪流測，順便告訴你哪個字眼容易讓信掉進垃圾信件夾。"
+      }
+    ],
+    "howToUse": [
+      {
+        "step": "先講清楚你要寫給誰",
+        "detail": "不是「中小企業老闆」這種範圍，而是具體到：五十人以下的食品加工廠、負責包裝決策的是二代或行銷主管。同時講清楚你賣什麼、有沒有做過類似的客戶可以拿來當佐證。這三件事講不出來，寫出來的信一定像罐頭，它也會直接跟你說目前的資訊只夠寫出很普通的版本。"
+      },
+      {
+        "step": "找出現在寫給他的理由",
+        "detail": "剛開新店、剛換包裝、剛在市集擺攤、剛上架某個通路、最近在徵人，都算。這種理由不用多厲害，但一定要跟你要解決的問題有關。看到對方是名校畢業所以誇一句，然後接著推銷，那是假客製，比沒有客製更糟。找不到理由的名單，它會建議你先別寄。"
+      },
+      {
+        "step": "要它寫短，只問一件事",
+        "detail": "第一封信超過一百五十字就太長了，尤其寫給老闆。結尾也不要一次要求對方看簡報、約會議、又回覆時程，挑一個，而且是門檻最低的那個。與其問要不要約三十分鐘，不如問一句你們現在包裝是自己做還是外包，對方回一個字你就接得上去。"
+      },
+      {
+        "step": "排好後續幾封，每封換角度",
+        "detail": "很多回覆是在第二封之後才出現，但重複催問只會讓人封鎖你。請它把後面幾封排成不同角度：一封補一個做過的案例、一封換另一個痛點切入、一封乾脆直接問是不是找錯人、最後一封講明這是最後一封，並留一句如果之後有需要再找我。間隔慢慢拉長，第一封到最後大約一個月。"
+      }
+    ],
+    "examplePrompt": "我是台中一家設計工作室的負責人，主要做包裝設計和商品攝影，做過幾個食品和保養品品牌。我想寫信給一家剛上架全聯的在地醬料廠，收信的是第二代，大約三十五歲，負責行銷。他們產品好吃但包裝十年沒改過。請幫我寫第一封信，一百五十字以內，開頭講他們的狀況不要講我，只問一個容易回答的問題，主旨給我三個像同事寄來的版本。另外幫我排後續三封追蹤信，每封換一個角度，不要有「跟您確認一下」這種句子。",
+    "exampleResult": "你會拿到一封四句話的信：第一句提他們剛上架全聯、第二句說通路上架後包裝在架上的競爭跟以前不一樣、第三句用一句話帶過你做過的類似品牌、最後問一句包裝是自己做還是外面配合。主旨三個版本大概像是「你們的醬料上架了」「包裝的事」「全聯那批」。後面三封各有角度：一封附案例、一封談架上辨識度、一封直接問是不是該找別人談。",
+    "tips": [
+      "信寫好只是一半。用自己的主網域大量寄陌生信，網域信譽會被拖累，建議另外開一個寄信用的子網域。",
+      "大量寄送得另外付錢用寄信服務，還要做信箱驗證、新網域先養四到六週，這些錢和時間躲不掉。",
+      "一天寄超過一兩百封同一個網域就開始危險。名單先驗過，退信率高會讓後面每一封都進垃圾桶。",
+      "記得放退訂方式，個資法和商業電子郵件的規範都要顧。內容也別誇大成效，寫得越像真人越安全。"
+    ],
+    "bestFor": "想主動開發客戶、但一開口就變成推銷腔的接案設計師、業務、品牌小團隊，還有要談通路和聯名的電商。",
+    "keywords": [
+      "陌生開發信",
+      "開發客戶",
+      "業務信件",
+      "追蹤信",
+      "主旨",
+      "回覆率",
+      "名單開發"
+    ],
+    "sourceRepo": "alirezarezvani/claude-skills",
+    "sourceRepoName": "claude-skills",
+    "sourceStars": "23,407",
+    "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/cold-email",
+    "image": "/skills-img/cold-email.webp",
+    "imageAlt": "陌生開發信寫作流程流程圖：鎖定對象、找出契機、四句成信、排追蹤信"
   }
 ];
 

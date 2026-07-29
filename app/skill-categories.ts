@@ -6,6 +6,7 @@
 export const CATEGORY_SLUGS: Record<string, string> = {
   文件整理: 'docs',
   行銷內容: 'marketing',
+  影音內容: 'video',
   電商經營: 'ecommerce',
   設計創意: 'design',
   開發工程: 'dev',
