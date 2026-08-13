@@ -42,6 +42,9 @@ jobs:
       # 只補「有規格但還沒有圖」的，正常情況下是 0 張、幾秒就跳過。
       - name: Generate missing skill images
         id: images
+        # 不阻斷：codex 掛掉時新文章還是要上得去。skills-data.ts 對缺圖的技能會給
+        # image: null，頁面本來就容許沒有圖，下一次 build 會再補一次。
+        continue-on-error: true
         run: |
           before=$(ls public/skills-img/*.webp 2>/dev/null | wc -l)
           npm run skills:images
