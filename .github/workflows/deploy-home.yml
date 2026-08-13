@@ -13,6 +13,9 @@ concurrency:
   group: deploy-home
   cancel-in-progress: false
 
+permissions:
+  contents: write   # 補完的流程圖要 commit 回 repo
+
 jobs:
   deploy:
     runs-on: [self-hosted, show]
@@ -28,6 +31,33 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      # data/skills/*.json 才是資料來源，skills-data.ts 是產物。
+      # 每次都重生，避免有人只改 JSON 忘了跑產生器。
+      - name: Rebuild skills-data.ts from data/skills/
+        run: npm run build:skills
+
+      # runner 就跑在家裡主機、身分是 user，讀得到 ~/.codex/auth.json，
+      # 所以可以直接叫 codex 生圖，不需要 ssh。
+      # 只補「有規格但還沒有圖」的，正常情況下是 0 張、幾秒就跳過。
+      - name: Generate missing skill images
+        id: images
+        run: |
+          before=$(ls public/skills-img/*.webp 2>/dev/null | wc -l)
+          npm run skills:images
+          after=$(ls public/skills-img/*.webp 2>/dev/null | wc -l)
+          echo "added=$(( after - before ))" >> "$GITHUB_OUTPUT"
+          echo "補了 $(( after - before )) 張"
+
+      - name: Commit new images back
+        if: steps.images.outputs.added != '0'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/skills-img app/skills-data.ts
+          # [skip ci] 很重要：不加的話這個 push 會再觸發一次同樣的 workflow，變成無窮迴圈
+          git commit -m "chore(skills): 補上 ${{ steps.images.outputs.added }} 張流程示意圖 [skip ci]"
+          git push origin HEAD:main
 
       - name: Build (static export)
         env:
