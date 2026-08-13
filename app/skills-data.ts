@@ -1,9 +1,10 @@
 /**
  * AI 技能圖書館資料。
- * 來源：GitHub 上最熱門的社群 Agent Skills 開源專案，
+ * 來源：GitHub 上熱門的社群 Agent Skills 開源專案，
  * 由靈境智造整理、翻譯並改寫為繁體中文使用指南。
  *
- * 此檔由 tools/build-skills-data.js 自動產生，請勿手動編輯。
+ * 此檔由 tools/build-skills-data.js 從 data/skills/*.json 自動產生，請勿手動編輯。
+ * 要新增技能：在 data/skills/ 放一個新的 JSON，再跑 npm run build:skills。
  */
 
 export type SkillScenario = { title: string; body: string };
@@ -786,7 +787,7 @@ export const SKILLS: Skill[] = [
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/raffle-winner-picker",
-    "image": "/skills-img/raffle-winner-picker.webp",
+    "image": null,
     "imageAlt": "留言名單自動開獎流程圖：匯入名單、設定權重、隨機抽出、留存紀錄"
   },
   {
