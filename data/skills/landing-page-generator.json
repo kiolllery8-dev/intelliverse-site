@@ -64,31 +64,15 @@
     "報名頁",
     "轉換率"
   ],
-  "diagram": {
-    "title": "一頁式銷售頁產出流程",
-    "steps": [
-      {
-        "label": "給齊資料",
-        "icon": "一張商品資料卡"
-      },
-      {
-        "label": "選定說法",
-        "icon": "一個左右分岔的路標"
-      },
-      {
-        "label": "寫出文案",
-        "icon": "一支鋼筆"
-      },
-      {
-        "label": "排成整頁",
-        "icon": "一個含購買按鈕的網頁視窗"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "product-team/skills/landing-page-generator",
     "stars": "23,256"
   },
-  "order": 49
+  "order": 49,
+  "illustration": {
+    "title": "一頁式銷售頁產出流程",
+    "focalObject": "一張摺成七摺、每摺各壓出一個空白凹槽的立起長紙",
+    "scene": "一張長條紙被摺成七摺立在桌上，像一道階梯。每一摺的面上都壓印出一個空白凹槽，凹槽由第一摺的最大一路縮到後面愈來愈小，最後一摺還是平的、什麼都沒壓。桌邊斜靠著另一張摺數相同的長紙，凹槽大小的排法明顯不一樣，等著換上來比一比。"
+  }
 }

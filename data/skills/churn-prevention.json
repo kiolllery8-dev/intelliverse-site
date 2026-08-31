@@ -66,31 +66,15 @@
     "催款信文案範本",
     "客戶流失率怎麼算"
   ],
-  "diagram": {
-    "title": "留住要退訂的客人",
-    "steps": [
-      {
-        "label": "說明方案",
-        "icon": "一個對話泡泡"
-      },
-      {
-        "label": "設計問卷",
-        "icon": "一張打勾的問卷紙"
-      },
-      {
-        "label": "配對挽留",
-        "icon": "一個綁緞帶的禮物盒"
-      },
-      {
-        "label": "排催款信",
-        "icon": "一張信用卡"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "marketing-skill/skills/churn-prevention",
     "stars": "23,256"
   },
-  "order": 26
+  "order": 26,
+  "illustration": {
+    "title": "留住要退訂的客人",
+    "focalObject": "一張缺角、被刷卡機吐出一半的信用卡",
+    "scene": "一台刷卡機把一張信用卡吐出一半，卡片右下角像票根一樣被撕開一小條，缺口向上翹起。刷卡機正前方橫排三個小沙漏，第一個沙已漏完、第二個漏到一半、第三個還滿著。刷卡機側邊那顆按鈕上掛著一片門把吊牌，吊牌正好把按鈕擋住，按不下去。"
+  }
 }

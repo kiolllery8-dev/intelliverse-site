@@ -66,31 +66,15 @@
     "電子報怎麼寫",
     "電商回購信件"
   ],
-  "diagram": {
-    "title": "自動信件流程設計",
-    "steps": [
-      {
-        "label": "挑選信種",
-        "icon": "一個信封"
-      },
-      {
-        "label": "提供語氣",
-        "icon": "一個對話泡泡"
-      },
-      {
-        "label": "產出信稿",
-        "icon": "一份帶折角的文件"
-      },
-      {
-        "label": "設定觸發",
-        "icon": "一個時鐘"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "marketing-skill/skills/email-sequence",
     "stars": "23,256"
   },
-  "order": 25
+  "order": 25,
+  "illustration": {
+    "title": "自動信件流程設計",
+    "focalObject": "用木夾依間距夾在晾衣繩上的五個信封",
+    "scene": "一條橫拉的晾衣繩，用木夾夾著五個信封，間距由左往右愈拉愈開。最左邊那封封口已經掀開、信紙探出一角；中間第三封的木夾被鬆開，信封正往下掉、離開繩子；最右邊那封還封得緊緊的。繩子兩端各繞在一根小木樁上，繩身微微下垂。"
+  }
 }

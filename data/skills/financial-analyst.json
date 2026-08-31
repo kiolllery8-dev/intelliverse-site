@@ -66,31 +66,15 @@
     "電商損益表 excel 範本",
     "應收帳款 收不回來 怎麼估"
   ],
-  "diagram": {
-    "title": "財務健檢與現金流預測",
-    "steps": [
-      {
-        "label": "準備報表",
-        "icon": "一張表格文件"
-      },
-      {
-        "label": "試算比率",
-        "icon": "一台計算機"
-      },
-      {
-        "label": "預估現金",
-        "icon": "一張折線圖"
-      },
-      {
-        "label": "每月對帳",
-        "icon": "一本桌曆"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "finance/skills/financial-analyst",
     "stars": "23,256"
   },
-  "order": 31
+  "order": 31,
+  "illustration": {
+    "title": "財務健檢與現金流預測",
+    "focalObject": "被四個長尾夾各咬走一角的鈔票",
+    "scene": "一張攤平的鈔票平釘在木板上。四個邊各有一個大小不同的長尾夾咬住鈔票邊緣往外扯，每個夾子的嘴裡都含著一塊剛被撕下來的碎片，鈔票四周因此缺了四個大小不等的破口，中間只剩不到一半還是完整的。夾子往外拉的方向不同，鈔票被扯得微微變形。"
+  }
 }

@@ -65,31 +65,15 @@
     "git commit 整理",
     "release notes 中文"
   ],
-  "diagram": {
-    "title": "開發紀錄變客戶月報",
-    "steps": [
-      {
-        "label": "抓取改動",
-        "icon": "一個由圓點與線構成的分岔樹枝"
-      },
-      {
-        "label": "分類歸檔",
-        "icon": "一個附標籤的資料夾"
-      },
-      {
-        "label": "白話改寫",
-        "icon": "一支鋼筆"
-      },
-      {
-        "label": "校稿寄出",
-        "icon": "一個信封"
-      }
-    ]
-  },
   "source": {
     "repo": "ComposioHQ/awesome-claude-skills",
     "path": "changelog-generator",
     "stars": "70,983"
   },
-  "order": 12
+  "order": 12,
+  "illustration": {
+    "title": "開發紀錄變客戶月報",
+    "focalObject": "一長條印表機連續報表紙，正被撕成三疊並折起束上紙腰帶",
+    "scene": "桌面上垂著一長條印表機吐出的連續報表紙，兩側是整排圓形齒孔，紙面上密密麻麻都是等距的短橫線與小方塊，像一筆筆流水紀錄。紙帶下半段已經沿折線被撕成三疊短紙，厚薄不同、各自疊齊。最靠前的那一疊被折成三折，正被套上一圈紙腰帶，腰帶還沒束緊、鬆鬆掛在紙的中段。"
+  }
 }

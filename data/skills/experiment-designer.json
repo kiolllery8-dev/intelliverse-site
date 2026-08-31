@@ -65,31 +65,15 @@
     "素材測試",
     "電商實驗"
   ],
-  "diagram": {
-    "title": "商品頁改版驗證流程",
-    "steps": [
-      {
-        "label": "寫下假設",
-        "icon": "一張便利貼"
-      },
-      {
-        "label": "選定指標",
-        "icon": "一個靶心"
-      },
-      {
-        "label": "算出天數",
-        "icon": "一個沙漏"
-      },
-      {
-        "label": "讀懂結果",
-        "icon": "一支放大鏡"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "product-team/skills/experiment-designer",
     "stars": "23,256"
   },
-  "order": 50
+  "order": 50,
+  "illustration": {
+    "title": "商品頁改版驗證流程",
+    "focalObject": "指針被插銷卡住、兩盤各放一張主圖卡的天秤",
+    "scene": "一座天秤，左右兩盤各躺一張商品主圖卡，兩張卡片大小相同、圖案排法不同。天秤的指針被一根插銷從側面卡住，暫時動不了。天秤正下方立著一個細長量杯，小珠子正一顆顆落進杯裡，堆到杯身中段那道刻痕下方一點點，還差一截沒過線。"
+  }
 }

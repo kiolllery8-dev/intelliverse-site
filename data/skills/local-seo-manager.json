@@ -66,31 +66,15 @@
     "多分店 商家檔案 管理",
     "google 商家檔案 被停權"
   ],
-  "diagram": {
-    "title": "讓客人在地圖上找到你",
-    "steps": [
-      {
-        "label": "填商家檔",
-        "icon": "一個地圖定位圖釘"
-      },
-      {
-        "label": "逐項健檢",
-        "icon": "一張打勾清單"
-      },
-      {
-        "label": "寫地區頁",
-        "icon": "一份帶折角的文件"
-      },
-      {
-        "label": "回覆評論",
-        "icon": "一顆五角星"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "marketing-skill/skills/local-seo-manager",
     "stars": "23,256"
   },
-  "order": 18
+  "order": 18,
+  "illustration": {
+    "title": "讓客人在地圖上找到你",
+    "focalObject": "一根插在紙本街道地圖上的圖釘，釘身垂掛三塊歪斜的店家招牌",
+    "scene": "一張摺疊式紙本街道地圖攤開了一半，摺痕還立著沒壓平。地圖中央插著一根圖釘，釘身下方用細鏈同時掛著三塊形狀各異的小店家招牌。一隻手正把其中一塊扶正、掛回釘子上，另外兩塊仍歪斜地晃著，其中一塊已滑落，卡在地圖的褶皺裡。"
+  }
 }

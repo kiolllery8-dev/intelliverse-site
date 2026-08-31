@@ -64,31 +64,15 @@
     "廣告合規",
     "出貨通知"
   ],
-  "diagram": {
-    "title": "客服回覆的產出流程",
-    "steps": [
-      {
-        "label": "選定類別",
-        "icon": "一張吊牌標籤"
-      },
-      {
-        "label": "判斷場景",
-        "icon": "一支放大鏡"
-      },
-      {
-        "label": "擋掉違規",
-        "icon": "一面盾牌"
-      },
-      {
-        "label": "產出四版",
-        "icon": "一疊紙張"
-      }
-    ]
-  },
   "source": {
     "repo": "dvcrn/openclaw-skills-marketplace",
     "path": "plugins/52yuanchangxing--ecommerce-customer-service-pro/skills/ecommerce-customer-service-pro",
     "stars": "27"
   },
-  "order": 66
+  "order": 66,
+  "illustration": {
+    "title": "客服回覆的產出流程",
+    "focalObject": "一台正在吐號碼牌的抽號機，前面四張號碼牌各配上一張回覆條",
+    "scene": "一台抽號碼牌機正吐出一張新的號碼牌，紙的前端還連著沒斷。機器前方的桌面上已經排著四張號碼牌，每張都被一個形狀不同的小夾子夾上一張現成的回覆條，條子長短不一。剛吐出來的那張還空著，沒有配到任何回覆條，紙尾微微捲起。"
+  }
 }

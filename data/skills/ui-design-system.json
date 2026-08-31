@@ -65,31 +65,15 @@
     "設計交付",
     "響應式"
   ],
-  "diagram": {
-    "title": "一個主色展開整套規格",
-    "steps": [
-      {
-        "label": "選定主色",
-        "icon": "一支顏色滴管"
-      },
-      {
-        "label": "展開色階",
-        "icon": "一條色票條，格子由淺到深"
-      },
-      {
-        "label": "檢查對比",
-        "icon": "一個放大鏡"
-      },
-      {
-        "label": "交付規格",
-        "icon": "一份帶折角的文件"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "product-team/skills/ui-design-system",
     "stars": "23,256"
   },
-  "order": 48
+  "order": 48,
+  "illustration": {
+    "title": "一個主色展開整套規格",
+    "focalObject": "一塊正剝成十片色階的方磚",
+    "scene": "一塊厚實的深色方磚立在桌面中央，右下角正在剝離，剝下來的部分裂成十片薄片，由深到淺往右排成一道階梯，每片都比前一片再薄一點。階梯下面壓著一支金屬直尺，尺緣的刻痕間距完全相等，剛好對上每一階的落差。方磚左邊另外立著三個高度依序遞減的實心方塊。"
+  }
 }

@@ -64,31 +64,15 @@
     "情緒安撫",
     "負評回覆"
   ],
-  "diagram": {
-    "title": "客訴訊息的降火順序",
-    "steps": [
-      {
-        "label": "貼上訊息",
-        "icon": "一個聊天對話泡泡"
-      },
-      {
-        "label": "判斷怒點",
-        "icon": "一支溫度計"
-      },
-      {
-        "label": "標出禁語",
-        "icon": "一個圓形禁止標誌"
-      },
-      {
-        "label": "產出回覆",
-        "icon": "一架紙飛機"
-      }
-    ]
-  },
   "source": {
     "repo": "composio-community/support-skills",
     "path": "angry-customer-playbook",
     "stars": "13"
   },
-  "order": 65
+  "order": 65,
+  "illustration": {
+    "title": "客訴訊息的降火順序",
+    "focalObject": "一顆長滿尖刺、壓在攤開劇本簿上的訊息泡泡",
+    "scene": "一顆邊緣長滿尖刺的訊息泡泡整個壓在桌上一本攤開的劇本簿上，尖端戳進紙面，把攤開那頁壓出凹陷。簿子上有三行被裁下的紙條整條蓋住壓平，緊鄰的下一行被摺出一個小舌片翹起來，正朝泡泡的方向遞回去。劇本簿旁邊躺著兩顆揉爛的廢紙團。"
+  }
 }

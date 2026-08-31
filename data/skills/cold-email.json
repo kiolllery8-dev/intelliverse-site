@@ -64,31 +64,15 @@
     "回覆率",
     "名單開發"
   ],
-  "diagram": {
-    "title": "陌生開發信寫作流程",
-    "steps": [
-      {
-        "label": "鎖定對象",
-        "icon": "一個標靶"
-      },
-      {
-        "label": "找出契機",
-        "icon": "一份捲起的報紙"
-      },
-      {
-        "label": "四句成信",
-        "icon": "一個信封"
-      },
-      {
-        "label": "排追蹤信",
-        "icon": "一本翻開的日曆"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "marketing-skill/skills/cold-email",
     "stars": "23,407"
   },
-  "order": 76
+  "order": 76,
+  "illustration": {
+    "title": "陌生開發信寫作流程",
+    "focalObject": "一卷正被從門縫底下推進去的細長傳單",
+    "scene": "一扇木門底部與地板之間留著一道細縫。一張寫滿密密麻麻橫線的長紙被捲成細細一卷，正從門縫底下被推進去，只剩捲筒的一端露在門外。門外的地上另外躺著兩卷捲得太粗的同款紙，明顯塞不進那道縫，其中一卷已經鬆開散成一大張攤在門前。"
+  }
 }

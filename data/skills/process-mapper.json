@@ -66,31 +66,15 @@
     "接案公司提案太慢",
     "交期太長怎麼改善"
   ],
-  "diagram": {
-    "title": "找出流程卡住的關卡",
-    "steps": [
-      {
-        "label": "選定流程",
-        "icon": "一支三角旗"
-      },
-      {
-        "label": "拆解關卡",
-        "icon": "一個齒輪"
-      },
-      {
-        "label": "畫泳道圖",
-        "icon": "一張方框加箭頭的流程圖"
-      },
-      {
-        "label": "找出瓶頸",
-        "icon": "一個沙漏"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "business-operations/skills/process-mapper",
     "stars": "23,256"
   },
-  "order": 29
+  "order": 29,
+  "illustration": {
+    "title": "找出流程卡住的關卡",
+    "focalObject": "三個並排窗口中，中間那個擋板只開一條縫、單據堆到滿出來",
+    "scene": "三個並排的木製櫃檯窗口，每個窗口都有一塊可上下推的擋板。左右兩個窗口的擋板全開，檯面上各只放著一兩張單據。中間那個窗口的擋板只拉開一條細縫，檯面上的單據堆得老高、擠向那道縫，最上面幾張已經滑出檯緣往下掉，地上散了一小片。"
+  }
 }

@@ -66,31 +66,15 @@
     "A/B測試怎麼做",
     "結帳流失率高"
   ],
-  "diagram": {
-    "title": "讓看的人真的按下購買",
-    "steps": [
-      {
-        "label": "貼上頁面",
-        "icon": "一台筆記型電腦"
-      },
-      {
-        "label": "打轉換分",
-        "icon": "一個圓形評分儀表"
-      },
-      {
-        "label": "標流失點",
-        "icon": "一個漏斗"
-      },
-      {
-        "label": "先改再測",
-        "icon": "一支扳手"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "marketing-skill/skills/page-cro",
     "stars": "23,256"
   },
-  "order": 23
+  "order": 23,
+  "illustration": {
+    "title": "讓看的人真的按下購買",
+    "focalObject": "側板裂開一道缺口的分段彈珠軌道",
+    "scene": "一座斜著往下的彈珠軌道，分成四段落差。彈珠成群從最上面滾下，滾到第二段與第三段的交界處，軌道側板裂開一道缺口，大半彈珠從缺口飛出去，散落一地。只有兩顆滾完全程，落進軌道末端的小杯子裡。缺口下方地上另擺著一個空的接珠盤，沒接到半顆。"
+  }
 }

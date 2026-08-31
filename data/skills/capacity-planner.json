@@ -65,31 +65,15 @@
     "招募規劃",
     "營運管理"
   ],
-  "diagram": {
-    "title": "客服人力盤點流程",
-    "steps": [
-      {
-        "label": "調出單量",
-        "icon": "一疊紙本訂單"
-      },
-      {
-        "label": "找出尖峰",
-        "icon": "一條有明顯高峰的折線圖"
-      },
-      {
-        "label": "試算人力",
-        "icon": "一台計算機"
-      },
-      {
-        "label": "排定補人",
-        "icon": "一本翻開的月曆"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "business-operations/skills/capacity-planner",
     "stars": "23,256"
   },
-  "order": 51
+  "order": 51,
+  "illustration": {
+    "title": "客服人力盤點流程",
+    "focalObject": "一排掛鉤上只掛了兩副耳罩壓扁的耳機，後面三個掛鉤空著",
+    "scene": "牆上一排五個掛鉤，前面兩個各掛著一副頭戴式客服耳機，兩副的耳罩都被壓得扁塌變形，耳機線在下方纏成一團打結。後面三個掛鉤空空的，鉤子朝上。三個空鉤的正下方，牆面上各留著一塊顏色比周圍深的方形印子，形狀跟耳機一模一樣。"
+  }
 }

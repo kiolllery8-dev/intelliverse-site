@@ -21,7 +21,7 @@ export async function generateMetadata({
 
   const title = `${skill.nameZh}｜${skill.nameEn} AI 技能用法完整說明`;
   const description = `${skill.tagline}｜${skill.summary}`.slice(0, 155);
-  // 有專屬流程圖就拿它當分享縮圖，比通用 OG 圖更能說明這頁在講什麼
+  // 有專屬情境照就拿它當分享縮圖 —— 圖上有標題，貼到 LINE／Threads 時看得懂在講什麼
   const share = skill.image
     ? { url: skill.image, width: 1200, height: 800, alt: skill.imageAlt }
     : { url: '/og-image.png', width: 1200, height: 630 };
@@ -149,7 +149,7 @@ export default async function SkillPage({
                   loading="eager"
                   decoding="async"
                 />
-                <figcaption>{skill.nameZh}的四個操作階段</figcaption>
+                {skill.imageCaption && <figcaption>{skill.imageCaption}</figcaption>}
               </figure>
             )}
 

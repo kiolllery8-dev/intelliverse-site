@@ -66,31 +66,15 @@
     "社群發文頻率建議",
     "節慶行銷行事曆"
   ],
-  "diagram": {
-    "title": "社群發文行事曆規劃",
-    "steps": [
-      {
-        "label": "盤點客群",
-        "icon": "一個人形頭像"
-      },
-      {
-        "label": "貼上數據",
-        "icon": "一張長條圖"
-      },
-      {
-        "label": "排發文表",
-        "icon": "一本翻開的月曆"
-      },
-      {
-        "label": "存成模板",
-        "icon": "一個資料夾"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "marketing-skill/skills/social-media-manager",
     "stars": "23,256"
   },
-  "order": 24
+  "order": 24,
+  "illustration": {
+    "title": "社群發文行事曆規劃",
+    "focalObject": "一本掛在牆上的翻開月曆，格子裡的便利貼正被移到另一排",
+    "scene": "一本翻開的牆掛月曆，四排格子裡貼滿便利貼，同一橫排的便利貼形狀一致，換一排就換成另一種形狀與大小。一隻手捏著一張便利貼，正從第三排的格子移到第一排的空格。月曆下方的檯面上立著三個不同形狀的桌上立牌，其中一個已經被取下，面朝下橫放在旁邊。"
+  }
 }

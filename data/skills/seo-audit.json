@@ -66,31 +66,15 @@
     "網站被Google降權徵兆",
     "SEO健檢工具推薦"
   ],
-  "diagram": {
-    "title": "找出網站排不上的原因",
-    "steps": [
-      {
-        "label": "提供網址",
-        "icon": "一個地球儀"
-      },
-      {
-        "label": "檢查收錄",
-        "icon": "一個放大鏡"
-      },
-      {
-        "label": "逐頁評分",
-        "icon": "一個速度錶"
-      },
-      {
-        "label": "排修正單",
-        "icon": "一張打勾清單"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "marketing-skill/skills/seo-audit",
     "stars": "23,256"
   },
-  "order": 22
+  "order": 22,
+  "illustration": {
+    "title": "找出網站排不上的原因",
+    "focalObject": "一條紙帶做的道路，岔路被三角錐封住，小推車卡在錐子前",
+    "scene": "一條用紙帶做成的道路從畫面深處延伸出來，中途分出兩條岔路。其中一條岔路口橫擺著三個三角錐路障，把整條路完全封死。一台四輪小推車停在路障前，車頭抵著錐子動彈不得，輪子還微微歪著。路邊一塊方向指示牌從底座斷開，整塊倒趴在紙路面上。"
+  }
 }

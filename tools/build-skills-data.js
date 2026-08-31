@@ -3,7 +3,7 @@
  * 讀 data/skills/*.json，產生 app/skills-data.ts。
  * 用法：node tools/build-skills-data.js
  *
- * 每個技能就是一個檔案，內容自足（含來源 repo、流程圖規格、顯示順序），
+ * 每個技能就是一個檔案，內容自足（含來源 repo、插畫主題、顯示順序），
  * 所以新增一個技能＝新增一個 JSON 檔，不用改這支程式。
  *
  * 之前的版本是從 workflow 的 journal.jsonl 萃取，但那些檔案在暫存目錄裡，
@@ -106,7 +106,7 @@ raw.sort((a, b) => (a.order ?? 9999) - (b.order ?? 9999) || a.slug.localeCompare
 const articles = raw.map((r) => {
   const a = twSanitize(r);
   const hasImg = fs.existsSync(path.join(IMG_DIR, `${a.slug}.webp`));
-  const d = a.diagram;
+  const ill = a.illustration;
   return {
     slug: a.slug,
     nameEn: a.nameEn,
@@ -131,9 +131,11 @@ const articles = raw.map((r) => {
       ? `https://github.com/${a.source.repo}/tree/main/${a.source.path}`
       : `https://github.com/${a.source.repo}`,
     image: hasImg ? `/skills-img/${a.slug}.webp` : null,
-    imageAlt: d
-      ? `${d.title}流程圖：${(d.steps || []).map((s) => s.label).join('、')}`
-      : `${a.nameZh}流程示意圖`,
+    // alt 給螢幕閱讀器，caption 給看得見的人 —— 兩個不能一樣，否則會被唸兩次
+    imageAlt: ill
+      ? `${ill.title}：${ill.focalObject}`
+      : `${a.nameZh}情境示意照`,
+    imageCaption: ill ? ill.focalObject : '',
   };
 });
 
@@ -171,6 +173,7 @@ export type Skill = {
   sourceUrl: string;
   image: string | null;
   imageAlt: string;
+  imageCaption: string;
 };
 
 export const SKILL_CATEGORIES = ${JSON.stringify(CATEGORY_ORDER, null, 2)} as const;

@@ -32,6 +32,7 @@ export type Skill = {
   sourceUrl: string;
   image: string | null;
   imageAlt: string;
+  imageCaption: string;
 };
 
 export const SKILL_CATEGORIES = [
@@ -119,7 +120,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/invoice-organizer",
     "image": "/skills-img/invoice-organizer.webp",
-    "imageAlt": "發票收據自動歸檔流程圖：收據匯入、辨識金額、改名歸檔、匯出報表"
+    "imageAlt": "發票收據自動歸檔：一台正在吐標籤的手持標籤機，標籤貼上剛撫平的統一發票紙條",
+    "imageCaption": "一台正在吐標籤的手持標籤機，標籤貼上剛撫平的統一發票紙條"
   },
   {
     "slug": "file-organizer",
@@ -194,7 +196,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/file-organizer",
     "image": "/skills-img/file-organizer.webp",
-    "imageAlt": "下載資料夾自動歸位流程圖：清點檔案、判讀內容、揪出重複、歸位改名"
+    "imageAlt": "下載資料夾自動歸位：一台三層鐵製文件盤，最上層的空白方卡正往下層滑落分流",
+    "imageCaption": "一台三層鐵製文件盤，最上層的空白方卡正往下層滑落分流"
   },
   {
     "slug": "meeting-insights-analyzer",
@@ -268,7 +271,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/meeting-insights-analyzer",
     "image": "/skills-img/meeting-insights-analyzer.webp",
-    "imageAlt": "會議紀錄變成待辦流程圖：讀逐字稿、拆出待辦、指派負責、附上原句"
+    "imageAlt": "會議紀錄變成待辦：一面白板上散亂的磁鐵，其中三顆被移到右緣排成一行",
+    "imageCaption": "一面白板上散亂的磁鐵，其中三顆被移到右緣排成一行"
   },
   {
     "slug": "competitive-ads-extractor",
@@ -341,7 +345,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/competitive-ads-extractor",
     "image": "/skills-img/competitive-ads-extractor.webp",
-    "imageAlt": "對手廣告全面拆解流程圖：鎖定對手、抓下素材、拆解賣點、整理成表"
+    "imageAlt": "對手廣告全面拆解：三座街邊立柱廣告燈箱，海報正被一張張撕下來收進檔案盒",
+    "imageCaption": "三座街邊立柱廣告燈箱，海報正被一張張撕下來收進檔案盒"
   },
   {
     "slug": "content-research-writer",
@@ -415,7 +420,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/content-research-writer",
     "image": "/skills-img/content-research-writer.webp",
-    "imageAlt": "長文從大綱寫到定稿流程圖：先要大綱、查證出處、逐段回饋、定稿檢查"
+    "imageAlt": "長文從大綱寫到定稿：一卷從桌沿垂到地面的長紙稿，三處被夾住牽線連回圖書索引卡",
+    "imageCaption": "一卷從桌沿垂到地面的長紙稿，三處被夾住牽線連回圖書索引卡"
   },
   {
     "slug": "image-enhancer",
@@ -490,7 +496,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/image-enhancer",
     "image": "/skills-img/image-enhancer.webp",
-    "imageAlt": "模糊圖片變清晰放大流程圖：放入圖片、檢視畫質、放大銳化、批次輸出"
+    "imageAlt": "模糊圖片變清晰放大：一張正被拉大的沖印照片",
+    "imageCaption": "一張正被拉大的沖印照片"
   },
   {
     "slug": "lead-research-assistant",
@@ -565,7 +572,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/lead-research-assistant",
     "image": "/skills-img/lead-research-assistant.webp",
-    "imageAlt": "找出該聯絡的潛在客戶流程圖：釐清賣點、篩出名單、評分排序、客製開場"
+    "imageAlt": "找出該聯絡的潛在客戶：一盤雜亂鈕扣中被挑出、並排在絨布上的三顆同款鈕扣",
+    "imageCaption": "一盤雜亂鈕扣中被挑出、並排在絨布上的三顆同款鈕扣"
   },
   {
     "slug": "domain-name-brainstormer",
@@ -639,7 +647,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/domain-name-brainstormer",
     "image": "/skills-img/domain-name-brainstormer.webp",
-    "imageAlt": "品牌命名與網址查詢流程圖：描述品牌、發想名稱、比對網域、排序推薦"
+    "imageAlt": "品牌命名與網址查詢：一面釘滿空白門牌的木牆",
+    "imageCaption": "一面釘滿空白門牌的木牆"
   },
   {
     "slug": "twitter-algorithm-optimizer",
@@ -714,7 +723,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/twitter-algorithm-optimizer",
     "image": "/skills-img/twitter-algorithm-optimizer.webp",
-    "imageAlt": "社群貼文健檢改寫流程圖：貼上草稿、逐句健檢、多版改寫、比對成效"
+    "imageAlt": "社群貼文健檢改寫：一支手機，螢幕上貼文的前三行正被整塊抽離、放大成獨立卡片",
+    "imageCaption": "一支手機，螢幕上貼文的前三行正被整塊抽離、放大成獨立卡片"
   },
   {
     "slug": "raffle-winner-picker",
@@ -787,8 +797,9 @@ export const SKILLS: Skill[] = [
     "sourceRepoName": "awesome-claude-skills",
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/raffle-winner-picker",
-    "image": null,
-    "imageAlt": "留言名單自動開獎流程圖：匯入名單、設定權重、隨機抽出、留存紀錄"
+    "image": "/skills-img/raffle-winner-picker.webp",
+    "imageAlt": "留言名單自動開獎：一個翻倒傾出滿桌紙籤的摸彩箱",
+    "imageCaption": "一個翻倒傾出滿桌紙籤的摸彩箱"
   },
   {
     "slug": "tailored-resume-generator",
@@ -862,7 +873,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/tailored-resume-generator",
     "image": "/skills-img/tailored-resume-generator.webp",
-    "imageAlt": "依需求量身寫提案流程圖：貼上需求、盤點案例、落差分析、輸出提案"
+    "imageAlt": "依需求量身寫提案：環扣被扳開的活頁作品集，一張內頁正被舉在半空準備插回最前面",
+    "imageCaption": "環扣被扳開的活頁作品集，一張內頁正被舉在半空準備插回最前面"
   },
   {
     "slug": "video-downloader",
@@ -936,7 +948,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/video-downloader",
     "image": "/skills-img/video-downloader.webp",
-    "imageAlt": "長影片變短影音貼文流程圖：貼上網址、核對片名、挑選畫質、抽音轉稿"
+    "imageAlt": "長影片變短影音貼文：一塊被從牆上螢幕取下、可以捧在手上的方形畫面板",
+    "imageCaption": "一塊被從牆上螢幕取下、可以捧在手上的方形畫面板"
   },
   {
     "slug": "changelog-generator",
@@ -1010,7 +1023,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/changelog-generator",
     "image": "/skills-img/changelog-generator.webp",
-    "imageAlt": "開發紀錄變客戶月報流程圖：抓取改動、分類歸檔、白話改寫、校稿寄出"
+    "imageAlt": "開發紀錄變客戶月報：一長條印表機連續報表紙，正被撕成三疊並折起束上紙腰帶",
+    "imageCaption": "一長條印表機連續報表紙，正被撕成三疊並折起束上紙腰帶"
   },
   {
     "slug": "shopify-expert",
@@ -1085,7 +1099,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "10,747",
     "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/shopify-expert",
     "image": "/skills-img/shopify-expert.webp",
-    "imageAlt": "電商版型與功能客製流程圖：盤點需求、提供店址、改寫版型、檢查上線"
+    "imageAlt": "電商版型與功能客製：一台收銀機側面的空插槽，正被插進一片新的按鍵面板",
+    "imageCaption": "一台收銀機側面的空插槽，正被插進一片新的按鍵面板"
   },
   {
     "slug": "wordpress-pro",
@@ -1160,7 +1175,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "10,747",
     "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/wordpress-pro",
     "image": "/skills-img/wordpress-pro.webp",
-    "imageAlt": "網站維運與加值開發流程圖：描述症狀、揪出元兇、備份測試、修復上線"
+    "imageAlt": "網站維運與加值開發：一條插滿插頭的排插，其中一個焦黑的插頭正被拔出來",
+    "imageCaption": "一條插滿插頭的排插，其中一個焦黑的插頭正被拔出來"
   },
   {
     "slug": "prompt-engineer",
@@ -1234,7 +1250,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "10,747",
     "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/prompt-engineer",
     "image": "/skills-img/prompt-engineer.webp",
-    "imageAlt": "寫好指令讓回答不跑掉流程圖：定義標準、附上範例、實跑測試、存成模板"
+    "imageAlt": "寫好指令讓回答不跑掉：一塊木製紅龜粿印模，與它壓出的四個一模一樣的粿",
+    "imageCaption": "一塊木製紅龜粿印模，與它壓出的四個一模一樣的粿"
   },
   {
     "slug": "security-reviewer",
@@ -1309,7 +1326,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "10,747",
     "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/security-reviewer",
     "image": "/skills-img/security-reviewer.webp",
-    "imageAlt": "揪出網站的資安漏洞流程圖：指定專案、掃描漏洞、風險分級、安全報告"
+    "imageAlt": "揪出網站的資安漏洞：一只掛著大鎖的木箱，鑰匙就綁在鎖環旁邊，背板破了一塊",
+    "imageCaption": "一只掛著大鎖的木箱，鑰匙就綁在鎖環旁邊，背板破了一塊"
   },
   {
     "slug": "dev-browser",
@@ -1383,7 +1401,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "6,479",
     "sourceUrl": "https://github.com/SawyerHood/dev-browser/tree/main/skills/dev-browser",
     "image": "/skills-img/dev-browser.webp",
-    "imageAlt": "讓電腦幫你抄後台數字流程圖：安裝一次、選瀏覽器、口述步驟、匯出表格"
+    "imageAlt": "讓電腦幫你抄後台數字：一支無人操作、自己滑動的滑鼠",
+    "imageCaption": "一支無人操作、自己滑動的滑鼠"
   },
   {
     "slug": "local-seo-manager",
@@ -1458,7 +1477,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/local-seo-manager",
     "image": "/skills-img/local-seo-manager.webp",
-    "imageAlt": "讓客人在地圖上找到你流程圖：填商家檔、逐項健檢、寫地區頁、回覆評論"
+    "imageAlt": "讓客人在地圖上找到你：一根插在紙本街道地圖上的圖釘，釘身垂掛三塊歪斜的店家招牌",
+    "imageCaption": "一根插在紙本街道地圖上的圖釘，釘身垂掛三塊歪斜的店家招牌"
   },
   {
     "slug": "paid-ads",
@@ -1533,7 +1553,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/paid-ads",
     "image": "/skills-img/paid-ads.webp",
-    "imageAlt": "抓出賠錢的廣告組流程圖：填客單價、檢查追蹤、產廣告組、揪賠錢組"
+    "imageAlt": "抓出賠錢的廣告組：投幣口塞滿代幣、出口只滾出兩顆扭蛋的扭蛋機",
+    "imageCaption": "投幣口塞滿代幣、出口只滾出兩顆扭蛋的扭蛋機"
   },
   {
     "slug": "copywriting",
@@ -1608,7 +1629,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/copywriting",
     "image": "/skills-img/copywriting.webp",
-    "imageAlt": "把官網文案改成人話流程圖：貼上舊頁、挑標題稿、重排段落、改按鈕字"
+    "imageAlt": "把官網文案改成人話：一個網頁版面外框，內部段落色塊正在重排、底部按鈕正被換成大的",
+    "imageCaption": "一個網頁版面外框，內部段落色塊正在重排、底部按鈕正被換成大的"
   },
   {
     "slug": "pricing-strategy",
@@ -1683,7 +1705,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/pricing-strategy",
     "image": "/skills-img/pricing-strategy.webp",
-    "imageAlt": "訂出客人願意付的價格流程圖：攤開現價、定收費制、排三段價、試算漲價"
+    "imageAlt": "訂出客人願意付的價格：橫桿上吊著三張大小遞增的紙吊牌，中間那張正在換牌",
+    "imageCaption": "橫桿上吊著三張大小遞增的紙吊牌，中間那張正在換牌"
   },
   {
     "slug": "seo-audit",
@@ -1758,7 +1781,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/seo-audit",
     "image": "/skills-img/seo-audit.webp",
-    "imageAlt": "找出網站排不上的原因流程圖：提供網址、檢查收錄、逐頁評分、排修正單"
+    "imageAlt": "找出網站排不上的原因：一條紙帶做的道路，岔路被三角錐封住，小推車卡在錐子前",
+    "imageCaption": "一條紙帶做的道路，岔路被三角錐封住，小推車卡在錐子前"
   },
   {
     "slug": "page-cro",
@@ -1833,7 +1857,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/page-cro",
     "image": "/skills-img/page-cro.webp",
-    "imageAlt": "讓看的人真的按下購買流程圖：貼上頁面、打轉換分、標流失點、先改再測"
+    "imageAlt": "讓看的人真的按下購買：側板裂開一道缺口的分段彈珠軌道",
+    "imageCaption": "側板裂開一道缺口的分段彈珠軌道"
   },
   {
     "slug": "social-media-manager",
@@ -1908,7 +1933,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/social-media-manager",
     "image": "/skills-img/social-media-manager.webp",
-    "imageAlt": "社群發文行事曆規劃流程圖：盤點客群、貼上數據、排發文表、存成模板"
+    "imageAlt": "社群發文行事曆規劃：一本掛在牆上的翻開月曆，格子裡的便利貼正被移到另一排",
+    "imageCaption": "一本掛在牆上的翻開月曆，格子裡的便利貼正被移到另一排"
   },
   {
     "slug": "email-sequence",
@@ -1983,7 +2009,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/email-sequence",
     "image": "/skills-img/email-sequence.webp",
-    "imageAlt": "自動信件流程設計流程圖：挑選信種、提供語氣、產出信稿、設定觸發"
+    "imageAlt": "自動信件流程設計：用木夾依間距夾在晾衣繩上的五個信封",
+    "imageCaption": "用木夾依間距夾在晾衣繩上的五個信封"
   },
   {
     "slug": "churn-prevention",
@@ -2058,7 +2085,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/churn-prevention",
     "image": "/skills-img/churn-prevention.webp",
-    "imageAlt": "留住要退訂的客人流程圖：說明方案、設計問卷、配對挽留、排催款信"
+    "imageAlt": "留住要退訂的客人：一張缺角、被刷卡機吐出一半的信用卡",
+    "imageCaption": "一張缺角、被刷卡機吐出一半的信用卡"
   },
   {
     "slug": "ad-creative",
@@ -2133,7 +2161,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/ad-creative",
     "image": "/skills-img/ad-creative.webp",
-    "imageAlt": "廣告文案量產把關流程圖：說明商品、指定平台、量產標題、檢查字數"
+    "imageAlt": "廣告文案量產把關：一台鑄鐵裁紙機的刀臂，正切齊一整批細長紙條",
+    "imageCaption": "一台鑄鐵裁紙機的刀臂，正切齊一整批細長紙條"
   },
   {
     "slug": "schema-markup",
@@ -2208,7 +2237,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/schema-markup",
     "image": "/skills-img/schema-markup.webp",
-    "imageAlt": "幫網站加上星等標記流程圖：提供網址、掃描頁面、貼上標記、官方驗證"
+    "imageAlt": "幫網站加上星等標記：一張被從背面頂出星形凸起的細長紙卡",
+    "imageCaption": "一張被從背面頂出星形凸起的細長紙卡"
   },
   {
     "slug": "process-mapper",
@@ -2283,7 +2313,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/process-mapper",
     "image": "/skills-img/process-mapper.webp",
-    "imageAlt": "找出流程卡住的關卡流程圖：選定流程、拆解關卡、畫泳道圖、找出瓶頸"
+    "imageAlt": "找出流程卡住的關卡：三個並排窗口中，中間那個擋板只開一條縫、單據堆到滿出來",
+    "imageCaption": "三個並排窗口中，中間那個擋板只開一條縫、單據堆到滿出來"
   },
   {
     "slug": "vendor-management",
@@ -2358,7 +2389,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/vendor-management",
     "image": "/skills-img/vendor-management.webp",
-    "imageAlt": "廠商與訂閱服務體檢流程圖：盤點廠商、記錄表現、逐家打分、決定續約"
+    "imageAlt": "廠商與訂閱服務體檢：三捲被拉出來比較的封箱膠帶，只有中間那捲貼得平整",
+    "imageCaption": "三捲被拉出來比較的封箱膠帶，只有中間那捲貼得平整"
   },
   {
     "slug": "financial-analyst",
@@ -2433,7 +2465,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/finance/skills/financial-analyst",
     "image": "/skills-img/financial-analyst.webp",
-    "imageAlt": "財務健檢與現金流預測流程圖：準備報表、試算比率、預估現金、每月對帳"
+    "imageAlt": "財務健檢與現金流預測：被四個長尾夾各咬走一角的鈔票",
+    "imageCaption": "被四個長尾夾各咬走一角的鈔票"
   },
   {
     "slug": "transcript",
@@ -2505,7 +2538,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "438",
     "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/transcript",
     "image": "/skills-img/transcript.webp",
-    "imageAlt": "影片變成文字素材流程圖：貼上網址、抓出字幕、整理重點、產出草稿"
+    "imageAlt": "影片變成文字素材：一捲錄影卡帶，抽出的磁帶在半途變成一條細長紙條",
+    "imageCaption": "一捲錄影卡帶，抽出的磁帶在半途變成一條細長紙條"
   },
   {
     "slug": "youtube-search",
@@ -2577,7 +2611,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "438",
     "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/youtube-search",
     "image": "/skills-img/youtube-search.webp",
-    "imageAlt": "關鍵字撈同業影片流程圖：設定題目、撈出清單、排序篩選、挑片細看"
+    "imageAlt": "關鍵字撈同業影片：一個立滿相同卡片的長木槽，右端空隙正被插進一張較高較窄的卡片",
+    "imageCaption": "一個立滿相同卡片的長木槽，右端空隙正被插進一張較高較窄的卡片"
   },
   {
     "slug": "youtube-channels",
@@ -2649,7 +2684,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "438",
     "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/youtube-channels",
     "image": "/skills-img/youtube-channels.webp",
-    "imageAlt": "同業頻道追蹤流程流程圖：指定頻道、抓最新片、比對熱度、排進選題"
+    "imageAlt": "同業頻道追蹤流程：牆上三個並排的鐵製信箱，中間那個被塞爆頂開門",
+    "imageCaption": "牆上三個並排的鐵製信箱，中間那個被塞爆頂開門"
   },
   {
     "slug": "youtube-playlist",
@@ -2722,7 +2758,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "438",
     "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/youtube-playlist",
     "image": "/skills-img/youtube-playlist.webp",
-    "imageAlt": "整串影片變文字素材流程圖：貼上網址、列出片單、抓回內容、整理素材"
+    "imageAlt": "整串影片變文字素材：一本攤開的碟片收納冊，被抽出的三張碟片正散成紙頁",
+    "imageCaption": "一本攤開的碟片收納冊，被抽出的三張碟片正散成紙頁"
   },
   {
     "slug": "brand-guidelines",
@@ -2795,7 +2832,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/brand-guidelines",
     "image": "/skills-img/brand-guidelines.webp",
-    "imageAlt": "品牌視覺統一流程流程圖：盤點素材、訂出色票、套用產出、留存規範"
+    "imageAlt": "品牌視覺統一流程：一支攤開成半圓的色卡扇，選定的一片被夾住、顏色染上空白紙樣",
+    "imageCaption": "一支攤開成半圓的色卡扇，選定的一片被夾住、顏色染上空白紙樣"
   },
   {
     "slug": "canvas-design",
@@ -2868,7 +2906,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/canvas-design",
     "image": "/skills-img/canvas-design.webp",
-    "imageAlt": "從一句話到一張海報流程圖：描述氣氛、訂出概念、畫成主圖、二次精修"
+    "imageAlt": "從一句話到一張海報：一張從紙筒半捲開的大尺寸海報",
+    "imageCaption": "一張從紙筒半捲開的大尺寸海報"
   },
   {
     "slug": "webapp-testing",
@@ -2941,7 +2980,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "70,983",
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/webapp-testing",
     "image": "/skills-img/webapp-testing.webp",
-    "imageAlt": "網站操作自動驗收流程流程圖：描述流程、開啟網站、逐步操作、截圖回報"
+    "imageAlt": "網站操作自動驗收流程：一段只有四階的木樓梯，第四階踏板裂開卡住一隻鞋",
+    "imageCaption": "一段只有四階的木樓梯，第四階踏板裂開卡住一隻鞋"
   },
   {
     "slug": "brainstorming",
@@ -3014,7 +3054,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "262,891",
     "sourceUrl": "https://github.com/obra/superpowers/tree/main/skills/brainstorming",
     "image": "/skills-img/brainstorming.webp",
-    "imageAlt": "模糊想法變成企劃書流程圖：盤點現況、逐題追問、比較做法、定稿存檔"
+    "imageAlt": "模糊想法變成企劃書：一列排隊等著被作答的二選一小卡",
+    "imageCaption": "一列排隊等著被作答的二選一小卡"
   },
   {
     "slug": "writing-plans",
@@ -3087,7 +3128,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "262,891",
     "sourceUrl": "https://github.com/obra/superpowers/tree/main/skills/writing-plans",
     "image": "/skills-img/writing-plans.webp",
-    "imageAlt": "企劃拆成一張執行單流程圖：盤點範圍、切小步驟、寫明驗收、回頭補漏"
+    "imageAlt": "企劃拆成一張執行單：下半截被剪成可撕紙條的執行單與板夾",
+    "imageCaption": "下半截被剪成可撕紙條的執行單與板夾"
   },
   {
     "slug": "planning-and-task-breakdown",
@@ -3160,7 +3202,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "80,825",
     "sourceUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/planning-and-task-breakdown",
     "image": "/skills-img/planning-and-task-breakdown.webp",
-    "imageAlt": "大專案拆成小任務流程圖：攤開全貌、找出卡關、切成小塊、插檢查點"
+    "imageAlt": "大專案拆成小任務：從纏死的麻繩結團裡抽出來、被打結分成四節的一條繩子",
+    "imageCaption": "從纏死的麻繩結團裡抽出來、被打結分成四節的一條繩子"
   },
   {
     "slug": "web-design-guidelines",
@@ -3233,7 +3276,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "29,584",
     "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
     "image": "/skills-img/web-design-guidelines.webp",
-    "imageAlt": "網頁介面體檢流程流程圖：更新準則、掃過頁面、逐條比對、標出問題"
+    "imageAlt": "網頁介面體檢流程：一支被手指蓋住按鈕的直立手機",
+    "imageCaption": "一支被手指蓋住按鈕的直立手機"
   },
   {
     "slug": "writing-guidelines",
@@ -3306,7 +3350,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "29,584",
     "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/writing-guidelines",
     "image": "/skills-img/writing-guidelines.webp",
-    "imageAlt": "照規矩逐句檢查文案流程圖：訂好規則、貼上稿子、逐句比對、標出問題"
+    "imageAlt": "照規矩逐句檢查文案：一疊稿頁，最上面那張的字行上被逐行蓋上小方印",
+    "imageCaption": "一疊稿頁，最上面那張的字行上被逐行蓋上小方印"
   },
   {
     "slug": "contract-and-proposal-writer",
@@ -3379,7 +3424,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-growth/skills/contract-and-proposal-writer",
     "image": "/skills-img/contract-and-proposal-writer.webp",
-    "imageAlt": "報價到簽約的流程流程圖：說清條件、選對文件、補齊條款、排版送簽"
+    "imageAlt": "報價到簽約的流程：一本正被撕開的三聯式估價單與旁邊沾著印泥的木頭印章",
+    "imageCaption": "一本正被撕開的三聯式估價單與旁邊沾著印泥的木頭印章"
   },
   {
     "slug": "customer-success-manager",
@@ -3452,7 +3498,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-growth/skills/customer-success-manager",
     "image": "/skills-img/customer-success-manager.webp",
-    "imageAlt": "老客戶健檢的流程流程圖：整理名單、算出分數、標出風險、排定聯繫"
+    "imageAlt": "老客戶健檢的流程：一個名片盒與正從盒口滑出去的一張名片",
+    "imageCaption": "一個名片盒與正從盒口滑出去的一張名片"
   },
   {
     "slug": "rfp-responder",
@@ -3525,7 +3572,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/rfp-responder",
     "image": "/skills-img/rfp-responder.webp",
-    "imageAlt": "投標前的判斷流程流程圖：拆解需求、標記門檻、比對實績、投或不投"
+    "imageAlt": "投標前的判斷流程：一本書口貼滿索引標籤的厚標書，其中三張標籤被撕下並各配一張回覆卡",
+    "imageCaption": "一本書口貼滿索引標籤的厚標書，其中三張標籤被撕下並各配一張回覆卡"
   },
   {
     "slug": "competitive-teardown",
@@ -3599,7 +3647,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/competitive-teardown",
     "image": "/skills-img/competitive-teardown.webp",
-    "imageAlt": "拆解對手寫成報告流程圖：鎖定對手、蒐集情報、逐項打分、產出對策"
+    "imageAlt": "拆解對手寫成報告：三個被拆開攤平成十字展開圖的商品紙盒，各繫著一張吊牌價標",
+    "imageCaption": "三個被拆開攤平成十字展開圖的商品紙盒，各繫著一張吊牌價標"
   },
   {
     "slug": "ui-design-system",
@@ -3673,7 +3722,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/ui-design-system",
     "image": "/skills-img/ui-design-system.webp",
-    "imageAlt": "一個主色展開整套規格流程圖：選定主色、展開色階、檢查對比、交付規格"
+    "imageAlt": "一個主色展開整套規格：一塊正剝成十片色階的方磚",
+    "imageCaption": "一塊正剝成十片色階的方磚"
   },
   {
     "slug": "landing-page-generator",
@@ -3746,7 +3796,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/landing-page-generator",
     "image": "/skills-img/landing-page-generator.webp",
-    "imageAlt": "一頁式銷售頁產出流程流程圖：給齊資料、選定說法、寫出文案、排成整頁"
+    "imageAlt": "一頁式銷售頁產出流程：一張摺成七摺、每摺各壓出一個空白凹槽的立起長紙",
+    "imageCaption": "一張摺成七摺、每摺各壓出一個空白凹槽的立起長紙"
   },
   {
     "slug": "experiment-designer",
@@ -3820,7 +3871,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/experiment-designer",
     "image": "/skills-img/experiment-designer.webp",
-    "imageAlt": "商品頁改版驗證流程流程圖：寫下假設、選定指標、算出天數、讀懂結果"
+    "imageAlt": "商品頁改版驗證流程：指針被插銷卡住、兩盤各放一張主圖卡的天秤",
+    "imageCaption": "指針被插銷卡住、兩盤各放一張主圖卡的天秤"
   },
   {
     "slug": "capacity-planner",
@@ -3894,7 +3946,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,256",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/capacity-planner",
     "image": "/skills-img/capacity-planner.webp",
-    "imageAlt": "客服人力盤點流程流程圖：調出單量、找出尖峰、試算人力、排定補人"
+    "imageAlt": "客服人力盤點流程：一排掛鉤上只掛了兩副耳罩壓扁的耳機，後面三個掛鉤空著",
+    "imageCaption": "一排掛鉤上只掛了兩副耳罩壓扁的耳機，後面三個掛鉤空著"
   },
   {
     "slug": "youtube-shorts-generator",
@@ -3968,7 +4021,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "4,415",
     "sourceUrl": "https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator/tree/main/.claude/skills/youtube-shorts-generator",
     "image": "/skills-img/youtube-shorts-generator.webp",
-    "imageAlt": "長影片變短影音流程流程圖：貼上網址、轉成逐字、逐段評分、裁成直式"
+    "imageAlt": "長影片變短影音流程：一條橫躺的電影膠卷，三格被剪下轉成直立並被魚鉤勾住",
+    "imageCaption": "一條橫躺的電影膠卷，三格被剪下轉成直立並被魚鉤勾住"
   },
   {
     "slug": "ai-clipping",
@@ -4042,7 +4096,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "3,930",
     "sourceUrl": "https://github.com/SamurAIGPT/Generative-Media-Skills/tree/main/library/edit/ai-clipping",
     "image": "/skills-img/ai-clipping.webp",
-    "imageAlt": "雲端切片產出流程流程圖：上傳影片、雲端分析、人臉追焦、下載成品"
+    "imageAlt": "雲端切片產出流程：一台蓋著薄布、闔上不動的筆記型電腦，旁邊立成一排的四支直式螢幕手機",
+    "imageCaption": "一台蓋著薄布、闔上不動的筆記型電腦，旁邊立成一排的四支直式螢幕手機"
   },
   {
     "slug": "clipify",
@@ -4116,7 +4171,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "491",
     "sourceUrl": "https://github.com/louisedesadeleer/clipify",
     "image": "/skills-img/clipify.webp",
-    "imageAlt": "本機剪片上字流程流程圖：挑出笑點、剪成片段、切換鏡位、燒上字幕"
+    "imageAlt": "本機剪片上字流程：一個被橫線分成上下兩格、下緣正在逐顆貼上小方塊的直立畫框",
+    "imageCaption": "一個被橫線分成上下兩格、下緣正在逐顆貼上小方塊的直立畫框"
   },
   {
     "slug": "legal-compare",
@@ -4189,7 +4245,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "1,596",
     "sourceUrl": "https://github.com/zubair-trabzada/ai-legal-claude/tree/main/skills/legal-compare",
     "image": "/skills-img/legal-compare.webp",
-    "imageAlt": "合約新舊版比對流程流程圖：兩版並排、逐條對照、標出風險、談判清單"
+    "imageAlt": "合約新舊版比對流程：兩份疊在一起對光透視的騎馬釘合約，中段露出一個缺口",
+    "imageCaption": "兩份疊在一起對光透視的騎馬釘合約，中段露出一個缺口"
   },
   {
     "slug": "ai-meeting-notes",
@@ -4262,7 +4319,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "2,110",
     "sourceUrl": "https://github.com/LeoYeAI/openclaw-master-skills/tree/main/skills/ai-meeting-notes",
     "image": "/skills-img/ai-meeting-notes.webp",
-    "imageAlt": "會議筆記變待辦清單流程圖：貼上筆記、整理摘要、抓出待辦、加入追蹤"
+    "imageAlt": "會議筆記變待辦清單：一本攤開的線圈筆記本，左頁纏繞的筆跡線正被抽直成右頁的條列",
+    "imageCaption": "一本攤開的線圈筆記本，左頁纏繞的筆跡線正被抽直成右頁的條列"
   },
   {
     "slug": "slide-maker",
@@ -4335,7 +4393,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "329",
     "sourceUrl": "https://github.com/addsumtech/slides_maker/tree/main/skills/slide-maker",
     "image": "/skills-img/slide-maker.webp",
-    "imageAlt": "簡報從問答到交檔流程圖：先問四題、確認大綱、排版出檔、挑錯交件"
+    "imageAlt": "簡報從問答到交檔：畫架上一個空的橫幅矩形框，便利貼正被抬起放大貼進去",
+    "imageCaption": "畫架上一個空的橫幅矩形框，便利貼正被抬起放大貼進去"
   },
   {
     "slug": "mineru",
@@ -4408,7 +4467,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "87",
     "sourceUrl": "https://github.com/Nebutra/MinerU-Skill",
     "image": "/skills-img/mineru.webp",
-    "imageAlt": "掃描檔變成可編輯文字流程圖：備妥檔案、版面辨識、轉出文字、接續改寫"
+    "imageAlt": "掃描檔變成可編輯文字：一台滾筒進紙口，一端吃進皺紙、另一端吐出可搬動的活字鉛字塊",
+    "imageCaption": "一台滾筒進紙口，一端吃進皺紙、另一端吐出可搬動的活字鉛字塊"
   },
   {
     "slug": "financial-parser",
@@ -4482,7 +4542,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "230",
     "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/financial-parser",
     "image": "/skills-img/financial-parser.webp",
-    "imageAlt": "發票帳單整理流程流程圖：整批上傳、逐筆讀取、分類統計、匯出明細"
+    "imageAlt": "發票帳單整理流程：一個分成六格、紙張插出高低起伏的木製票據盒",
+    "imageCaption": "一個分成六格、紙張插出高低起伏的木製票據盒"
   },
   {
     "slug": "product-description-generator",
@@ -4555,7 +4616,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "513",
     "sourceUrl": "https://github.com/nexscope-ai/eCommerce-Skills/tree/main/product-description-generator",
     "image": "/skills-img/product-description-generator.webp",
-    "imageAlt": "競品字詞比對改寫流程圖：貼上競品、抓出字詞、比對缺口、限字改寫"
+    "imageAlt": "競品字詞比對改寫：一張穿線補孔的商品卡紙與正要穿過空孔的針",
+    "imageCaption": "一張穿線補孔的商品卡紙與正要穿過空孔的針"
   },
   {
     "slug": "price-optimization-tool",
@@ -4628,7 +4690,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "513",
     "sourceUrl": "https://github.com/nexscope-ai/eCommerce-Skills/tree/main/price-optimization-tool",
     "image": "/skills-img/price-optimization-tool.webp",
-    "imageAlt": "從成本算到定價流程圖：攤開成本、算出底價、排出價位、小量測價"
+    "imageAlt": "從成本算到定價：被推成四落、只剩最矮一落緊貼刻度尺的硬幣",
+    "imageCaption": "被推成四落、只剩最矮一落緊貼刻度尺的硬幣"
   },
   {
     "slug": "inventory-reorder-planner",
@@ -4701,7 +4764,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "230",
     "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/inventory-reorder-planner",
     "image": "/skills-img/inventory-reorder-planner.webp",
-    "imageAlt": "從銷量算出補貨清單流程圖：匯出銷量、扣掉斷貨、算補貨點、列採購單"
+    "imageAlt": "從銷量算出補貨清單：一排被水位線橫貫、其中一格明顯低於線的貨架",
+    "imageCaption": "一排被水位線橫貫、其中一格明顯低於線的貨架"
   },
   {
     "slug": "ecom-rfm-analysis",
@@ -4775,7 +4839,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "222",
     "sourceUrl": "https://github.com/asgard-ai-platform/skills/tree/main/ecom-rfm-analysis",
     "image": "/skills-img/ecom-rfm-analysis.webp",
-    "imageAlt": "從訂單分出客戶等級流程圖：匯出訂單、三項打分、歸群貼標、分眾發訊"
+    "imageAlt": "從訂單分出客戶等級：依蓋章多寡被分成三落的集點卡",
+    "imageCaption": "依蓋章多寡被分成三落的集點卡"
   },
   {
     "slug": "tw-einvoice-guide",
@@ -4849,7 +4914,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "222",
     "sourceUrl": "https://github.com/asgard-ai-platform/skills/tree/main/tw-einvoice-guide",
     "image": "/skills-img/tw-einvoice-guide.webp",
-    "imageAlt": "電子發票從開立到對帳流程圖：挑對管道、申請字軌、上線開票、按期對帳"
+    "imageAlt": "電子發票從開立到對帳：一條從見底紙卷吐出、中段摺起打斜槓的統一發票紙條",
+    "imageCaption": "一條從見底紙卷吐出、中段摺起打斜槓的統一發票紙條"
   },
   {
     "slug": "angry-customer-playbook",
@@ -4922,7 +4988,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "13",
     "sourceUrl": "https://github.com/composio-community/support-skills/tree/main/angry-customer-playbook",
     "image": "/skills-img/angry-customer-playbook.webp",
-    "imageAlt": "客訴訊息的降火順序流程圖：貼上訊息、判斷怒點、標出禁語、產出回覆"
+    "imageAlt": "客訴訊息的降火順序：一顆長滿尖刺、壓在攤開劇本簿上的訊息泡泡",
+    "imageCaption": "一顆長滿尖刺、壓在攤開劇本簿上的訊息泡泡"
   },
   {
     "slug": "ecommerce-customer-service-pro",
@@ -4995,7 +5062,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "27",
     "sourceUrl": "https://github.com/dvcrn/openclaw-skills-marketplace/tree/main/plugins/52yuanchangxing--ecommerce-customer-service-pro/skills/ecommerce-customer-service-pro",
     "image": "/skills-img/ecommerce-customer-service-pro.webp",
-    "imageAlt": "客服回覆的產出流程流程圖：選定類別、判斷場景、擋掉違規、產出四版"
+    "imageAlt": "客服回覆的產出流程：一台正在吐號碼牌的抽號機，前面四張號碼牌各配上一張回覆條",
+    "imageCaption": "一台正在吐號碼牌的抽號機，前面四張號碼牌各配上一張回覆條"
   },
   {
     "slug": "tw-tax-basics",
@@ -5068,7 +5136,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "222",
     "sourceUrl": "https://github.com/asgard-ai-platform/skills/tree/main/tw-tax-basics",
     "image": "/skills-img/tw-tax-basics.webp",
-    "imageAlt": "報稅日期的盤點方式流程圖：講清現況、列出稅目、排出日期、設好提醒"
+    "imageAlt": "報稅日期的盤點方式：四張被撕下存根聯的橫式繳款單與串著存根的鐵製收據插",
+    "imageCaption": "四張被撕下存根聯的橫式繳款單與串著存根的鐵製收據插"
   },
   {
     "slug": "cash-flow-forecast",
@@ -5141,7 +5210,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "1,237",
     "sourceUrl": "https://github.com/mohitagw15856/pm-claude-skills/tree/main/skills/cash-flow-forecast",
     "image": "/skills-img/cash-flow-forecast.webp",
-    "imageAlt": "逐週現金滾動表流程圖：盤點餘額、填入入帳、排入支出、找出低點"
+    "imageAlt": "逐週現金滾動表：一條十三塊木板的棧橋，第八塊塌下去一截，旁邊躺著備用短柱",
+    "imageCaption": "一條十三塊木板的棧橋，第八塊塌下去一截，旁邊躺著備用短柱"
   },
   {
     "slug": "cowork-invoice-chaser",
@@ -5214,7 +5284,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "230",
     "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/cowork-invoice-chaser",
     "image": "/skills-img/cowork-invoice-chaser.webp",
-    "imageAlt": "應收帳款追款流程流程圖：請款對帳、排出帳齡、標出疑義、草稿待審"
+    "imageAlt": "應收帳款追款流程：用長尾夾兩兩配對的請款單與銀行入帳條",
+    "imageCaption": "用長尾夾兩兩配對的請款單與銀行入帳條"
   },
   {
     "slug": "job-profitability-analyzer",
@@ -5287,7 +5358,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "230",
     "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/job-profitability-analyzer",
     "image": "/skills-img/job-profitability-analyzer.webp",
-    "imageAlt": "案件獲利拆解流程流程圖：收支歸案、工時成本、攤提管銷、客戶排名"
+    "imageAlt": "案件獲利拆解流程：一張被打洞打到破出邊緣的打卡卡，中央壓著一枚很小的硬幣",
+    "imageCaption": "一張被打洞打到破出邊緣的打卡卡，中央壓著一枚很小的硬幣"
   },
   {
     "slug": "html-ppt",
@@ -5360,7 +5432,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "7,465",
     "sourceUrl": "https://github.com/lewislulu/html-ppt-skill",
     "image": "/skills-img/html-ppt.webp",
-    "imageAlt": "網頁簡報加逐字稿流程圖：交代場合、挑選風格、寫入講稿、開窗彩排"
+    "imageAlt": "網頁簡報加逐字稿：一面投影布幕與幕下一台掀開的筆電",
+    "imageCaption": "一面投影布幕與幕下一台掀開的筆電"
   },
   {
     "slug": "social-card-maker",
@@ -5433,7 +5506,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "5,659",
     "sourceUrl": "https://github.com/op7418/guizang-social-card-skill",
     "image": "/skills-img/social-card-maker.webp",
-    "imageAlt": "一篇文章變成整套圖卡流程圖：備齊素材、拆頁確認、選版排圖、出圖檢查"
+    "imageAlt": "一篇文章變成整套圖卡：六張斜疊展開的直式卡片，第一張大一號，正被貼上撕下的紙段",
+    "imageCaption": "六張斜疊展開的直式卡片，第一張大一號，正被貼上撕下的紙段"
   },
   {
     "slug": "power-design",
@@ -5506,7 +5580,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "573",
     "sourceUrl": "https://github.com/ItsssssJack/power-design",
     "image": "/skills-img/power-design.webp",
-    "imageAlt": "品牌色變成簡報與網頁流程圖：決定用途、抓品牌色、套用規範、開檔微調"
+    "imageAlt": "品牌色變成簡報與網頁：一塊正被拆解的立體招牌，面板與圓徽被裝到簡報卡與版面條上",
+    "imageCaption": "一塊正被拆解的立體招牌，面板與圓徽被裝到簡報卡與版面條上"
   },
   {
     "slug": "image-prompt-advisor",
@@ -5579,7 +5654,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "1,787",
     "sourceUrl": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
     "image": "/skills-img/image-prompt-advisor.webp",
-    "imageAlt": "從範本挑到可用指令流程圖：說清用途、搜庫比對、看圖挑組、改寫指令"
+    "imageAlt": "從範本挑到可用指令：三片被疊在一起、中段被換掉一小塊的彩色玻璃片",
+    "imageCaption": "三片被疊在一起、中段被換掉一小塊的彩色玻璃片"
   },
   {
     "slug": "last30days",
@@ -5653,7 +5729,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "54,803",
     "sourceUrl": "https://github.com/mvanhorn/last30days-skill/tree/main/skills/last30days",
     "image": "/skills-img/last30days.webp",
-    "imageAlt": "最新網路討論盤點流程圖：丟出主題、只撈近月、依讚排序、原話佐證"
+    "imageAlt": "最新網路討論盤點：由撕下的日曆頁圍成的圓圈，圈內兜滿飽滿的對話氣泡",
+    "imageCaption": "由撕下的日曆頁圍成的圓圈，圈內兜滿飽滿的對話氣泡"
   },
   {
     "slug": "cold-email",
@@ -5726,7 +5803,8 @@ export const SKILLS: Skill[] = [
     "sourceStars": "23,407",
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/cold-email",
     "image": "/skills-img/cold-email.webp",
-    "imageAlt": "陌生開發信寫作流程流程圖：鎖定對象、找出契機、四句成信、排追蹤信"
+    "imageAlt": "陌生開發信寫作流程：一卷正被從門縫底下推進去的細長傳單",
+    "imageCaption": "一卷正被從門縫底下推進去的細長傳單"
   }
 ];
 

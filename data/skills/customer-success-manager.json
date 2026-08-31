@@ -64,31 +64,15 @@
     "客戶分級",
     "季度檢討"
   ],
-  "diagram": {
-    "title": "老客戶健檢的流程",
-    "steps": [
-      {
-        "label": "整理名單",
-        "icon": "一份帶橫線條目的清單"
-      },
-      {
-        "label": "算出分數",
-        "icon": "一個半圓形的儀表指針"
-      },
-      {
-        "label": "標出風險",
-        "icon": "一個裡面有驚嘆號的三角形"
-      },
-      {
-        "label": "排定聯繫",
-        "icon": "一支電話話筒"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "business-growth/skills/customer-success-manager",
     "stars": "23,256"
   },
-  "order": 45
+  "order": 45,
+  "illustration": {
+    "title": "老客戶健檢的流程",
+    "focalObject": "一個名片盒與正從盒口滑出去的一張名片",
+    "scene": "一個橫放的名片盒，裡面立著一整排名片，高低不齊：多數整齊埋在盒中，有三張被往上抽高半截，明顯突出於其他名片。最靠外側的那一張已經滑出盒口，斜斜卡在盒緣，一角懸空，眼看就要掉到桌面上。盒子四周大片留白，掉落方向沒有任何東西接著。"
+  }
 }

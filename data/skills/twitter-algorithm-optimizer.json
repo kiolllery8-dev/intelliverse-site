@@ -66,31 +66,15 @@
     "social listening 台灣",
     "X 貼文優化"
   ],
-  "diagram": {
-    "title": "社群貼文健檢改寫",
-    "steps": [
-      {
-        "label": "貼上草稿",
-        "icon": "一張便利貼"
-      },
-      {
-        "label": "逐句健檢",
-        "icon": "一個放大鏡"
-      },
-      {
-        "label": "多版改寫",
-        "icon": "三張並排的卡片"
-      },
-      {
-        "label": "比對成效",
-        "icon": "一張向上的折線圖"
-      }
-    ]
-  },
   "source": {
     "repo": "ComposioHQ/awesome-claude-skills",
     "path": "twitter-algorithm-optimizer",
     "stars": "70,983"
   },
-  "order": 8
+  "order": 8,
+  "illustration": {
+    "title": "社群貼文健檢改寫",
+    "focalObject": "一支手機，螢幕上貼文的前三行正被整塊抽離、放大成獨立卡片",
+    "scene": "一支直立的手機立在桌上，螢幕裡是一則長貼文的文字線條。最上面三行被一個方框圈住，而這整塊區域正被抽離螢幕，變成一張放大許多的獨立卡片，懸在手機前方。手機底座前橫躺著同一則貼文的另外兩張卡片，每張的行長與斷句位置都不一樣。"
+  }
 }

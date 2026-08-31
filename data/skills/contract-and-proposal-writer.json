@@ -64,31 +64,15 @@
     "驗收條款",
     "著作權歸屬"
   ],
-  "diagram": {
-    "title": "報價到簽約的流程",
-    "steps": [
-      {
-        "label": "說清條件",
-        "icon": "一個對話泡泡"
-      },
-      {
-        "label": "選對文件",
-        "icon": "一疊層疊的文件"
-      },
-      {
-        "label": "補齊條款",
-        "icon": "一支鉛筆"
-      },
-      {
-        "label": "排版送簽",
-        "icon": "一支正在簽名的鋼筆"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "business-growth/skills/contract-and-proposal-writer",
     "stars": "23,256"
   },
-  "order": 44
+  "order": 44,
+  "illustration": {
+    "title": "報價到簽約的流程",
+    "focalObject": "一本正被撕開的三聯式估價單與旁邊沾著印泥的木頭印章",
+    "scene": "一本台灣常見的三聯式估價單攤在桌上，最上面的白聯正沿著騎縫線被撕起一半，底下紅聯上被複寫壓出來的表格線與金額方塊正透出來，筆畫比上聯淡。右邊躺著一顆方形木頭印章，章面朝上還沾著紅印泥，旁邊印泥盒的蓋子開著。整張桌面只有這兩件東西。"
+  }
 }

@@ -66,31 +66,15 @@
     "麵包屑 結構化資料",
     "WooCommerce 商品結構化資料"
   ],
-  "diagram": {
-    "title": "幫網站加上星等標記",
-    "steps": [
-      {
-        "label": "提供網址",
-        "icon": "一個鎖鏈連結圖示"
-      },
-      {
-        "label": "掃描頁面",
-        "icon": "一個放大鏡"
-      },
-      {
-        "label": "貼上標記",
-        "icon": "一個程式碼括號圖示"
-      },
-      {
-        "label": "官方驗證",
-        "icon": "一個打勾的盾牌"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "marketing-skill/skills/schema-markup",
     "stars": "23,256"
   },
-  "order": 28
+  "order": 28,
+  "illustration": {
+    "title": "幫網站加上星等標記",
+    "focalObject": "一張被從背面頂出星形凸起的細長紙卡",
+    "scene": "一張細長的白色紙卡平放在桌上，一支金屬壓凸筆從紙的背面頂上來。紙面因此鼓出一排小小的星形凸起，旁邊還頂出一枚吊牌形狀的隆起，凸起邊緣的紙纖維被撐得微微發白。同一款紙卡另外一張躺在旁邊，表面完全平坦、沒有任何凸起，兩張的厚薄一模一樣。"
+  }
 }

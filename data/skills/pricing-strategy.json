@@ -66,31 +66,15 @@
     "月費方案設計",
     "訂閱制定價怎麼分級"
   ],
-  "diagram": {
-    "title": "訂出客人願意付的價格",
-    "steps": [
-      {
-        "label": "攤開現價",
-        "icon": "一張價目表"
-      },
-      {
-        "label": "定收費制",
-        "icon": "一台天秤"
-      },
-      {
-        "label": "排三段價",
-        "icon": "一組三階階梯"
-      },
-      {
-        "label": "試算漲價",
-        "icon": "一台計算機"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "marketing-skill/skills/pricing-strategy",
     "stars": "23,256"
   },
-  "order": 21
+  "order": 21,
+  "illustration": {
+    "title": "訂出客人願意付的價格",
+    "focalObject": "橫桿上吊著三張大小遞增的紙吊牌，中間那張正在換牌",
+    "scene": "一根橫木桿上用棉繩吊著三張由小到大的厚紙吊牌，左邊最小、中間中等、右邊最大，三張高度略有落差。中間那張吊牌前面被覆上一張新的空白牌片，用一支迴紋針固定在原牌上；被換下來的舊牌片掉在桌面上，落在吊牌正下方，上頭還連著一小段斷掉的棉繩。"
+  }
 }

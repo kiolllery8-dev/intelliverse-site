@@ -66,31 +66,15 @@
     "廠商出包沒有紀錄",
     "續約前該注意什麼"
   ],
-  "diagram": {
-    "title": "廠商與訂閱服務體檢",
-    "steps": [
-      {
-        "label": "盤點廠商",
-        "icon": "一張打勾清單"
-      },
-      {
-        "label": "記錄表現",
-        "icon": "一支鋼筆"
-      },
-      {
-        "label": "逐家打分",
-        "icon": "一個半圓形儀表盤"
-      },
-      {
-        "label": "決定續約",
-        "icon": "一張蓋了印章的合約"
-      }
-    ]
-  },
   "source": {
     "repo": "alirezarezvani/claude-skills",
     "path": "business-operations/skills/vendor-management",
     "stars": "23,256"
   },
-  "order": 30
+  "order": 30,
+  "illustration": {
+    "title": "廠商與訂閱服務體檢",
+    "focalObject": "三捲被拉出來比較的封箱膠帶，只有中間那捲貼得平整",
+    "scene": "桌上三捲寬度相同、顏色不同的封箱膠帶並排立著。中間那捲被拉出一段，平整無皺地貼在前方一個紙箱的封口上，壓得服貼。左邊那捲拉出的膠帶皺成一團、黏死在自己身上，扯不開。右邊那捲已經見底，只剩一圈空的紙芯，還套在原位沒被換下。"
+  }
 }

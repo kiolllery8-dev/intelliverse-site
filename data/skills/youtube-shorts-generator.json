@@ -65,31 +65,15 @@
     "社群影片",
     "九比十六"
   ],
-  "diagram": {
-    "title": "長影片變短影音流程",
-    "steps": [
-      {
-        "label": "貼上網址",
-        "icon": "兩個互扣的鎖鍊環"
-      },
-      {
-        "label": "轉成逐字",
-        "icon": "一份帶折角的文件"
-      },
-      {
-        "label": "逐段評分",
-        "icon": "一顆實心的五角星"
-      },
-      {
-        "label": "裁成直式",
-        "icon": "一支直立的手機"
-      }
-    ]
-  },
   "source": {
     "repo": "Anil-matcha/AI-Youtube-Shorts-Generator",
     "path": ".claude/skills/youtube-shorts-generator",
     "stars": "4,415"
   },
-  "order": 52
+  "order": 52,
+  "illustration": {
+    "title": "長影片變短影音流程",
+    "focalObject": "一條橫躺的電影膠卷，三格被剪下轉成直立並被魚鉤勾住",
+    "scene": "一條電影膠卷橫過畫面，兩側是整排方形齒孔。膠卷上貼著幾張長短不一的紙標籤，高低像刻度一樣。最長的那三張標籤所對應的三格已經被剪下來，從橫躺的膠卷上立起來轉成直的，並排站在膠卷前方，每一格頂端各勾著一支小小的金屬魚鉤把它往上提。旁邊躺著一把剪刀，刀口還開著。"
+  }
 }

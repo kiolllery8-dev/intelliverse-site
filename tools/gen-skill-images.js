@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 用 codex 產生技能流程示意圖 → public/skills-img/<slug>.webp
+ * 用 codex 產生技能情境照 → public/skills-img/<slug>.webp
  *
  * 用法：
  *   node tools/gen-skill-images.js                 # 只補缺圖的
@@ -35,29 +35,96 @@ const onlyArg = args.find((a) => a.startsWith('--only='));
 const only = onlyArg ? new Set(onlyArg.split('=')[1].split(',').filter(Boolean)) : null;
 const jobsArg = args.find((a) => a.startsWith('--jobs='));
 const JOBS = jobsArg ? Number(jobsArg.split('=')[1]) : 3;
+const engineArg = args.find((a) => a.startsWith('--engine='));
+const ENGINE = engineArg ? engineArg.split('=')[1] : 'codex';
 
 const STYLE = fs.readFileSync(STYLE_FILE, 'utf8').trim();
 
+/* ---------- 引擎 A：OpenAI gpt-image ---------- */
+const GPT_MODEL = 'gpt-image-2-2026-04-21';
+
+function openaiKey() {
+  if (process.env.OPENAI_API_KEY) return process.env.OPENAI_API_KEY;
+  const p = path.join(
+    process.env.USERPROFILE || process.env.HOME,
+    '.claude', 'skills', 'gpt-image-generator', '.env'
+  );
+  const m = fs.readFileSync(p, 'utf8').match(/OPENAI_API_KEY\s*=\s*["']?([^"'\s]+)/);
+  if (!m) throw new Error('找不到 OPENAI_API_KEY');
+  return m[1];
+}
+
+async function gptGenerate(spec, key) {
+  const res = await fetch('https://api.openai.com/v1/images/generations', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: GPT_MODEL,
+      prompt: buildPrompt(spec),
+      size: '1536x1024',
+      quality: 'medium',
+      n: 1,
+    }),
+  });
+  const j = await res.json();
+  if (j.error) throw new Error(j.error.message || JSON.stringify(j.error));
+  const b64 = j?.data?.[0]?.b64_json;
+  if (!b64) throw new Error('回應沒有影像資料');
+  return Buffer.from(b64, 'base64');
+}
+
+async function runGpt(todo, tmpDir) {
+  const key = openaiKey();
+  const failed = [];
+  let done = 0;
+  let cursor = 0;
+  async function worker() {
+    while (cursor < todo.length) {
+      const spec = todo[cursor++];
+      let ok = false;
+      for (let attempt = 1; attempt <= 3 && !ok; attempt++) {
+        try {
+          const png = await gptGenerate(spec, key);
+          fs.writeFileSync(path.join(tmpDir, `${spec.slug}.png`), png);
+          console.log(`  ✓ [${++done}/${todo.length}] ${spec.slug}`);
+          ok = true;
+        } catch (e) {
+          if (attempt === 3) {
+            console.log(`  ✗ ${spec.slug}：${e.message}`);
+            failed.push(spec.slug);
+          } else {
+            await new Promise((r) => setTimeout(r, 3000 * attempt));
+          }
+        }
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: JOBS }, worker));
+  if (failed.length) console.log(`失敗 ${failed.length} 個：${failed.join(', ')}`);
+}
+
 const RULES = `硬性要求（違反就是失敗）：
 - 橫式構圖，長寬比嚴格為 3:2（寬 1536、高 1024），絕對不可以是正方形。
-- 內容垂直置中，上下留白平均，不要偏上或偏下。
-- 所有文字必須是筆畫清晰、完全正確的繁體中文，不可有錯字、簡體字、日文假名或亂碼。
-- 畫面上除了指定的中文字之外，不可出現任何英文字母、數字或其他文字。
-- 四個節點大小一致、水平等距排列，不要有一個特別大或位置歪掉。`;
+- 主體置於右側，左側必須留出乾淨的空白區域給標題，標題不可以壓在主體上。
+- 標題文字必須筆畫清晰、完全正確的繁體中文，不可有錯字、簡體字、日文假名或亂碼。
+- 除了指定的標題之外，畫面上不可出現任何其他文字、字母或數字，
+  紙張、螢幕、包裝上都不可以有可辨識的字。
+- 不要出現人臉。可以有手入鏡，但只拍到手部。
+- 標題的每個字必須連續緊接排列，字與字之間不可以出現空格或任何間隔符號。`;
 
 function buildPrompt(spec) {
-  const nodes = spec.steps
-    .map((s, i) => `  ${i + 1}. 圖示＝${s.icon}，標籤文字「${s.label}」`)
-    .join('\n');
   // 只叫它生圖，不叫它複製檔案 —— 取檔由 driver 從隔離的 CODEX_HOME 直接抓
   return `請生成一張圖片。生成完就結束，不需要複製檔案或做其他事。
 
-=== 圖片內容 ===
-主標題（大字，置中於畫面上方）：「${spec.title}」
-主標題下方是四個流程節點，由左至右水平排列，以箭頭連接：
-${nodes}
+=== 畫面內容 ===
+${spec.scene}
 
-=== 視覺風格 ===
+=== 標題文字 ===
+畫面左側的空白區域，一行大字的繁體中文標題，文字內容必須完全是：「${spec.title}」
+字體是粗的黑體，深藍綠色 #2f6f6a，字高約佔畫面高度的 12%，垂直置中於左半部。
+總共 ${[...spec.title].length} 個字，一個都不能多、不能少、不能寫錯。
+
+=== 攝影風格 ===
 ${STYLE}
 
 === ${RULES} ===
@@ -69,8 +136,8 @@ function loadSpecs() {
     .readdirSync(DATA_DIR)
     .filter((f) => f.endsWith('.json'))
     .map((f) => JSON.parse(fs.readFileSync(path.join(DATA_DIR, f), 'utf8')))
-    .filter((o) => o.diagram && Array.isArray(o.diagram.steps) && o.diagram.steps.length === 4)
-    .map((o) => ({ slug: o.slug, title: o.diagram.title, steps: o.diagram.steps }));
+    .filter((o) => o.illustration && o.illustration.scene && o.illustration.title)
+    .map((o) => ({ slug: o.slug, title: o.illustration.title, scene: o.illustration.scene }));
 }
 
 function hasLocalCodex() {
@@ -136,7 +203,7 @@ function toWebp(src, dst) {
   ], { stdio: ['ignore', 'ignore', 'pipe'] });
 }
 
-function main() {
+async function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
 
   let specs = loadSpecs();
@@ -146,8 +213,8 @@ function main() {
   console.log(`${specs.length} 個技能有流程圖規格，需要產生 ${todo.length} 張`);
   if (!todo.length) return;
 
-  const local = hasLocalCodex();
-  console.log(local ? '在本機執行 codex' : '本機沒有 codex，改走 ssh home');
+  const local = ENGINE === "codex" ? hasLocalCodex() : false;
+  console.log(ENGINE === 'gpt' ? `引擎：OpenAI ${GPT_MODEL}` : (local ? '引擎：本機 codex' : '引擎：codex（走 ssh home）'));
 
   const stage = path.join(ROOT, '.codex-img');
   fs.rmSync(stage, { recursive: true, force: true });
@@ -158,7 +225,10 @@ function main() {
   }
 
   let pngDir;
-  if (local) {
+  if (ENGINE === 'gpt') {
+    pngDir = path.join(stage, 'out');
+    await runGpt(todo, pngDir);
+  } else if (local) {
     const base = path.join(process.env.HOME || process.env.USERPROFILE, REMOTE);
     fs.rmSync(base, { recursive: true, force: true });
     fs.mkdirSync(path.join(base, 'out'), { recursive: true });
@@ -200,4 +270,4 @@ function main() {
   }
 }
 
-main();
+main().catch((e) => { console.error("執行失敗：", e.message); process.exit(1); });
