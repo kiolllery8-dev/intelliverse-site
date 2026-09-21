@@ -2544,3 +2544,66 @@ footer::before {
   .skill-steps li { flex-direction: column; gap: 8px; }
 }
 
+
+/* ===== 技能頁：日期、常見問題、同分類技能 ===== */
+.skill-dates {
+  margin-top: 14px;
+  font-size: var(--fs-small);
+  color: var(--ink-dim);
+  letter-spacing: 0.02em;
+}
+.skill-faq { display: flex; flex-direction: column; gap: 12px; }
+.skill-faq-item {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  padding: 0 20px;
+}
+.skill-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 28px 18px 0;
+  position: relative;
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.skill-faq-item summary::-webkit-details-marker { display: none; }
+.skill-faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0; top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold);
+  font-size: 20px;
+}
+.skill-faq-item[open] summary::after { content: '−'; }
+.skill-faq-item p {
+  padding: 0 0 20px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.skill-related {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.skill-related a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  transition: border-color .2s ease;
+}
+.skill-related a:hover { border-color: var(--line-strong); }
+.skill-related strong { font-weight: 500; color: var(--ink); line-height: 1.45; }
+.skill-related span { font-size: var(--fs-small); color: var(--ink-dim); line-height: 1.5; }
+@media (max-width: 640px) {
+  .skill-related { grid-template-columns: 1fr; }
+}

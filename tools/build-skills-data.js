@@ -136,6 +136,10 @@ const articles = raw.map((r) => {
       ? `${ill.title}：${ill.focalObject}`
       : `${a.nameZh}情境示意照`,
     imageCaption: ill ? ill.focalObject : '',
+    // 日期寫死在 JSON 裡而不是跑 git log —— CI 的 checkout 是淺層 clone，拿不到歷史
+    publishedAt: a.publishedAt || null,
+    updatedAt: a.updatedAt || a.publishedAt || null,
+    faq: Array.isArray(a.faq) ? a.faq : [],
   };
 });
 
@@ -174,6 +178,9 @@ export type Skill = {
   image: string | null;
   imageAlt: string;
   imageCaption: string;
+  publishedAt: string | null;
+  updatedAt: string | null;
+  faq: { q: string; a: string }[];
 };
 
 export const SKILL_CATEGORIES = ${JSON.stringify(CATEGORY_ORDER, null, 2)} as const;

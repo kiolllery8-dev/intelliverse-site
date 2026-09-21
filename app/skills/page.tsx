@@ -7,7 +7,8 @@ import { catSlug } from '../skill-categories';
 const SITE_URL = 'https://show.intelliverse.tw';
 
 export const metadata: Metadata = {
-  title: 'AI 技能圖書館｜GitHub 熱門 Agent Skills 繁體中文指南',
+  // 絕對標題：原本套上全站後綴後長達 63 字，搜尋結果只顯示得到前一半
+  title: { absolute: `AI 技能圖書館：${SKILLS.length} 個 Agent Skills 中文教學｜靈境智造` },
   description:
     '靈境智造整理 GitHub 上最熱門的 AI Agent Skills，翻譯成繁體中文並改寫成台灣中小企業看得懂的實用指南。從發票整理、競品廣告拆解到商品圖優化，一次看懂 AI 能幫你省下哪些重複工作。',
   keywords: [
@@ -36,8 +37,35 @@ export const metadata: Metadata = {
 export default function SkillsIndex() {
   const groups = skillsByCategory();
 
+  // 讓搜尋引擎與 AI 一次看到完整清單，而不是只能一頁頁爬
+  const collectionJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${SITE_URL}/skills/#collection`,
+    name: 'AI 技能圖書館',
+    description: `靈境智造整理 GitHub 上熱門的 ${SKILLS.length} 個 AI Agent Skills，改寫成繁體中文使用指南。`,
+    url: `${SITE_URL}/skills/`,
+    inLanguage: 'zh-Hant-TW',
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: SKILLS.length,
+      itemListElement: SKILLS.map((s, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${SITE_URL}/skills/${s.slug}/`,
+        name: s.nameZh,
+      })),
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
       <SiteNav base="/" />
 
       <main>

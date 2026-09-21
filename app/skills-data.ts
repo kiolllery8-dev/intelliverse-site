@@ -33,6 +33,9 @@ export type Skill = {
   image: string | null;
   imageAlt: string;
   imageCaption: string;
+  publishedAt: string | null;
+  updatedAt: string | null;
+  faq: { q: string; a: string }[];
 };
 
 export const SKILL_CATEGORIES = [
@@ -121,7 +124,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/invoice-organizer",
     "image": "/skills-img/invoice-organizer.webp",
     "imageAlt": "發票收據自動歸檔：一台正在吐標籤的手持標籤機，標籤貼上剛撫平的統一發票紙條",
-    "imageCaption": "一台正在吐標籤的手持標籤機，標籤貼上剛撫平的統一發票紙條"
+    "imageCaption": "一台正在吐標籤的手持標籤機，標籤貼上剛撫平的統一發票紙條",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我整理發票和收據嗎？",
+        "a": "可以。它會讀 PDF 帳單、掃描檔和手機拍的收據，抓出日期、廠商與金額，把檔名改成看得懂的格式、依年度與費用類別分資料夾，最後產出一份可匯入記帳軟體的 CSV 進項憑證明細。"
+      },
+      {
+        "q": "用 AI 整理發票，讀不出金額的收據怎麼辦？",
+        "a": "讀不出金額或日期的檔案會被放進「待確認」資料夾，不會亂猜。這些多半是拍太糊或掃描歪掉的收據，跑完後只要人工檢查這個資料夾就好。"
+      },
+      {
+        "q": "手機載具的電子發票要怎麼交給 AI 整理？",
+        "a": "先到財政部電子發票整合服務平台匯出 CSV 再交給它，比拍照準確。加密的發票 PDF 記得先另存成無密碼版本，第一次跑也建議先叫它「複製不要搬移」，原始檔留著。"
+      }
+    ]
   },
   {
     "slug": "file-organizer",
@@ -197,7 +216,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/file-organizer",
     "image": "/skills-img/file-organizer.webp",
     "imageAlt": "下載資料夾自動歸位：一台三層鐵製文件盤，最上層的空白方卡正往下層滑落分流",
-    "imageCaption": "一台三層鐵製文件盤，最上層的空白方卡正往下層滑落分流"
+    "imageCaption": "一台三層鐵製文件盤，最上層的空白方卡正往下層滑落分流",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我整理電腦裡亂七八糟的檔案嗎？",
+        "a": "可以。它會先盤點資料夾有幾個檔、多大、什麼類型，再依檔名和內容判斷該放哪裡，抓出重複檔案、把半年以上沒動的挑出來建議封存，並統一成「2026-03-15-客戶名-提案.pdf」這類命名。"
+      },
+      {
+        "q": "用 AI 整理檔案會不會把重要檔案刪掉？",
+        "a": "不會，刪除建議永遠自己來。可以請它「只列出重複檔案清單，先不要刪」，自己掃過確認沒有誤判再動手；進行中的專案與共用資料夾也要先講明「不要動」。"
+      },
+      {
+        "q": "整理雲端硬碟同步資料夾要注意什麼？",
+        "a": "整理雲端同步資料夾前要先暫停同步。大量搬移檔案會觸發整批重新上傳，暫停同步、整理完再恢復，就能避免雲端空間與網路被塞爆。"
+      }
+    ]
   },
   {
     "slug": "meeting-insights-analyzer",
@@ -272,7 +307,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/meeting-insights-analyzer",
     "image": "/skills-img/meeting-insights-analyzer.webp",
     "imageAlt": "會議紀錄變成待辦：一面白板上散亂的磁鐵，其中三顆被移到右緣排成一行",
-    "imageCaption": "一面白板上散亂的磁鐵，其中三顆被移到右緣排成一行"
+    "imageCaption": "一面白板上散亂的磁鐵，其中三顆被移到右緣排成一行",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把會議逐字稿整理成待辦清單嗎？",
+        "a": "可以。它會把逐字稿整理成「誰負責、做什麼、什麼時候前要交」的待辦清單，每一條都附上逐字稿原句與時間點，另外把客戶講得模稜兩可、規格還沒定案的地方列成待確認清單。"
+      },
+      {
+        "q": "會議錄音檔可以直接丟給 AI 分析嗎？",
+        "a": "不行，錄音檔要先用會議軟體或轉錄工具產出逐字稿。而且逐字稿要有講者標籤，沒有的話 AI 分不出哪一句是誰講的，就無法正確分配待辦負責人。"
+      },
+      {
+        "q": "客戶會議的逐字稿交給 AI 處理安全嗎？",
+        "a": "客戶會議逐字稿含報價與商業機密，建議放在本機資料夾處理，不要上傳到來路不明的線上轉檔網站。整理出待辦清單後，當天就照著發一封確認信給客戶最有效。"
+      }
+    ]
   },
   {
     "slug": "competitive-ads-extractor",
@@ -346,7 +397,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/competitive-ads-extractor",
     "image": "/skills-img/competitive-ads-extractor.webp",
     "imageAlt": "對手廣告全面拆解：三座街邊立柱廣告燈箱，海報正被一張張撕下來收進檔案盒",
-    "imageCaption": "三座街邊立柱廣告燈箱，海報正被一張張撕下來收進檔案盒"
+    "imageCaption": "三座街邊立柱廣告燈箱，海報正被一張張撕下來收進檔案盒",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我找出競爭對手正在投放的廣告嗎？",
+        "a": "可以。它會從 Facebook、Instagram 廣告檔案庫抓出對手正在跑的廣告，把圖片與文案存成競品素材庫，再歸納對方主打的痛點、客群與標題公式，一次比對三到五個競品。"
+      },
+      {
+        "q": "從廣告檔案庫看得到競品廣告的成效嗎？",
+        "a": "看不到，廣告檔案庫不會提供點擊率和成效數字。要判斷一支廣告好不好，看它連續投了多久，以及同一組文案有沒有換素材重投，長期在跑的通常就是有效的。"
+      },
+      {
+        "q": "化妝品賣家可以直接參考對手的廣告文案嗎？",
+        "a": "結構可以參考，但不能整段照抄。化妝品廣告受化粧品衛生安全管理法規範，對手敢寫的療效字眼不代表你可以寫，引用前要先確認自己扛不扛得住法規風險。"
+      }
+    ]
   },
   {
     "slug": "content-research-writer",
@@ -421,7 +488,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/content-research-writer",
     "image": "/skills-img/content-research-writer.webp",
     "imageAlt": "長文從大綱寫到定稿：一卷從桌沿垂到地面的長紙稿，三處被夾住牽線連回圖書索引卡",
-    "imageCaption": "一卷從桌沿垂到地面的長紙稿，三處被夾住牽線連回圖書索引卡"
+    "imageCaption": "一卷從桌沿垂到地面的長紙稿，三處被夾住牽線連回圖書索引卡",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我寫品牌部落格長文並附上資料出處嗎？",
+        "a": "可以。它能把模糊主題展開成完整大綱、幫你查資料並在句子後附上可回溯的出處，你寫一段它回饋一段，發布前再跑一次出處、錯字與段落轉折的檢查清單。"
+      },
+      {
+        "q": "怎麼讓 AI 寫的文章不要有 AI 腔？",
+        "a": "先丟兩三篇自己以前寫過、滿意的文章給它讀，再開始動筆。沒有語氣範本的話，它預設會寫得偏正式、偏 AI 腔；有範本它就會模仿你的語氣，改完還是像你寫的。"
+      },
+      {
+        "q": "AI 查到的數據可以直接放進文章嗎？",
+        "a": "不建議直接用。AI 找到的數據一定要自己點進原始出處看一眼再引用，因為引用來源寫錯，賠上的是品牌信任度，尤其是要給客戶看的提案分析。"
+      }
+    ]
   },
   {
     "slug": "image-enhancer",
@@ -497,7 +580,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/image-enhancer",
     "image": "/skills-img/image-enhancer.webp",
     "imageAlt": "模糊圖片變清晰放大：一張正被拉大的沖印照片",
-    "imageCaption": "一張正被拉大的沖印照片"
+    "imageCaption": "一張正被拉大的沖印照片",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把模糊的商品圖放大變清楚嗎？",
+        "a": "可以。它能智慧放大解析度，讓 600px 的小圖也撐得起商品頁，同時銳化邊緣與截圖裡的中文字，並消除 LINE 轉傳後那種一格一格的壓縮雜訊，還能整個資料夾一次處理。"
+      },
+      {
+        "q": "多模糊的照片 AI 還救得回來？",
+        "a": "放大不是無中生有。原圖低於 400px 或本身拍晃的照片，救回來也只是「比較不糊」；螢幕截圖這類數位圖效果最好，手機夜拍的糊照改善最有限。"
+      },
+      {
+        "q": "用 AI 修完商品圖可以把原檔刪掉嗎？",
+        "a": "不要刪。平台改版或換尺寸規格時，你會需要從原檔重新處理一次，拿修過的圖再修只會更糟。上架前也務必在手機上再看一次，確認邊緣沒有不自然的白線。"
+      }
+    ]
   },
   {
     "slug": "lead-research-assistant",
@@ -573,7 +672,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/lead-research-assistant",
     "image": "/skills-img/lead-research-assistant.webp",
     "imageAlt": "找出該聯絡的潛在客戶：一盤雜亂鈕扣中被挑出、並排在絨布上的三顆同款鈕扣",
-    "imageCaption": "一盤雜亂鈕扣中被挑出、並排在絨布上的三顆同款鈕扣"
+    "imageCaption": "一盤雜亂鈕扣中被挑出、並排在絨布上的三顆同款鈕扣",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我找潛在客戶名單嗎？",
+        "a": "可以。它會先讀懂你的產品賣點，再依產業、規模、地區篩出目標公司，替每家打 1 到 10 分的適配分數、寫出理由，建議該找哪個職位談，並整理成可匯出 CSV 的表格。"
+      },
+      {
+        "q": "AI 找潛在客戶時要用什麼篩選條件比較準？",
+        "a": "用查得到的條件，像資本額、登記地址、有無電商通路。營收和員工數不公開，AI 只能用猜的；統編與登記狀態可以用經濟部商工登記查詢核對。"
+      },
+      {
+        "q": "用 AI 開發客戶，一次要多少家名單比較好？",
+        "a": "不要一次要五十家。先要十家，挑出真的談得成的樣貌，再請它照這個樣子往外擴，命中率會差很多。聯絡方式也要走官網或客服信箱，別讓 AI 猜手機號碼。"
+      }
+    ]
   },
   {
     "slug": "domain-name-brainstormer",
@@ -648,7 +763,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/domain-name-brainstormer",
     "image": "/skills-img/domain-name-brainstormer.webp",
     "imageAlt": "品牌命名與網址查詢：一面釘滿空白門牌的木牆",
-    "imageCaption": "一面釘滿空白門牌的木牆"
+    "imageCaption": "一面釘滿空白門牌的木牆",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫新品牌想名字並查網址能不能用嗎？",
+        "a": "可以。它會依品牌定位一次發想十幾個候選名稱，跨 .com、.com.tw、.co 比對哪些還空著、哪些已被註冊或標價出售，並提醒 IG 帳號、賣場名稱能否統一。"
+      },
+      {
+        "q": "AI 查到網址可以註冊，就代表這個名字能用嗎？",
+        "a": "不一定。網址能註冊不代表名字沒被註冊成商標，定案前要到經濟部智慧財產局的商標檢索系統查一次；而且查到的可用狀態只是當下參考，實際以註冊商結帳頁為準。"
+      },
+      {
+        "q": ".com.tw 網域跟 .com 有什麼不一樣？",
+        "a": ".com.tw 通常比 .com 貴，而且可能要驗證公司登記或身分資料。如果想兩個一起買，預算和文件要先準備好，猶豫太久名字可能被別人先註冊走。"
+      }
+    ]
   },
   {
     "slug": "twitter-algorithm-optimizer",
@@ -724,7 +855,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/twitter-algorithm-optimizer",
     "image": "/skills-img/twitter-algorithm-optimizer.webp",
     "imageAlt": "社群貼文健檢改寫：一支手機，螢幕上貼文的前三行正被整塊抽離、放大成獨立卡片",
-    "imageCaption": "一支手機，螢幕上貼文的前三行正被整塊抽離、放大成獨立卡片"
+    "imageCaption": "一支手機，螢幕上貼文的前三行正被整塊抽離、放大成獨立卡片",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我改 Threads 和 IG 貼文讓更多人看到嗎？",
+        "a": "可以。它會逐句拆解草稿、檢查開頭三行夠不夠力，抓出純求讚、亂塞標籤這類壓低觸及的地雷，並一次給兩到三個改寫版本，說明各自鎖定哪一群讀者。"
+      },
+      {
+        "q": "AI 貼文健檢依據的是哪一套演算法？",
+        "a": "這套排序邏輯最早來自 X 公開釋出的原始碼。Threads、IG 的原則相近但不完全一樣，所以改完的貼文務必用自己帳號的實際數據驗證一次。"
+      },
+      {
+        "q": "Threads 貼文發出去後要怎麼做才能被推得更廣？",
+        "a": "發文後第一個小時最關鍵，留言進來要盡快回，平台看到對話正在進行才會繼續往外推。另外別為了衝話題把話講得偏激，被檢舉或大量取消追蹤會拖累之後幾週的觸及。"
+      }
+    ]
   },
   {
     "slug": "raffle-winner-picker",
@@ -799,7 +946,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/raffle-winner-picker",
     "image": "/skills-img/raffle-winner-picker.webp",
     "imageAlt": "留言名單自動開獎：一個翻倒傾出滿桌紙籤的摸彩箱",
-    "imageCaption": "一個翻倒傾出滿桌紙籤的摸彩箱"
+    "imageCaption": "一個翻倒傾出滿桌紙籤的摸彩箱",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "IG 留言抽獎可以用 AI 自動抽出得獎者嗎？",
+        "a": "可以。把 CSV、Excel、Google 試算表或直接貼上的名單交給它，就能一次抽出多位得獎者，自動排除重複帳號與上次已中獎的人，還能同時抽出正取與備取。"
+      },
+      {
+        "q": "用 AI 抽獎要怎麼避免被說是內定？",
+        "a": "公告時附上總筆數、抽出時間與抽法說明當佐證，被質疑是不是內定時最有用。得獎者的 Email 和電話要留在後臺，不要一起貼到公開貼文裡。"
+      },
+      {
+        "q": "AI 抽獎能篩掉沒追蹤或沒標記朋友的人嗎？",
+        "a": "可以，但要先把「有沒有追蹤」「有沒有標記朋友」做成名單裡的一欄，AI 才抽得出符合資格的人。它也支援依抽獎券張數加權，消費越多抽中機率越高。"
+      }
+    ]
   },
   {
     "slug": "tailored-resume-generator",
@@ -874,7 +1037,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/tailored-resume-generator",
     "image": "/skills-img/tailored-resume-generator.webp",
     "imageAlt": "依需求量身寫提案：環扣被扳開的活頁作品集，一張內頁正被舉在半空準備插回最前面",
-    "imageCaption": "環扣被扳開的活頁作品集，一張內頁正被舉在半空準備插回最前面"
+    "imageCaption": "環扣被扳開的活頁作品集，一張內頁正被舉在半空準備插回最前面",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以依照客戶需求幫我寫提案書嗎？",
+        "a": "可以。它會拆解需求書與標案公告，抓出必備資格與加分條件，把你的案例逐件對應客戶要求並補上數字成果，整理服務範圍與時程，還會列出你沒符合的資格與補強方式。"
+      },
+      {
+        "q": "可以請 AI 在提案書裡幫我補沒做過的案例嗎？",
+        "a": "絕對不要。讓 AI 補沒做過的案子或不存在的資格，客戶一問細節就破功。寧可誠實寫少一點，再用它產出的落差分析去說明你打算怎麼補足。"
+      },
+      {
+        "q": "怎麼讓 AI 寫出來的提案書更有說服力？",
+        "a": "給資料時盡量帶數字，像「做過 40 件包裝」「上架三個月成長兩倍」，沒有數字它只能寫空話。標案和企業採購常有固定表格，也要先問清楚格式再請它照順序寫。"
+      }
+    ]
   },
   {
     "slug": "video-downloader",
@@ -949,7 +1128,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/video-downloader",
     "image": "/skills-img/video-downloader.webp",
     "imageAlt": "長影片變短影音貼文：一塊被從牆上螢幕取下、可以捧在手上的方形畫面板",
-    "imageCaption": "一塊被從牆上螢幕取下、可以捧在手上的方形畫面板"
+    "imageCaption": "一塊被從牆上螢幕取下、可以捧在手上的方形畫面板",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "直播存檔可以用 AI 變成貼文和短影音嗎？",
+        "a": "可以。它能把自家頻道的直播存檔或長影片整支抓回本機，也能只抽出聲音存成音檔，再交給 AI 轉逐字稿改寫成貼文，畫質可以從最高畫質選到 480p。"
+      },
+      {
+        "q": "哪些影片沒辦法用這個 AI 工具下載？",
+        "a": "會員限定、需要登入或有地區限制的影片抓不到；正在直播中的也要等結束存檔後才能處理。另外要合併 1080p 的影音兩軌，電腦上要先裝 ffmpeg。"
+      },
+      {
+        "q": "只要做逐字稿，下載影片要選什麼格式？",
+        "a": "只做逐字稿就一律選音檔。一小時的音檔大約幾十 MB，同一支影片抓 1080p 可能好幾 GB，硬碟空間差很多，而且轉逐字稿本來就只需要聲音。"
+      }
+    ]
   },
   {
     "slug": "changelog-generator",
@@ -1024,7 +1219,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/changelog-generator",
     "image": "/skills-img/changelog-generator.webp",
     "imageAlt": "開發紀錄變客戶月報：一長條印表機連續報表紙，正被撕成三疊並折起束上紙腰帶",
-    "imageCaption": "一長條印表機連續報表紙，正被撕成三疊並折起束上紙腰帶"
+    "imageCaption": "一長條印表機連續報表紙，正被撕成三疊並折起束上紙腰帶",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把程式改動紀錄寫成給客戶看的月報嗎？",
+        "a": "可以。它會抓出指定期間的所有程式改動，分成新功能、體驗改善、問題修正、重大變更四類，把英文技術句改寫成客戶看得懂的白話中文，並略過內部重構這類客戶不需要知道的改動。"
+      },
+      {
+        "q": "為什麼 AI 產出的改版公告內容很空？",
+        "a": "產出品質取決於工程師留下的紀錄。如果團隊習慣只寫 update、fix bug，AI 也編不出內容，要先請工程師把每次改了什麼寫清楚。"
+      },
+      {
+        "q": "改版公告裡的安全性修正要怎麼寫？",
+        "a": "安全性修正只寫「已強化登入安全性」就好，別讓 AI 把漏洞細節寫進對外公開的公告。可以另外請它產一份給內部的完整版，日後交接或查紀錄會輕鬆很多。"
+      }
+    ]
   },
   {
     "slug": "shopify-expert",
@@ -1100,7 +1311,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/shopify-expert",
     "image": "/skills-img/shopify-expert.webp",
     "imageAlt": "電商版型與功能客製：一台收銀機側面的空插槽，正被插進一片新的按鍵面板",
-    "imageCaption": "一台收銀機側面的空插槽，正被插進一片新的按鍵面板"
+    "imageCaption": "一台收銀機側面的空插槽，正被插進一片新的按鍵面板",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "不會寫程式可以用 AI 改 Shopify 版型嗎？",
+        "a": "可以。它能改寫 Shopify 版型的 Liquid 檔案做出官方主題沒有的區塊，寫結帳頁擴充做滿額贈品或隱藏特定貨運，部署前還會自動跑 shopify theme check 抓出語法錯誤。"
+      },
+      {
+        "q": "用 AI 改 Shopify 版型前要先做什麼？",
+        "a": "動版型之前先在後台複製一份主題當備份，改壞了兩秒就能切回去。另外 API 金鑰和密碼絕對不要寫進版型檔案，Shopify 前台原始碼任何人都看得到。"
+      },
+      {
+        "q": "Shopify 可以用 AI 串接綠界或超商取貨嗎？",
+        "a": "可以處理，但要另外講清楚。這個技能依據的是 Shopify 官方英文文件規格，台灣的金流物流（綠界、藍新、超商取貨）要把串接方式交代清楚，AI 才能正確寫出對應的程式。"
+      }
+    ]
   },
   {
     "slug": "wordpress-pro",
@@ -1176,7 +1403,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/wordpress-pro",
     "image": "/skills-img/wordpress-pro.webp",
     "imageAlt": "網站維運與加值開發：一條插滿插頭的排插，其中一個焦黑的插頭正被拔出來",
-    "imageCaption": "一條插滿插頭的排插，其中一個焦黑的插頭正被拔出來"
+    "imageCaption": "一條插滿插頭的排插，其中一個焦黑的插頭正被拔出來",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "WordPress 網站變慢可以用 AI 找出原因嗎？",
+        "a": "可以。它會逐項找元兇：慢查詢、肥大的圖片、每頁都載入的多餘 JS。更新後白畫面或外掛互相衝突，也能用停用比對法抓出問題再修好。"
+      },
+      {
+        "q": "WordPress 網站被掛馬要先準備什麼給 AI？",
+        "a": "網站已經打不開或被掛馬時，先跟主機商要最近的備份與錯誤紀錄檔再開口，AI 才有東西可以判斷。它能做資安加固與可疑程式碼清查，包括防 SQL 注入。"
+      },
+      {
+        "q": "請 AI 幫 WordPress 加功能為什麼要用子主題？",
+        "a": "直接改佈景主題檔案的話，主題一更新，花錢做的客製會整包被蓋掉。用子主題或獨立外掛就不會；台灣的藍新、綠界、7-11 取貨多半也有現成外掛，先問能省不少錢。"
+      }
+    ]
   },
   {
     "slug": "prompt-engineer",
@@ -1251,7 +1494,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/prompt-engineer",
     "image": "/skills-img/prompt-engineer.webp",
     "imageAlt": "寫好指令讓回答不跑掉：一塊木製紅龜粿印模，與它壓出的四個一模一樣的粿",
-    "imageCaption": "一塊木製紅龜粿印模，與它壓出的四個一模一樣的粿"
+    "imageCaption": "一塊木製紅龜粿印模，與它壓出的四個一模一樣的粿",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "怎麼讓 AI 每次都照我要的格式回答？",
+        "a": "把需求整理成一份四段固定指令，附上好例子與壞例子，並指定固定輸出格式。這個技能會幫你寫好這份指令，再拿真實商品或客服問題實跑，找出哪種輸入會讓 AI 出錯。"
+      },
+      {
+        "q": "化妝品文案可以用 AI 大量產出又不違規嗎？",
+        "a": "可以把化妝品、保健食品的禁用詞清單與可用的替代說法寫進固定指令，讓 AI 每次都照規則寫。特別適合文案受法規限制、不能每次都靠人工校稿的品項。"
+      },
+      {
+        "q": "修改 AI 指令範本時要注意什麼？",
+        "a": "一次只改一句。同時改三處結果變好，你永遠不知道是哪一處有效。換一個 AI 模型也要重測一次，同一份指令在不同模型上表現可能差很多。"
+      }
+    ]
   },
   {
     "slug": "security-reviewer",
@@ -1327,7 +1586,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/Jeffallan/claude-skills/tree/main/skills/security-reviewer",
     "image": "/skills-img/security-reviewer.webp",
     "imageAlt": "揪出網站的資安漏洞：一只掛著大鎖的木箱，鑰匙就綁在鎖環旁邊，背板破了一塊",
-    "imageCaption": "一只掛著大鎖的木箱，鑰匙就綁在鎖環旁邊，背板破了一塊"
+    "imageCaption": "一只掛著大鎖的木箱，鑰匙就綁在鎖環旁邊，背板破了一塊",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫網站做資安健檢嗎？",
+        "a": "可以。它會自動掃描程式碼找出 SQL 注入、跨站腳本與可疑後門，揪出寫死在檔案裡的 API 金鑰與密碼，每條問題標上嚴重程度與修法，並產出可交給外包廠商的中文安全報告。"
+      },
+      {
+        "q": "可以用 AI 掃描別人的網站找漏洞嗎？",
+        "a": "不行。只能檢查你自己或有書面授權的專案，掃別人的網站這個技能會拒絕，在台灣也可能觸犯刑法妨害電腦使用罪。"
+      },
+      {
+        "q": "AI 產出的網站資安報告可以直接分享嗎？",
+        "a": "修好之前不要公開。報告裡的漏洞細節等於一份攻擊說明書，只能在內部流通，不要貼到公開社群或客戶群組。"
+      }
+    ]
   },
   {
     "slug": "dev-browser",
@@ -1402,7 +1677,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/SawyerHood/dev-browser/tree/main/skills/dev-browser",
     "image": "/skills-img/dev-browser.webp",
     "imageAlt": "讓電腦幫你抄後台數字：一支無人操作、自己滑動的滑鼠",
-    "imageCaption": "一支無人操作、自己滑動的滑鼠"
+    "imageCaption": "一支無人操作、自己滑動的滑鼠",
+    "publishedAt": "2026-07-27",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "每天要登蝦皮後台抄數字，可以交給 AI 自動做嗎？",
+        "a": "可以。它會自動開網頁、點按鈕、填欄位，把網頁上的表格與清單抓成整齊資料整理進 Excel，還能連上你已登入的 Chrome，處理要帳號才進得去的後台頁面。"
+      },
+      {
+        "q": "讓 AI 操作瀏覽器跑後台，有什麼事不該交給它？",
+        "a": "送出、下架、刪除、付款這類按鈕請自己按，只讓 AI 做讀取與整理，因為它是真的在操作你的瀏覽器。遇到驗證碼或機器人偵測也要停下改人工，硬闖可能被平台鎖帳號。"
+      },
+      {
+        "q": "用 AI 自動抓後台資料，第一次要怎麼測？",
+        "a": "第一次先只抓一兩筆，確認欄位對不對，格式沒問題再放大到整批，免得整包資料重來一次。它也能自動截圖整頁、指定區塊或手機版畫面。"
+      }
+    ]
   },
   {
     "slug": "local-seo-manager",
@@ -1478,7 +1769,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/local-seo-manager",
     "image": "/skills-img/local-seo-manager.webp",
     "imageAlt": "讓客人在地圖上找到你：一根插在紙本街道地圖上的圖釘，釘身垂掛三塊歪斜的店家招牌",
-    "imageCaption": "一根插在紙本街道地圖上的圖釘，釘身垂掛三塊歪斜的店家招牌"
+    "imageCaption": "一根插在紙本街道地圖上的圖釘，釘身垂掛三塊歪斜的店家招牌",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我的店在 Google 地圖上更容易被找到嗎？",
+        "a": "可以。它會逐項健檢 Google 商家檔案的類別、簡介、營業時間與照片，比對各平台的店名、地址、電話差異，產出地區服務頁草稿與 LocalBusiness 標記，並寫好評論回覆稿。"
+      },
+      {
+        "q": "Google 商家名稱可以加關鍵字嗎？",
+        "a": "千萬不要。寫成「XX 設計｜台中北屯裝潢推薦」有被檢舉停權的風險，商家名稱就填公司登記的正式名字。聯絡電話也建議用市話加區碼，不要放 0800。"
+      },
+      {
+        "q": "純網路賣家需要做 Google 地圖在地 SEO 嗎？",
+        "a": "不需要。在地 SEO 適合有實體店面或固定服務區域的生意，例如設計工作室、美容美髮、汽車保養、診所、家電維修；純線上出貨的電商用不到。"
+      }
+    ]
   },
   {
     "slug": "paid-ads",
@@ -1554,7 +1861,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/paid-ads",
     "image": "/skills-img/paid-ads.webp",
     "imageAlt": "抓出賠錢的廣告組：投幣口塞滿代幣、出口只滾出兩顆扭蛋的扭蛋機",
-    "imageCaption": "投幣口塞滿代幣、出口只滾出兩顆扭蛋的扭蛋機"
+    "imageCaption": "投幣口塞滿代幣、出口只滾出兩顆扭蛋的扭蛋機",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我檢查哪些廣告組在賠錢嗎？",
+        "a": "可以。它會算出扣掉成本後的真實 ROAS 與 CPA，跟平台回報的數字對照，並在成效下滑時判斷該換素材、改受眾，還是先修銷售頁。"
+      },
+      {
+        "q": "為什麼廣告後台的 ROAS 比實際賺的還好看？",
+        "a": "平台回報的 ROAS 一定比實際好看，因為它會把「看過廣告後自己搜尋進來」的訂單算給自己。判斷真實成效要以 GA4 和實際出貨資料對帳為準。"
+      },
+      {
+        "q": "廣告成效好想加預算，一次可以加多少？",
+        "a": "一次不要超過三成，加完等三到五天再動。一口氣把日預算從一千拉到五千，等於叫演算法重新學習一次，成效很可能不升反降。"
+      }
+    ]
   },
   {
     "slug": "copywriting",
@@ -1630,7 +1953,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/copywriting",
     "image": "/skills-img/copywriting.webp",
     "imageAlt": "把官網文案改成人話：一個網頁版面外框，內部段落色塊正在重排、底部按鈕正被換成大的",
-    "imageCaption": "一個網頁版面外框，內部段落色塊正在重排、底部按鈕正被換成大的"
+    "imageCaption": "一個網頁版面外框，內部段落色塊正在重排、底部按鈕正被換成大的",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我重寫官網首頁和服務頁的文案嗎？",
+        "a": "可以。它會一次產出 5 到 10 個主標題候選並打分，把功能改寫成客人得到的好處，依痛點、解法、運作方式、破除疑慮、行動的順序重排整頁，還會把「送出」這類按鈕改成講明會拿到什麼。"
+      },
+      {
+        "q": "AI 改寫網頁文案會幫我編成效數字嗎？",
+        "a": "不會，它不會幫你編數字。手上有「已服務 320 家」「平均三週交件」這類真實資料，一開始就提供給它，文案的說服力會差很多。"
+      },
+      {
+        "q": "AI 寫好的銷售頁文案要怎麼測試有沒有效？",
+        "a": "定稿別急著上線。先把頁面開頭截圖給沒看過的朋友看三秒，問他「你覺得我們在賣什麼」，答不出來就再改一輪。每個改動 AI 也會附一句理由，可以逐條決定要不要採用。"
+      }
+    ]
   },
   {
     "slug": "pricing-strategy",
@@ -1706,7 +2045,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/pricing-strategy",
     "image": "/skills-img/pricing-strategy.webp",
     "imageAlt": "訂出客人願意付的價格：橫桿上吊著三張大小遞增的紙吊牌，中間那張正在換牌",
-    "imageCaption": "橫桿上吊著三張大小遞增的紙吊牌，中間那張正在換牌"
+    "imageCaption": "橫桿上吊著三張大小遞增的紙吊牌，中間那張正在換牌",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫接案公司規劃報價方案嗎？",
+        "a": "可以。它會把服務排成入門、主推、完整三段並把中間那檔標成推薦，決定價格要跟著人數、件數、用量還是固定月費走，也能健檢價格頁的排法與年繳月繳切換。"
+      },
+      {
+        "q": "想漲價又怕客人跑掉，AI 能幫忙試算嗎？",
+        "a": "可以。它會試算漲價後客戶跑掉一成、兩成、三成時營收各剩多少，並寫好漲價公告、通知信與客服問答，附上老客戶鎖價方案。但每月流失超過 5% 時，它會提醒你先別漲價。"
+      },
+      {
+        "q": "賣實體商品用 AI 訂價要注意什麼？",
+        "a": "賣實體商品時要補上進貨成本與平台抽成。這個技能的預設思路來自訂閱制服務，一次性買斷的商品沒補這兩項，建議的價位會偏樂觀；競品價格它也不會自己上網查，要把對手方案頁貼給它。"
+      }
+    ]
   },
   {
     "slug": "seo-audit",
@@ -1782,7 +2137,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/seo-audit",
     "image": "/skills-img/seo-audit.webp",
     "imageAlt": "找出網站排不上的原因：一條紙帶做的道路，岔路被三角錐封住，小推車卡在錐子前",
-    "imageCaption": "一條紙帶做的道路，岔路被三角錐封住，小推車卡在錐子前"
+    "imageCaption": "一條紙帶做的道路，岔路被三角錐封住，小推車卡在錐子前",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我找出網站為什麼排不上 Google 嗎？",
+        "a": "可以。它會檢查哪些頁被 noindex 或 robots.txt 擋掉，逐頁檢查標題、描述、H1、內部連結與圖片 alt，找出好幾篇文章互搶同一個關鍵字，並把每個問題排成先做哪一項的清單。"
+      },
+      {
+        "q": "AI 做 SEO 診斷看得到網站的即時排名嗎？",
+        "a": "看不到。它量不到即時排名也量不到網站速度，數字要自己從 Search Console 和 PageSpeed 匯出貼給它，它再幫你解讀是圖太大還是版面亂跳。"
+      },
+      {
+        "q": "SEO 診斷出一堆問題，要先改哪一項？",
+        "a": "先處理轉址、索引這類會直接擋住收錄的問題，內容改寫留到後面。一次全改的話，排名變化時會分不出是哪一項起了作用。"
+      }
+    ]
   },
   {
     "slug": "page-cro",
@@ -1858,7 +2229,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/page-cro",
     "image": "/skills-img/page-cro.webp",
     "imageAlt": "讓看的人真的按下購買：側板裂開一道缺口的分段彈珠軌道",
-    "imageCaption": "側板裂開一道缺口的分段彈珠軌道"
+    "imageCaption": "側板裂開一道缺口的分段彈珠軌道",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "商品頁有人看卻沒人買，AI 能幫我找出原因嗎？",
+        "a": "可以。它會用五秒測試檢查訪客能不能一眼看懂你在賣什麼，掃描按鈕、表單欄位、運費說明與評價等信任元素給出轉換分數，並逐段標出訪客流失的位置。"
+      },
+      {
+        "q": "蝦皮和 momo 的商品頁要優化哪裡最有效？",
+        "a": "平台版型能動的有限，把力氣放在主圖順序、標題前二十個字和前三段賣點，那才是真正影響下單的位置。改的時候一次只改一件事再看數字。"
+      },
+      {
+        "q": "給 AI 什麼資料，頁面優化建議會更精準？",
+        "a": "把加入購物車率、跳出率、熱點圖一起提供給它。它看不到你的後台數據，有了這些資料，建議就會從通則變成針對你這一頁的具體修法。"
+      }
+    ]
   },
   {
     "slug": "social-media-manager",
@@ -1934,7 +2321,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/social-media-manager",
     "image": "/skills-img/social-media-manager.webp",
     "imageAlt": "社群發文行事曆規劃：一本掛在牆上的翻開月曆，格子裡的便利貼正被移到另一排",
-    "imageCaption": "一本掛在牆上的翻開月曆，格子裡的便利貼正被移到另一排"
+    "imageCaption": "一本掛在牆上的翻開月曆，格子裡的便利貼正被移到另一排",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我排社群發文行事曆嗎？",
+        "a": "可以。它會盤點客群、建議只專心經營一到兩個平台，訂出教學四成、幕後兩成、推銷一成的內容比例，產出標好日期、主題與發布時段的四週發文行事曆。"
+      },
+      {
+        "q": "用 AI 規劃台灣的社群經營要先講清楚什麼？",
+        "a": "原始技能偏歐美、預設推 LinkedIn，開口就要指定「台灣市場，只看 IG、Threads、LINE 官方帳號」。化妝品與保健食品也要先講明不能寫療效與絕對用語。"
+      },
+      {
+        "q": "AI 排好社群行事曆後會自動幫我發文嗎？",
+        "a": "不會。它排得出行事曆但不會幫你發文，也看不到你的後台。要自動發布得另外接排程工具，成效數據也要自己複製貼給它。"
+      }
+    ]
   },
   {
     "slug": "email-sequence",
@@ -2010,7 +2413,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/email-sequence",
     "image": "/skills-img/email-sequence.webp",
     "imageAlt": "自動信件流程設計：用木夾依間距夾在晾衣繩上的五個信封",
-    "imageCaption": "用木夾依間距夾在晾衣繩上的五個信封"
+    "imageCaption": "用木夾依間距夾在晾衣繩上的五個信封",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫電商設計會員自動信件流程嗎？",
+        "a": "可以。它會排出整串信的封數、間隔天數、觸發與退出條件，每封直接給主旨、預覽文字、完整內文與按鈕文案，主旨再多給三個版本方便 A/B 測試。"
+      },
+      {
+        "q": "AI 寫好的自動信會幫我寄出去嗎？",
+        "a": "不會，它只負責寫稿和排流程。稿子要自己貼到電子報系統或 LINE 官方帳號的自動訊息，寄送設定也要自己開。它會附上開信率與點擊率的合格線，讓你知道寄完該看哪些數字。"
+      },
+      {
+        "q": "訂閱制月費會員適合用這套自動信流程嗎？",
+        "a": "不太適合。這支技能只處理一次性買賣的名單：首購、棄單、回購、生日。訂閱制月費會員的續訂與退訂挽留，要改用專門處理續訂率的技能。"
+      }
+    ]
   },
   {
     "slug": "churn-prevention",
@@ -2086,7 +2505,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/churn-prevention",
     "image": "/skills-img/churn-prevention.webp",
     "imageAlt": "留住要退訂的客人：一張缺角、被刷卡機吐出一半的信用卡",
-    "imageCaption": "一張缺角、被刷卡機吐出一半的信用卡"
+    "imageCaption": "一張缺角、被刷卡機吐出一半的信用卡",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "訂閱制客人要取消時，AI 能幫忙設計挽留流程嗎？",
+        "a": "可以。它會設計從按下取消到取消後的五個階段流程，寫好一題式退訂原因問卷，並依退訂理由配對挽留方案：折扣、暫停、換小方案或專人協助。"
+      },
+      {
+        "q": "定期扣款刷卡失敗要怎麼救回來？",
+        "a": "AI 會排定扣款失敗的重試時間表，在第三天、第八天、第十五天各扣一次，並產出五封從第一次提醒到最後通知的催款信。催款信語氣要客氣，信裡直接放更新付款的連結。"
+      },
+      {
+        "q": "為了留住客人可以把取消按鈕藏起來嗎？",
+        "a": "不要。流程可以多一步問原因，但找不到取消入口只會換來客訴跟一星評價。挽留方案也要對上退訂原因，所有人都看到同一個折扣，等於公告原價可以殺價。"
+      }
+    ]
   },
   {
     "slug": "ad-creative",
@@ -2162,7 +2597,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/ad-creative",
     "image": "/skills-img/ad-creative.webp",
     "imageAlt": "廣告文案量產把關：一台鑄鐵裁紙機的刀臂，正切齊一整批細長紙條",
-    "imageCaption": "一台鑄鐵裁紙機的刀臂，正切齊一整批細長紙條"
+    "imageCaption": "一台鑄鐵裁紙機的刀臂，正切齊一整批細長紙條",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以一次產出很多組廣告標題嗎？",
+        "a": "可以。它一次能生十五組 Google 搜尋廣告標題，每組都在字數上限內，也能寫 Meta、Google、LINE 各平台版本，並依冷客、考慮中、快下單三個階段換不同說法。"
+      },
+      {
+        "q": "Google 廣告的中文標題字數上限是多少？",
+        "a": "中文字數上限是英文的一半，Google 廣告標題只有十五個中文字。請 AI 產出時要直接講明是中文廣告，不然它會給你超出上限的版本。"
+      },
+      {
+        "q": "化妝品廣告文案要怎麼用 AI 避免違規？",
+        "a": "產出後請它列一張 NG 用詞對照表，左邊原句、右邊合規改法，把踩到療效與絕對用語的句子挑出來改完再上傳。化粧品、保健食品與醫美是最容易踩雷的類別。"
+      }
+    ]
   },
   {
     "slug": "schema-markup",
@@ -2238,7 +2689,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/schema-markup",
     "image": "/skills-img/schema-markup.webp",
     "imageAlt": "幫網站加上星等標記：一張被從背面頂出星形凸起的細長紙卡",
-    "imageCaption": "一張被從背面頂出星形凸起的細長紙卡"
+    "imageCaption": "一張被從背面頂出星形凸起的細長紙卡",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫網站產生結構化資料標記嗎？",
+        "a": "可以。它會掃描現有頁面列出缺漏欄位，產出可直接貼進網頁的 JSON-LD，依頁面挑對類型（商品頁用 Product、問答頁用 FAQPage），並補上作者、發布日期與麵包屑。"
+      },
+      {
+        "q": "加了結構化資料，Google 就一定會顯示星等嗎？",
+        "a": "不一定。標記正確只是取得資格，不保證顯示，問答摺疊區近年也幾乎只留給醫療與政府網站。而且標記必須跟頁面上看得到的內容一致，沒評價卻標星等會被判定違規。"
+      },
+      {
+        "q": "蝦皮和 momo 賣場可以加結構化資料嗎？",
+        "a": "不行。蝦皮、momo 的賣場頁動不了原始碼，結構化資料只對自己的官網、部落格與一頁式頁面有效。"
+      }
+    ]
   },
   {
     "slug": "process-mapper",
@@ -2314,7 +2781,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/process-mapper",
     "image": "/skills-img/process-mapper.webp",
     "imageAlt": "找出流程卡住的關卡：三個並排窗口中，中間那個擋板只開一條縫、單據堆到滿出來",
-    "imageCaption": "三個並排窗口中，中間那個擋板只開一條縫、單據堆到滿出來"
+    "imageCaption": "三個並排窗口中，中間那個擋板只開一條縫、單據堆到滿出來",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "公司出貨老是很慢，AI 能幫我找出卡在哪一關嗎？",
+        "a": "可以。它會把流程拆成一關一關畫成泳道圖，分辨哪些時間在做事、哪些在等人，算出一般與最糟要多久，並排出最該先動的瓶頸，附上可能原因與一個具體動作。"
+      },
+      {
+        "q": "用 AI 分析流程，時間數字要怎麼給？",
+        "a": "盡量去查後台紀錄，不要憑印象填。憑感覺估出來的瓶頸八成抓錯人。也要畫現在實際怎麼跑，而不是理想中該怎麼跑，不然看不到真正卡住的地方。"
+      },
+      {
+        "q": "流程卡住的關卡加人手就能解決嗎？",
+        "a": "不一定。等待時間不是加人可以解決的，把人力加在等簽核的那一關，只會變成一群人一起在那邊等。要先分出是在做事還是在等人。"
+      }
+    ]
   },
   {
     "slug": "vendor-management",
@@ -2390,7 +2873,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/vendor-management",
     "image": "/skills-img/vendor-management.webp",
     "imageAlt": "廠商與訂閱服務體檢：三捲被拉出來比較的封箱膠帶，只有中間那捲貼得平整",
-    "imageCaption": "三捲被拉出來比較的封箱膠帶，只有中間那捲貼得平整"
+    "imageCaption": "三捲被拉出來比較的封箱膠帶，只有中間那捲貼得平整",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我評估外包廠商和軟體訂閱該不該續約嗎？",
+        "a": "可以。它會把廠商與訂閱整理成含年費、到期日、重要程度的表，用穩定度、客服回應、報價、合約彈性、可替代性五個面向打 0 到 100 分，並標成續約、約談、換掉三種處理方式。"
+      },
+      {
+        "q": "廠商的重要程度要怎麼排？",
+        "a": "不要用花多少錢排。一個月三百塊的網域代管一旦掛掉，官網和公司信箱會一起停擺，那才是第一級。它也會挑出一掛掉公司就停擺、卻沒有備案的高風險廠商。"
+      },
+      {
+        "q": "給 AI 什麼資料，廠商評分才能拿去談判？",
+        "a": "給日期和件數，不要只給印象。記下廠商沒做到承諾的日期與次數，AI 產出的評分表才會是能攤在談判桌上談折讓或改條款的數字。"
+      }
+    ]
   },
   {
     "slug": "financial-analyst",
@@ -2466,7 +2965,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/finance/skills/financial-analyst",
     "image": "/skills-img/financial-analyst.webp",
     "imageAlt": "財務健檢與現金流預測：被四個長尾夾各咬走一角的鈔票",
-    "imageCaption": "被四個長尾夾各咬走一角的鈔票"
+    "imageCaption": "被四個長尾夾各咬走一角的鈔票",
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫小公司看懂財務報表嗎？",
+        "a": "可以。它會算出獲利、變現、負債、周轉四大類共二十多項比率，每個數字附白話解釋與同業參考值，並比對預算與實際，只挑出差距超過門檻的科目。"
+      },
+      {
+        "q": "AI 可以預測公司現金撐不撐得到年底嗎？",
+        "a": "可以。它會做未來 13 週的滾動現金流，抓出哪一週帳上會見底，也能算應收帳款帳齡、標出可能收不回來的款項，並用歷史資料推出樂觀、正常、保守三個營收版本。"
+      },
+      {
+        "q": "AI 的財務分析可以取代記帳士嗎？",
+        "a": "不行。AI 算出來的是分析，不是財報，報稅、財簽跟帳務憑證還是要交給記帳士或會計師。另外平台抽成、金流手續費、退貨損失要一起放進去，不然毛利會虛胖。"
+      }
+    ]
   },
   {
     "slug": "transcript",
@@ -2539,7 +3054,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/transcript",
     "image": "/skills-img/transcript.webp",
     "imageAlt": "影片變成文字素材：一捲錄影卡帶，抽出的磁帶在半途變成一條細長紙條",
-    "imageCaption": "一捲錄影卡帶，抽出的磁帶在半途變成一條細長紙條"
+    "imageCaption": "一捲錄影卡帶，抽出的磁帶在半途變成一條細長紙條",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把 YouTube 影片內容轉成文字稿嗎？",
+        "a": "可以。貼上影片網址，它會把整支影片講過的話變成文字，每一句都標時間，同時帶回標題與頻道名稱；長影片可以先要重點摘要，英文或日文影片也能邊抓邊翻成中文。"
+      },
+      {
+        "q": "為什麼有些 YouTube 影片抓不到文字稿？",
+        "a": "影片沒有開字幕就抓不到內容。先看影片下方有沒有字幕按鈕，剛結束的直播通常也要等一段時間才會有字幕可以抓。"
+      },
+      {
+        "q": "抓下來的同業影片文字稿可以直接當貼文嗎？",
+        "a": "不行。拿別人的話當參考可以，整段搬過去當自己的文案不行，一定要改寫過再用。化妝品和保養品的說法尤其要小心，同業敢講不代表你能講。"
+      }
+    ]
   },
   {
     "slug": "youtube-search",
@@ -2612,7 +3143,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/youtube-search",
     "image": "/skills-img/youtube-search.webp",
     "imageAlt": "關鍵字撈同業影片：一個立滿相同卡片的長木槽，右端空隙正被插進一張較高較窄的卡片",
-    "imageCaption": "一個立滿相同卡片的長木槽，右端空隙正被插進一張較高較窄的卡片"
+    "imageCaption": "一個立滿相同卡片的長木槽，右端空隙正被插進一張較高較窄的卡片",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我搜尋某個主題的 YouTube 同業影片嗎？",
+        "a": "可以。用一句關鍵字就能撈出相關影片，一次最多五十支，附觀看數和上架時間；也能改成找頻道，或限定在某一個頻道裡搜，撈完再請它讀內容整理成比較表。"
+      },
+      {
+        "q": "用 AI 搜 YouTube 影片，關鍵字要怎麼下？",
+        "a": "打消費者會用的口語，不要打公司內部的商品名，搜出來的結果差很多。一次撈三十支就夠，寧可多搜幾個不同的關鍵字。"
+      },
+      {
+        "q": "搜到觀看數很高的 YouTube 影片就值得參考嗎？",
+        "a": "不一定。觀看數高不一定是新片，一定要看上架時間，三年前的影片參考價值有限。沒有字幕的影片也抓不到內容，可以先在清單上過濾掉。"
+      }
+    ]
   },
   {
     "slug": "youtube-channels",
@@ -2685,7 +3232,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/youtube-channels",
     "image": "/skills-img/youtube-channels.webp",
     "imageAlt": "同業頻道追蹤流程：牆上三個並排的鐵製信箱，中間那個被塞爆頂開門",
-    "imageCaption": "牆上三個並排的鐵製信箱，中間那個被塞爆頂開門"
+    "imageCaption": "牆上三個並排的鐵製信箱，中間那個被塞爆頂開門",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我追蹤同業的 YouTube 頻道上了什麼新片嗎？",
+        "a": "可以。它會列出指定頻道最近十五支影片，附精確觀看數和上架日期，也能把整個頻道歷年上傳的影片全部列出，或在單一頻道裡用關鍵字搜尋。"
+      },
+      {
+        "q": "追蹤同業頻道要多久看一次？",
+        "a": "看最近上片每週問一次就好，沒什麼負擔；整個頻道全部撈一遍比較慢，一季做一次就夠。同一份名單每週累積下來，就是同業的上片紀錄。"
+      },
+      {
+        "q": "比較不同 YouTube 頻道的觀看數有意義嗎？",
+        "a": "沒什麼意義。觀看數要跟同一個頻道的其他影片比才看得出哪支表現特別好，跨頻道比大小看不出東西。"
+      }
+    ]
   },
   {
     "slug": "youtube-playlist",
@@ -2759,7 +3322,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ZeroPointRepo/youtube-skills/tree/main/skills/youtube-playlist",
     "image": "/skills-img/youtube-playlist.webp",
     "imageAlt": "整串影片變文字素材：一本攤開的碟片收納冊，被抽出的三張碟片正散成紙頁",
-    "imageCaption": "一本攤開的碟片收納冊，被抽出的三張碟片正散成紙頁"
+    "imageCaption": "一本攤開的碟片收納冊，被抽出的三張碟片正散成紙頁",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把整個 YouTube 播放清單轉成文字嗎？",
+        "a": "可以。貼上播放清單或頻道網址，它會把每支影片的標題、片長、觀看數列出來，一次超過一百支也會自動翻頁抓完，再挑出你要的幾支轉成文字稿。"
+      },
+      {
+        "q": "播放清單有一百支影片，需要全部轉文字嗎？",
+        "a": "通常沒必要。先列清單再挑，挑觀看數前十支就足夠看出方向，也省時間。頻道的「所有影片」其實也是一種清單，每個月撈一次就能固定追同業動態。"
+      },
+      {
+        "q": "同業影片的文字稿可以改幾個字當成自己的貼文嗎？",
+        "a": "會有爭議。抓下來的是別人的內容，當研究參考沒問題，但改幾個字就當成自己的貼文不行。題目可以借，句子要自己寫。"
+      }
+    ]
   },
   {
     "slug": "brand-guidelines",
@@ -2833,7 +3412,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/brand-guidelines",
     "image": "/skills-img/brand-guidelines.webp",
     "imageAlt": "品牌視覺統一流程：一支攤開成半圓的色卡扇，選定的一片被夾住、顏色染上空白紙樣",
-    "imageCaption": "一支攤開成半圓的色卡扇，選定的一片被夾住、顏色染上空白紙樣"
+    "imageCaption": "一支攤開成半圓的色卡扇，選定的一片被夾住、顏色染上空白紙樣",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我建立品牌色票和字體規範嗎？",
+        "a": "可以。它會把主色、輔助色、文字色整理成一張標明用途的色票表，訂好標題與內文的字體搭配，之後做簡報、圖卡、文件時自動套上，規範也能存成文件給外包設計師照著做。"
+      },
+      {
+        "q": "給 AI 品牌顏色要怎麼描述才準？",
+        "a": "色號一定要給到六碼，只說「我們的藍」它只能用猜的，出來的顏色常常跟你想的差一截。輔助色抓兩到三個就夠，超過五個畫面會亂。"
+      },
+      {
+        "q": "品牌規範的字體要怎麼挑？",
+        "a": "挑大家電腦都有的字體。不然檔案傳給客戶或印刷廠，開起來整份跑版會更麻煩。它也會事先講好電腦沒裝該字體時要用什麼替代。"
+      }
+    ]
   },
   {
     "slug": "canvas-design",
@@ -2907,7 +3502,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/canvas-design",
     "image": "/skills-img/canvas-design.webp",
     "imageAlt": "從一句話到一張海報：一張從紙筒半捲開的大尺寸海報",
-    "imageCaption": "一張從紙筒半捲開的大尺寸海報"
+    "imageCaption": "一張從紙筒半捲開的大尺寸海報",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我做活動主視覺海報嗎？",
+        "a": "可以。它會先寫一份設計概念說明，講清楚形狀、顏色與氣氛的來源，再照著概念畫成可以直接印、直接貼的單張海報，畫完還會精修一輪檢查元素重疊與間距。"
+      },
+      {
+        "q": "請 AI 做海報時，要怎麼描述我想要的感覺？",
+        "a": "舉具體例子，像「日本攝影集那種安靜」，會比說「高級感」有用太多。文字給三到五個字就好，想放整段文案那是商品頁的事，不是主視覺。"
+      },
+      {
+        "q": "AI 做的海報要拿去印刷要注意什麼？",
+        "a": "要先講清楚尺寸和出血。事後再放大會糊，重做一次比一開始講清楚更花時間。需要成套時它也能延伸出多張風格一致、畫面不同的版本。"
+      }
+    ]
   },
   {
     "slug": "webapp-testing",
@@ -2981,7 +3592,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ComposioHQ/awesome-claude-skills/tree/main/webapp-testing",
     "image": "/skills-img/webapp-testing.webp",
     "imageAlt": "網站操作自動驗收流程：一段只有四階的木樓梯，第四階踏板裂開卡住一隻鞋",
-    "imageCaption": "一段只有四階的木樓梯，第四階踏板裂開卡住一隻鞋"
+    "imageCaption": "一段只有四階的木樓梯，第四階踏板裂開卡住一隻鞋",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以自動幫我測試網站功能有沒有壞掉嗎？",
+        "a": "可以。照你描述的流程，它會自己開瀏覽器把每個步驟點一遍，每一步截圖存下來，幫你填表單、按送出確認有沒有成功，還能在手機、平板、電腦三種尺寸各跑一次。"
+      },
+      {
+        "q": "請 AI 測試網站，流程要怎麼寫才準？",
+        "a": "越具體越好。寫「填表單」它會亂猜，寫「姓名填王小明」才準。改版前先把常用流程存成固定一份，改完直接重跑，比自己一頁頁點省事很多。"
+      },
+      {
+        "q": "AI 測到網站錯誤會自己修好嗎？",
+        "a": "不會。它只回報畫面上發生什麼事，並把畫面背後的錯誤訊息抓出來，修改還是要交給工程師。另外它只能拿來測自己的網站或測試站。"
+      }
+    ]
   },
   {
     "slug": "brainstorming",
@@ -3055,7 +3682,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/obra/superpowers/tree/main/skills/brainstorming",
     "image": "/skills-img/brainstorming.webp",
     "imageAlt": "模糊想法變成企劃書：一列排隊等著被作答的二選一小卡",
-    "imageCaption": "一列排隊等著被作答的二選一小卡"
+    "imageCaption": "一列排隊等著被作答的二選一小卡",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "想法還很模糊時，AI 可以幫我整理成企劃書嗎？",
+        "a": "可以。它一次只問一個問題、多半是選擇題，針對同一件事給兩到三種做法並推薦一個，企劃分段給你確認，定稿後存成一份企劃書檔案，之後給外包或同事看。"
+      },
+      {
+        "q": "AI 一直問問題，可以直接叫它開始做嗎？",
+        "a": "已經想得很清楚的事直接叫它做就行，不用走這一套。這個技能是給想法還模糊的時候用的，多回答一題，通常就少一次做完才發現方向錯的重做。"
+      },
+      {
+        "q": "AI 問的方向不是我在意的怎麼辦？",
+        "a": "直接打斷它，例如說「這題不重要，我更在意成本」，它會馬上換方向。它也會在發現你要的其實是三個獨立案子時，先提醒你拆開來一件一件做。"
+      }
+    ]
   },
   {
     "slug": "writing-plans",
@@ -3129,7 +3772,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/obra/superpowers/tree/main/skills/writing-plans",
     "image": "/skills-img/writing-plans.webp",
     "imageAlt": "企劃拆成一張執行單：下半截被剪成可撕紙條的執行單與板夾",
-    "imageCaption": "下半截被剪成可撕紙條的執行單與板夾"
+    "imageCaption": "下半截被剪成可撕紙條的執行單與板夾",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把企劃拆成給外包或新同事的執行單嗎？",
+        "a": "可以。它會先盤點這件事會動到的商品頁、後台、圖檔與對帳表，把工作切成兩三分鐘一步的小動作，每一步都寫清楚做完應該長什麼樣，寫完再對照原企劃檢查有沒有漏。"
+      },
+      {
+        "q": "請 AI 寫執行單時要先告訴它什麼？",
+        "a": "一定要講執行的人是誰。同一件事給老手跟給新人，單子的詳細程度差很多。單子太長也可以叫它拆成兩張，一張今天做完、一張明天做完。"
+      },
+      {
+        "q": "AI 寫的執行單可以拿來當交接文件嗎？",
+        "a": "可以，這張單子同時就是交接文件，人走了下一個人照著走就能接手。執行途中改了做法，記得回頭叫它更新單子，不要只在腦袋裡改。"
+      }
+    ]
   },
   {
     "slug": "planning-and-task-breakdown",
@@ -3203,7 +3862,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/addyosmani/agent-skills/tree/main/skills/planning-and-task-breakdown",
     "image": "/skills-img/planning-and-task-breakdown.webp",
     "imageAlt": "大專案拆成小任務：從纏死的麻繩結團裡抽出來、被打結分成四節的一條繩子",
-    "imageCaption": "從纏死的麻繩結團裡抽出來、被打結分成四節的一條繩子"
+    "imageCaption": "從纏死的麻繩結團裡抽出來、被打結分成四節的一條繩子",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "專案太大不知道從哪開始，AI 能幫忙排順序嗎？",
+        "a": "可以。它會找出哪件事沒做完、後面幾件就動不了，把工作切成一次做得完的小塊，每個任務寫上「怎樣算做完」，並標出哪些可以同時發給不同人做、哪些一定要排隊。"
+      },
+      {
+        "q": "AI 排出來的專案順序做不完怎麼辦？",
+        "a": "一開始就要講人力和時間限制，不然它排出來的順序很理想，但你根本做不完。另外先讓一件事完整走通再複製到其他件，比每個環節都做一半安全。"
+      },
+      {
+        "q": "任務要切多細才適合交給 AI 規劃？",
+        "a": "任務名稱裡出現「和」這個字，通常代表那其實是兩件事，該拆成兩個。它每兩三個任務會插一個檢查點，到了就真的停下來看一遍再決定要不要繼續。"
+      }
+    ]
   },
   {
     "slug": "web-design-guidelines",
@@ -3277,7 +3952,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines",
     "image": "/skills-img/web-design-guidelines.webp",
     "imageAlt": "網頁介面體檢流程：一支被手指蓋住按鈕的直立手機",
-    "imageCaption": "一支被手指蓋住按鈕的直立手機"
+    "imageCaption": "一支被手指蓋住按鈕的直立手機",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫網頁做使用介面健檢嗎？",
+        "a": "可以。它會用手機尺寸檢查按鈕大小與間距、文字跟背景的對比、表單好不好填，抓出載入時畫面亂跳與圖片變形，並把問題整理成清單，標出在哪一段、為什麼要改、改成什麼樣。"
+      },
+      {
+        "q": "網頁介面健檢會幫我改設計風格嗎？",
+        "a": "不會。它看的是好不好用，不是好不好看，想調整風格美感要另外找設計討論。一次可能列出二三十項問題，先修會擋住客人下單的那幾項就好。"
+      },
+      {
+        "q": "網頁介面健檢多久要做一次？",
+        "a": "準則會持續更新，重要頁面建議每一季跑一次，不要只在改版時才想到。另外蝦皮、LINE 內建瀏覽器的行為跟一般瀏覽器不同，檢查時要特別註明。"
+      }
+    ]
   },
   {
     "slug": "writing-guidelines",
@@ -3351,7 +4042,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/vercel-labs/agent-skills/tree/main/skills/writing-guidelines",
     "image": "/skills-img/writing-guidelines.webp",
     "imageAlt": "照規矩逐句檢查文案：一疊稿頁，最上面那張的字行上被逐行蓋上小方印",
-    "imageCaption": "一疊稿頁，最上面那張的字行上被逐行蓋上小方印"
+    "imageCaption": "一疊稿頁，最上面那張的字行上被逐行蓋上小方印",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以依照我的用字規則逐句檢查文案嗎？",
+        "a": "可以。把用字規則、品牌寫法、禁用詞整理成一份標準，它會逐句掃過稿子，指出哪一段哪一句有問題並附上建議改法，也能一次檢查多篇貼文、商品頁與電子報。"
+      },
+      {
+        "q": "文案規則要怎麼寫，AI 才抓得到問題？",
+        "a": "越具體越有用。「語氣要親切」它抓不到，「不要用您、一律用你」它就抓得到。能在字面上被看見的規則，才寫得進檢查標準。"
+      },
+      {
+        "q": "化妝品賣家怎麼用 AI 避免文案踩到療效字眼？",
+        "a": "把主管機關公告的禁用詞一起放進規則裡，它每篇都會照這份檢查，這一條最省事。每次改稿發現的新問題也補進規則，用久了它抓稿的標準會越來越像你。"
+      }
+    ]
   },
   {
     "slug": "contract-and-proposal-writer",
@@ -3425,7 +4132,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-growth/skills/contract-and-proposal-writer",
     "image": "/skills-img/contract-and-proposal-writer.webp",
     "imageAlt": "報價到簽約的流程：一本正被撕開的三聯式估價單與旁邊沾著印泥的木頭印章",
-    "imageCaption": "一本正被撕開的三聯式估價單與旁邊沾著印泥的木頭印章"
+    "imageCaption": "一本正被撕開的三聯式估價單與旁邊沾著印泥的木頭印章",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫接案工作室擬報價單和合約嗎？",
+        "a": "可以。它能把案子條件整理成含工作範圍、時程與報價明細的提案書，擬好付款分期的合作契約與保密協議，並補上改稿次數、追加需求計價、驗收期限等最容易漏的條款。"
+      },
+      {
+        "q": "AI 擬的合約可以直接拿去簽嗎？",
+        "a": "不建議直接簽。金額大或條件特殊的案子，簽之前還是要請律師看過，AI 擬的文件是好用的起點，不是法律意見。談成之後可以把最終版留一份當範本，下次同類案子直接叫它照著改。"
+      },
+      {
+        "q": "接案合約最容易漏掉哪些條款？",
+        "a": "改稿次數與追加需求怎麼計價最常漏，一定要寫進合約，比事後在 LINE 上跟客戶吵有用得多。著作權與作品能不能放進作品集、放上官網，也要事先寫清楚。"
+      }
+    ]
   },
   {
     "slug": "customer-success-manager",
@@ -3499,7 +4222,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-growth/skills/customer-success-manager",
     "image": "/skills-img/customer-success-manager.webp",
     "imageAlt": "老客戶健檢的流程：一個名片盒與正從盒口滑出去的一張名片",
-    "imageCaption": "一個名片盒與正從盒口滑出去的一張名片"
+    "imageCaption": "一個名片盒與正從盒口滑出去的一張名片",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我找出哪些老客戶快要流失嗎？",
+        "a": "可以。它會替每個客戶算健康分數、分成綠燈黃燈紅燈三級，跟上一期比對找出正在往下掉的客戶，排出流失風險並標出哪幾家該老闆親自出面，也會找出可以加購或升級的客戶。"
+      },
+      {
+        "q": "用 AI 分析客戶健康度需要準備哪些資料？",
+        "a": "不用一次到齊，先從下單日期和聯絡日期兩欄開始，就看得出不少東西。每季固定跑一次、跟上一季比，才看得出誰正在往下掉。"
+      },
+      {
+        "q": "有什麼警訊代表老客戶可能要流失了？",
+        "a": "對方窗口換人是最準的警訊之一，看到就先約時間見面，不要等對方主動開口。AI 算出的分數只是用來排先後，最後還是要自己判斷。"
+      }
+    ]
   },
   {
     "slug": "rfp-responder",
@@ -3573,7 +4312,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/rfp-responder",
     "image": "/skills-img/rfp-responder.webp",
     "imageAlt": "投標前的判斷流程：一本書口貼滿索引標籤的厚標書，其中三張標籤被撕下並各配一張回覆卡",
-    "imageCaption": "一本書口貼滿索引標籤的厚標書，其中三張標籤被撕下並各配一張回覆卡"
+    "imageCaption": "一本書口貼滿索引標籤的厚標書，其中三張標籤被撕下並各配一張回覆卡",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我拆解政府標案的需求書嗎？",
+        "a": "可以。它會把幾十頁需求書拆成逐條清單，標出繳件期限、份數和格式限制，分出資格門檻、配分項目與加分項，並對照你的實績標成有把握、勉強、完全沒有。"
+      },
+      {
+        "q": "AI 能幫我判斷一個標案值不值得投嗎？",
+        "a": "可以。它會依對手、關係深淺、有沒有現任廠商，估一個大概的機會高低。決定不投也是一種結果，省下的時間可以拿去談成交機會更高的案子。"
+      },
+      {
+        "q": "用 AI 寫標案回覆要注意什麼？",
+        "a": "答題順序照對方的題號走，因為評審是照他們的表打分。沒有真實案例或證書佐證的說法不要寫，它也不會幫你編實績湊數；力氣要放在配分高的題目上。"
+      }
+    ]
   },
   {
     "slug": "competitive-teardown",
@@ -3648,7 +4403,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/competitive-teardown",
     "image": "/skills-img/competitive-teardown.webp",
     "imageAlt": "拆解對手寫成報告：三個被拆開攤平成十字展開圖的商品紙盒，各繫著一張吊牌價標",
-    "imageCaption": "三個被拆開攤平成十字展開圖的商品紙盒，各繫著一張吊牌價標"
+    "imageCaption": "三個被拆開攤平成十字展開圖的商品紙盒，各繫著一張吊牌價標",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我分析蝦皮上的競爭對手嗎？",
+        "a": "可以。它會把對手的商品頁、定價、組合方式整理成並排比較表，把顧客評價分成稱讚、抱怨、許願三類，用十二個面向逐項打分並附上證據，最後整理出你可以切入的缺口與行動清單。"
+      },
+      {
+        "q": "做競品分析要挑幾家對手比較好？",
+        "a": "最多挑三家。挑五家以上，每家都只能寫兩句，看起來很豐富，其實一件事都做不了。顧客評價也至少要看二十則以上再下結論。"
+      },
+      {
+        "q": "AI 做的競品分析分數可以拿去開會嗎？",
+        "a": "要求它每一分都附證據才可以，例如看到哪一則評論、哪一頁定價。沒有出處的分數是它自己編的印象分，不能拿去開會。同一批對手每季重做一次，看差異更有參考價值。"
+      }
+    ]
   },
   {
     "slug": "ui-design-system",
@@ -3723,7 +4494,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/ui-design-system",
     "image": "/skills-img/ui-design-system.webp",
     "imageAlt": "一個主色展開整套規格：一塊正剝成十片色階的方磚",
-    "imageCaption": "一塊正剝成十片色階的方磚"
+    "imageCaption": "一塊正剝成十片色階的方磚",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以從一個品牌主色展開整套網站設計規格嗎？",
+        "a": "可以。它會把一個主色展開成十個深淺階並標好按鈕各狀態用哪一階，算出成套的字級與行高，間距用八的倍數排，檢查文字對比是否符合無障礙標準，最後輸出成工程師能直接用的規格檔。"
+      },
+      {
+        "q": "給 AI 做設計系統，主色要怎麼提供？",
+        "a": "給六碼色號，不要只說「我們的綠」。深淺差一點點，整站看起來就會不一樣。它會從這個主色展開十個深淺階，並標好按鈕平常、滑過、按下、停用各用哪一階。"
+      },
+      {
+        "q": "設計規格定好之後要怎麼維護？",
+        "a": "把它當成唯一版本，之後要改就回頭改這份，不要在單一頁面上直接硬改數字。對比檢查也不要跳過，淺灰字配白底在陽光下滑手機時會看不到。"
+      }
+    ]
   },
   {
     "slug": "landing-page-generator",
@@ -3797,7 +4584,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/landing-page-generator",
     "image": "/skills-img/landing-page-generator.webp",
     "imageAlt": "一頁式銷售頁產出流程：一張摺成七摺、每摺各壓出一個空白凹槽的立起長紙",
-    "imageCaption": "一張摺成七摺、每摺各壓出一個空白凹槽的立起長紙"
+    "imageCaption": "一張摺成七摺、每摺各壓出一個空白凹槽的立起長紙",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我做一頁式銷售頁嗎？",
+        "a": "可以。它會一次產出完整一頁：開頭主打、賣點區塊、方案比較、常見問答、購買按鈕與頁尾，文案照先講煩惱、再放大後果、最後給解法的順序寫，並以手機優先排版。"
+      },
+      {
+        "q": "AI 做的一頁式銷售頁可以放它生成的評價嗎？",
+        "a": "不可以。評價區一定要放真的評論，還沒有真實評價就先拿掉，不要用 AI 生成的假評價。價格、期限、庫存這些數字也要自己再核對一次。"
+      },
+      {
+        "q": "一頁式銷售頁要先做幾個版本測試？",
+        "a": "先讓它出兩版標題跟開頭，投一點廣告測過，再決定哪一版擴寫成完整頁。同一支商品它可以生兩三版不同說法，拿去比比看哪一版有人按。"
+      }
+    ]
   },
   {
     "slug": "experiment-designer",
@@ -3872,7 +4675,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/experiment-designer",
     "image": "/skills-img/experiment-designer.webp",
     "imageAlt": "商品頁改版驗證流程：指針被插銷卡住、兩盤各放一張主圖卡的天秤",
-    "imageCaption": "指針被插銷卡住、兩盤各放一張主圖卡的天秤"
+    "imageCaption": "指針被插銷卡住、兩盤各放一張主圖卡的天秤",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我測試商品頁改版有沒有效嗎？",
+        "a": "可以。它會把想改的地方寫成一句可驗證的假設，挑一個決定去留的主要指標並設好退貨率、客訴數這類底線，算出要累積多少人看過、多少張單，才分得出真的差異。"
+      },
+      {
+        "q": "做 A/B 測試為什麼一次只能改一件事？",
+        "a": "主圖和標題一起換，贏了也不知道功勞算誰的，下次就沒辦法複製。另外說好跑十天就跑滿，不要每天偷看、見好就收，提早收的結果多半是運氣。"
+      },
+      {
+        "q": "商品頁剛改版前幾天數字特別好，代表改對了嗎？",
+        "a": "不一定。剛換版前三天特別好很常見，那是老客人看到新東西的反應，過一週再看才準。流量不夠的賣場，也不值得去測百分之零點五這種小差距。"
+      }
+    ]
   },
   {
     "slug": "capacity-planner",
@@ -3947,7 +4766,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/capacity-planner",
     "image": "/skills-img/capacity-planner.webp",
     "imageAlt": "客服人力盤點流程：一排掛鉤上只掛了兩副耳罩壓扁的耳機，後面三個掛鉤空著",
-    "imageCaption": "一排掛鉤上只掛了兩副耳罩壓扁的耳機，後面三個掛鉤空著"
+    "imageCaption": "一排掛鉤上只掛了兩副耳罩壓扁的耳機，後面三個掛鉤空著",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以算出旺季客服要補幾個人嗎？",
+        "a": "可以。它會把過去三個月的量分成平常日、忙日與最爆的那天，用平均處理時間和目標回覆速度，算出七成、八成、九成負載各要幾個人，並排出把新人上手期算進去的補人時間表。"
+      },
+      {
+        "q": "用 AI 算人力需求，只給平均單量可以嗎？",
+        "a": "只給平均值算出來一定偏少。務必準備每天的數字，最忙那幾天才是決定要請幾個人的關鍵；新人也不是報到就有戰力，兩三個月的上手期要一起算進去。"
+      },
+      {
+        "q": "人力排到九成負載是不是最省錢？",
+        "a": "不是。排到九成以上是把風險藏起來，只要一個人請假整條線就會慢下來。補人前也要先確認塞住的地方真的是人不夠，而不是卡在等主管簽核或等倉庫回覆。"
+      }
+    ]
   },
   {
     "slug": "youtube-shorts-generator",
@@ -4022,7 +4857,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator/tree/main/.claude/skills/youtube-shorts-generator",
     "image": "/skills-img/youtube-shorts-generator.webp",
     "imageAlt": "長影片變短影音流程：一條橫躺的電影膠卷，三格被剪下轉成直立並被魚鉤勾住",
-    "imageCaption": "一條橫躺的電影膠卷，三格被剪下轉成直立並被魚鉤勾住"
+    "imageCaption": "一條橫躺的電影膠卷，三格被剪下轉成直立並被魚鉤勾住",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把長影片自動剪成短影音嗎？",
+        "a": "可以。它會把影片轉成有時間點的逐字稿，用開場鉤子、情緒高點、金句等八種訊號掃描全片，每段給 0 到 100 分，挑出高分段落自動裁成直式畫面，並附上開頭第一句鉤子。"
+      },
+      {
+        "q": "用 AI 把長影片剪成短影音要付費嗎？",
+        "a": "需要。這個技能要另外申請雲端服務金鑰，聽寫按影片分鐘數計費，不是免費工具，建議先拿一支短片試算成本。"
+      },
+      {
+        "q": "AI 自動挑出的爆點段落可以直接發嗎？",
+        "a": "發之前要先改。第一句鉤子是機器寫的，語氣會有點誇張，要改成自己平常講話的樣子；它挑的是容易被停下來看的段落，化妝品的功效說法也要自己再看一次。"
+      }
+    ]
   },
   {
     "slug": "ai-clipping",
@@ -4097,7 +4948,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/SamurAIGPT/Generative-Media-Skills/tree/main/library/edit/ai-clipping",
     "image": "/skills-img/ai-clipping.webp",
     "imageAlt": "雲端切片產出流程：一台蓋著薄布、闔上不動的筆記型電腦，旁邊立成一排的四支直式螢幕手機",
-    "imageCaption": "一台蓋著薄布、闔上不動的筆記型電腦，旁邊立成一排的四支直式螢幕手機"
+    "imageCaption": "一台蓋著薄布、闔上不動的筆記型電腦，旁邊立成一排的四支直式螢幕手機",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "電腦效能不好也能用 AI 剪短影音嗎？",
+        "a": "可以。這支整套流程都在雲端跑，你的電腦只負責上傳和下載，不用裝剪輯軟體。鏡頭會跟著講話的人移動，直式、正方形、四比五三種比例都能出。"
+      },
+      {
+        "q": "雲端 AI 剪片要付費嗎？",
+        "a": "需要。這支全程靠付費的雲端服務，按影片長度計費，同一支影片重跑要再算一次錢，建議先幫自己設每月預算上限，並想清楚要幾支、什麼比例再送出。"
+      },
+      {
+        "q": "為什麼上傳到雲端剪片的影片會失敗？",
+        "a": "影片要讓雲端讀得到。放在只有你能開的資料夾或需要登入的頁面會失敗，要先傳成公開連結。畫面一直切鏡頭或穿插字卡的素材，追臉也會比較沒把握。"
+      }
+    ]
   },
   {
     "slug": "clipify",
@@ -4172,7 +5039,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/louisedesadeleer/clipify",
     "image": "/skills-img/clipify.webp",
     "imageAlt": "本機剪片上字流程：一個被橫線分成上下兩格、下緣正在逐顆貼上小方塊的直立畫框",
-    "imageCaption": "一個被橫線分成上下兩格、下緣正在逐顆貼上小方塊的直立畫框"
+    "imageCaption": "一個被橫線分成上下兩格、下緣正在逐顆貼上小方塊的直立畫框",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "有沒有不用上傳影片、在自己電腦剪短影音的 AI 工具？",
+        "a": "有。這支從聽寫到上字幕整個過程都在你自己的電腦跑，影片不會離開這台機器，不用申請金鑰也不用付雲端費用，適合敏感或未上市的素材。"
+      },
+      {
+        "q": "兩個人對談的橫式影片可以用 AI 轉成直式嗎？",
+        "a": "可以。橫轉直有兩種做法：鏡頭跟著正在講話的人切換，或上下分割讓兩人同框。它還會燒上一個字一個字跳的動態字幕，有三種樣式可選。"
+      },
+      {
+        "q": "在自己電腦跑 AI 剪片會很慢嗎？",
+        "a": "會比較吃電腦效能，長片會慢一點。素材如果是超高畫質，先轉成一般畫質再剪，速度會差很多；第一次用建議先拿一支十分鐘以內的短片試手感。"
+      }
+    ]
   },
   {
     "slug": "legal-compare",
@@ -4246,7 +5129,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/zubair-trabzada/ai-legal-claude/tree/main/skills/legal-compare",
     "image": "/skills-img/legal-compare.webp",
     "imageAlt": "合約新舊版比對流程：兩份疊在一起對光透視的騎馬釘合約，中段露出一個缺口",
-    "imageCaption": "兩份疊在一起對光透視的騎馬釘合約，中段露出一個缺口"
+    "imageCaption": "兩份疊在一起對光透視的騎馬釘合約，中段露出一個缺口",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我比對合約新舊版改了哪些條款嗎？",
+        "a": "可以。它會逐條分成新增、刪除、實質修改、只改文字四類，標出每一條對哪一方有利與嚴重程度，特別抓偷塞條款、保護被拿掉、賠償變無上限等九種陷阱，新舊原文並排列出。"
+      },
+      {
+        "q": "AI 比對合約的結果可以當成法律意見嗎？",
+        "a": "不行。AI 比對合約是幫你讀懂差異，不是法律意見，金額大或牽涉智慧財產的合約還是要給律師看過。它能做的是先把偷改的條款標出來，讓你帶著問題去問。"
+      },
+      {
+        "q": "用 AI 比對合約要注意什麼？",
+        "a": "掃描的紙本合約要先確認字看得清楚，糊掉的條款它讀不到。合約全文會送進 AI 處理，機密部分要自己先評估；談完的最終版也要再比一次，確認刪掉的條款沒被放回去。"
+      }
+    ]
   },
   {
     "slug": "ai-meeting-notes",
@@ -4320,7 +5219,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/LeoYeAI/openclaw-master-skills/tree/main/skills/ai-meeting-notes",
     "image": "/skills-img/ai-meeting-notes.webp",
     "imageAlt": "會議筆記變待辦清單：一本攤開的線圈筆記本，左頁纏繞的筆跡線正被抽直成右頁的條列",
-    "imageCaption": "一本攤開的線圈筆記本，左頁纏繞的筆跡線正被抽直成右頁的條列"
+    "imageCaption": "一本攤開的線圈筆記本，左頁纏繞的筆跡線正被抽直成右頁的條列",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把開會的潦草筆記整理成待辦清單嗎？",
+        "a": "可以。它會把筆記收成兩三句摘要，抓出每件要做的事並標上負責人跟期限，把當天的決定和還沒結論的問題分開列。逐字稿、往返信件、群組對話都吃得下，不用先整理格式。"
+      },
+      {
+        "q": "AI 會議筆記工具會自己進會議錄音嗎？",
+        "a": "不會。逐字稿或筆記要你先貼給它，錄音檔要另外轉成文字。它不需要另外訂閱付費服務，但客戶名字、報價這類敏感內容要先自己刪掉。"
+      },
+      {
+        "q": "用 AI 整理會議待辦要注意什麼？",
+        "a": "同一個人的叫法要統一，阿哲、哲哥、王先生會被當成三個人。加進長期追蹤的項目也控制在十項以內，太多就變成另一張沒人打開的清單。"
+      }
+    ]
   },
   {
     "slug": "slide-maker",
@@ -4394,7 +5309,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/addsumtech/slides_maker/tree/main/skills/slide-maker",
     "image": "/skills-img/slide-maker.webp",
     "imageAlt": "簡報從問答到交檔：畫架上一個空的橫幅矩形框，便利貼正被抬起放大貼進去",
-    "imageCaption": "畫架上一個空的橫幅矩形框，便利貼正被抬起放大貼進去"
+    "imageCaption": "畫架上一個空的橫幅矩形框，便利貼正被抬起放大貼進去",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我做能用 PowerPoint 編輯的簡報嗎？",
+        "a": "可以。它產出的是真正的 PowerPoint 檔，圖表可以點開改數字，不是一張圖片。動工前會先問你講給誰聽、講幾分鐘、要不要套用現有版型，並先排出每頁重點讓你確認才開始排版。"
+      },
+      {
+        "q": "用 AI 做中文簡報要注意什麼？",
+        "a": "一定要明講「用繁體中文、字型要能顯示中文」，沒交代的話整頁可能變成空白方塊，得整份重來。大綱那一關也不要隨便按過，排完版再改等於重做一份。"
+      },
+      {
+        "q": "AI 做簡報時生成配圖要另外付費嗎？",
+        "a": "要。生成配圖走的是外部付費的圖像服務，會另外算錢。它會先問過你才動用，不想花錢就直接說不要，改用自己的產品照。"
+      }
+    ]
   },
   {
     "slug": "mineru",
@@ -4468,7 +5399,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/Nebutra/MinerU-Skill",
     "image": "/skills-img/mineru.webp",
     "imageAlt": "掃描檔變成可編輯文字：一台滾筒進紙口，一端吃進皺紙、另一端吐出可搬動的活字鉛字塊",
-    "imageCaption": "一台滾筒進紙口，一端吃進皺紙、另一端吐出可搬動的活字鉛字塊"
+    "imageCaption": "一台滾筒進紙口，一端吃進皺紙、另一端吐出可搬動的活字鉛字塊",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "掃描的 PDF 或手機拍的紙本可以用 AI 轉成文字嗎？",
+        "a": "可以。它能把 PDF、Word、簡報、Excel 的內容抽成可複製的文字，掃描檔、傳真件、手機拍的紙本會自動做文字辨識，預設就認得中文，表格也會保留成表格的樣子。"
+      },
+      {
+        "q": "用 AI 把 PDF 轉文字，機密文件安全嗎？",
+        "a": "要特別留意，它預設是把檔案送到雲端處理。合約、客戶名單、還沒公開的配方，先問清楚能不能改成本機處理，不然就別丟。"
+      },
+      {
+        "q": "PDF 轉文字工具有檔案大小限制嗎？",
+        "a": "有。免費額度大約是單檔十 MB、二十頁以內，超過或要整批跑，得到官網申請一組免費金鑰才會開通。手機拍紙本時也要拍正、避開反光，歪斜和陰影最容易造成錯字。"
+      }
+    ]
   },
   {
     "slug": "financial-parser",
@@ -4543,7 +5490,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/financial-parser",
     "image": "/skills-img/financial-parser.webp",
     "imageAlt": "發票帳單整理流程：一個分成六格、紙張插出高低起伏的木製票據盒",
-    "imageCaption": "一個分成六格、紙張插出高低起伏的木製票據盒"
+    "imageCaption": "一個分成六格、紙張插出高低起伏的木製票據盒",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把一疊收據帳單整理成分類明細表嗎？",
+        "a": "可以。它認得發票、收據、請款單、信用卡與銀行對帳單，逐筆讀出日期、店家、品項與金額，依包材、軟體訂閱、運費、廣告等類別統計，整理成可以直接貼進試算表的格式。"
+      },
+      {
+        "q": "AI 能幫我找出信用卡重複扣款或忘記的訂閱嗎？",
+        "a": "可以。它會找出每月固定扣款的訂閱、同一筆重複入帳，以及金額異常大的支出，各標在一區。帳號和卡號只留末四碼，不會把完整號碼寫進報表。"
+      },
+      {
+        "q": "用 AI 整理的收據明細可以直接拿來報稅嗎？",
+        "a": "不行。這是幫你整理明細，不是報稅，能不能列帳、稅務怎麼認列還是要問記帳士。讀不清楚的地方它會標出來不亂猜，但金額還是自己抽幾筆核對比較安心。"
+      }
+    ]
   },
   {
     "slug": "product-description-generator",
@@ -4617,7 +5580,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/nexscope-ai/eCommerce-Skills/tree/main/product-description-generator",
     "image": "/skills-img/product-description-generator.webp",
     "imageAlt": "競品字詞比對改寫：一張穿線補孔的商品卡紙與正要穿過空孔的針",
-    "imageCaption": "一張穿線補孔的商品卡紙與正要穿過空孔的針"
+    "imageCaption": "一張穿線補孔的商品卡紙與正要穿過空孔的針",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我找出商品頁漏寫的關鍵字嗎？",
+        "a": "可以。它會抓下你指定的競品頁面，整理出對方標題與賣點裡真正在用的字，替每個關鍵字打分，再列一張缺口表，標出哪些你已經有、哪些完全沒寫到。"
+      },
+      {
+        "q": "這個 AI 商品文案工具支援 momo 嗎？",
+        "a": "原始設定裡沒有 momo 的欄位規則。momo 的商品名長度和規格欄位跟蝦皮不一樣，要自己指定字數，或請它照蝦皮版再壓縮一次。"
+      },
+      {
+        "q": "AI 整理出的商品關鍵字代表搜尋量嗎？",
+        "a": "不代表。它整理的關鍵字來自公開頁面，不是真實搜尋量，當作同業都在寫什麼的參考就好。這個技能不用付費也不用申請金鑰，但要能連網抓競品頁面。"
+      }
+    ]
   },
   {
     "slug": "price-optimization-tool",
@@ -4691,7 +5670,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/nexscope-ai/eCommerce-Skills/tree/main/price-optimization-tool",
     "image": "/skills-img/price-optimization-tool.webp",
     "imageAlt": "從成本算到定價：被推成四落、只剩最矮一落緊貼刻度尺的硬幣",
-    "imageCaption": "被推成四落、只剩最矮一落緊貼刻度尺的硬幣"
+    "imageCaption": "被推成四落、只剩最矮一落緊貼刻度尺的硬幣",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫電商算出不虧錢的保本底價嗎？",
+        "a": "可以。它會把平台抽成、金流手續費、運費補貼、退貨損耗全部列進變動成本，用抽成比例回推保本底價，並算出降價之後要多賣幾件才不會比原價賺得少。"
+      },
+      {
+        "q": "用 AI 算定價，平台抽成要填公告費率嗎？",
+        "a": "不要，一定要用實際帳單上的百分比，活動檔期的加成和運費補貼也要算進去。沒有自己的成本和銷售紀錄，它只會給空架構，不會編數字充數。"
+      },
+      {
+        "q": "AI 算完售價會自動幫我改賣場價格嗎？",
+        "a": "不會，也不該這樣做。所有調價都要自己登入賣家後台操作並記下改動日期。另外不要先抬高原價做出折扣感，這在平台規範和消費者保護上都有風險。"
+      }
+    ]
   },
   {
     "slug": "inventory-reorder-planner",
@@ -4765,7 +5760,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/inventory-reorder-planner",
     "image": "/skills-img/inventory-reorder-planner.webp",
     "imageAlt": "從銷量算出補貨清單：一排被水位線橫貫、其中一格明顯低於線的貨架",
-    "imageCaption": "一排被水位線橫貫、其中一格明顯低於線的貨架"
+    "imageCaption": "一排被水位線橫貫、其中一格明顯低於線的貨架",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以算出這週要補哪些貨、補幾件嗎？",
+        "a": "可以。它會從訂單紀錄算出每個品項一週賣幾件，依營收貢獻分成 A、B、C 三級，算出再訂購點與安全庫存，並把要補的貨按供應商分組，湊到最低訂購量整理成可以直接下的單。"
+      },
+      {
+        "q": "熱賣商品缺貨過，AI 算補貨會不會低估？",
+        "a": "不會。它會把斷貨那幾天從計算裡拿掉，只用有貨的日子算銷售速度，熱賣款才不會被誤判成賣不動。雙 11、母親節這類活動日也要告訴它，別把活動量當成日常。"
+      },
+      {
+        "q": "用 AI 算補貨需要準備什麼資料？",
+        "a": "至少要能匯出蝦皮、momo 的訂單報表，只給截圖它算不出來；不需要另外買軟體或付費金鑰。新上架不到一個月的品項紀錄不足，會被另外標成靠判斷下的量。"
+      }
+    ]
   },
   {
     "slug": "ecom-rfm-analysis",
@@ -4840,7 +5851,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/asgard-ai-platform/skills/tree/main/ecom-rfm-analysis",
     "image": "/skills-img/ecom-rfm-analysis.webp",
     "imageAlt": "從訂單分出客戶等級：依蓋章多寡被分成三落的集點卡",
-    "imageCaption": "依蓋章多寡被分成三落的集點卡"
+    "imageCaption": "依蓋章多寡被分成三落的集點卡",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我把電商客戶分群嗎？",
+        "a": "可以。它會依每個客戶上次購買距今幾天、買過幾次、總共花多少各給一到五分，把名單分成常客、忠實客、潛力客、快流失、沉睡、新客等群組，並建議每群該講什麼、用哪個管道發。"
+      },
+      {
+        "q": "做客戶分群分析需要哪些訂單欄位？",
+        "a": "至少要有客戶編號、日期、金額三項。匯出時把姓名、電話、地址拿掉只留編號就好，分群不需要真名，也少一層個資風險。"
+      },
+      {
+        "q": "客戶分群後發 LINE 群發真的比較省錢嗎？",
+        "a": "LINE 官方帳號的群發按則計費，分完群再發通常比整包發省，但實際省多少要看你目前的方案。快流失那群也不要一直連發，一次講清楚就好，否則只會被封鎖。"
+      }
+    ]
   },
   {
     "slug": "tw-einvoice-guide",
@@ -4915,7 +5942,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/asgard-ai-platform/skills/tree/main/tw-einvoice-guide",
     "image": "/skills-img/tw-einvoice-guide.webp",
     "imageAlt": "電子發票從開立到對帳：一條從見底紙卷吐出、中段摺起打斜槓的統一發票紙條",
-    "imageCaption": "一條從見底紙卷吐出、中段摺起打斜槓的統一發票紙條"
+    "imageCaption": "一條從見底紙卷吐出、中段摺起打斜槓的統一發票紙條",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "剛開始開電子發票要先做哪些準備？",
+        "a": "要先跟國稅局申請字軌，用完就開不了票，所以要先算好一期大概需要幾號。它也會依你的規模與平台，建議走財政部的軟體、加值中心，還是讓 POS 廠商處理，並排出從註冊到開第一張票的時程。"
+      },
+      {
+        "q": "電子發票開錯了還能作廢嗎？",
+        "a": "作廢有時間限制，過了那一期就只能走折讓，流程麻煩很多，所以發現開錯當下就處理最省事。它會說明什麼時候還能作廢，以及每天該核對哪一份紀錄。"
+      },
+      {
+        "q": "三聯式和二聯式電子發票差在哪裡？",
+        "a": "三聯式開給公司行號，二聯式開給一般消費者，差別在稅額要不要分開列。這個技能提供的是規劃與檢查清單，不是稅務意見，正式申報前還是要請記帳士或國稅局確認。"
+      }
+    ]
   },
   {
     "slug": "angry-customer-playbook",
@@ -4989,7 +6032,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/composio-community/support-skills/tree/main/angry-customer-playbook",
     "image": "/skills-img/angry-customer-playbook.webp",
     "imageAlt": "客訴訊息的降火順序：一顆長滿尖刺、壓在攤開劇本簿上的訊息泡泡",
-    "imageCaption": "一顆長滿尖刺、壓在攤開劇本簿上的訊息泡泡"
+    "imageCaption": "一顆長滿尖刺、壓在攤開劇本簿上的訊息泡泡",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "客人在蝦皮聊聊開罵，AI 可以幫我寫回覆嗎？",
+        "a": "可以。它會先分辨客人是不耐煩、帶敵意、酸言酸語還是又急又無助，找出真正的火源，列出這次不能說的話，再照接住情緒、認錯、給做法與時間、說明如何避免再發生的順序寫好回覆。"
+      },
+      {
+        "q": "AI 寫的客訴回覆可以直接送出嗎？",
+        "a": "要先改過。它給的是草稿，退款天數、運費誰付、能不能補寄，一定要換成你們家真的做得到的內容再送出。客人的姓名、電話、地址也不要貼進去。"
+      },
+      {
+        "q": "客人說要找消保官或提告時，還能用 AI 回嗎？",
+        "a": "先別急著自己回。訊息裡明確提到消保官、法律途徑或向主管機關檢舉時，要讓老闆或專業人士看過再處理。"
+      }
+    ]
   },
   {
     "slug": "ecommerce-customer-service-pro",
@@ -5063,7 +6122,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/dvcrn/openclaw-skills-marketplace/tree/main/plugins/52yuanchangxing--ecommerce-customer-service-pro/skills/ecommerce-customer-service-pro",
     "image": "/skills-img/ecommerce-customer-service-pro.webp",
     "imageAlt": "客服回覆的產出流程：一台正在吐號碼牌的抽號機，前面四張號碼牌各配上一張回覆條",
-    "imageCaption": "一台正在吐號碼牌的抽號機，前面四張號碼牌各配上一張回覆條"
+    "imageCaption": "一台正在吐號碼牌的抽號機，前面四張號碼牌各配上一張回覆條",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫電商客服一次產出不同版本的回覆嗎？",
+        "a": "可以。它會先確認你賣的品類與客人卡在哪一段，一次給四塊：直接送出的短版、給真人客服的完整版、內部處理備註，以及要你確認的欄位，還能改寫成官方、親切、書面三種語氣。"
+      },
+      {
+        "q": "賣保養品的客服回覆，AI 能擋掉違規字眼嗎？",
+        "a": "可以，送出前它會把療效字眼、最低價宣稱、幾天必到這類說法擋下來。但法規會改，它擋掉的字眼當參考就好，真正上架的文案還是要自己再查一次現行規定。"
+      },
+      {
+        "q": "用這個 AI 客服工具要先設定什麼？",
+        "a": "這個技能原本是用簡體中文寫的，預設情境也不是台灣，開頭要先說用繁體中文、賣場在蝦皮和 momo。它不會連進後台，訂單編號與物流狀態都要自己貼給它。"
+      }
+    ]
   },
   {
     "slug": "tw-tax-basics",
@@ -5137,7 +6212,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/asgard-ai-platform/skills/tree/main/tw-tax-basics",
     "image": "/skills-img/tw-tax-basics.webp",
     "imageAlt": "報稅日期的盤點方式：四張被撕下存根聯的橫式繳款單與串著存根的鐵製收據插",
-    "imageCaption": "四張被撕下存根聯的橫式繳款單與串著存根的鐵製收據插"
+    "imageCaption": "四張被撕下存根聯的橫式繳款單與串著存根的鐵製收據插",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "台灣剛設立的小公司一年要繳哪些稅？",
+        "a": "最常用到的是營業稅、營所稅與扣繳三種。它會排出一整年的申報日期：單月十五號、五月、九月、每月十號，還有一月底那一次，並用你給的營業額估出大概金額。"
+      },
+      {
+        "q": "小公司報稅最常漏掉什麼？",
+        "a": "最常漏掉兩件：九月的營所稅暫繳，以及付錢給個人時每月十號的扣繳。付給國外的雲端服務、廣告費、軟體訂閱這類匯出去的錢，也常常忘了先扣繳。"
+      },
+      {
+        "q": "AI 排的報稅行事曆可以取代記帳士嗎？",
+        "a": "不行。它講的是通則，稅法幾乎年年在改，真正要送出的申報還是要由記帳士或會計師處理；它估的金額只能拿來抓規模，實際以帳上的發票和憑證為準。"
+      }
+    ]
   },
   {
     "slug": "cash-flow-forecast",
@@ -5211,7 +6302,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/mohitagw15856/pm-claude-skills/tree/main/skills/cash-flow-forecast",
     "image": "/skills-img/cash-flow-forecast.webp",
     "imageAlt": "逐週現金滾動表：一條十三塊木板的棧橋，第八塊塌下去一截，旁邊躺著備用短柱",
-    "imageCaption": "一條十三塊木板的棧橋，第八塊塌下去一截，旁邊躺著備用短柱"
+    "imageCaption": "一條十三塊木板的棧橋，第八塊塌下去一截，旁邊躺著備用短柱",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以預測公司未來哪一週會沒錢嗎？",
+        "a": "可以。它會把未來十三週的現金進出排成一週一列的表，用各平台真正撥款的日子填收入，標出最低點在第幾週、缺口多大，並把薪資、房租、代工廠尾款、營業稅分開列。"
+      },
+      {
+        "q": "做現金流預測，收入要用開發票的日期嗎？",
+        "a": "不要，要用錢實際入帳的日子。蝦皮、momo 撥款都有落差，用開發票或出貨日會高估手上的現金。收入寧可估晚估少，支出寧可估早估多。"
+      },
+      {
+        "q": "AI 現金流預測需要連結銀行帳戶嗎？",
+        "a": "不需要，也不用付費金鑰，數字都是你自己填進去的，所以安全，但填錯就會全錯。每週花十分鐘把上週的實際數字換進去，滾動更新才有用。"
+      }
+    ]
   },
   {
     "slug": "cowork-invoice-chaser",
@@ -5285,7 +6392,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/cowork-invoice-chaser",
     "image": "/skills-img/cowork-invoice-chaser.webp",
     "imageAlt": "應收帳款追款流程：用長尾夾兩兩配對的請款單與銀行入帳條",
-    "imageCaption": "用長尾夾兩兩配對的請款單與銀行入帳條"
+    "imageCaption": "用長尾夾兩兩配對的請款單與銀行入帳條",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫接案工作室追沒收到的尾款嗎？",
+        "a": "可以。它會把請款單和銀行入帳逐筆對起來，做出依逾期天數分區的帳齡表，並依逾期程度寫出四種語氣的催款信草稿，從善意提醒到最後通知。"
+      },
+      {
+        "q": "AI 會自動寄催款信給客戶嗎？",
+        "a": "不會，信一律只出草稿、不寄出。催錯一個已經付款的客戶，賠掉的信任比那筆帳貴，寄出前一定要自己看過。同一個客戶欠三筆也只會寫一封信。"
+      },
+      {
+        "q": "催款信裡可以提滯納金或違約金嗎？",
+        "a": "只有合約或請款單上真的寫了才能提。沒寫卻在信裡講違約金，反而變成你理虧。匯出入帳明細時也要把客戶名稱那欄一起匯出，它才對得出是誰付的。"
+      }
+    ]
   },
   {
     "slug": "job-profitability-analyzer",
@@ -5359,7 +6482,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/OneWave-AI/claude-skills/tree/main/job-profitability-analyzer",
     "image": "/skills-img/job-profitability-analyzer.webp",
     "imageAlt": "案件獲利拆解流程：一張被打洞打到破出邊緣的打卡卡，中央壓著一枚很小的硬幣",
-    "imageCaption": "一張被打洞打到破出邊緣的打卡卡，中央壓著一枚很小的硬幣"
+    "imageCaption": "一張被打洞打到破出邊緣的打卡卡，中央壓著一枚很小的硬幣",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以算出每個接案案子真正賺多少嗎？",
+        "a": "可以。它會把每筆收入對回所屬案子，掛上工時、外包、材料與直接費用，把房租、軟體訂閱等管銷按工時攤進去，分開算出毛利與真實淨利，並算出每個客戶的實際時薪。"
+      },
+      {
+        "q": "計算案子獲利，人力成本要怎麼算才準？",
+        "a": "要用含勞健保、勞退、加班和獎金的實際成本，不是月薪除以工時，否則每個案子的毛利都會看起來比實際漂亮。老闆自己的工時也最常被漏掉。"
+      },
+      {
+        "q": "發現某個客戶的案子在賠錢，要馬上停止合作嗎？",
+        "a": "不一定。一個案子做壞不代表這個客戶不好，至少累積三個案子再下結論。它也會告訴你賠錢的原因，是報價太低、需求一直加，還是有工時沒開帳單。"
+      }
+    ]
   },
   {
     "slug": "html-ppt",
@@ -5433,7 +6572,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/lewislulu/html-ppt-skill",
     "image": "/skills-img/html-ppt.webp",
     "imageAlt": "網頁簡報加逐字稿：一面投影布幕與幕下一台掀開的筆電",
-    "imageCaption": "一面投影布幕與幕下一台掀開的筆電"
+    "imageCaption": "一面投影布幕與幕下一台掀開的筆電",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "有沒有可以在瀏覽器開、又能看講稿的 AI 簡報工具？",
+        "a": "有。這支會產出一份網頁簡報，用瀏覽器開、方向鍵翻頁，按一個鍵就跳出只有你看得到的講者視窗，同時顯示這頁、下一頁、逐字稿和計時器，逐字稿每頁一百五到三百字。"
+      },
+      {
+        "q": "AI 做的網頁簡報可以用 PowerPoint 打開嗎？",
+        "a": "不行。它產出的是網頁不是 PowerPoint 檔，無法用 PowerPoint 開來改。主辦單位要求繳交簡報檔的場合要先問清楚。"
+      },
+      {
+        "q": "上台用網頁簡報要注意什麼？",
+        "a": "講者視窗是另開一個視窗，有些瀏覽器預設會擋掉，上台前一定要在實際使用的電腦上試一次。字型是連網抓的，場地網路不穩時畫面可能不同，提早到場開一次最保險。"
+      }
+    ]
   },
   {
     "slug": "social-card-maker",
@@ -5507,7 +6662,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/op7418/guizang-social-card-skill",
     "image": "/skills-img/social-card-maker.webp",
     "imageAlt": "一篇文章變成整套圖卡：六張斜疊展開的直式卡片，第一張大一號，正被貼上撕下的紙段",
-    "imageCaption": "六張斜疊展開的直式卡片，第一張大一號，正被貼上撕下的紙段"
+    "imageCaption": "六張斜疊展開的直式卡片，第一張大一號，正被貼上撕下的紙段",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以把一篇文章做成 IG 輪播圖卡嗎？",
+        "a": "可以。它會把長文拆成五到九張圖，第一張是封面、後面每張講一個重點，有雜誌編輯風與瑞士排版風兩套可選，並照 IG、Threads、蝦皮活動圖各自的比例出圖。"
+      },
+      {
+        "q": "用 AI 做社群圖卡，圖片版權沒問題嗎？",
+        "a": "要自己確認。沒提供圖時它會去免費圖庫抓，但版權它不替你保證，商用前要自己確認。牽涉療效、成分功效、價格保證的字眼，它也不會幫你擋廣告法地雷。"
+      },
+      {
+        "q": "AI 圖卡工具第一次使用要準備什麼？",
+        "a": "輸出圖檔是靠瀏覽器截圖完成的，第一次用要先讓它裝一個小工具，會多等幾分鐘。要做會動的動態圖卡，成品得先傳進 iPhone 相簿才發得出去。"
+      }
+    ]
   },
   {
     "slug": "power-design",
@@ -5581,7 +6752,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/ItsssssJack/power-design",
     "image": "/skills-img/power-design.webp",
     "imageAlt": "品牌色變成簡報與網頁：一塊正被拆解的立體招牌，面板與圓徽被裝到簡報卡與版面條上",
-    "imageCaption": "一塊正被拆解的立體招牌，面板與圓徽被裝到簡報卡與版面條上"
+    "imageCaption": "一塊正被拆解的立體招牌，面板與圓徽被裝到簡報卡與版面條上",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以照我的品牌色系做簡報和網頁嗎？",
+        "a": "可以。給一個網址，它會抓出品牌的主色、輔色、標題字型和說話語氣直接套用；做網頁時從手機寬度開始排，並自帶淺色深色兩套主題。"
+      },
+      {
+        "q": "用網址抓品牌色系需要付費嗎？",
+        "a": "抓網址那段是接外部的網頁擷取服務，要自己申請金鑰，有免費額度但用量大要付費。嫌麻煩的話，直接給色碼跟字型就好，台灣本地品牌用這種方式也比較準。"
+      },
+      {
+        "q": "AI 產出的品牌簡報可以再編輯嗎？",
+        "a": "產出的是網頁檔，不是簡報檔，要能再編輯的格式得另外轉，先確認客戶收不收 PDF。它嚴格照設計規則走，想破例要講明是哪一張、為什麼。"
+      }
+    ]
   },
   {
     "slug": "image-prompt-advisor",
@@ -5655,7 +6842,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/YouMind-OpenLab/nano-banana-pro-prompts-recommend-skill",
     "image": "/skills-img/image-prompt-advisor.webp",
     "imageAlt": "從範本挑到可用指令：三片被疊在一起、中段被換掉一小塊的彩色玻璃片",
-    "imageCaption": "三片被疊在一起、中段被換掉一小塊的彩色玻璃片"
+    "imageCaption": "三片被疊在一起、中段被換掉一小塊的彩色玻璃片",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "不會寫生圖指令，AI 可以幫我挑現成的嗎？",
+        "a": "可以。它會先問清楚你要哪種圖與用途，從一萬多組現成指令裡一次推三組、各附一張成品範例圖，你挑定後再問場景等細節，改寫成你的版本。"
+      },
+      {
+        "q": "這個 AI 工具會直接幫我生出圖片嗎？",
+        "a": "不會。它只給指令不生圖，你還是要有自己的生圖工具，多數要另外付月費。指令是英文的也不用擔心，只要看範例圖判斷合不合意就好。"
+      },
+      {
+        "q": "庫裡沒有適合的生圖範本怎麼辦？",
+        "a": "這個工具會直說沒有，另外幫你寫一組並註明是自己寫的，不會魚目混珠。有些範本標明需要參考圖，要先準備好自己的商品照或人像。"
+      }
+    ]
   },
   {
     "slug": "last30days",
@@ -5730,7 +6933,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/mvanhorn/last30days-skill/tree/main/skills/last30days",
     "image": "/skills-img/last30days.webp",
     "imageAlt": "最新網路討論盤點：由撕下的日曆頁圍成的圓圈，圈內兜滿飽滿的對話氣泡",
-    "imageCaption": "由撕下的日曆頁圍成的圓圈，圈內兜滿飽滿的對話氣泡"
+    "imageCaption": "由撕下的日曆頁圍成的圓圈，圈內兜滿飽滿的對話氣泡",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我查最近一個月網友在討論什麼嗎？",
+        "a": "可以。它一次跑七八個社群平台，只撈最近三十天的貼文，連留言一起抓，把按讚最高的網友原話整段引出來，並把散在各平台的討論歸成幾條故事線。"
+      },
+      {
+        "q": "用這個工具查中文題目效果好嗎？",
+        "a": "要有心理準備。Reddit 這類英文論壇幾乎撈不到台灣的討論，中文題目主要靠 Threads、Instagram、YouTube 和網頁搜尋。它只看最近三十天，也不適合查長期趨勢。"
+      },
+      {
+        "q": "查 Threads 和 Instagram 的討論要付費嗎？",
+        "a": "TikTok、Instagram、Threads 要另外申請一把免費金鑰，前一萬次查詢免費，超過才收費。它也需要電腦裡有 Python 3.12 以上，沒裝會直接告訴你怎麼裝。"
+      }
+    ]
   },
   {
     "slug": "cold-email",
@@ -5804,7 +7023,23 @@ export const SKILLS: Skill[] = [
     "sourceUrl": "https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/cold-email",
     "image": "/skills-img/cold-email.webp",
     "imageAlt": "陌生開發信寫作流程：一卷正被從門縫底下推進去的細長傳單",
-    "imageCaption": "一卷正被從門縫底下推進去的細長傳單"
+    "imageCaption": "一卷正被從門縫底下推進去的細長傳單",
+    "publishedAt": "2026-07-29",
+    "updatedAt": "2026-08-31",
+    "faq": [
+      {
+        "q": "AI 可以幫我寫不像推銷的陌生開發信嗎？",
+        "a": "可以。第一封信它會控制在一百五十字以內，開頭講對方的處境、結尾只問一個問題，主旨給兩三個像同事寄來的版本，並依對方職位調整長度，還能排出五到六封換角度的追蹤信。"
+      },
+      {
+        "q": "大量寄陌生開發信要注意什麼？",
+        "a": "用自己的主網域大量寄，網域信譽會被拖累，建議另外開寄信用的子網域。一天同一個網域寄超過一兩百封就開始危險，名單要先驗過，退信率高會讓後面的信都進垃圾桶。"
+      },
+      {
+        "q": "寄陌生開發信要付費嗎？",
+        "a": "信可以請 AI 寫，但大量寄送得另外付錢用寄信服務，還要做信箱驗證、新網域先養四到六週。信裡也要放退訂方式，並顧到個資法與商業電子郵件的規範。"
+      }
+    ]
   }
 ];
 

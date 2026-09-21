@@ -19,7 +19,10 @@ export async function generateMetadata({
   const skill = getSkill(slug);
   if (!skill) return {};
 
-  const title = `${skill.nameZh}｜${skill.nameEn} AI 技能用法完整說明`;
+  // 搜尋結果大約只顯示 30 個中文字寬。原本「中文名｜英文名 AI 技能用法完整說明｜靈境智造
+  // Intelliverse Studio」中位數 69 字，後半全被截掉。改成絕對標題，不再套全站的長後綴。
+  const title = `${skill.nameZh}｜AI 技能中文教學｜靈境智造`;
+  const shareTitle = `${skill.nameZh}｜${skill.nameEn} AI 技能中文教學`;
   const description = `${skill.tagline}｜${skill.summary}`.slice(0, 155);
   // 有專屬情境照就拿它當分享縮圖 —— 圖上有標題，貼到 LINE／Threads 時看得懂在講什麼
   const share = skill.image
@@ -27,7 +30,7 @@ export async function generateMetadata({
     : { url: '/og-image.png', width: 1200, height: 630 };
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: skill.keywords,
     alternates: { canonical: `/skills/${skill.slug}/` },
@@ -35,13 +38,17 @@ export async function generateMetadata({
       type: 'article',
       locale: 'zh_TW',
       url: `${SITE_URL}/skills/${skill.slug}/`,
-      title,
+      title: shareTitle,
       description,
       images: [share],
+      ...(skill.publishedAt ? { publishedTime: skill.publishedAt } : {}),
+      ...(skill.updatedAt ? { modifiedTime: skill.updatedAt } : {}),
+      section: skill.category,
+      tags: skill.keywords,
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: shareTitle,
       description,
     },
   };
@@ -60,16 +67,26 @@ export default async function SkillPage({
   const prev = idx > 0 ? SKILLS[idx - 1] : null;
   const next = idx < SKILLS.length - 1 ? SKILLS[idx + 1] : null;
 
+  // 同分類互連：從自己的位置往後輪流取 4 篇，每篇頁面拿到的組合不同，
+  // 整個分類會被均勻地串起來，不會只有前幾篇被連到
+  const sameCat = SKILLS.filter((s) => s.category === skill.category && s.slug !== skill.slug);
+  const start = sameCat.findIndex((s) => SKILLS.indexOf(s) > idx);
+  const related = [...sameCat.slice(Math.max(start, 0)), ...sameCat.slice(0, Math.max(start, 0))].slice(0, 4);
+
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     '@id': `${SITE_URL}/skills/${skill.slug}/#article`,
-    headline: `${skill.nameZh}｜${skill.nameEn} AI 技能用法完整說明`,
+    headline: `${skill.nameZh}｜${skill.nameEn} AI 技能中文教學`,
     description: skill.summary,
     inLanguage: 'zh-Hant-TW',
     keywords: skill.keywords.join(', '),
     articleSection: skill.category,
     url: `${SITE_URL}/skills/${skill.slug}/`,
+    mainEntityOfPage: `${SITE_URL}/skills/${skill.slug}/`,
+    // AI 搜尋很看重新鮮度，沒有日期的內容常被當成來源不明
+    ...(skill.publishedAt ? { datePublished: skill.publishedAt } : {}),
+    ...(skill.updatedAt ? { dateModified: skill.updatedAt } : {}),
     image: `${SITE_URL}${skill.image || '/og-image.png'}`,
     author: { '@id': `${SITE_URL}/#organization` },
     publisher: { '@id': `${SITE_URL}/#organization` },
@@ -98,6 +115,21 @@ export default async function SkillPage({
       text: s.detail,
     })),
   };
+
+  // FAQ 必須與頁面上看得到的問答完全一致，否則結構化資料會被判定為不實
+  const faqJsonLd = skill.faq.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${SITE_URL}/skills/${skill.slug}/#faq`,
+        inLanguage: 'zh-Hant-TW',
+        mainEntity: skill.faq.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      }
+    : null;
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
@@ -130,6 +162,14 @@ export default async function SkillPage({
               </p>
               <h1>{skill.nameZh}</h1>
               <p className="skill-tagline">{skill.tagline}</p>
+              {skill.updatedAt && (
+                <p className="skill-dates">
+                  最後更新 <time dateTime={skill.updatedAt}>{skill.updatedAt}</time>
+                  {skill.publishedAt && skill.publishedAt !== skill.updatedAt && (
+                    <> · 首次發布 <time dateTime={skill.publishedAt}>{skill.publishedAt}</time></>
+                  )}
+                </p>
+              )}
 
               <div className="skill-pain">
                 <span className="skill-pain-label">解決什麼問題</span>
@@ -214,6 +254,20 @@ export default async function SkillPage({
               </ul>
             </section>
 
+            {skill.faq.length > 0 && (
+              <section className="skill-block" id="faq">
+                <h2>常見問題</h2>
+                <div className="skill-faq">
+                  {skill.faq.map((f, i) => (
+                    <details key={i} className="skill-faq-item" open={i === 0}>
+                      <summary>{f.q}</summary>
+                      <p>{f.a}</p>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            )}
+
             <section className="skill-block skill-meta-block">
               <div className="skill-bestfor">
                 <h3>適合誰</h3>
@@ -230,6 +284,22 @@ export default async function SkillPage({
                 </p>
               </div>
             </section>
+
+            {related.length > 0 && (
+              <section className="skill-block">
+                <h2>同樣是「{skill.category}」的技能</h2>
+                <ul className="skill-related">
+                  {related.map((r) => (
+                    <li key={r.slug}>
+                      <a href={`/skills/${r.slug}/`}>
+                        <strong>{r.nameZh}</strong>
+                        <span>{r.tagline}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             <nav className="skill-nav" aria-label="其他技能">
               {prev ? (
@@ -281,6 +351,12 @@ export default async function SkillPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
     </>
   );
 }
