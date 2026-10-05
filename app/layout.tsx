@@ -1,11 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-
-const SITE_URL = 'https://show.intelliverse.tw';
-const SITE_NAME = '靈境智造 Intelliverse Studio';
-const SITE_TITLE = `${SITE_NAME}｜臺中設計工作室・軟硬整合・AI 工作流程・商品・網頁・廣告`;
-const SITE_DESC =
-  '靈境智造 Intelliverse Studio — 位於臺中太平的整合型設計工作室，結合科技、設計與商業思維。服務範圍橫跨軟硬體整合、AI 自動工作流程、商品設計、網頁開發、一頁式廣告與投放策略，陪品牌從點子走到市場。';
+import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESCRIPTION as SITE_DESC } from './site-info';
 const OG_IMAGE = '/og-image.png';
 
 const ADDRESS = {
@@ -64,9 +59,6 @@ export const metadata: Metadata = {
   category: 'Design Studio',
   alternates: {
     canonical: '/',
-    languages: {
-      'zh-Hant-TW': '/',
-    },
   },
   openGraph: {
     type: 'website',
@@ -250,7 +242,7 @@ const CHAT_CONFIG = {
   // 不指定 origin —— 讓 widget 由自己的 script src 推導出
   // https://show.intelliverse.tw/chat，這樣就不依賴 chat.intelliverse.tw
   title: '工程聊聊',
-  subtitle: '靈境智造 · 真人回覆，通常幾分鐘內',
+  subtitle: '靈境智造 · 真人團隊協助',
   greeting:
     '您好，這裡是靈境智造 👋\n\n' +
     '不論是 AI 自動化、軟硬體整合，還是網站與廣告投放的需求，都可以直接在這裡問。\n\n' +
@@ -290,7 +282,7 @@ const serviceNodes = [
     id: 'service-automation',
     name: 'AI 電商代管自動化',
     serviceType: 'AI Automation & E-commerce Operations',
-    desc: '為蝦皮、MOMO、PChome 等電商平台建置每日置頂、售更多降價、活動排程等自動化流程，讓重複的工作交給 AI 執行。',
+    desc: '提供蝦皮每日置頂協作、MOMO 每週售更多排程及企業重複作業的自動化評估與設定，依平台規則確認執行範圍，保留人工審核與異常處理。',
   },
 ];
 
@@ -357,7 +349,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
         ))}
         {/*
-          首頁專屬 schema（WebPage / FAQPage / BreadcrumbList / ItemList / HowTo×2）
+          首頁專屬 schema（WebPage / FAQPage / ItemList）
           已移到 app/home-schema.ts，只在 app/page.tsx 輸出。
           避免出現在 /skills/* 內頁造成語意錯誤與 BreadcrumbList 重複。
         */}
@@ -367,7 +359,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/*
           線上客服「工程聊聊」
-          後端是家裡 server 的 chat-intelliverse 容器，經由本站 /chat/ 反代，
+          後端是家裡 server 的 chat-gongcheng 容器，經由本站 /chat/ 反代，
           所以不依賴 chat.intelliverse.tw（該網域另有他用）。
           widget 會從自己的 script src 推導出 base = /chat，
           socket.io 也會自動接上 /chat/socket.io。

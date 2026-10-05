@@ -32,6 +32,12 @@ export const metadata: Metadata = {
       '把 GitHub 上最紅的 AI Agent Skills 翻成繁體中文，並改寫成台灣老闆看得懂的用法說明。',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: `AI 技能圖書館：${SKILLS.length} 個中文教學｜靈境智造`,
+    description: '從發票整理、網站 SEO 到短影音剪輯，閱讀 AI Agent Skills 的繁體中文使用指南與對話範例。',
+    images: ['/og-image.png'],
+  },
 };
 
 export default function SkillsIndex() {
@@ -68,7 +74,7 @@ export default function SkillsIndex() {
       />
       <SiteNav base="/" />
 
-      <main>
+      <main id="main-content">
         <header id="top" className="page-hero">
           <div className="shell">
             <nav className="crumbs" aria-label="麵包屑">

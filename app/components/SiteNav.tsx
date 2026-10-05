@@ -1,6 +1,7 @@
 import { WORKS, TYPES } from '../content';
 import { SKILLS, skillsByCategory } from '../skills-data';
 import { catSlug } from '../skill-categories';
+import { SERVICE_GUIDES } from '../service-guides';
 
 /**
  * 共用主選單。
@@ -13,7 +14,7 @@ export default function SiteNav({ base = '' }: { base?: string }) {
 
   return (
     <>
-      <a href={base ? `${base}#top` : '#top'} className="skip-link">跳到主內容</a>
+      <a href="#main-content" className="skip-link">跳到主內容</a>
       <nav className="nav" id="nav" aria-label="主選單">
         <div className="shell nav-inner">
           <a href={base || '#top'} className="logo" aria-label="靈境智造首頁">
@@ -21,7 +22,13 @@ export default function SiteNav({ base = '' }: { base?: string }) {
           </a>
           <ul className="nav-links" role="menubar">
             <li role="none"><a role="menuitem" href={h('about')}>關於我們</a></li>
-            <li role="none"><a role="menuitem" href={h('services')}>服務項目</a></li>
+            <li role="none" className="has-sub">
+              <a role="menuitem" href={h('services')} aria-haspopup="true">服務項目</a>
+              <ul className="nav-sub" role="menu">
+                {SERVICE_GUIDES.map((g) => <li role="none" key={g.slug}><a role="menuitem" href={`/services/${g.slug}/`}>{g.name}</a></li>)}
+                <li role="none"><a role="menuitem" href={h('services')}>全部服務與軟硬體整合</a></li>
+              </ul>
+            </li>
             <li role="none" className="has-sub">
               <a role="menuitem" href={h('types')} aria-haspopup="true">合作方式</a>
               <ul className="nav-sub" role="menu">
@@ -83,6 +90,9 @@ export default function SiteNav({ base = '' }: { base?: string }) {
           <div className="nav-drawer-links">
             <a href={h('about')}>關於我們</a>
             <a href={h('services')}>服務項目</a>
+            <div className="nav-drawer-group">
+              {SERVICE_GUIDES.map((g) => <a key={g.slug} href={`/services/${g.slug}/`}>{g.name}</a>)}
+            </div>
             <div className="nav-drawer-group">
               <span className="nav-drawer-group-label">合作方式</span>
               <a href={h('automation')}>AI 自動化代管</a>

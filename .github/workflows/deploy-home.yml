@@ -67,6 +67,9 @@ jobs:
           NODE_ENV: production
         run: npm run build
 
+      - name: Verify SEO and internal links in export
+        run: npm run check:seo
+
       - name: Rsync out/ → /opt/auslife/nginx-static/show/
         run: |
           rsync -avz --delete \
@@ -75,6 +78,6 @@ jobs:
 
       - name: Smoke test (origin direct)
         run: |
-          curl -sk --resolve show.intelliverse.tw:443:127.0.0.1 \
+          curl --fail --silent --show-error --resolve show.intelliverse.tw:443:127.0.0.1 \
             -o /dev/null -w "origin %{http_code}\n" \
             https://show.intelliverse.tw/

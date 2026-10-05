@@ -50,6 +50,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: shareTitle,
       description,
+      images: [share.url],
     },
   };
 }
@@ -145,7 +146,7 @@ export default async function SkillPage({
     <>
       <SiteNav base="/" />
 
-      <main>
+      <main id="main-content">
         <article className="skill-article">
           <header id="top" className="page-hero skill-hero">
             <div className="shell">

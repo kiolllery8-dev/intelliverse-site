@@ -1,5 +1,7 @@
 import { SKILLS, skillsByCategory } from '../skills-data';
 import { WORKS } from '../content';
+import { SERVICE_GUIDES } from '../service-guides';
+import { SITE_DESCRIPTION } from '../site-info';
 
 export const dynamic = 'force-static';
 
@@ -16,7 +18,7 @@ export function GET() {
   lines.push('# 靈境智造 Intelliverse Studio');
   lines.push('');
   lines.push(
-    '> 位於臺中太平的整合型設計工作室，結合科技、設計與商業思維。服務範圍橫跨軟硬體整合、AI 自動工作流程、商品設計、網頁開發、一頁式廣告與投放策略，陪品牌從點子走到市場。'
+    `> ${SITE_DESCRIPTION}`
   );
   lines.push('');
   lines.push('- 地址：臺中市太平區精美路 122 號');
@@ -28,12 +30,18 @@ export function GET() {
   lines.push('## 服務');
   lines.push('');
   lines.push(`- [軟硬體整合設計](${SITE_URL}/#services)：從電子元件選型、韌體開發到後端資料流，替物聯網產品、智慧零售設備與商業場域裝置打造軟硬整合方案。`);
-  lines.push(`- [AI 自動化代管](${SITE_URL}/#automation)：目前實作過蝦皮（每日商品置頂）與 MOMO（每週售更多降價排程）的自動化代管，也能依需求擴充到 PChome、樂天、自架電商與 LINE 商店。`);
+  lines.push(`- [AI 自動化代管](${SITE_URL}/#automation)：提供蝦皮每日置頂協作與 MOMO 每週售更多排程的實作與設定，依平台權限與規則評估範圍，保留人工確認及例外處理。`);
   lines.push(`- [網頁設計與開發](${SITE_URL}/#services)：品牌官網、產品形象頁到電商系統，以使用者體驗為核心。`);
   lines.push(`- [廣告投放與行銷策略](${SITE_URL}/#services)：操作 Meta、Google、LINE 等媒體，從受眾定義、素材製作到轉換追蹤。`);
   lines.push(`- [商品設計與品牌規劃](${SITE_URL}/#services)：從產品結構、包裝設計到品牌識別系統。`);
   lines.push('');
 
+  lines.push('## 完整服務指南');
+  lines.push('');
+  for (const g of SERVICE_GUIDES) {
+    lines.push(`- [${g.name}](${SITE_URL}/services/${g.slug}/)：${g.description}`);
+  }
+  lines.push('');
   lines.push('## AI 技能圖書館');
   lines.push('');
   lines.push(

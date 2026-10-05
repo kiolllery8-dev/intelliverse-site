@@ -2,13 +2,15 @@ import { FAQ, WORKS, TYPES, WORK_CATEGORIES } from './content';
 import { HOME_SCHEMAS } from './home-schema';
 import SiteNav from './components/SiteNav';
 import SiteFooter from './components/SiteFooter';
+import { SKILLS } from './skills-data';
+import { SERVICE_GUIDES } from './service-guides';
 
 export default function Home() {
   return (
     <>
       <SiteNav />
 
-      <main>
+      <main id="main-content">
       <header id="top" className="hero">
         <div className="shell hero-grid">
           <div>
@@ -16,16 +18,20 @@ export default function Home() {
               <span aria-hidden="true" /> 靈境智造 · INTELLIVERSE STUDIO
             </p>
             <h1>
-              <span className="line">讓每一個品牌，</span>
+              <span className="line">網站設計與 AI 自動化，</span>
               <span className="line">
-                都擁有屬於自己的 <span className="mark">智造宇宙</span>。
+                打造你的 <span className="mark">智造宇宙</span>。
               </span>
             </h1>
             <p className="hero-sub">
-              靈境智造是一間結合科技、設計與商業思維的整合型工作室。
-              我們以工程實力串接美感直覺，橫跨軟硬體整合、商品設計、網頁開發與廣告投放，
-              陪客戶把一個點子，完整打造成會被市場記住的品牌。
+              靈境智造位於台中太平，整合品牌網站設計、SEO 行銷代管、AI 自動化與軟硬體工程。
+              從讓客戶看懂你的服務、找到詢問入口，到讓每天重複的工作按流程運行，
+              我們依品牌的營運目標，把設計、行銷與技術一起往前推進。
             </p>
+            <div className="service-actions">
+              <a href="#service-guides" className="btn-primary">找到適合的服務</a>
+              <a href="#works" className="btn-ghost">看看實際作品</a>
+            </div>
             <div className="hero-meta">
               <div><b>04</b> &nbsp;核心服務</div>
               <div><b>01</b> &nbsp;整合團隊</div>
@@ -187,7 +193,7 @@ export default function Home() {
             </article>
           </div>
 
-          <div className="strategy">
+          <div className="strategy" id="marketing-management">
             <div className="strategy-head">
               <div className="strategy-kicker">— 專屬品牌網站行銷代管服務</div>
               <h3 className="strategy-title">
@@ -244,7 +250,14 @@ export default function Home() {
               整合行銷策略、美編排版、SEO 引流、網站代管與 IT 技術支援，
               協助品牌掌握流量來源、優化網站內容、解決技術問題，讓營運更有效率、轉換更穩定。
             </p>
+            <a className="service-text-link" href="/services/seo-management/">看 SEO 與網站行銷代管的完整服務範圍 →</a>
           </div>
+          <aside className="service-guides" id="service-guides" aria-labelledby="service-guides-title">
+            <h3 id="service-guides-title">從你現在需要解決的問題，找到合作方向。</h3>
+            <div className="service-guide-grid">
+              {SERVICE_GUIDES.map((g) => <a key={g.slug} href={`/services/${g.slug}/`} className="service-guide-card"><h4>{g.name}</h4><p>{g.cardText}</p><span>看服務內容與合作方式 →</span></a>)}
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -259,7 +272,7 @@ export default function Home() {
             </div>
             <p className="section-lede">
               把每天、每週、每月都要重複跑一次的營運動作，
-              變成不會忘記、不會偷懶的自動化流程。
+              整理成有規則、有紀錄、需要時能由人工接手的自動化流程。
             </p>
           </div>
 
@@ -268,13 +281,13 @@ export default function Home() {
               <div className="automation-tag">CASE 01 · SHOPEE</div>
               <h3>蝦皮｜每日商品置頂</h3>
               <p>
-                每天定時對指定商品執行置頂操作，配合人工微調，確保賣場曝光不中斷。
+                依帳號權限與平台規則，設定每日商品置頂的協作流程，配合人工確認與調整。
                 把「記得跑流程」這件事從小幫手的腦袋裡搬走。
               </p>
               <ul>
-                <li>不再忘記、不再撞時段</li>
-                <li>多帳號／多商店同步</li>
-                <li>人工可隨時介入調整</li>
+                <li>依商品清單安排執行時段</li>
+                <li>多店需求先確認權限與規則</li>
+                <li>保留人工確認與異常處理</li>
               </ul>
             </article>
 
@@ -282,13 +295,13 @@ export default function Home() {
               <div className="automation-tag">CASE 02 · MOMO</div>
               <h3>MOMO｜每週降價促銷（售更多）</h3>
               <p>
-                每週依排程設定降價區間與適用商品清單，省下手動上下架的時間。
-                「售更多」活動可以開好開滿，不漏單。
+                先確認活動條件、商品與價格規則，再設定每週促銷作業排程。
+                把反覆填寫與檢查的步驟整理起來，讓小幫手把時間留給選品與營運判斷。
               </p>
               <ul>
-                <li>排程自動跑、結束自動還原</li>
-                <li>商品清單可批次調整</li>
-                <li>與「售更多」活動同步運作</li>
+                <li>品牌先確認價格與商品範圍</li>
+                <li>依平台規則設定排程與檢查</li>
+                <li>執行結果留紀錄、例外由人處理</li>
               </ul>
             </article>
           </div>
@@ -308,7 +321,7 @@ export default function Home() {
                 <span className="automation-library-tag">SKILL LIBRARY</span>
                 <strong>先看看 AI 到底能幫你做哪些事</strong>
                 <p>
-                  我們整理了 18 個 GitHub 熱門 AI 技能的繁體中文說明——
+                  我們整理了 {SKILLS.length} 個 GitHub 熱門 AI 技能的繁體中文說明——
                   發票整理、競品廣告拆解、商品圖優化、會議記錄，都有實際用法與對話範例。
                 </p>
               </div>
@@ -316,6 +329,7 @@ export default function Home() {
             </a>
           </div>
 
+          <a href="/services/ai-automation/" className="service-text-link">看 AI 自動化的導入流程、費用評估與交付內容 →</a>
           <a href="mailto:linsonder6@gmail.com?subject=AI%20%E8%87%AA%E5%8B%95%E5%8C%96%E4%BB%A3%E7%AE%A1%E8%A9%A2%E5%95%8F" className="automation-cta">
             <span>有重複的工作想交出去？</span>
             <span>告訴我們你最痛的那一個 <em>→</em></span>
@@ -373,7 +387,7 @@ export default function Home() {
             {STEPS.map((step) => (
               <div key={step.num} className="step">
                 <div className="step-num">{step.num}</div>
-                <h4>{step.title}</h4>
+                <h3>{step.title}</h3>
                 <p>{step.body}</p>
               </div>
             ))}
@@ -499,15 +513,15 @@ export default function Home() {
 
       <SiteFooter />
 
-      {/* 導向 #work-* 錨點時：自動展開作品區、把分類重設為「全部」，避免目標卡片被篩選隱藏 */}
+      {/* 點選作品入口時展開；個別作品入口也重設分類，避免目標被篩選隱藏。 */}
       <script
         dangerouslySetInnerHTML={{
           __html:
-            "(function(){function open(){var h=location.hash;if(!/^#work-/.test(h))return;var a=document.getElementById('wf-all');if(a&&!a.checked)a.checked=true;var d=document.getElementById('works-fold');if(d&&!d.open)d.open=true;requestAnimationFrame(function(){var t=document.querySelector(h);if(t)t.scrollIntoView({block:'start'});});}open();addEventListener('hashchange',open);})();",
+            "(function(){function open(){var h=location.hash;if(h!=='#works'&&!/^#work-/.test(h))return;var a=document.getElementById('wf-all');if(a&&!a.checked)a.checked=true;var d=document.getElementById('works-fold');if(d&&!d.open)d.open=true;requestAnimationFrame(function(){var t=document.getElementById(h.slice(1));if(t)t.scrollIntoView({block:'start'});});}open();addEventListener('hashchange',open);})();",
         }}
       />
 
-      {/* 首頁專屬結構化資料（WebPage / FAQ / 麵包屑 / 作品集 / 自動化 HowTo） */}
+      {/* 首頁專屬結構化資料（WebPage / FAQ / 作品集）。 */}
       {HOME_SCHEMAS.map((schema, i) => (
         <script
           key={i}

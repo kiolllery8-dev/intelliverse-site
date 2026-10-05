@@ -1,12 +1,10 @@
 import type { MetadataRoute } from 'next';
 import { SKILLS } from './skills-data';
+import { SERVICE_GUIDES } from './service-guides';
+import { SITE_URL, HOME_UPDATED } from './site-info';
 
 export const dynamic = 'force-static';
 
-const SITE_URL = 'https://show.intelliverse.tw';
-
-// 首頁內容最後一次實質改版的日期；改首頁文案時記得更新
-const HOME_UPDATED = '2026-08-31';
 
 /**
  * 只列真正可以被索引的網址。
@@ -32,6 +30,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.9,
     },
+    ...SERVICE_GUIDES.map((g) => ({
+      url: `${SITE_URL}/services/${g.slug}/`,
+      lastModified: new Date(g.updatedAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    })),
     ...SKILLS.map((s) => ({
       url: `${SITE_URL}/skills/${s.slug}/`,
       lastModified: new Date(s.updatedAt || s.publishedAt || HOME_UPDATED),
