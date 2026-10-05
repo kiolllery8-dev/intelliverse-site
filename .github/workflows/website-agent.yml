@@ -1,0 +1,68 @@
+name: Website agent publication
+
+on:
+  schedule:
+    # 11:00 and 17:00 Asia/Taipei. GitHub may delay scheduled jobs.
+    - cron: '0 3,9 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-home
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: [self-hosted, show]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Select a verified proposal after observation gates
+        id: proposal
+        run: |
+          python3 tools/test-website-agent.py
+          python3 tools/website-agent.py prepare
+      - name: Build and verify bounded content change
+        if: steps.proposal.outputs.ready == 'true'
+        run: |
+          npm ci
+          npm run build:skills
+          npm run build
+          npm run check:seo
+      - name: Commit only the verified article and generated data
+        if: steps.proposal.outputs.ready == 'true'
+        id: commit
+        env:
+          SKILL_SLUG: ${{ steps.proposal.outputs.slug }}
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+          git config user.name 'Intelliverse Website Agent'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "data/skills/$SKILL_SLUG.json" app/skills-data.ts
+          git diff --cached --check
+          git commit -m "fix(skills): 依原始文件修正 $SKILL_SLUG 說明"
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Publish with origin verification and automatic rollback
+        id: release
+        if: steps.commit.outputs.sha != ''
+        run: python3 tools/deploy-atomic.py --source out --revision "$(git rev-parse HEAD)"
+      - name: Record successful publication
+        if: steps.commit.outputs.sha != ''
+        run: python3 tools/website-agent.py receipt
+      - name: Revert only this agent's failed publication
+        if: failure() && steps.release.outcome == 'failure' && steps.commit.outputs.sha != ''
+        env:
+          FAILED_SHA: ${{ steps.commit.outputs.sha }}
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$FAILED_SHA"
+          git revert --no-edit "$FAILED_SHA"
+          git push origin HEAD:main

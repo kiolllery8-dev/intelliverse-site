@@ -70,11 +70,8 @@ jobs:
       - name: Verify SEO and internal links in export
         run: npm run check:seo
 
-      - name: Rsync out/ → /opt/auslife/nginx-static/show/
-        run: |
-          rsync -avz --delete \
-            --exclude='*.map' \
-            out/ /opt/auslife/nginx-static/show/
+      - name: Publish verified release with rollback
+        run: python3 tools/deploy-atomic.py --source out --revision "$GITHUB_SHA"
 
       - name: Smoke test (origin direct)
         run: |
