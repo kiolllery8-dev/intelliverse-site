@@ -12,6 +12,7 @@ import re
 import subprocess
 import time
 import urllib.request
+import urllib.error
 import uuid
 from zoneinfo import ZoneInfo
 
@@ -84,9 +85,22 @@ def budget(kind, limit):
         record[kind] = record.get(kind, 0) + 1
         write(file, record)
 
+class SourceUnavailable(RuntimeError):
+    """An explicitly missing source must not block the remaining review queue."""
+
 def scrape(url):
     budget('researchPages', 20)
-    raw, _ = request(FIRECRAWL, {'url': url, 'formats': ['markdown'], 'onlyMainContent': False}, 120)
+    try:
+        raw, _ = request(FIRECRAWL, {'url': url, 'formats': ['markdown'], 'onlyMainContent': False}, 120)
+    except urllib.error.HTTPError as error:
+        try:
+            detail = json.loads(error.read(8192).decode('utf8'))
+        except (ValueError, UnicodeError):
+            raise error
+        if (detail.get('code') == 'SOURCE_HTTP_ERROR' and
+                detail.get('sourceStatusCode') in (404, 410) and detail.get('retryable') is False):
+            raise SourceUnavailable('Source returned HTTP ' + str(detail['sourceStatusCode'])) from error
+        raise error
     result = json.loads(raw)
     data = result.get('data', result)
     content = data.get('markdown', '')
@@ -176,7 +190,20 @@ def research():
             raise ValueError('Invalid source location')
         url = f'https://raw.githubusercontent.com/{repo}/HEAD/' + (source_path + '/' if source_path else '') + 'SKILL.md'
         folder = STATE / 'runs' / now().strftime('%Y%m%d-%H%M%S'); folder.mkdir(parents=True)
-        source = scrape(url)
+        try:
+            source = scrape(url)
+        except SourceUnavailable as error:
+            report = {'id': folder.name, 'at': now().isoformat(), 'base': base, 'slug': slug,
+                      'sourceUrl': url, 'approved': False, 'status': 'source-unavailable',
+                      'reason': str(error), 'action': 'Manual source verification; no publication'}
+            write(folder / 'source-unavailable.json', report)
+            unavailable = read(STATE / 'source-unavailable.json', {})
+            unavailable[slug] = report
+            write(STATE / 'source-unavailable.json', unavailable)
+            examined[slug] = now().isoformat()
+            write(STATE / 'examined.json', examined)
+            print(json.dumps(report, ensure_ascii=False))
+            return
         (folder / 'source.md').write_text(source, encoding='utf8')
         write(folder / 'article.json', article)
         prompt = '''你是靈境智造官網的繁體中文內容校對員。只能分析提供的資料，不使用工具。

@@ -3,6 +3,10 @@ import copy
 import importlib.util
 from pathlib import Path
 import unittest
+from unittest.mock import patch
+import io
+import json
+import urllib.error
 
 spec = importlib.util.spec_from_file_location('worker', Path(__file__).with_name('website-agent.py'))
 worker = importlib.util.module_from_spec(spec); spec.loader.exec_module(worker)
@@ -37,5 +41,20 @@ class ContentBoundaryTests(unittest.TestCase):
     def test_duplicate_fields_rejected(self):
         self.proposal['changes'].append(copy.deepcopy(self.proposal['changes'][0]))
         with self.assertRaises(ValueError): worker.validate(self.article, self.proposal, self.source)
+
+class SourceFailureTests(unittest.TestCase):
+    def failure(self, detail):
+        return urllib.error.HTTPError(worker.FIRECRAWL, 502, 'Gateway', {},
+                                      io.BytesIO(json.dumps(detail).encode()))
+
+    def test_explicit_missing_source_is_quarantined(self):
+        error = self.failure({'code': 'SOURCE_HTTP_ERROR', 'sourceStatusCode': 404, 'retryable': False})
+        with patch.object(worker, 'budget'), patch.object(worker, 'request', side_effect=error):
+            with self.assertRaises(worker.SourceUnavailable): worker.scrape('https://example.com/missing')
+
+    def test_transient_gateway_failure_remains_failure(self):
+        error = self.failure({'code': 'SOURCE_HTTP_ERROR', 'sourceStatusCode': 503, 'retryable': True})
+        with patch.object(worker, 'budget'), patch.object(worker, 'request', side_effect=error):
+            with self.assertRaises(urllib.error.HTTPError): worker.scrape('https://example.com/unavailable')
 
 if __name__ == '__main__': unittest.main()

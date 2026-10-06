@@ -55,3 +55,8 @@ cat /home/user/show-site-agent/state/publications.json
 - `python3 tools/test-website-agent.py`：六項內容邊界測試，包括來源欄位不可修改、過期 before、缺乏證據、HTML 注入、重複欄位。
 - `python3 tools/deploy-atomic.py --self-test`：暫存環境的原子遷移、版本切換及失敗回復。
 - 既有正式 build、TypeScript 與 82 頁 SEO 匯出檢查。
+
+## 2026-10-06 來源失效修正
+
+Firecrawl 將原始文件的 404 包成 502 時，只有明確的 SOURCE_HTTP_ERROR、來源 404/410 且 retryable=false 才列入私有 source-unavailable.json 並標記已核對，讓下一輪繼續其他技能。暫時性 503、登入及其他錯誤仍保留失敗狀態。失效来源不產生修訂、不更換文章來源、不略過發布審核。新增兩項來源錯誤分類測試，八項測試通過。
+
