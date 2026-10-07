@@ -41,7 +41,7 @@ const ENGINE = engineArg ? engineArg.split('=')[1] : 'codex';
 const STYLE = fs.readFileSync(STYLE_FILE, 'utf8').trim();
 
 /* ---------- 引擎 A：OpenAI gpt-image ---------- */
-const GPT_MODEL = 'gpt-image-2-2026-04-21';
+const GPT_MODEL = process.env.SKILL_IMAGE_MODEL || 'gpt-image-2.5-sunburst';
 
 function openaiKey() {
   if (process.env.OPENAI_API_KEY) return process.env.OPENAI_API_KEY;
@@ -62,7 +62,7 @@ async function gptGenerate(spec, key) {
       model: GPT_MODEL,
       prompt: buildPrompt(spec),
       size: '1536x1024',
-      quality: 'medium',
+      quality: 'high',
       n: 1,
     }),
   });
@@ -115,6 +115,7 @@ const RULES = `硬性要求（違反就是失敗）：
 function buildPrompt(spec) {
   // 只叫它生圖，不叫它複製檔案 —— 取檔由 driver 從隔離的 CODEX_HOME 直接抓
   return `請生成一張圖片。生成完就結束，不需要複製檔案或做其他事。
+優先使用 GPT Image 2.5 Sunburst（gpt-image-2.5-sunburst）。若目前內建生圖工具不能指定模型，不可聲稱已使用該模型；在最後回報實際模型或模型不可確認。
 
 === 畫面內容 ===
 ${spec.scene}
