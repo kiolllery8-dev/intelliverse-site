@@ -24,6 +24,15 @@ SITE = 'https://show.intelliverse.tw'
 FIRECRAWL = 'http://192.168.1.236:3002/v2/scrape'
 MAX_MODEL_RUNS = 4
 
+def intake_reserve(record, date):
+    """Keep three calls for the sole intake owner's draft, review and one image."""
+    if not record.get('otherSchedulerConfirmedAbsent') or record.get('status') != 'enabled-subject-to-observation-review-and-shared-budget':
+        return 0
+    daily = record.get('dailyRun', {})
+    if daily.get('date') == date and daily.get('status') in ('published', 'no-qualified-candidates', 'completed-no-publication'):
+        return 0
+    return 3
+
 def now():
     return datetime.now(TZ)
 
@@ -169,7 +178,8 @@ def research():
         if config.get('paused'):
             return
         used = read(STATE / ('budget-' + now().date().isoformat() + '.json'), {})
-        if used.get('modelRuns', 0) > MAX_MODEL_RUNS - 2:
+        reserve = intake_reserve(read(STATE / 'skill-intake.json', {}), now().date().isoformat())
+        if used.get('modelRuns', 0) + 2 + reserve > MAX_MODEL_RUNS:
             print('Reserve writer and independent reviewer budget; resume tomorrow'); return
         if not REPO.exists():
             run(['git', 'clone', '--depth', '1', 'https://github.com/kiolllery8-dev/intelliverse-site.git', str(REPO)], timeout=180)

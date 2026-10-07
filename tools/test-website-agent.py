@@ -57,4 +57,18 @@ class SourceFailureTests(unittest.TestCase):
         with patch.object(worker, 'budget'), patch.object(worker, 'request', side_effect=error):
             with self.assertRaises(urllib.error.HTTPError): worker.scrape('https://example.com/unavailable')
 
+class IntakeBudgetTests(unittest.TestCase):
+    def test_disabled_intake_does_not_reserve(self):
+        self.assertEqual(worker.intake_reserve({}, '2026-10-08'), 0)
+
+    def test_previous_day_completion_still_reserves(self):
+        record = {'otherSchedulerConfirmedAbsent': True, 'status': 'enabled-subject-to-observation-review-and-shared-budget',
+                  'dailyRun': {'date': '2026-10-07', 'status': 'published'}}
+        self.assertEqual(worker.intake_reserve(record, '2026-10-08'), 3)
+
+    def test_current_day_completion_releases_reserve(self):
+        record = {'otherSchedulerConfirmedAbsent': True, 'status': 'enabled-subject-to-observation-review-and-shared-budget',
+                  'dailyRun': {'date': '2026-10-08', 'status': 'no-qualified-candidates'}}
+        self.assertEqual(worker.intake_reserve(record, '2026-10-08'), 0)
+
 if __name__ == '__main__': unittest.main()
