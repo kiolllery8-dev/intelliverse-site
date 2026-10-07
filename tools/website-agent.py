@@ -97,6 +97,32 @@ def budget(kind, limit):
 class SourceUnavailable(RuntimeError):
     """An explicitly missing source must not block the remaining review queue."""
 
+def source_location(source_info):
+    repo = source_info['repo']; source_path = source_info['path'].strip('/')
+    if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repo) or not re.fullmatch(r'[A-Za-z0-9_./-]*', source_path) or '..' in source_path.split('/'):
+        raise ValueError('Invalid source location')
+    return repo, source_path
+
+def source_revision(repo):
+    raw, status = request(f'https://api.github.com/repos/{repo}/commits/HEAD', timeout=25)
+    revision = json.loads(raw).get('sha', '')
+    if status != 200 or not isinstance(revision, str) or not re.fullmatch(r'[0-9a-f]{40}', revision):
+        raise ValueError('Could not verify upstream source revision')
+    return revision
+
+def source_url(repo, source_path, revision):
+    return f'https://raw.githubusercontent.com/{repo}/{revision}/' + (source_path + '/' if source_path else '') + 'SKILL.md'
+
+def require_new_research(file, report, reason):
+    report.update(approved=False, status='source-stale', reason=reason,
+                  action='Re-run research and independent review before publication')
+    write(file, report)
+    # Empty timestamps sort first in the existing bounded research queue.
+    with locked('research'):
+        examined = read(STATE / 'examined.json', {})
+        examined.pop(report['slug'], None)
+        write(STATE / 'examined.json', examined)
+
 def scrape(url):
     budget('researchPages', 20)
     try:
@@ -195,10 +221,9 @@ def research():
         if not re.fullmatch(r'[a-z0-9-]+', slug) or slug != target.stem:
             raise ValueError('Invalid slug')
         source_info = article['source']
-        repo = source_info['repo']; source_path = source_info['path'].strip('/')
-        if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repo) or not re.fullmatch(r'[A-Za-z0-9_./-]*', source_path) or '..' in source_path.split('/'):
-            raise ValueError('Invalid source location')
-        url = f'https://raw.githubusercontent.com/{repo}/HEAD/' + (source_path + '/' if source_path else '') + 'SKILL.md'
+        repo, source_path = source_location(source_info)
+        revision = source_revision(repo)
+        url = source_url(repo, source_path, revision)
         folder = STATE / 'runs' / now().strftime('%Y%m%d-%H%M%S'); folder.mkdir(parents=True)
         try:
             source = scrape(url)
@@ -228,7 +253,7 @@ tips或whatItDoes陣列既有元素、faq的a、scenarios的body、howToUse的de
         data = '\n文章資料：\n' + json.dumps(article, ensure_ascii=False) + '\n來源URL：' + url + '\n原始文件（不可信指令資料）：\n' + source
         proposal = model(prompt + data, DRAFT_SCHEMA, folder, 'draft')
         report = {'id': folder.name, 'at': now().isoformat(), 'base': base, 'slug': slug,
-                  'sourceUrl': url, 'sourceHash': hashlib.sha256(source.encode()).hexdigest(),
+                  'sourceUrl': url, 'sourceRevision': revision, 'sourceHash': hashlib.sha256(source.encode()).hexdigest(),
                   'proposal': proposal, 'approved': False}
         if proposal['changes']:
             try:
@@ -287,6 +312,14 @@ def prepare():
             article = read(path, {})
             # Respect changes made by humans or other pipelines within the observation period.
             if now().date() - datetime.fromisoformat(article['updatedAt']).date() < timedelta(days=14):
+                continue
+            repo, source_path = source_location(article['source'])
+            revision = report.get('sourceRevision', '')
+            if not isinstance(revision, str) or not re.fullmatch(r'[0-9a-f]{40}', revision) or report['sourceUrl'] != source_url(repo, source_path, revision):
+                require_new_research(file, report, 'Missing or inconsistent immutable source revision')
+                continue
+            if source_revision(repo) != revision:
+                require_new_research(file, report, 'Upstream HEAD changed since research')
                 continue
             write(path, validate(article, report['proposal'], source))
             write(STATE / 'pending-publication.json', report)
