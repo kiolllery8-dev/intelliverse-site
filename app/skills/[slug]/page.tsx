@@ -85,12 +85,14 @@ export default async function SkillPage({
     articleSection: skill.category,
     url: `${SITE_URL}/skills/${skill.slug}/`,
     mainEntityOfPage: `${SITE_URL}/skills/${skill.slug}/`,
-    // AI 搜尋很看重新鮮度，沒有日期的內容常被當成來源不明
+    // 保留內容實際發布與更新日期，不因樣式或共用模板變動重設日期。
     ...(skill.publishedAt ? { datePublished: skill.publishedAt } : {}),
     ...(skill.updatedAt ? { dateModified: skill.updatedAt } : {}),
     image: `${SITE_URL}${skill.image || '/og-image.png'}`,
     author: { '@id': `${SITE_URL}/#organization` },
     publisher: { '@id': `${SITE_URL}/#organization` },
+    citation: skill.sourceUrl,
+    isBasedOn: { '@type': 'CreativeWork', name: `${skill.sourceRepo} — ${skill.nameEn}`, url: skill.sourceUrl },
     isPartOf: { '@id': `${SITE_URL}/#website` },
     about: {
       '@type': 'SoftwareApplication',
@@ -172,6 +174,8 @@ export default async function SkillPage({
                 </p>
               )}
 
+              <p className="skill-source-note">靈境智造整理 · 繁體中文應用說明 · <a href={skill.sourceUrl} target="_blank" rel="noopener noreferrer">原始技能文件 ↗</a></p>
+              <p className="skill-summary">{skill.summary}</p>
               <div className="skill-pain">
                 <span className="skill-pain-label">解決什麼問題</span>
                 <p>{skill.painPoint}</p>
@@ -195,8 +199,7 @@ export default async function SkillPage({
             )}
 
             <section className="skill-block">
-              <h2>這是什麼</h2>
-              <p className="skill-summary">{skill.summary}</p>
+              <h2>{skill.nameZh}可以做什麼？</h2>
               <ul className="skill-can-do">
                 {skill.whatItDoes.map((w, i) => (
                   <li key={i}>{w}</li>
@@ -218,7 +221,7 @@ export default async function SkillPage({
             </section>
 
             <section className="skill-block">
-              <h2>怎麼用</h2>
+              <h2>{skill.nameZh}怎麼用？</h2>
               <ol className="skill-steps">
                 {skill.howToUse.map((s, i) => (
                   <li key={i}>
@@ -233,7 +236,8 @@ export default async function SkillPage({
             </section>
 
             <section className="skill-block">
-              <h2>實際對話長這樣</h2>
+              <h2>指令與回覆示例</h2>
+              <p className="skill-source-note">以下為示意對話，不是實測紀錄或成效保證。實際輸出取決於模型、輸入資料、工具版本與設定，使用前請人工確認。</p>
               <div className="skill-example">
                 <div className="skill-example-row skill-example-you">
                   <span className="skill-example-who">你</span>
@@ -280,8 +284,9 @@ export default async function SkillPage({
                   {skill.sourceRepo} <span aria-hidden="true">↗</span>
                 </a>
                 <p className="skill-source-note">
-                  GitHub {skill.sourceStars} stars ·
+                  GitHub {skill.sourceStars} stars（收錄時紀錄，非即時數值） ·
                   本頁為靈境智造整理翻譯的繁體中文說明，非原作者官方文件。
+                  功能、安裝方式、授權與費用請以原始專案最新文件為準；文中的應用情境不代表客戶實績。
                 </p>
               </div>
             </section>

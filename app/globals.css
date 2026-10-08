@@ -2542,11 +2542,13 @@ footer::before {
 }
 .skill-source a:hover { color: var(--gold-deep); }
 .skill-source-note {
-  font-size: 13px;
+  font-size: var(--fs-small);
   line-height: 1.6;
-  color: var(--ink-dim);
+  color: var(--ink-soft);
   margin-top: 10px;
 }
+.skill-hero .skill-source-note { margin-bottom: 12px; }
+.skill-source-note a { color: var(--gold-deep); text-decoration: underline; text-underline-offset: 3px; }
 
 .skill-nav {
   display: grid;

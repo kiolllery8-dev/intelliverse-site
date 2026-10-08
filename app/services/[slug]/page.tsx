@@ -45,6 +45,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     {
       '@context': 'https://schema.org', '@type': 'WebPage', '@id': `${url}#webpage`,
       url, name: guide.title, description: guide.description, inLanguage: 'zh-Hant-TW', dateModified: guide.updatedAt,
+      author: { '@id': `${SITE_URL}/#organization` },
       isPartOf: { '@id': `${SITE_URL}/#website` }, mainEntity: { '@id': `${url}#service` },
     },
     {

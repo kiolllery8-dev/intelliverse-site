@@ -68,6 +68,15 @@ for (const [url, page] of pages) {
   for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     try {
       const schema = JSON.parse(match[1]);
+      if (schema['@type'] === 'TechArticle' && url.includes('/skills/')) {
+        assert(typeof schema.citation === 'string' && schema.citation === schema.isBasedOn?.url, `${url}: article source references disagree`);
+        const anchors = [...html.matchAll(/<a\b[^>]*>/g)].map((m) => attrs(m[0]));
+        assert(anchors.some((a) => a.href === schema.citation), `${url}: article citation is not linked visibly`);
+        assert(visible.includes('以下為示意對話，不是實測紀錄或成效保證'), `${url}: example disclosure missing`);
+        const summaryPosition = html.indexOf('class="skill-summary"');
+        const figurePosition = html.indexOf('class="skill-figure"');
+        assert(summaryPosition >= 0 && (figurePosition < 0 || summaryPosition < figurePosition), `${url}: summary must precede illustration`);
+      }
       if (schema['@type'] === 'FAQPage') for (const question of schema.mainEntity) {
         assert(visible.includes(text(question.name)), `${url}: FAQ question absent from HTML`);
         assert(visible.includes(text(question.acceptedAnswer.text)), `${url}: FAQ answer absent from HTML`);

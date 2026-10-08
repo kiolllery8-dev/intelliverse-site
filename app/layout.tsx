@@ -10,7 +10,6 @@ const ADDRESS = {
   postalCode: '411',
   addressCountry: 'TW',
 } as const;
-const FULL_ADDRESS_TW = `臺中市太平區精美路 122 號`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -305,7 +304,6 @@ const servicesJsonLd = serviceNodes.map((s) => ({
   inLanguage: 'zh-Hant-TW',
 }));
 
-export { FULL_ADDRESS_TW };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
