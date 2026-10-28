@@ -1,24 +1,18 @@
-# 每日 Trending Skill 自動收錄流程
+# 每日技能收錄：完整驗證、審核、發布
 
-這份文件是給**雲端排程 agent** 看的作業說明。每天跑一次，把 GitHub 上新竄出來的
-Agent Skill 挑進 `show.intelliverse.tw/skills/`。
+唯一負責者為目前 Codex heartbeat；不另建重複 worker。每天台灣時間10:00後首輪執行，桌面離線會延後。每天目標1–3篇、最多3篇，共用每日四次模型工作與20頁研究額度。
 
-排程本身只會說「讀這份文件並照做」，所有規則寫在這裡，要調整直接改這個檔案。
+## 必須完成的流程
 
----
+1. 先處理前次候選，再補三種角度搜尋。不能每天只找新候選，將舊候選無限順延。
+2. 對最高優先候選讀完原始 SKILL.md、實際 LICENSE、引用檔案與必要腳本。GitHub license=NOASSERTION 不代表沒有授權，應讀 LICENSE 原文。截斷輸出需分段讀完，不能以截斷為理由直接結束。
+3. 逐一記錄明確結論：符合並製作、具體原因排除，或確實受登入／額度／來源失效阻塞。單純尚未讀完不算完成每日收錄；留在 verifying，下輪接續同一候選。無合格候選才寫 no-qualified-candidates。
+4. 符合者寫 data/skills/<slug>.json，保留來源版本、授權、重複比對與事實證據；以獨立模型審核完整文章。若審核失敗，在剩餘額度內修正並重新審核，不能直接跳過。
+5. 由 home server 既有 Codex 登入生成圖片，每日最多3張；逐張目視核對繁體中文標題、畫面與來源。圖片不合格不得推送，發布流程不能依賴未檢查的補圖。
+6. 在同步 origin/main 的獨立 worktree 製作。產生 skills-data，正式 build、SEO、內容邊界與部署回復測試通過後才 commit/push。等待 GitHub 成功，核對公開文章、圖片及 sitemap，再記發布收據。
+7. state/skill-intake.json 記候選與每個步驟；終態只使用 published、no-qualified-candidates、completed-no-publication。completed-no-publication 必須保留明確拒絕／阻塞原因，不可用來掩蓋未完成驗證。writer/reviewer/image 及重試共用每日四次額度，完成後釋放校正 worker 保留額度。
 
-## 你要產出什麼
-
-在 `data/skills/` 放入**新的 JSON 檔案**（一個技能一個檔），然後 commit + push 到 `main`。
-
-推上去之後就不用管了：家裡主機上的 GitHub Actions runner 會自動
-重生 `app/skills-data.ts`、用 codex 補情境照、build、部署。
-
-**不要**手動編輯 `app/skills-data.ts`（那是產物），
-**不要**產生圖片（你在雲端，沒有 codex），
-**不要**改 `public/skills-img/`。
-
----
+訂正：本流程由本機 heartbeat 執行，能使用 home Codex 生圖。下列欄位與寫作規範仍適用；原文若涉及雲端不能生圖、每天2篇、不用等部署等舊規則，以本節為準。平台本地化僅能改情境，不能編造蝦皮、momo或金流整合能力。FAQ須與可見內容一致，不保證被搜尋或AI引用。
 
 ## 硬性限制
 
@@ -112,7 +106,7 @@ gh api repos/OWNER/REPO/contents/PATH/SKILL.md --jq '.content' | base64 -d
 1. **一律繁體中文台灣用語**。嚴禁：`視頻/軟件/信息/質量/賦能/顆粒度/一鍵/打通/閉環/落地頁/公眾號/小程序/用戶/網絡/默認/智能/屏幕/激活/復購/拉新/私域/爆款/種草/引流/轉化/營銷/第一屏`
    → 要用：`影片/軟體/資訊/品質/銷售頁/使用者/網路/預設/智慧/螢幕/啟用/回購/開發新客/自有客群/熱賣款/推薦/導流/轉換/行銷/第一眼`
 2. **不要中國平台**。原始 SKILL.md 常是簡體中文寫的、舉例是淘寶抖音微信支付寶
-   → 全部換成蝦皮、momo、LINE 官方帳號、IG、Threads、綠界、藍新
+   → 只有來源支持的情境才可在地化；不編造蝦皮、momo、LINE 或金流整合。
 3. **不要翻譯腔**。不要「基於」「進行」「針對…進行」「賦予」「助力」
 4. **講具體**。「提升效率」要換成看得到畫面的事，例如「原本要開三個分頁比對，現在一次列出來」
 5. **不要誇大**。不要「業績翻倍」「保證」「百分之百」
@@ -166,7 +160,7 @@ gh api repos/OWNER/REPO/contents/PATH/SKILL.md --jq '.content' | base64 -d
 
 #### 常見問答怎麼寫（`faq`）
 
-這 3 題會被 Google 與 ChatGPT／Perplexity 這類 AI 搜尋直接引用，是 GEO 最有效的欄位。
+這3題需與可見內容一致並能獨立理解；是否收錄或引用由搜尋服務決定。
 
 - **不可以編造**：答案裡每個事實都要能在這篇 JSON 的其他欄位找到依據。
   沒寫到價格就不要答價格，tips 沒提到付費就不要問「要付費嗎」
@@ -228,7 +222,7 @@ git push origin main
 
 Commit 訊息用繁體中文，一行講清楚收了什麼、從哪來、幾顆星。
 
-推上去之後 CI 會自動補圖、build、部署，你不用等。
+圖片須先生成與目視審核後納入 commit。推送後等待 CI build、SEO 及部署成功，再驗證公開頁。
 
 ### 8. 回報
 

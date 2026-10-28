@@ -29,7 +29,7 @@ def intake_reserve(record, date):
     if not record.get('otherSchedulerConfirmedAbsent') or record.get('status') != 'enabled-subject-to-observation-review-and-shared-budget':
         return 0
     daily = record.get('dailyRun', {})
-    if daily.get('date') == date and daily.get('status') in ('published', 'no-qualified-candidates', 'completed-no-publication'):
+    if daily.get('date') == date and daily.get('status') in ('published', 'no-qualified-candidates', 'completed-no-publication', 'no-approved-candidates'):
         return 0
     return 3
 

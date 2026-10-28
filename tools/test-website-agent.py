@@ -71,4 +71,14 @@ class IntakeBudgetTests(unittest.TestCase):
                   'dailyRun': {'date': '2026-10-08', 'status': 'no-qualified-candidates'}}
         self.assertEqual(worker.intake_reserve(record, '2026-10-08'), 0)
 
+    def test_legacy_finished_review_releases_reserve(self):
+        record = {'otherSchedulerConfirmedAbsent': True, 'status': 'enabled-subject-to-observation-review-and-shared-budget',
+                  'dailyRun': {'date': '2026-10-28', 'status': 'no-approved-candidates'}}
+        self.assertEqual(worker.intake_reserve(record, '2026-10-28'), 0)
+
+    def test_pending_verification_keeps_reserve(self):
+        record = {'otherSchedulerConfirmedAbsent': True, 'status': 'enabled-subject-to-observation-review-and-shared-budget',
+                  'dailyRun': {'date': '2026-10-28', 'status': 'verifying'}}
+        self.assertEqual(worker.intake_reserve(record, '2026-10-28'), 3)
+
 if __name__ == '__main__': unittest.main()
